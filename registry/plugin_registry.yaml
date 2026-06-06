@@ -1,0 +1,16 @@
+plugins:
+  subfinder:
+    version: 2.1
+    category: recon
+    status: certified
+    maintainer: core
+  nmap:
+    version: 2.1
+    category: recon
+    status: certified
+    maintainer: core
+  dalfox:
+    version: 2.1
+    category: web
+    status: experimental
+    maintainer: community

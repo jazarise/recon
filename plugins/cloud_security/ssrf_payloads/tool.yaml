@@ -1,0 +1,16 @@
+name: ssrf_payloads
+category: cloud_security
+language: .txt
+execution_type: library
+entrypoint: ssrf_payloads.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ssrf_payloads
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

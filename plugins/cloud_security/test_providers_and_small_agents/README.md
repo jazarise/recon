@@ -1,0 +1,3 @@
+# test_providers_and_small_agents Plugin
+
+Auto-generated scaffolding for test_providers_and_small_agents.

@@ -1,0 +1,38 @@
+# IDE and Editor files
+.claude/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Scan results and outputs
+scans/
+results/
+*.json
+*.txt
+*.html
+!README.md
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.zip
+*.tar.gz
+*.deb
+*.rpm
+
+# Configuration (with sensitive data)
+config.json
+*.key
+*.pem
+credentials.json
+
+# Tool-specific
+.bchacktool/
+checkpoints/

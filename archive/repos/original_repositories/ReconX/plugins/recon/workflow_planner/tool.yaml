@@ -1,0 +1,16 @@
+name: workflow_planner
+category: recon
+language: .py
+execution_type: library
+entrypoint: workflow_planner.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - workflow_planner
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

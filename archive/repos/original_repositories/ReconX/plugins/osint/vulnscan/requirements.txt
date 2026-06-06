@@ -1,0 +1,6 @@
+requests
+re
+ssl
+socket
+urllib.parse
+urllib3

@@ -1,0 +1,16 @@
+name: test_process_registry
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: test_process_registry.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_process_registry
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

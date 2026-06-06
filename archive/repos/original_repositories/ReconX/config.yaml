@@ -1,0 +1,26 @@
+# ReconX Configuration
+# Edit this file to customize platform behaviour.
+
+general:
+  threads: 10
+  timeout_default: 300
+  log_level: INFO
+
+api_keys:
+  shodan: ""
+  virustotal: ""
+  github: ""
+  openai: ""
+
+reporting:
+  formats: ["markdown", "json", "csv", "html"]
+  company_name: "ReconX Operator"
+
+dashboard:
+  port: 8000
+  host: "127.0.0.1"
+
+performance:
+  rate_limit_requests_per_second: 10
+  rate_limit_burst: 50
+  enable_caching: true

@@ -1,0 +1,16 @@
+name: shannon-report-juice-shop
+category: recon
+language: .md
+execution_type: library
+entrypoint: shannon-report-juice-shop.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - shannon-report-juice-shop
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: intelligence_concepts
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: intelligence_concepts.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - intelligence_concepts
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

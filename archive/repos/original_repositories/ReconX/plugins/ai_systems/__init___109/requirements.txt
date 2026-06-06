@@ -1,0 +1,6 @@
+.sdk
+.manager
+.loader
+.sandbox
+.marketplace
+.schemas

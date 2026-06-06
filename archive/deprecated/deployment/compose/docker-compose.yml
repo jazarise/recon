@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  reconx:
+    build:
+      context: ../../
+      dockerfile: deployment/docker/Dockerfile
+    volumes:
+      - ../../workspaces:/app/workspaces
+    ports:
+      - "8000:8000"

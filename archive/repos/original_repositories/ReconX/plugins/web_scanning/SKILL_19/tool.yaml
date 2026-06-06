@@ -1,0 +1,16 @@
+name: SKILL_19
+category: web_scanning
+language: .md
+execution_type: library
+entrypoint: SKILL_19.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - SKILL_19
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

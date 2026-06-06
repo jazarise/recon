@@ -1,0 +1,3 @@
+# __init___112 Plugin
+
+Auto-generated scaffolding for __init___112.

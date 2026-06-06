@@ -1,0 +1,16 @@
+name: stage121_web
+category: recon
+language: .py
+execution_type: library
+entrypoint: stage121_web.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - stage121_web
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

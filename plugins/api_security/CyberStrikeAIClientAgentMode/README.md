@@ -1,0 +1,3 @@
+# CyberStrikeAIClientAgentMode Plugin
+
+Auto-generated scaffolding for CyberStrikeAIClientAgentMode.

@@ -1,0 +1,57 @@
+name: Deep Recon Workflow
+description: Maximum intelligence gathering using the full Phase 8 Recon Pipeline. Estimated time 1-6+ hours.
+mode: deep
+steps:
+- id: s1
+  plugin: passive_recon
+  plugin_path: plugins/deep/passive_recon
+  timeout: 3600
+  description: Deep Passive Subdomain Enumeration (subfinder, assetfinder)
+
+- id: s2
+  plugin: active_recon
+  plugin_path: plugins/deep/active_recon
+  timeout: 7200
+  description: Active Reconnaissance (dnsx, httpx, naabu)
+
+- id: s3
+  plugin: asn_intel
+  plugin_path: plugins/deep/asn_intel
+  timeout: 300
+  description: ASN and IP Intelligence Mapping
+
+- id: s4
+  plugin: csp_extractor
+  plugin_path: plugins/deep/csp_extractor
+  timeout: 600
+  description: Content Security Policy Domain Extraction
+
+- id: s5
+  plugin: content_discovery
+  plugin_path: plugins/deep/content_discovery
+  timeout: 7200
+  description: Web Crawling and Content Discovery (katana, waybackurls, feroxbuster)
+
+- id: s6
+  plugin: nuclei
+  plugin_path: plugins/deep/nuclei
+  timeout: 14400
+  description: Comprehensive Vulnerability Scanning against alive HTTP endpoints
+
+- id: s7
+  plugin: xss_scan
+  plugin_path: plugins/deep/xss_scan
+  timeout: 3600
+  description: Parameter Fuzzing and XSS Scanning
+
+- id: s8
+  plugin: graphql_scan
+  plugin_path: plugins/deep/graphql_scan
+  timeout: 600
+  description: GraphQL Introspection Scanning
+
+- id: s9
+  plugin: reporting
+  plugin_path: plugins/reporting/reporting
+  timeout: 300
+  description: Generate Full Intelligence Report

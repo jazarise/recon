@@ -1,0 +1,16 @@
+name: docker_2
+category: cloud_security
+language: .yml
+execution_type: library
+entrypoint: docker_2.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - docker_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: hakrawler
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: hakrawler.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - hakrawler
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

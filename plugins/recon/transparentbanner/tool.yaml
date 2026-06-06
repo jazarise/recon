@@ -1,0 +1,16 @@
+name: transparentbanner
+category: recon
+language: .png
+execution_type: library
+entrypoint: transparentbanner.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - transparentbanner
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,1 @@
+# Hardening Report\nValidation active.

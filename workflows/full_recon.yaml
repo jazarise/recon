@@ -1,0 +1,18 @@
+name: full_recon
+steps:
+  - osint
+  - subdomains:
+      depends_on:
+        - osint
+  - ports:
+      depends_on:
+        - subdomains
+  - technologies:
+      depends_on:
+        - ports
+  - vulnerabilities:
+      depends_on:
+        - technologies
+  - reports:
+      depends_on:
+        - vulnerabilities

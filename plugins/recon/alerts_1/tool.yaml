@@ -1,0 +1,16 @@
+name: alerts_1
+category: recon
+language: .json
+execution_type: library
+entrypoint: alerts_1.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - alerts_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: cloud_storage
+category: cloud_security
+language: .yaml
+execution_type: library
+entrypoint: cloud_storage.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - cloud_storage
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

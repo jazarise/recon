@@ -1,0 +1,16 @@
+name: attack-chain
+category: recon
+language: .png
+execution_type: library
+entrypoint: attack-chain.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - attack-chain
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

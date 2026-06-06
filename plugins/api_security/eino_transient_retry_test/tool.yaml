@@ -1,0 +1,16 @@
+name: eino_transient_retry_test
+category: api_security
+language: .go
+execution_type: library
+entrypoint: eino_transient_retry_test.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - eino_transient_retry_test
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

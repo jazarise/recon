@@ -1,0 +1,16 @@
+name: infrastructure_view
+category: recon
+language: .py
+execution_type: library
+entrypoint: infrastructure_view.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - infrastructure_view
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

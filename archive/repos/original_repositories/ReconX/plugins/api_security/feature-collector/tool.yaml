@@ -1,0 +1,16 @@
+name: feature-collector
+category: api_security
+language: .js
+execution_type: library
+entrypoint: feature-collector.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - feature-collector
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

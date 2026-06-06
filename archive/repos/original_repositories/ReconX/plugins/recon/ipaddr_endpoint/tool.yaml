@@ -1,0 +1,16 @@
+name: ipaddr_endpoint
+category: recon
+language: .go
+execution_type: library
+entrypoint: ipaddr_endpoint.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ipaddr_endpoint
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

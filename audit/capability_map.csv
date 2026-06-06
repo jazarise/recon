@@ -1,0 +1,3979 @@
+Capability,Tool,Status,Integrated,Working
+AI,activity_feed,Metadata Only,No,No
+AI,ad_agent,Metadata Only,No,No
+AI,agent_1,Metadata Only,No,No
+AI,agent_trace,Metadata Only,No,No
+AI,agent_trace_test,Metadata Only,No,No
+AI,app_3,Metadata Only,No,No
+AI,attach,Metadata Only,No,No
+AI,attach_test,Metadata Only,No,No
+AI,audit,Metadata Only,No,No
+AI,audit-logger,Metadata Only,No,No
+AI,audit-session,Metadata Only,No,No
+AI,base-agent,Metadata Only,No,No
+AI,base_1,Metadata Only,No,No
+AI,base_tool,Metadata Only,No,No
+AI,batch_task,Metadata Only,No,No
+AI,batch_task_manager,Metadata Only,No,No
+AI,batch_task_mcp,Metadata Only,No,No
+AI,beacongo,Metadata Only,No,No
+AI,bug,Metadata Only,No,No
+AI,BurpExtender,Metadata Only,No,No
+AI,BurpExtender1,Metadata Only,No,No
+AI,c2_hitl_bridge,Metadata Only,No,No
+AI,CLAUDE,Metadata Only,No,No
+AI,claude_reasoning_roundtrip,Metadata Only,No,No
+AI,claude_reasoning_roundtrip_test,Metadata Only,No,No
+AI,cleanup-rollback,Metadata Only,No,No
+AI,client,Metadata Only,No,No
+AI,cmdi-agent,Metadata Only,No,No
+AI,config,Metadata Only,No,No
+AI,config_3,Metadata Only,No,No
+AI,content,Metadata Only,No,No
+AI,controller,Metadata Only,No,No
+AI,corpus,Metadata Only,No,No
+AI,cost,Metadata Only,No,No
+AI,createdFiles,Metadata Only,No,No
+AI,CTF,Metadata Only,No,No
+AI,cyberstrikeai-burp-extension-100,Metadata Only,No,No
+AI,CyberStrikeAIClientConfig,Metadata Only,No,No
+AI,CyberStrikeAITabTestRun,Metadata Only,No,No
+AI,CyberStrikeAITabTestRunCellRenderer,Metadata Only,No,No
+AI,dashboard,Metadata Only,No,No
+AI,default,Metadata Only,No,No
+AI,default_1,Metadata Only,No,No
+AI,dependency_graph,Metadata Only,No,No
+AI,detector,Metadata Only,No,No
+AI,development,Metadata Only,No,No
+AI,eino_checkpoint,Metadata Only,No,No
+AI,eino_execute_monitor,Metadata Only,No,No
+AI,eino_execute_streaming_wrap,Metadata Only,No,No
+AI,eino_exit_fallback_test,Metadata Only,No,No
+AI,eino_filesystem_tool_monitor,Metadata Only,No,No
+AI,eino_input_telemetry,Metadata Only,No,No
+AI,eino_middleware,Metadata Only,No,No
+AI,eino_middleware_test,Metadata Only,No,No
+AI,eino_model_facing_trace,Metadata Only,No,No
+AI,eino_model_rewrite_pipeline,Metadata Only,No,No
+AI,eino_orchestration,Metadata Only,No,No
+AI,eino_resume_segment,Metadata Only,No,No
+AI,eino_single_agent,Metadata Only,No,No
+AI,eino_skills,Metadata Only,No,No
+AI,eino_sse_sanitizer,Metadata Only,No,No
+AI,eino_sse_sanitizer_test,Metadata Only,No,No
+AI,eino_summarize,Metadata Only,No,No
+AI,eino_summarize_test,Metadata Only,No,No
+AI,engagement-planning,Metadata Only,No,No
+AI,EQBSL-Primer,Metadata Only,No,No
+AI,events,Metadata Only,No,No
+AI,events_1,Metadata Only,No,No
+AI,EvidenceCommand,Metadata Only,No,No
+AI,eyewitness,Metadata Only,No,No
+AI,feature,Metadata Only,No,No
+AI,feature_2,Metadata Only,No,No
+AI,formatting,Metadata Only,No,No
+AI,frontmatter,Metadata Only,No,No
+AI,generate-totp,Metadata Only,No,No
+AI,git-manager,Metadata Only,No,No
+AI,ground-truth-agent,Metadata Only,No,No
+AI,group,Metadata Only,No,No
+AI,hitl_context,Metadata Only,No,No
+AI,hitl_middleware,Metadata Only,No,No
+AI,holder,Metadata Only,No,No
+Web Enumeration,HttpMessageFormatter,Metadata Only,No,No
+AI,impact-exfiltration,Metadata Only,No,No
+AI,index,Metadata Only,No,No
+AI,index_12,Metadata Only,No,No
+AI,index_3,Metadata Only,No,No
+AI,index_4,Metadata Only,No,No
+AI,index_9,Metadata Only,No,No
+AI,install_preferences,Metadata Only,No,No
+AI,interrupt,Metadata Only,No,No
+AI,lateral-movement,Metadata Only,No,No
+AI,layout,Metadata Only,No,No
+AI,listener_tcp,Metadata Only,No,No
+AI,log-stream,Metadata Only,No,No
+AI,logger,Metadata Only,No,No
+AI,logger_1,Metadata Only,No,No
+AI,login-instructions,Metadata Only,No,No
+AI,login-instructions_1,Metadata Only,No,No
+AI,logo,Metadata Only,No,No
+AI,main_12,Metadata Only,No,No
+AI,main_3,Metadata Only,No,No
+AI,main_8,Metadata Only,No,No
+AI,markdown_orchestrator_test,Metadata Only,No,No
+AI,mcp_pent_claude_agent,Metadata Only,No,No
+AI,mcp_tools,Metadata Only,No,No
+AI,memory,Metadata Only,No,No
+AI,metrics,Metadata Only,No,No
+AI,models,Metadata Only,No,No
+AI,model_manager,Metadata Only,No,No
+AI,multi_agent_prepare,Metadata Only,No,No
+AI,navigator,Metadata Only,No,No
+AI,normalize_streaming_delta_test,Metadata Only,No,No
+AI,normalize_streaming_eof_test,Metadata Only,No,No
+AI,opsec-evasion,Metadata Only,No,No
+AI,orchestratortest,Metadata Only,No,No
+AI,orchestrator_instruction,Metadata Only,No,No
+AI,orphan_tool_pruner_middleware_test,Metadata Only,No,No
+AI,otel,Metadata Only,No,No
+AI,package-lock_1,Metadata Only,No,No
+AI,package_2,Metadata Only,No,No
+AI,package_4,Metadata Only,No,No
+AI,paths_1,Metadata Only,No,No
+AI,payload_builder,Metadata Only,No,No
+AI,PentestGPT_design,Metadata Only,No,No
+AI,persistence-maintenance,Metadata Only,No,No
+AI,plan_execute_executor,Metadata Only,No,No
+AI,plan_execute_steps_cap,Metadata Only,No,No
+AI,plan_execute_steps_cap_test,Metadata Only,No,No
+AI,plan_execute_text,Metadata Only,No,No
+AI,plan_execute_text_test,Metadata Only,No,No
+AI,plugin_3,Metadata Only,No,No
+AI,plugin_center,Metadata Only,No,No
+AI,pnpm-workspace,Metadata Only,No,No
+Port Scanning,portscan-all-tcp-ports,Metadata Only,No,No
+Port Scanning,portscan-top-100-udp-ports,Metadata Only,No,No
+AI,pre-commit-config,Metadata Only,No,No
+AI,pre-recon-code_3,Metadata Only,No,No
+AI,privilege-escalation,Metadata Only,No,No
+AI,production,Metadata Only,No,No
+AI,progress-manager,Metadata Only,No,No
+AI,prompt-manager,Metadata Only,No,No
+AI,prompts,Metadata Only,No,No
+AI,prompt_select,Metadata Only,No,No
+AI,README_14,Metadata Only,No,No
+AI,README_34,Metadata Only,No,No
+AI,README_35,Metadata Only,No,No
+AI,README_40,Metadata Only,No,No
+AI,reasoning_trace,Metadata Only,No,No
+AI,reasoning_trace_test,Metadata Only,No,No
+AI,reconftw_prox_deploy,Metadata Only,No,No
+AI,recon_3,Metadata Only,No,No
+AI,registry_4,Metadata Only,No,No
+AI,registry_8,Metadata Only,No,No
+AI,registry_bridge,Metadata Only,No,No
+AI,remediation-agent,Metadata Only,No,No
+Port Scanning,report-output-provider,Metadata Only,No,No
+Port Scanning,reporting-remediation,Metadata Only,No,No
+Port Scanning,report_agent,Metadata Only,No,No
+AI,result,Metadata Only,No,No
+AI,role,Metadata Only,No,No
+AI,router,Metadata Only,No,No
+AI,runner_reasoning_history_test,Metadata Only,No,No
+AI,run_context,Metadata Only,No,No
+AI,save-deliverable,Metadata Only,No,No
+AI,service_1,Metadata Only,No,No
+AI,settings_3,Metadata Only,No,No
+AI,settings_4,Metadata Only,No,No
+AI,skills,Metadata Only,No,No
+AI,splash,Metadata Only,No,No
+AI,sse_stream,Metadata Only,No,No
+AI,styles,Metadata Only,No,No
+AI,summary-mapper,Metadata Only,No,No
+AI,task_handler,Metadata Only,No,No
+AI,task_manager,Metadata Only,No,No
+AI,task_processor,Metadata Only,No,No
+AI,task_tree_manager,Metadata Only,No,No
+AI,test-multibar,Metadata Only,No,No
+AI,test_async_prompt,Metadata Only,No,No
+AI,test_backend_interface,Metadata Only,No,No
+AI,test_base_agent_coverage,Metadata Only,No,No
+AI,test_controller,Metadata Only,No,No
+AI,test_cost_tracker,Metadata Only,No,No
+AI,test_events,Metadata Only,No,No
+AI,test_install_planner,Metadata Only,No,No
+AI,test_integration,Metadata Only,No,No
+AI,test_langfuse,Metadata Only,No,No
+AI,test_mcp_auth_session_reuse,Metadata Only,No,No
+AI,test_mcp_client_and_hitl,Metadata Only,No,No
+AI,test_mcp_server,Metadata Only,No,No
+AI,test_output_parser,Metadata Only,No,No
+AI,test_playbook,Metadata Only,No,No
+AI,test_stage2_integration,Metadata Only,No,No
+AI,test_trigger_system,Metadata Only,No,No
+Web Enumeration,test_web_agent_set_auth,Metadata Only,No,No
+AI,tmux_manager,Metadata Only,No,No
+AI,tool_error_middleware,Metadata Only,No,No
+AI,tool_error_middleware_test,Metadata Only,No,No
+AI,tool_invoke_notify,Metadata Only,No,No
+AI,tracer,Metadata Only,No,No
+AI,trigger_system,Metadata Only,No,No
+AI,truncate_test,Metadata Only,No,No
+AI,tsdownconfig,Metadata Only,No,No
+AI,tui,Metadata Only,No,No
+AI,types_7,Metadata Only,No,No
+AI,utils,Metadata Only,No,No
+AI,validate,Metadata Only,No,No
+AI,validate-authentication,Metadata Only,No,No
+AI,validation-harness,Metadata Only,No,No
+AI,vulnerability-triage,Metadata Only,No,No
+Web Enumeration,Web,Metadata Only,No,No
+Web Enumeration,webshell_context,Metadata Only,No,No
+Web Enumeration,webshell_context_test,Metadata Only,No,No
+Web Enumeration,webshell_probe,Metadata Only,No,No
+AI,wechat,Metadata Only,No,No
+AI,wireless_agent,Metadata Only,No,No
+AI,workflow-logger,Metadata Only,No,No
+AI,workflow_engine,Metadata Only,No,No
+AI,_14,Metadata Only,No,No
+AI,_rules_1,Metadata Only,No,No
+AI,_target_1,Metadata Only,No,No
+AI,__init___109,Metadata Only,No,No
+AI,__init___11,Metadata Only,No,No
+AI,__init___141,Metadata Only,No,No
+AI,__init___144,Metadata Only,No,No
+AI,__init___17,Metadata Only,No,No
+AI,__init___202,Metadata Only,No,No
+AI,__init___211,Metadata Only,No,No
+AI,__init___29,Metadata Only,No,No
+AI,__init___31,Metadata Only,No,No
+AI,__init___50,Metadata Only,No,No
+AI,__init___52,Metadata Only,No,No
+AI,__init___6,Metadata Only,No,No
+AI,__init___70,Metadata Only,No,No
+General,activities,Metadata Only,No,No
+General,agent-execution,Metadata Only,No,No
+General,agents,Metadata Only,No,No
+General,agent_1,Metadata Only,No,No
+General,agent_runner,Metadata Only,No,No
+General,agent_test,Metadata Only,No,No
+General,anthropic_agent,Metadata Only,No,No
+General,anthropic_official,Metadata Only,No,No
+General,api,Metadata Only,No,No
+General,api-discoverer-agent,Metadata Only,No,No
+General,api-discovery,Metadata Only,No,No
+General,api-discoverytest,Metadata Only,No,No
+General,api-docs,Metadata Only,No,No
+General,api-schema-analyzer,Metadata Only,No,No
+General,apitest,Metadata Only,No,No
+General,api_authentication,Metadata Only,No,No
+General,api_pipeline,Metadata Only,No,No
+General,app,Metadata Only,No,No
+General,app_2,Metadata Only,No,No
+General,app_config,Metadata Only,No,No
+General,asvs-mapper,Metadata Only,No,No
+General,async_prompt,Metadata Only,No,No
+AI,attackchain,Metadata Only,No,No
+General,audit,Metadata Only,No,No
+General,audit-session,Metadata Only,No,No
+General,audit_1,Metadata Only,No,No
+General,aup_consent,Metadata Only,No,No
+General,auth,Metadata Only,No,No
+General,auth_analyzer,Metadata Only,No,No
+General,auth_cache,Metadata Only,No,No
+General,backend,Metadata Only,No,No
+General,banner_analyzer,Metadata Only,No,No
+General,billing-detection,Metadata Only,No,No
+General,build,Metadata Only,No,No
+General,build-mvn,Metadata Only,No,No
+General,burp_client,Metadata Only,No,No
+General,burp_commands,Metadata Only,No,No
+General,business-logic-agent,Metadata Only,No,No
+General,c2_lifecycle,Metadata Only,No,No
+General,c2_tools,Metadata Only,No,No
+General,captcha_replay,Metadata Only,No,No
+AI,chain,Metadata Only,No,No
+General,chat-files,Metadata Only,No,No
+General,chatgpt,Metadata Only,No,No
+General,chatgpt_api,Metadata Only,No,No
+General,chatgpt_config_sample,Metadata Only,No,No
+General,chat_config,Metadata Only,No,No
+General,checkpoint,Metadata Only,No,No
+General,checkpoint-manager,Metadata Only,No,No
+General,citations,Metadata Only,No,No
+AI,clair,Metadata Only,No,No
+General,claude_bridge,Metadata Only,No,No
+General,client,Metadata Only,No,No
+General,CODE_OF_CONDUCT,Metadata Only,No,No
+General,config,Metadata Only,No,No
+General,config-loader,Metadata Only,No,No
+General,config_2,Metadata Only,No,No
+General,config_5,Metadata Only,No,No
+General,config_6,Metadata Only,No,No
+General,conftest,Metadata Only,No,No
+General,constants,Metadata Only,No,No
+General,content_fingerprint,Metadata Only,No,No
+General,CONTRIBUTING_2,Metadata Only,No,No
+General,CONTRIBUTING_3,Metadata Only,No,No
+General,CONTRIBUTING_4,Metadata Only,No,No
+General,conversation,Metadata Only,No,No
+General,corpus,Metadata Only,No,No
+General,cors-probe-agent,Metadata Only,No,No
+General,cors_reflection,Metadata Only,No,No
+General,cortex,Metadata Only,No,No
+General,coupon_forging,Metadata Only,No,No
+General,credential_detector,Metadata Only,No,No
+General,cve_db,Metadata Only,No,No
+General,cve_poc_primitives,Metadata Only,No,No
+General,cvss-calculator,Metadata Only,No,No
+AI,CyberStrikeAIClient,Metadata Only,No,No
+AI,CyberStrikeAIClientAgentMode,Metadata Only,No,No
+General,dark-matter,Metadata Only,No,No
+General,dark-mattertest,Metadata Only,No,No
+General,dashboard,Metadata Only,No,No
+General,dashboard_2,Metadata Only,No,No
+General,DATA-PRIVACY,Metadata Only,No,No
+General,datasrcs,Metadata Only,No,No
+General,debug,Metadata Only,No,No
+General,DECISION,Metadata Only,No,No
+General,deepseek,Metadata Only,No,No
+General,deepseek_api,Metadata Only,No,No
+General,default_single_system_prompt,Metadata Only,No,No
+General,DEPLOYMENT,Metadata Only,No,No
+General,deserialization,Metadata Only,No,No
+General,documentation-agent,Metadata Only,No,No
+General,doc_3,Metadata Only,No,No
+General,DPA,Metadata Only,No,No
+General,eino,Metadata Only,No,No
+General,eino_single_runner,Metadata Only,No,No
+General,eino_test,Metadata Only,No,No
+General,eino_transient_retry,Metadata Only,No,No
+General,eino_transient_retry_test,Metadata Only,No,No
+General,embedding,Metadata Only,No,No
+General,endpoint_classifier,Metadata Only,No,No
+General,engineapi_test,Metadata Only,No,No
+General,envexpand_test,Metadata Only,No,No
+General,env_2,Metadata Only,No,No
+General,env_4,Metadata Only,No,No
+General,error-handling,Metadata Only,No,No
+General,ErrorPatternAnalyzertest,Metadata Only,No,No
+General,errors,Metadata Only,No,No
+General,evidence,Metadata Only,No,No
+General,executor_2,Metadata Only,No,No
+General,exploit-authz_1,Metadata Only,No,No
+General,exploit-authz_3,Metadata Only,No,No
+General,express-scaffold,Metadata Only,No,No
+General,external_mcp_test,Metadata Only,No,No
+General,extract_cookie,Metadata Only,No,No
+General,facebook,Metadata Only,No,No
+General,feature-collector,Metadata Only,No,No
+General,forced_error,Metadata Only,No,No
+General,frontend-i18n,Metadata Only,No,No
+General,gemini,Metadata Only,No,No
+General,gemini_api,Metadata Only,No,No
+General,getting-started,Metadata Only,No,No
+General,gpt4all_api,Metadata Only,No,No
+General,graphql,Metadata Only,No,No
+Port Scanning,graphql-scanner,Metadata Only,No,No
+General,graphql_introspection,Metadata Only,No,No
+General,graphql_tool,Metadata Only,No,No
+General,hackertarget,Metadata Only,No,No
+General,harness,Metadata Only,No,No
+General,hidden_discovery,Metadata Only,No,No
+General,hitl,Metadata Only,No,No
+General,host_header_reset_poisoning,Metadata Only,No,No
+Web Enumeration,HTTPMethodAnalyzertest,Metadata Only,No,No
+Web Enumeration,http_extractor,Metadata Only,No,No
+General,idor_authenticated,Metadata Only,No,No
+General,idor_authz_differential,Metadata Only,No,No
+General,index,Metadata Only,No,No
+General,indexer,Metadata Only,No,No
+General,index_1,Metadata Only,No,No
+General,index_13,Metadata Only,No,No
+General,index_17,Metadata Only,No,No
+General,index_3,Metadata Only,No,No
+General,inference,Metadata Only,No,No
+General,inferencetest,Metadata Only,No,No
+General,install-git-hooks,Metadata Only,No,No
+General,INSTALL_2,Metadata Only,No,No
+General,jina,Metadata Only,No,No
+General,js-analysis,Metadata Only,No,No
+General,juiceshop,Metadata Only,No,No
+General,jwt_jku_x5u_ssrf,Metadata Only,No,No
+General,knowledge,Metadata Only,No,No
+General,knowledgejs,Metadata Only,No,No
+General,knowledge_base,Metadata Only,No,No
+General,langfuse,Metadata Only,No,No
+General,lark,Metadata Only,No,No
+General,ldap_injection,Metadata Only,No,No
+General,legacy,Metadata Only,No,No
+General,LICENSE,Metadata Only,No,No
+General,LICENSE_1,Metadata Only,No,No
+General,LICENSE_10,Metadata Only,No,No
+General,LICENSE_12,Metadata Only,No,No
+General,LICENSE_13,Metadata Only,No,No
+General,LICENSE_2,Metadata Only,No,No
+General,LICENSE_4,Metadata Only,No,No
+General,LICENSE_6,Metadata Only,No,No
+General,LICENSE_7,Metadata Only,No,No
+General,LICENSE_9,Metadata Only,No,No
+AI,llm,Metadata Only,No,No
+AI,llm-analysis,Metadata Only,No,No
+AI,llm-client,Metadata Only,No,No
+AI,llm-clienttest,Metadata Only,No,No
+AI,llm-clienttest_1,Metadata Only,No,No
+AI,llm-client_1,Metadata Only,No,No
+AI,llm_api,Metadata Only,No,No
+General,loader_1,Metadata Only,No,No
+General,LOCAL-SETUP,Metadata Only,No,No
+AI,main_4,Metadata Only,No,No
+AI,main_5,Metadata Only,No,No
+General,manager_2,Metadata Only,No,No
+General,markdown,Metadata Only,No,No
+General,MarkdownRenderer,Metadata Only,No,No
+General,markdown_agents,Metadata Only,No,No
+Port Scanning,masscan,Metadata Only,No,No
+Port Scanning,masscan_2,Metadata Only,No,No
+General,mass_assignment,Metadata Only,No,No
+General,mcp_client,Metadata Only,No,No
+General,mcp_manager,Metadata Only,No,No
+General,mcp_setup,Metadata Only,No,No
+General,memory_compressor,Metadata Only,No,No
+General,message-handlers,Metadata Only,No,No
+General,metrics-tracker,Metadata Only,No,No
+General,models_1,Metadata Only,No,No
+General,models_5,Metadata Only,No,No
+Port Scanning,module_import,Metadata Only,No,No
+General,monitor,Metadata Only,No,No
+General,multi_agent,Metadata Only,No,No
+General,MULTI_AGENT_EINO,Metadata Only,No,No
+General,nikto_tool,Metadata Only,No,No
+General,nmap-irc,Metadata Only,No,No
+General,notifications,Metadata Only,No,No
+General,no_nested_task,Metadata Only,No,No
+General,ollama_api,Metadata Only,No,No
+AI,openai,Metadata Only,No,No
+General,openapi,Metadata Only,No,No
+General,openapi-discovery-agent,Metadata Only,No,No
+General,openapi_i18n,Metadata Only,No,No
+General,openapi_parser,Metadata Only,No,No
+AI,open_ai,Metadata Only,No,No
+General,oracle-patator,Metadata Only,No,No
+General,orchestrator-plan-execute,Metadata Only,No,No
+General,orchestrator-supervisor,Metadata Only,No,No
+General,orphan_tool_pruner_middleware,Metadata Only,No,No
+General,osrframework,Metadata Only,No,No
+General,package_1,Metadata Only,No,No
+General,package_5,Metadata Only,No,No
+General,parameter_mapper,Metadata Only,No,No
+General,password_reset_weak,Metadata Only,No,No
+General,path_traversal,Metadata Only,No,No
+General,penetration,Metadata Only,No,No
+AI,pentest-ai,Metadata Only,No,No
+General,pentest_agent,Metadata Only,No,No
+General,pentest_gpt,Metadata Only,No,No
+General,pentest_gpt_rebuilt,Metadata Only,No,No
+General,pent_claude_agent_config,Metadata Only,No,No
+General,perplexity,Metadata Only,No,No
+General,persistencetest,Metadata Only,No,No
+General,playwright-config-writer,Metadata Only,No,No
+General,plugin_loader_1,Metadata Only,No,No
+General,poc_agent,Metadata Only,No,No
+General,pom,Metadata Only,No,No
+General,postman_parser,Metadata Only,No,No
+General,pre-recon-code_2,Metadata Only,No,No
+General,privilege_escalation_patch,Metadata Only,No,No
+General,project_manager,Metadata Only,No,No
+General,prototype_pollution,Metadata Only,No,No
+General,pyproject,Metadata Only,No,No
+General,quake_search,Metadata Only,No,No
+General,queue,Metadata Only,No,No
+General,race_condition,Metadata Only,No,No
+General,reactive-verifier,Metadata Only,No,No
+General,READMEzh-CN,Metadata Only,No,No
+General,README_10,Metadata Only,No,No
+General,README_11,Metadata Only,No,No
+General,README_13,Metadata Only,No,No
+General,README_15,Metadata Only,No,No
+General,README_32,Metadata Only,No,No
+General,README_33,Metadata Only,No,No
+General,README_38,Metadata Only,No,No
+General,README_50,Metadata Only,No,No
+General,README_54,Metadata Only,No,No
+General,README_55,Metadata Only,No,No
+General,README_CN_3,Metadata Only,No,No
+General,recon,Metadata Only,No,No
+General,reconx_engine,Metadata Only,No,No
+General,REFERENCE,Metadata Only,No,No
+General,reflected_xss,Metadata Only,No,No
+General,registry,Metadata Only,No,No
+General,release-pypi,Metadata Only,No,No
+General,replay,Metadata Only,No,No
+Port Scanning,report-snippet,Metadata Only,No,No
+Port Scanning,report_18,Metadata Only,No,No
+Port Scanning,report_injector,Metadata Only,No,No
+Port Scanning,report_injector_1,Metadata Only,No,No
+General,requirements_6,Metadata Only,No,No
+General,reset_juice_shop,Metadata Only,No,No
+General,retrieval_postprocess,Metadata Only,No,No
+General,retry,Metadata Only,No,No
+General,review,Metadata Only,No,No
+General,robot,Metadata Only,No,No
+General,robot_en,Metadata Only,No,No
+General,roles,Metadata Only,No,No
+General,route_correlator,Metadata Only,No,No
+General,RunCommand,Metadata Only,No,No
+General,runner,Metadata Only,No,No
+General,saml_xsw,Metadata Only,No,No
+General,sandbox,Metadata Only,No,No
+General,sanitize,Metadata Only,No,No
+General,schedulertest,Metadata Only,No,No
+General,scheduler_2,Metadata Only,No,No
+General,schema-gen-agent,Metadata Only,No,No
+General,scope,Metadata Only,No,No
+General,search,Metadata Only,No,No
+General,SecurityHeaderAnalyzertest,Metadata Only,No,No
+General,server,Metadata Only,No,No
+General,service,Metadata Only,No,No
+General,services_commands,Metadata Only,No,No
+General,service_intelligence_view,Metadata Only,No,No
+General,settings,Metadata Only,No,No
+General,shared,Metadata Only,No,No
+General,sherlock,Metadata Only,No,No
+General,shodan_api,Metadata Only,No,No
+General,shodan_apicpython-313,Metadata Only,No,No
+General,shodan_search,Metadata Only,No,No
+General,sitemap-agent,Metadata Only,No,No
+General,SKILL,Metadata Only,No,No
+General,skills,Metadata Only,No,No
+General,SKILL_11,Metadata Only,No,No
+General,SKILL_13,Metadata Only,No,No
+General,SKILL_3,Metadata Only,No,No
+General,SKILL_7,Metadata Only,No,No
+General,SKILL_9,Metadata Only,No,No
+General,source-gen-agent,Metadata Only,No,No
+General,ssti_polyglot,Metadata Only,No,No
+General,status,Metadata Only,No,No
+General,stored_xss,Metadata Only,No,No
+General,style,Metadata Only,No,No
+General,sub_agent_context,Metadata Only,No,No
+General,sub_agent_context_test,Metadata Only,No,No
+General,SUMMARY,Metadata Only,No,No
+General,swagger_2,Metadata Only,No,No
+General,swagger_parser,Metadata Only,No,No
+General,tasks,Metadata Only,No,No
+General,telemetry,Metadata Only,No,No
+General,terminal,Metadata Only,No,No
+General,test-cortex-integration,Metadata Only,No,No
+General,test-gen-agent,Metadata Only,No,No
+General,testLogin,Metadata Only,No,No
+General,test_agent_loop,Metadata Only,No,No
+General,test_agent_mode_cli,Metadata Only,No,No
+General,test_anthropic_agent,Metadata Only,No,No
+General,test_auth_profiles,Metadata Only,No,No
+General,test_auth_profile_cli,Metadata Only,No,No
+General,test_auth_runner,Metadata Only,No,No
+General,test_benchmarks_scoring_common,Metadata Only,No,No
+General,test_browser_agent,Metadata Only,No,No
+AI,test_chain,Metadata Only,No,No
+AI,test_chain_quality,Metadata Only,No,No
+General,test_config,Metadata Only,No,No
+General,test_connection,Metadata Only,No,No
+Web Enumeration,test_handler_web_probes,Metadata Only,No,No
+General,test_langfuse_1,Metadata Only,No,No
+General,test_legacy_probe_migration,Metadata Only,No,No
+AI,test_llm,Metadata Only,No,No
+AI,test_llm_e2e_smoke,Metadata Only,No,No
+General,test_mcp_action_surface,Metadata Only,No,No
+General,test_new_high_roi_probes,Metadata Only,No,No
+General,test_probe_cors_reflection,Metadata Only,No,No
+General,test_probe_coupon_forging,Metadata Only,No,No
+General,test_probe_cve_poc,Metadata Only,No,No
+General,test_probe_deserialization,Metadata Only,No,No
+General,test_probe_dom_xss,Metadata Only,No,No
+General,test_probe_file_upload_validation,Metadata Only,No,No
+General,test_probe_forced_error,Metadata Only,No,No
+General,test_probe_graphql_introspection,Metadata Only,No,No
+General,test_probe_hidden_discovery,Metadata Only,No,No
+General,test_probe_host_header_reset_poisoning,Metadata Only,No,No
+General,test_probe_idor_authenticated,Metadata Only,No,No
+General,test_probe_idor_authz_differential,Metadata Only,No,No
+General,test_probe_idor_sequential,Metadata Only,No,No
+General,test_probe_ldap_injection,Metadata Only,No,No
+General,test_probe_mass_assignment,Metadata Only,No,No
+General,test_probe_path_traversal,Metadata Only,No,No
+General,test_probe_primitives,Metadata Only,No,No
+General,test_probe_prototype_pollution,Metadata Only,No,No
+General,test_probe_race_condition,Metadata Only,No,No
+General,test_probe_reflected_xss,Metadata Only,No,No
+General,test_probe_registry,Metadata Only,No,No
+General,test_probe_ssti_stored,Metadata Only,No,No
+General,test_probe_stored_xss,Metadata Only,No,No
+Web Enumeration,test_probe_web3,Metadata Only,No,No
+Web Enumeration,test_probe_web_cache_deception,Metadata Only,No,No
+General,test_probe_xxe_upload,Metadata Only,No,No
+General,test_providers,Metadata Only,No,No
+General,test_registry_bridge,Metadata Only,No,No
+General,test_scope,Metadata Only,No,No
+General,test_spa_probes,Metadata Only,No,No
+General,test_specialist_agents_coverage,Metadata Only,No,No
+General,test_stage1,Metadata Only,No,No
+General,test_tracing_and_telemetry,Metadata Only,No,No
+General,test_working_memory,Metadata Only,No,No
+General,tracing,Metadata Only,No,No
+General,traffic_parser,Metadata Only,No,No
+AI,train-filternet,Metadata Only,No,No
+AI,train-simple,Metadata Only,No,No
+General,TROUBLESHOOTING,Metadata Only,No,No
+General,truncate,Metadata Only,No,No
+General,trusted_header_bypass,Metadata Only,No,No
+General,types,Metadata Only,No,No
+General,unauthed-decision-log,Metadata Only,No,No
+General,upgrade,Metadata Only,No,No
+Port Scanning,urlscan,Metadata Only,No,No
+General,utils_2,Metadata Only,No,No
+General,validate-authentication,Metadata Only,No,No
+General,vuln-auth_3,Metadata Only,No,No
+General,vuln-ssrf_3,Metadata Only,No,No
+General,vulnerability,Metadata Only,No,No
+General,wayback,Metadata Only,No,No
+General,waybackurls,Metadata Only,No,No
+Web Enumeration,web3_probe,Metadata Only,No,No
+Web Enumeration,webshell,Metadata Only,No,No
+Web Enumeration,web_intelligence_view,Metadata Only,No,No
+Web Enumeration,web_parser,Metadata Only,No,No
+Web Enumeration,web_probes,Metadata Only,No,No
+General,wechat-robot,Metadata Only,No,No
+General,wechat_robot,Metadata Only,No,No
+General,wordlist,Metadata Only,No,No
+General,workflow-errors,Metadata Only,No,No
+General,workflows,Metadata Only,No,No
+General,workflow_engine_1,Metadata Only,No,No
+Port Scanning,wpscan,Metadata Only,No,No
+General,writer,Metadata Only,No,No
+General,xxe_upload,Metadata Only,No,No
+General,zap,Metadata Only,No,No
+General,__init___112,Metadata Only,No,No
+General,__init___115,Metadata Only,No,No
+General,__init___116,Metadata Only,No,No
+General,__init___142,Metadata Only,No,No
+General,__init___146,Metadata Only,No,No
+General,__init___153,Metadata Only,No,No
+General,__init___203,Metadata Only,No,No
+General,__init___22,Metadata Only,No,No
+General,__init___34,Metadata Only,No,No
+General,__init___64,Metadata Only,No,No
+General,builtin-tools,Metadata Only,No,No
+General,constants,Metadata Only,No,No
+AI,CyberStrikeAIClientStreamListener,Metadata Only,No,No
+AI,CyberStrikeAITab1,Metadata Only,No,No
+AI,CyberStrikeAITabDotIcon,Metadata Only,No,No
+General,headers_inject,Metadata Only,No,No
+AI,hexstrike-ai-mcp,Metadata Only,No,No
+AI,main,Metadata Only,No,No
+General,mcp,Metadata Only,No,No
+General,mcp_tools_test,Metadata Only,No,No
+General,monitor_1,Metadata Only,No,No
+General,options,Metadata Only,No,No
+General,README_6,Metadata Only,No,No
+General,SimpleJson,Metadata Only,No,No
+General,sse_keepalive,Metadata Only,No,No
+General,SslTrustAll1,Metadata Only,No,No
+General,SslTrustAllTimeoutSslSocketFactory,Metadata Only,No,No
+General,test_file_transfer,Metadata Only,No,No
+General,test_handlers_misc,Metadata Only,No,No
+General,__init___38,Metadata Only,No,No
+General,__init___55,Metadata Only,No,No
+AI,__main__,Metadata Only,No,No
+Cloud,404StarLinkLogo,Partial,Yes,No
+Cloud,agent-management,Partial,Yes,No
+Cloud,agents-for,Partial,Yes,No
+Cloud,ai_analysis,Partial,Yes,No
+Cloud,alterations,Partial,Yes,No
+Cloud,announcements,Partial,Yes,No
+Cloud,AUP,Partial,Yes,No
+Cloud,auth_profiles,Partial,Yes,No
+Cloud,aws,Partial,Yes,No
+Cloud,aws_recon,Partial,Yes,No
+Cloud,aws_sm,Partial,Yes,No
+Cloud,azure,Partial,Yes,No
+Cloud,azure_recon,Partial,Yes,No
+Cloud,banner_2,Partial,Yes,No
+Cloud,benchmark_runner,Partial,Yes,No
+Cloud,bizlogic-hunter,Partial,Yes,No
+Cloud,bucket_correlator,Partial,Yes,No
+Port Scanning,bug_report,Partial,Yes,No
+Cloud,ccr-config-template,Partial,Yes,No
+Cloud,chat,Partial,Yes,No
+Cloud,chatgpt_config_curl,Partial,Yes,No
+Cloud,ChatGPT_key,Partial,Yes,No
+Cloud,checkov,Partial,Yes,No
+Cloud,ci_1,Partial,Yes,No
+Cloud,ci_cd_cloud,Partial,Yes,No
+Cloud,ci_cd_cloud_mapper,Partial,Yes,No
+Cloud,claude-executor,Partial,Yes,No
+Cloud,CLAUDE_2,Partial,Yes,No
+Cloud,CLAUDE_3,Partial,Yes,No
+Cloud,clear,Partial,Yes,No
+Cloud,cli,Partial,Yes,No
+Cloud,cloud-security,Partial,Yes,No
+Cloud,cloudfront_mapper,Partial,Yes,No
+Cloud,cloudmapper,Partial,Yes,No
+Cloud,cloud_agent,Partial,Yes,No
+Cloud,cloud_attack_surface,Partial,Yes,No
+Cloud,cloud_enum,Partial,Yes,No
+Cloud,cloud_fingerprint,Partial,Yes,No
+Cloud,cloud_models,Partial,Yes,No
+Cloud,cloud_pipeline,Partial,Yes,No
+Cloud,cloud_storage,Partial,Yes,No
+Cloud,conftest_2,Partial,Yes,No
+Cloud,container-breakout,Partial,Yes,No
+Cloud,CUSTOMIZATION,Partial,Yes,No
+Cloud,CyberStrikeAITab,Partial,Yes,No
+Cloud,dec-2025,Partial,Yes,No
+Cloud,demo,Partial,Yes,No
+Cloud,demo_1,Partial,Yes,No
+Cloud,dependabot_3,Partial,Yes,No
+Cloud,devcontainer,Partial,Yes,No
+Cloud,DISCLAIMER,Partial,Yes,No
+Cloud,docker,Partial,Yes,No
+Cloud,docker-compose,Partial,Yes,No
+Cloud,docker-compose_1,Partial,Yes,No
+Cloud,docker-compose_2,Partial,Yes,No
+Cloud,docker-compose_3,Partial,Yes,No
+Cloud,Dockerfile_4,Partial,Yes,No
+Cloud,Dockerfile_7,Partial,Yes,No
+Cloud,Dockerfile_9,Partial,Yes,No
+Cloud,docker_2,Partial,Yes,No
+Cloud,docker_manager,Partial,Yes,No
+Cloud,docker_nightly,Partial,Yes,No
+Cloud,docker_registry_analyzer,Partial,Yes,No
+Cloud,domains,Partial,Yes,No
+Cloud,embedder,Partial,Yes,No
+Cloud,engagement-planner,Partial,Yes,No
+Cloud,entrypoint,Partial,Yes,No
+Cloud,env,Partial,Yes,No
+Cloud,env_3,Partial,Yes,No
+Cloud,example-stig-finding,Partial,Yes,No
+Cloud,executor_test,Partial,Yes,No
+Cloud,exploit-auth,Partial,Yes,No
+Cloud,exploit-authz,Partial,Yes,No
+Cloud,exploit-authz_2,Partial,Yes,No
+Cloud,exploit-auth_2,Partial,Yes,No
+Cloud,exploit-injection,Partial,Yes,No
+Cloud,exploit-xss,Partial,Yes,No
+Cloud,exploit-xss_2,Partial,Yes,No
+Port Scanning,export_menu,Partial,Yes,No
+Cloud,factory,Partial,Yes,No
+Cloud,fill-legal,Partial,Yes,No
+Cloud,fingerprinter,Partial,Yes,No
+Cloud,fingerprintertest,Partial,Yes,No
+Cloud,fix-workspace-permissions,Partial,Yes,No
+Cloud,gcp,Partial,Yes,No
+Cloud,gcp_recon,Partial,Yes,No
+Cloud,github-banner,Partial,Yes,No
+Cloud,gitleaks,Partial,Yes,No
+Cloud,go_2,Partial,Yes,No
+Cloud,graphw00f,Partial,Yes,No
+Cloud,hexstrike-logo,Partial,Yes,No
+Cloud,home,Partial,Yes,No
+Cloud,index_5,Partial,Yes,No
+Cloud,javascript,Partial,Yes,No
+Cloud,js-harvester-agent,Partial,Yes,No
+Cloud,kube-bench,Partial,Yes,No
+Cloud,kube-hunter,Partial,Yes,No
+Cloud,kubernetes,Partial,Yes,No
+Cloud,launch-config,Partial,Yes,No
+Cloud,leaksapi-banner,Partial,Yes,No
+Cloud,leaksapi-logo,Partial,Yes,No
+Cloud,LICENSE_5,Partial,Yes,No
+Cloud,litellm_provider,Partial,Yes,No
+Cloud,logo_3,Partial,Yes,No
+Cloud,main_13,Partial,Yes,No
+Cloud,main_menu,Partial,Yes,No
+Cloud,Makefile,Partial,Yes,No
+Cloud,mindmap_obsidian,Partial,Yes,No
+Cloud,misconfig-detector,Partial,Yes,No
+Cloud,misconfigtest,Partial,Yes,No
+Cloud,mobile-pentester,Partial,Yes,No
+Cloud,mode,Partial,Yes,No
+Cloud,orchestrator,Partial,Yes,No
+Cloud,outputs,Partial,Yes,No
+Cloud,package_3,Partial,Yes,No
+Cloud,pacu,Partial,Yes,No
+Cloud,pentestgpt_executor,Partial,Yes,No
+Cloud,PentestGPT_Hackable2,Partial,Yes,No
+Cloud,plugins,Partial,Yes,No
+Cloud,pnpm-lock,Partial,Yes,No
+Cloud,poc-validator,Partial,Yes,No
+Cloud,pre-recon-code,Partial,Yes,No
+Cloud,privesc-advisor,Partial,Yes,No
+Cloud,privesc_agent,Partial,Yes,No
+Cloud,prowler,Partial,Yes,No
+Cloud,pyproject_3,Partial,Yes,No
+Cloud,quick-start,Partial,Yes,No
+Cloud,README_21,Partial,Yes,No
+Cloud,README_22,Partial,Yes,No
+Cloud,README_28,Partial,Yes,No
+Cloud,README_29,Partial,Yes,No
+Cloud,README_30,Partial,Yes,No
+Cloud,reconcloud,Partial,Yes,No
+Cloud,reconx,Partial,Yes,No
+Cloud,release-beta,Partial,Yes,No
+Cloud,release_1,Partial,Yes,No
+Cloud,requirements_7,Partial,Yes,No
+Cloud,resolver,Partial,Yes,No
+Cloud,results,Partial,Yes,No
+Cloud,role-management,Partial,Yes,No
+Cloud,rollback,Partial,Yes,No
+Cloud,rsecloud,Partial,Yes,No
+Port Scanning,s3scanner,Partial,Yes,No
+Port Scanning,s3_scanner,Partial,Yes,No
+Cloud,sarif,Partial,Yes,No
+Port Scanning,scan_pipeline,Partial,Yes,No
+Port Scanning,scan_running,Partial,Yes,No
+Cloud,scout-suite,Partial,Yes,No
+Cloud,Screenshot2,Partial,Yes,No
+Cloud,Screenshot3,Partial,Yes,No
+Cloud,Screenshot4,Partial,Yes,No
+Port Scanning,secret-scanner-agent,Partial,Yes,No
+Cloud,secure_credential,Partial,Yes,No
+Cloud,security,Partial,Yes,No
+Cloud,SECURITY_3,Partial,Yes,No
+Cloud,selection_agent,Partial,Yes,No
+Cloud,server_mcp_pentest_18,Partial,Yes,No
+Cloud,service_analyzer,Partial,Yes,No
+Cloud,service_correlator_1,Partial,Yes,No
+Cloud,settings_2,Partial,Yes,No
+Cloud,setup,Partial,Yes,No
+Cloud,setup_1,Partial,Yes,No
+Cloud,shannon-banner,Partial,Yes,No
+Cloud,SHANNON-PRO_1,Partial,Yes,No
+Port Scanning,shannon-report-capital-api,Partial,Yes,No
+Cloud,shannon-screen,Partial,Yes,No
+Cloud,shodan,Partial,Yes,No
+Cloud,six2dez_reconftw-stars-history,Partial,Yes,No
+Cloud,SKILL_1,Partial,Yes,No
+Cloud,SKILL_14,Partial,Yes,No
+Cloud,SKILL_16,Partial,Yes,No
+Cloud,SKILL_17,Partial,Yes,No
+Cloud,SKILL_4,Partial,Yes,No
+Cloud,social-engineer,Partial,Yes,No
+Cloud,sponsor-wechat-alipay-qr,Partial,Yes,No
+Cloud,ssrf_cloud_metadata,Partial,Yes,No
+Cloud,ssrf_payloads,Partial,Yes,No
+Cloud,stop,Partial,Yes,No
+Cloud,tch,Partial,Yes,No
+Cloud,tcp_beacon_server,Partial,Yes,No
+Cloud,teardown,Partial,Yes,No
+Cloud,techdetect,Partial,Yes,No
+Cloud,terraform-reconFTW,Partial,Yes,No
+Cloud,test_ad_agent_e2e_smoke,Partial,Yes,No
+Cloud,test_agents,Partial,Yes,No
+Cloud,test_benchmark_cli,Partial,Yes,No
+Cloud,test_chain_context_discriminator,Partial,Yes,No
+Cloud,test_cli_menu,Partial,Yes,No
+Cloud,test_cloud_agent_e2e_smoke,Partial,Yes,No
+Cloud,test_container_health,Partial,Yes,No
+Cloud,test_docker_build,Partial,Yes,No
+Cloud,test_flag_detection,Partial,Yes,No
+Cloud,test_litellm_provider,Partial,Yes,No
+Cloud,test_misc_coverage_2,Partial,Yes,No
+Cloud,test_probe_ssrf_cloud_metadata,Partial,Yes,No
+Cloud,test_providers_and_small_agents,Partial,Yes,No
+Cloud,test_selection_agent,Partial,Yes,No
+Cloud,trufflehog,Partial,Yes,No
+Cloud,type_confusion,Partial,Yes,No
+Cloud,uninstall,Partial,Yes,No
+Cloud,USAGE,Partial,Yes,No
+Cloud,usage_input,Partial,Yes,No
+Cloud,usage_output,Partial,Yes,No
+Cloud,usage_server1,Partial,Yes,No
+Cloud,usage_server2,Partial,Yes,No
+Cloud,variables,Partial,Yes,No
+Cloud,vectorDB,Partial,Yes,No
+Cloud,vuln-auth,Partial,Yes,No
+Cloud,vuln-authz,Partial,Yes,No
+Cloud,vuln-authz_2,Partial,Yes,No
+Cloud,vuln-auth_2,Partial,Yes,No
+Cloud,vuln-injection,Partial,Yes,No
+Cloud,vuln-injection_2,Partial,Yes,No
+Cloud,vuln-xss,Partial,Yes,No
+Cloud,vuln-xss_2,Partial,Yes,No
+Cloud,vulnerability-management,Partial,Yes,No
+Cloud,waf-detector-agent,Partial,Yes,No
+Cloud,wafw00f,Partial,Yes,No
+Web Enumeration,web-console,Partial,Yes,No
+Cloud,wechat-group-cyberstrikeai-qr,Partial,Yes,No
+Cloud,workflow_center,Partial,Yes,No
+Cloud,workspaces,Partial,Yes,No
+Cloud,zh-CN,Partial,Yes,No
+Cloud,_10,Partial,Yes,No
+Cloud,__init___119,Partial,Yes,No
+Cloud,__init___26,Partial,Yes,No
+Cloud,__init___78,Partial,Yes,No
+Cloud,404StarLinkLogo,Metadata Only,No,No
+Cloud,agent-management,Metadata Only,No,No
+Cloud,agents-for,Metadata Only,No,No
+Cloud,ai_analysis,Metadata Only,No,No
+Cloud,alterations,Metadata Only,No,No
+Cloud,announcements,Metadata Only,No,No
+Cloud,AUP,Metadata Only,No,No
+Cloud,auth_profiles,Metadata Only,No,No
+Cloud,aws,Metadata Only,No,No
+Cloud,aws_sm,Metadata Only,No,No
+Cloud,azure,Metadata Only,No,No
+Cloud,azure_recon,Metadata Only,No,No
+Cloud,banner_2,Metadata Only,No,No
+Cloud,benchmark_runner,Metadata Only,No,No
+Cloud,bizlogic-hunter,Metadata Only,No,No
+Cloud,bucket_correlator,Metadata Only,No,No
+Port Scanning,bug_report,Metadata Only,No,No
+Cloud,build,Metadata Only,No,No
+Cloud,ccr-config-template,Metadata Only,No,No
+Cloud,chat,Metadata Only,No,No
+Cloud,chatgpt_config_curl,Metadata Only,No,No
+Cloud,ChatGPT_key,Metadata Only,No,No
+Cloud,checkov,Metadata Only,No,No
+Cloud,ci_1,Metadata Only,No,No
+Cloud,ci_cd_cloud,Metadata Only,No,No
+Cloud,ci_cd_cloud_mapper,Metadata Only,No,No
+Cloud,claude-executor,Metadata Only,No,No
+Cloud,CLAUDE_2,Metadata Only,No,No
+Cloud,CLAUDE_3,Metadata Only,No,No
+Cloud,clear,Metadata Only,No,No
+Cloud,cli,Metadata Only,No,No
+Cloud,cloud-security,Metadata Only,No,No
+Cloud,cloudfront_mapper,Metadata Only,No,No
+Cloud,cloudmapper,Metadata Only,No,No
+Cloud,cloud_agent,Metadata Only,No,No
+Cloud,cloud_attack_surface,Metadata Only,No,No
+Cloud,cloud_storage,Metadata Only,No,No
+Cloud,conftest_2,Metadata Only,No,No
+Cloud,container-breakout,Metadata Only,No,No
+Cloud,CUSTOMIZATION,Metadata Only,No,No
+Cloud,CyberStrikeAITab,Metadata Only,No,No
+Cloud,dec-2025,Metadata Only,No,No
+Cloud,demo,Metadata Only,No,No
+Cloud,demo_1,Metadata Only,No,No
+Cloud,dependabot_3,Metadata Only,No,No
+Cloud,devcontainer,Metadata Only,No,No
+Cloud,DISCLAIMER,Metadata Only,No,No
+Cloud,docker,Metadata Only,No,No
+Cloud,docker-compose,Metadata Only,No,No
+Cloud,docker-compose_1,Metadata Only,No,No
+Cloud,docker-compose_2,Metadata Only,No,No
+Cloud,docker-compose_3,Metadata Only,No,No
+Cloud,Dockerfile_4,Metadata Only,No,No
+Cloud,Dockerfile_7,Metadata Only,No,No
+Cloud,Dockerfile_9,Metadata Only,No,No
+Cloud,docker_2,Metadata Only,No,No
+Cloud,docker_manager,Metadata Only,No,No
+Cloud,docker_nightly,Metadata Only,No,No
+Cloud,docker_registry_analyzer,Metadata Only,No,No
+Cloud,domains,Metadata Only,No,No
+Cloud,embedder,Metadata Only,No,No
+Cloud,engagement-planner,Metadata Only,No,No
+Cloud,entrypoint,Metadata Only,No,No
+Cloud,env,Metadata Only,No,No
+Cloud,env_3,Metadata Only,No,No
+Cloud,example-stig-finding,Metadata Only,No,No
+Cloud,executor_test,Metadata Only,No,No
+Cloud,exploit-auth,Metadata Only,No,No
+Cloud,exploit-authz,Metadata Only,No,No
+Cloud,exploit-authz_2,Metadata Only,No,No
+Cloud,exploit-auth_2,Metadata Only,No,No
+Cloud,exploit-injection,Metadata Only,No,No
+Cloud,exploit-xss,Metadata Only,No,No
+Cloud,exploit-xss_2,Metadata Only,No,No
+Port Scanning,export_menu,Metadata Only,No,No
+Cloud,factory,Metadata Only,No,No
+Cloud,fill-legal,Metadata Only,No,No
+Cloud,fingerprinter,Metadata Only,No,No
+Cloud,fingerprintertest,Metadata Only,No,No
+Cloud,fix-workspace-permissions,Metadata Only,No,No
+Cloud,gcp,Metadata Only,No,No
+Cloud,gcp_recon,Metadata Only,No,No
+Cloud,github-banner,Metadata Only,No,No
+Cloud,gitleaks,Metadata Only,No,No
+Cloud,go_2,Metadata Only,No,No
+Cloud,graphw00f,Metadata Only,No,No
+Cloud,hexstrike-logo,Metadata Only,No,No
+Cloud,home,Metadata Only,No,No
+Cloud,index,Metadata Only,No,No
+Cloud,index_5,Metadata Only,No,No
+Cloud,javascript,Metadata Only,No,No
+Cloud,js-harvester-agent,Metadata Only,No,No
+Cloud,kube-bench,Metadata Only,No,No
+Cloud,kube-hunter,Metadata Only,No,No
+Cloud,kubernetes,Metadata Only,No,No
+Cloud,launch-config,Metadata Only,No,No
+Cloud,leaksapi-banner,Metadata Only,No,No
+Cloud,leaksapi-logo,Metadata Only,No,No
+Cloud,LICENSE_1,Metadata Only,No,No
+Cloud,LICENSE_5,Metadata Only,No,No
+Cloud,litellm_provider,Metadata Only,No,No
+Cloud,logo_3,Metadata Only,No,No
+Cloud,main_13,Metadata Only,No,No
+Cloud,main_menu,Metadata Only,No,No
+Cloud,Makefile,Metadata Only,No,No
+Cloud,mindmap_obsidian,Metadata Only,No,No
+Cloud,misconfig-detector,Metadata Only,No,No
+Cloud,misconfigtest,Metadata Only,No,No
+Cloud,mobile-pentester,Metadata Only,No,No
+Cloud,mode,Metadata Only,No,No
+Cloud,orchestrator,Metadata Only,No,No
+OSINT,osint,Metadata Only,No,No
+Cloud,outputs,Metadata Only,No,No
+Cloud,package_3,Metadata Only,No,No
+Cloud,pacu,Metadata Only,No,No
+Cloud,pentestgpt_executor,Metadata Only,No,No
+Cloud,PentestGPT_Hackable2,Metadata Only,No,No
+Cloud,plugins,Metadata Only,No,No
+Cloud,pnpm-lock,Metadata Only,No,No
+Cloud,poc-validator,Metadata Only,No,No
+Cloud,pre-recon-code,Metadata Only,No,No
+Cloud,privesc-advisor,Metadata Only,No,No
+Cloud,privesc_agent,Metadata Only,No,No
+Cloud,prowler,Metadata Only,No,No
+Cloud,pyproject_3,Metadata Only,No,No
+Cloud,quick-start,Metadata Only,No,No
+Cloud,README_21,Metadata Only,No,No
+Cloud,README_22,Metadata Only,No,No
+Cloud,README_28,Metadata Only,No,No
+Cloud,README_29,Metadata Only,No,No
+Cloud,README_30,Metadata Only,No,No
+Cloud,reconx,Metadata Only,No,No
+Cloud,release-beta,Metadata Only,No,No
+Cloud,release_1,Metadata Only,No,No
+Cloud,requirements_7,Metadata Only,No,No
+Cloud,resolver,Metadata Only,No,No
+Cloud,results,Metadata Only,No,No
+Cloud,role-management,Metadata Only,No,No
+Cloud,rollback,Metadata Only,No,No
+Cloud,sarif,Metadata Only,No,No
+Port Scanning,scan_pipeline,Metadata Only,No,No
+Port Scanning,scan_running,Metadata Only,No,No
+Cloud,scout-suite,Metadata Only,No,No
+Cloud,Screenshot2,Metadata Only,No,No
+Cloud,Screenshot3,Metadata Only,No,No
+Cloud,Screenshot4,Metadata Only,No,No
+Port Scanning,secret-scanner-agent,Metadata Only,No,No
+Cloud,secure_credential,Metadata Only,No,No
+Cloud,security,Metadata Only,No,No
+Cloud,SECURITY_3,Metadata Only,No,No
+Cloud,selection_agent,Metadata Only,No,No
+Cloud,server_mcp_pentest_18,Metadata Only,No,No
+Cloud,service_analyzer,Metadata Only,No,No
+Cloud,service_correlator_1,Metadata Only,No,No
+Cloud,settings,Metadata Only,No,No
+Cloud,settings_2,Metadata Only,No,No
+Cloud,setup,Metadata Only,No,No
+Cloud,setup_1,Metadata Only,No,No
+Cloud,shannon-banner,Metadata Only,No,No
+Cloud,SHANNON-PRO_1,Metadata Only,No,No
+Port Scanning,shannon-report-capital-api,Metadata Only,No,No
+Cloud,shannon-screen,Metadata Only,No,No
+Cloud,shodan,Metadata Only,No,No
+Cloud,six2dez_reconftw-stars-history,Metadata Only,No,No
+Cloud,skills,Metadata Only,No,No
+Cloud,SKILL_1,Metadata Only,No,No
+Cloud,SKILL_14,Metadata Only,No,No
+Cloud,SKILL_16,Metadata Only,No,No
+Cloud,SKILL_17,Metadata Only,No,No
+Cloud,SKILL_4,Metadata Only,No,No
+Cloud,social-engineer,Metadata Only,No,No
+Cloud,sponsor-wechat-alipay-qr,Metadata Only,No,No
+Cloud,ssrf_payloads,Metadata Only,No,No
+Cloud,status,Metadata Only,No,No
+Cloud,stop,Metadata Only,No,No
+Cloud,tch,Metadata Only,No,No
+Cloud,tcp_beacon_server,Metadata Only,No,No
+Cloud,teardown,Metadata Only,No,No
+Cloud,techdetect,Metadata Only,No,No
+Cloud,terraform-reconFTW,Metadata Only,No,No
+Cloud,test_ad_agent_e2e_smoke,Metadata Only,No,No
+Cloud,test_agents,Metadata Only,No,No
+Cloud,test_benchmark_cli,Metadata Only,No,No
+Cloud,test_chain_context_discriminator,Metadata Only,No,No
+Cloud,test_cli_menu,Metadata Only,No,No
+Cloud,test_cloud_agent_e2e_smoke,Metadata Only,No,No
+Cloud,test_container_health,Metadata Only,No,No
+Cloud,test_docker_build,Metadata Only,No,No
+Cloud,test_flag_detection,Metadata Only,No,No
+Cloud,test_litellm_provider,Metadata Only,No,No
+Cloud,test_misc_coverage_2,Metadata Only,No,No
+OSINT,test_osint_domain_info_msftrecon,Metadata Only,No,No
+Cloud,test_providers_and_small_agents,Metadata Only,No,No
+Cloud,test_selection_agent,Metadata Only,No,No
+Cloud,trufflehog,Metadata Only,No,No
+Cloud,type_confusion,Metadata Only,No,No
+Cloud,uninstall,Metadata Only,No,No
+Cloud,USAGE,Metadata Only,No,No
+Cloud,usage_input,Metadata Only,No,No
+Cloud,usage_output,Metadata Only,No,No
+Cloud,usage_server1,Metadata Only,No,No
+Cloud,usage_server2,Metadata Only,No,No
+Cloud,variables,Metadata Only,No,No
+Cloud,vectorDB,Metadata Only,No,No
+Cloud,vuln-auth,Metadata Only,No,No
+Cloud,vuln-authz,Metadata Only,No,No
+Cloud,vuln-authz_2,Metadata Only,No,No
+Cloud,vuln-auth_2,Metadata Only,No,No
+Cloud,vuln-injection,Metadata Only,No,No
+Cloud,vuln-injection_2,Metadata Only,No,No
+Cloud,vuln-xss,Metadata Only,No,No
+Cloud,vuln-xss_2,Metadata Only,No,No
+Cloud,vulnerability-management,Metadata Only,No,No
+Cloud,waf-detector-agent,Metadata Only,No,No
+Cloud,wafw00f,Metadata Only,No,No
+Web Enumeration,web-console,Metadata Only,No,No
+Cloud,wechat-group-cyberstrikeai-qr,Metadata Only,No,No
+Cloud,whois,Metadata Only,No,No
+Cloud,workflow_center,Metadata Only,No,No
+Cloud,workspaces,Metadata Only,No,No
+Cloud,zh-CN,Metadata Only,No,No
+Cloud,_10,Metadata Only,No,No
+Cloud,__init___119,Metadata Only,No,No
+Cloud,__init___26,Metadata Only,No,No
+Cloud,__init___78,Metadata Only,No,No
+General,common,Metadata Only,No,No
+General,hashpump,Metadata Only,No,No
+General,libc-database,Metadata Only,No,No
+General,linpeas,Metadata Only,No,No
+General,one-gadget,Metadata Only,No,No
+General,output_parser,Metadata Only,No,No
+General,pwninit,Metadata Only,No,No
+General,README_31,Metadata Only,No,No
+General,score_juiceshop,Metadata Only,No,No
+General,steghide,Metadata Only,No,No
+General,test_session,Metadata Only,No,No
+General,zsteg,Metadata Only,No,No
+General,__init___219,Metadata Only,No,No
+General,AGENT-GUIDE,Metadata Only,No,No
+General,agents,Metadata Only,No,No
+General,agent_mode_controller,Metadata Only,No,No
+AI,attackchain_1,Metadata Only,No,No
+Port Scanning,balanced-active-scan,Metadata Only,No,No
+General,BigQueryInjection,Metadata Only,No,No
+General,cache,Metadata Only,No,No
+AI,CassandraInjection,Metadata Only,No,No
+General,checkpoint-provider,Metadata Only,No,No
+General,common,Metadata Only,No,No
+General,concurrency,Metadata Only,No,No
+General,constants,Metadata Only,No,No
+AI,container,Metadata Only,No,No
+General,context,Metadata Only,No,No
+General,conversation_1,Metadata Only,No,No
+General,cve_mapper,Metadata Only,No,No
+General,cvss,Metadata Only,No,No
+General,database,Metadata Only,No,No
+General,DB2Injection,Metadata Only,No,No
+General,db_1,Metadata Only,No,No
+General,db_test,Metadata Only,No,No
+General,deliverables,Metadata Only,No,No
+General,detection_agent,Metadata Only,No,No
+General,eino_adk_run_loop,Metadata Only,No,No
+General,eino_meta_test,Metadata Only,No,No
+General,eino_retriever_adapter,Metadata Only,No,No
+AI,eino_retrieve_chain,Metadata Only,No,No
+General,eino_sqlite_indexer,Metadata Only,No,No
+General,endpoint-prober,Metadata Only,No,No
+General,ErrorPatternAnalyzer,Metadata Only,No,No
+General,exploit-auth_1,Metadata Only,No,No
+General,exploit-auth_3,Metadata Only,No,No
+General,exploit-injection_1,Metadata Only,No,No
+General,exploit-injection_3,Metadata Only,No,No
+General,exploit-ssrf_1,Metadata Only,No,No
+General,exploit-ssrf_3,Metadata Only,No,No
+General,exploit-xss_1,Metadata Only,No,No
+General,exploit-xss_3,Metadata Only,No,No
+General,exploitation-checker,Metadata Only,No,No
+Port Scanning,export,Metadata Only,No,No
+Port Scanning,export-metrics,Metadata Only,No,No
+General,finalizers,Metadata Only,No,No
+General,findings,Metadata Only,No,No
+General,FINDINGS-DB,Metadata Only,No,No
+General,findings-provider,Metadata Only,No,No
+General,findings-renderer,Metadata Only,No,No
+General,generators,Metadata Only,No,No
+General,gowitness,Metadata Only,No,No
+General,Hackable2_3,Metadata Only,No,No
+General,handoff,Metadata Only,No,No
+General,index_3,Metadata Only,No,No
+General,index_pipeline,Metadata Only,No,No
+General,Kioptrix_level_1,Metadata Only,No,No
+Web Enumeration,listener_http_test,Metadata Only,No,No
+General,manager,Metadata Only,No,No
+General,manager_start_test,Metadata Only,No,No
+General,menu_system,Metadata Only,No,No
+General,metasploit,Metadata Only,No,No
+General,metasploit_aux,Metadata Only,No,No
+General,metatron,Metadata Only,No,No
+General,metrics-tracker,Metadata Only,No,No
+General,migrate,Metadata Only,No,No
+General,net-recon-agent,Metadata Only,No,No
+General,nikto,Metadata Only,No,No
+General,nmap-distccd,Metadata Only,No,No
+General,nmap_2,Metadata Only,No,No
+General,notification,Metadata Only,No,No
+General,output-formatter,Metadata Only,No,No
+General,output-formatters,Metadata Only,No,No
+General,payloads,Metadata Only,No,No
+General,pentestTarget,Metadata Only,No,No
+General,pipeline,Metadata Only,No,No
+General,primitives,Metadata Only,No,No
+General,prompt_class,Metadata Only,No,No
+General,pwntools,Metadata Only,No,No
+General,query-execution-result,Metadata Only,No,No
+General,queue-schemas,Metadata Only,No,No
+General,queue-validation,Metadata Only,No,No
+Port Scanning,report-executive,Metadata Only,No,No
+Port Scanning,report-executive_3,Metadata Only,No,No
+Port Scanning,report-generator,Metadata Only,No,No
+Port Scanning,reporting,Metadata Only,No,No
+General,requester,Metadata Only,No,No
+General,requestercpython-313,Metadata Only,No,No
+General,retriever,Metadata Only,No,No
+General,schema,Metadata Only,No,No
+General,schema_migrate,Metadata Only,No,No
+General,session-manager,Metadata Only,No,No
+General,settings-writer,Metadata Only,No,No
+General,SKILL_10,Metadata Only,No,No
+General,SKILL_15,Metadata Only,No,No
+General,SKILL_21,Metadata Only,No,No
+General,target,Metadata Only,No,No
+General,task,Metadata Only,No,No
+General,test_aup_consent,Metadata Only,No,No
+General,test_benchmark_registry,Metadata Only,No,No
+AI,test_chain_dedup,Metadata Only,No,No
+AI,test_chain_validation,Metadata Only,No,No
+General,test_cve_db,Metadata Only,No,No
+General,test_cvss,Metadata Only,No,No
+General,test_diff,Metadata Only,No,No
+General,test_findings,Metadata Only,No,No
+General,test_findings_db_reaper,Metadata Only,No,No
+General,test_findings_db_reconciler,Metadata Only,No,No
+General,test_handler_finalizers,Metadata Only,No,No
+General,test_intensity_safe,Metadata Only,No,No
+General,test_orchestrator,Metadata Only,No,No
+General,test_probe_cookie_prefix_bypass,Metadata Only,No,No
+General,test_probe_jwt_jku_x5u_ssrf,Metadata Only,No,No
+General,test_probe_nextjs_rsc_rce,Metadata Only,No,No
+General,test_probe_saml_xsw,Metadata Only,No,No
+General,test_probe_sqli_login_bypass,Metadata Only,No,No
+General,test_sarif,Metadata Only,No,No
+Web Enumeration,test_webhooks,Metadata Only,No,No
+General,tls-analyzer,Metadata Only,No,No
+General,TOKEN-OPTIMIZATION,Metadata Only,No,No
+General,tool,Metadata Only,No,No
+General,types_5,Metadata Only,No,No
+General,vuln-authz_3,Metadata Only,No,No
+General,vuln-injection_3,Metadata Only,No,No
+General,vuln-mapper,Metadata Only,No,No
+General,vuln-mappertest,Metadata Only,No,No
+General,vuln-ssrf_1,Metadata Only,No,No
+General,vuln-xss_1,Metadata Only,No,No
+General,vuln-xss_3,Metadata Only,No,No
+General,worker,Metadata Only,No,No
+General,working_memory,Metadata Only,No,No
+General,xsser,Metadata Only,No,No
+General,_exploit-scope,Metadata Only,No,No
+General,_exploit-scope_1,Metadata Only,No,No
+General,_vuln-scope,Metadata Only,No,No
+General,_vuln-scope_1,Metadata Only,No,No
+General,active,Metadata Only,No,No
+General,active_test,Metadata Only,No,No
+General,auth,Metadata Only,No,No
+General,auth_manager,Metadata Only,No,No
+Port Scanning,basic_scan,Metadata Only,No,No
+General,beacon_host,Metadata Only,No,No
+General,brute,Metadata Only,No,No
+General,bruteforce-ftp,Metadata Only,No,No
+Web Enumeration,bruteforce-http,Metadata Only,No,No
+General,bruteforce-rdp,Metadata Only,No,No
+General,bruteforce-smb,Metadata Only,No,No
+General,bruteforce-ssh,Metadata Only,No,No
+General,brute_test,Metadata Only,No,No
+General,cgo_specific,Metadata Only,No,No
+General,check-env,Metadata Only,No,No
+General,client_2,Metadata Only,No,No
+General,client_sdk,Metadata Only,No,No
+General,codeclimate,Metadata Only,No,No
+General,common,Metadata Only,No,No
+General,config_2,Metadata Only,No,No
+General,config_4,Metadata Only,No,No
+General,curl-known-security,Metadata Only,No,No
+General,curl-robots,Metadata Only,No,No
+AI,CyberStrikeAIClient1,Metadata Only,No,No
+General,datasrcs_test,Metadata Only,No,No
+General,deepsource,Metadata Only,No,No
+General,dependabot_2,Metadata Only,No,No
+AI,eino_retrieve_chain_test,Metadata Only,No,No
+General,entrypoint_1,Metadata Only,No,No
+General,enum4linux,Metadata Only,No,No
+General,env,Metadata Only,No,No
+General,envexpand,Metadata Only,No,No
+General,env_1,Metadata Only,No,No
+General,error,Metadata Only,No,No
+General,eslintconfig,Metadata Only,No,No
+General,execute-python-script,Metadata Only,No,No
+General,external_manager,Metadata Only,No,No
+General,external_manager_test,Metadata Only,No,No
+General,external_mcp,Metadata Only,No,No
+General,falco,Metadata Only,No,No
+General,generate-totp,Metadata Only,No,No
+General,get-arch,Metadata Only,No,No
+General,gitleaks,Metadata Only,No,No
+General,goreleaser,Metadata Only,No,No
+General,home,Metadata Only,No,No
+General,index_14,Metadata Only,No,No
+General,index_7,Metadata Only,No,No
+General,install-python-package,Metadata Only,No,No
+Port Scanning,issue_importer,Metadata Only,No,No
+General,jaeles,Metadata Only,No,No
+General,ldap-search,Metadata Only,No,No
+General,lint,Metadata Only,No,No
+General,logger,Metadata Only,No,No
+General,loggercpython-313,Metadata Only,No,No
+General,logger_2,Metadata Only,No,No
+General,lookup-sid,Metadata Only,No,No
+AI,main_14,Metadata Only,No,No
+AI,main_15,Metadata Only,No,No
+Web Enumeration,main_server_http_redirect,Metadata Only,No,No
+Web Enumeration,main_server_http_redirect_test,Metadata Only,No,No
+General,mcp_reverse_shell,Metadata Only,No,No
+General,meta,Metadata Only,No,No
+Port Scanning,nbtscan,Metadata Only,No,No
+General,nikto,Metadata Only,No,No
+General,nmap-finger,Metadata Only,No,No
+General,nmap-kerberos,Metadata Only,No,No
+General,nmap-msrpc,Metadata Only,No,No
+General,nmap-nntp,Metadata Only,No,No
+General,nmap-redis,Metadata Only,No,No
+General,nmap-rmi,Metadata Only,No,No
+General,nmap-sip,Metadata Only,No,No
+General,nmap-ssh,Metadata Only,No,No
+General,nmap-telnet,Metadata Only,No,No
+General,nmap-tftp,Metadata Only,No,No
+General,nmap_tool_1,Metadata Only,No,No
+General,onesixtyone,Metadata Only,No,No
+General,oracle-odat,Metadata Only,No,No
+Port Scanning,oracle-scanner,Metadata Only,No,No
+General,oracle-tnscmd,Metadata Only,No,No
+Port Scanning,parallel_scans,Metadata Only,No,No
+General,paths,Metadata Only,No,No
+Port Scanning,portscan-top-tcp-ports,Metadata Only,No,No
+General,pre-commit-config_1,Metadata Only,No,No
+General,process_registry,Metadata Only,No,No
+General,pyproject_5,Metadata Only,No,No
+General,README_CN,Metadata Only,No,No
+General,README_CN_2,Metadata Only,No,No
+General,reconFTW,Metadata Only,No,No
+General,redirect-host-discovery,Metadata Only,No,No
+General,redis-cli,Metadata Only,No,No
+General,registry_2,Metadata Only,No,No
+General,release,Metadata Only,No,No
+General,requirements_14,Metadata Only,No,No
+General,requirements_15,Metadata Only,No,No
+General,requirements_5,Metadata Only,No,No
+General,resiliencetest,Metadata Only,No,No
+General,resolvers_test,Metadata Only,No,No
+General,resources,Metadata Only,No,No
+General,retrieval_postprocess_test,Metadata Only,No,No
+General,rigid,Metadata Only,No,No
+General,rigid_test,Metadata Only,No,No
+General,rpcclient,Metadata Only,No,No
+General,rpcdump,Metadata Only,No,No
+General,rsync-list-files,Metadata Only,No,No
+General,run,Metadata Only,No,No
+General,run-shannon-blackbox,Metadata Only,No,No
+General,run_all,Metadata Only,No,No
+General,run_bench,Metadata Only,No,No
+Port Scanning,rustscan,Metadata Only,No,No
+Port Scanning,rustscan_tool,Metadata Only,No,No
+General,save-deliverable,Metadata Only,No,No
+Web Enumeration,server_https_bootstrap,Metadata Only,No,No
+General,shannon,Metadata Only,No,No
+General,showmount,Metadata Only,No,No
+General,sipvicious,Metadata Only,No,No
+General,sleep,Metadata Only,No,No
+General,smb-vuln,Metadata Only,No,No
+General,smbclient,Metadata Only,No,No
+General,smbmap,Metadata Only,No,No
+General,snmpwalk,Metadata Only,No,No
+General,SslTrustAll,Metadata Only,No,No
+General,subprocess_mixin,Metadata Only,No,No
+General,subprocess_runner,Metadata Only,No,No
+General,terminal,Metadata Only,No,No
+General,terminal_ws_unix,Metadata Only,No,No
+Port Scanning,terrascan,Metadata Only,No,No
+General,test_cli_vps_count,Metadata Only,No,No
+Web Enumeration,test_ensure_webs_all,Metadata Only,No,No
+General,test_exec_context,Metadata Only,No,No
+General,test_injection,Metadata Only,No,No
+General,test_mcp_setup,Metadata Only,No,No
+General,test_permutation_wordlist_select,Metadata Only,No,No
+General,test_process_registry,Metadata Only,No,No
+General,test_profile_migration,Metadata Only,No,No
+General,test_resolver_env,Metadata Only,No,No
+General,test_secure_credential,Metadata Only,No,No
+General,test_target_expander,Metadata Only,No,No
+General,test_tracing_coverage,Metadata Only,No,No
+General,test_verbosity,Metadata Only,No,No
+General,trivy,Metadata Only,No,No
+General,tsconfig,Metadata Only,No,No
+General,tsconfigbase,Metadata Only,No,No
+General,tsconfig_1,Metadata Only,No,No
+General,turbo,Metadata Only,No,No
+Web Enumeration,webhooks,Metadata Only,No,No
+Web Enumeration,whatweb,Metadata Only,No,No
+General,winrm-detection,Metadata Only,No,No
+General,wordlist,Metadata Only,No,No
+General,wordlist_test,Metadata Only,No,No
+General,_13,Metadata Only,No,No
+General,__init___201,Metadata Only,No,No
+General,__init___205,Metadata Only,No,No
+General,__init___51,Metadata Only,No,No
+General,activity-logger,Metadata Only,No,No
+General,activity-logger_1,Metadata Only,No,No
+General,bloodhound,Metadata Only,No,No
+AI,domain-profiler,Metadata Only,No,No
+General,error-formatter,Metadata Only,No,No
+General,feature_request,Metadata Only,No,No
+General,file-io,Metadata Only,No,No
+General,file-operations,Metadata Only,No,No
+General,glob,Metadata Only,No,No
+General,index_1,Metadata Only,No,No
+General,input-validator,Metadata Only,No,No
+General,junit_xml,Metadata Only,No,No
+General,Keygraph_Button,Metadata Only,No,No
+General,metrics_1,Metadata Only,No,No
+General,progress-indicator,Metadata Only,No,No
+General,totp-validator,Metadata Only,No,No
+General,__init___207,Metadata Only,No,No
+General,ARCHITECTURE_2,Metadata Only,No,No
+General,bucket_exposure_engine,Metadata Only,No,No
+General,codeql,Metadata Only,No,No
+General,codeql-analysis,Metadata Only,No,No
+General,conversation_manager,Metadata Only,No,No
+General,dep-auto-merge,Metadata Only,No,No
+General,eino_meta,Metadata Only,No,No
+General,execution-runner,Metadata Only,No,No
+General,functional,Metadata Only,No,No
+General,gosum,Metadata Only,No,No
+General,health-monitor,Metadata Only,No,No
+General,index_2,Metadata Only,No,No
+General,logger_1,Metadata Only,No,No
+General,meta-cognition,Metadata Only,No,No
+General,naabu,Metadata Only,No,No
+General,queue-validator,Metadata Only,No,No
+General,README_25,Metadata Only,No,No
+General,README_9,Metadata Only,No,No
+General,recorder,Metadata Only,No,No
+General,release-binary,Metadata Only,No,No
+General,release-test,Metadata Only,No,No
+Port Scanning,rustscan_2,Metadata Only,No,No
+General,tests,Metadata Only,No,No
+General,update,Metadata Only,No,No
+General,vulnerability_1,Metadata Only,No,No
+General,__init___147,Metadata Only,No,No
+General,__init___224,Metadata Only,No,No
+General,__init___231,Metadata Only,No,No
+General,__init___57,Metadata Only,No,No
+OSINT,auth_1,Partial,Yes,No
+OSINT,backfill-arch-data,Partial,Yes,No
+OSINT,conftest_1,Partial,Yes,No
+OSINT,contacts,Complete,Yes,Yes
+OSINT,COOKIES,Partial,Yes,No
+OSINT,credential_tester_agent,Partial,Yes,No
+OSINT,crtsh,Complete,Yes,Yes
+OSINT,email-osint-agent,Partial,Yes,No
+OSINT,environment,Partial,Yes,No
+OSINT,holehe,Partial,Yes,No
+OSINT,intel-collection,Partial,Yes,No
+OSINT,metadata,Complete,Yes,Yes
+OSINT,osint,Partial,Yes,No
+OSINT,osint-collector,Partial,Yes,No
+OSINT,parsers_1,Partial,Yes,No
+OSINT,phoneinfoga,Partial,Yes,No
+OSINT,privacy_detect,Partial,Yes,No
+OSINT,prompt-manager,Metadata Only,No,No
+OSINT,sdk,Partial,Yes,No
+OSINT,setup,Metadata Only,No,No
+OSINT,setup_1,Metadata Only,No,No
+OSINT,smtp-user-enum,Partial,Yes,No
+OSINT,social_engineer_agent,Partial,Yes,No
+OSINT,splash-screen,Partial,Yes,No
+OSINT,test_osint_domain_info_msftrecon,Partial,Yes,No
+OSINT,test_probe_password_reset_weak,Partial,Yes,No
+OSINT,validation,Partial,Yes,No
+Port Scanning,vulnscan,Partial,Yes,No
+OSINT,whois_tool,Partial,Yes,No
+OSINT,_safety,Partial,Yes,No
+OSINT,__init___125,Partial,Yes,No
+OSINT,__init___128,Partial,Yes,No
+General,arbiter,Metadata Only,No,No
+General,auth_2,Metadata Only,No,No
+General,debug-world-model,Metadata Only,No,No
+General,dotdotpwn,Metadata Only,No,No
+General,exposure_prioritizer,Metadata Only,No,No
+General,fingerprint_correlator,Metadata Only,No,No
+General,index_15,Metadata Only,No,No
+General,index_16,Metadata Only,No,No
+General,lint_python,Metadata Only,No,No
+AI,main_7,Metadata Only,No,No
+General,model-registry,Metadata Only,No,No
+General,netexec,Metadata Only,No,No
+General,package,Metadata Only,No,No
+General,plugin_loader,Metadata Only,No,No
+General,pom,Metadata Only,No,No
+Port Scanning,portscan-guess-tcp-ports,Metadata Only,No,No
+General,README_12,Metadata Only,No,No
+General,registry_3,Metadata Only,No,No
+General,releaserc,Metadata Only,No,No
+General,renderers,Metadata Only,No,No
+General,settings,Metadata Only,No,No
+General,test_plugin_loader,Metadata Only,No,No
+General,tools_commands,Metadata Only,No,No
+General,tooltipcpython-313,Metadata Only,No,No
+General,validatorcpython-313,Metadata Only,No,No
+General,volatility3,Metadata Only,No,No
+Web Enumeration,whatweb_2,Metadata Only,No,No
+General,__init__cpython-313,Metadata Only,No,No
+General,__init__cpython-313_1,Metadata Only,No,No
+General,__init___212,Metadata Only,No,No
+General,__init___213,Metadata Only,No,No
+General,__init___214,Metadata Only,No,No
+General,__init___215,Metadata Only,No,No
+General,__init___216,Metadata Only,No,No
+General,__init___217,Metadata Only,No,No
+General,__init___28,Metadata Only,No,No
+General,__init___43,Metadata Only,No,No
+General,__init___58,Metadata Only,No,No
+General,__init___71,Metadata Only,No,No
+General,2dd29513_findings,Partial,Yes,No
+General,2dd29513_run_B_safe,Partial,Yes,No
+General,acquifinder,Complete,Yes,Yes
+General,active,Partial,Yes,No
+General,active-crawl,Partial,Yes,No
+General,active_recon,Complete,Yes,Yes
+Port Scanning,active_scanning,Partial,Yes,No
+General,active_test,Partial,Yes,No
+General,activities,Partial,Yes,No
+General,activity-logger,Partial,Yes,No
+General,activity-logger_1,Partial,Yes,No
+General,activity_feed,Partial,Yes,No
+General,ad-attacker,Partial,Yes,No
+General,adapter,Partial,Yes,No
+General,addr,Partial,Yes,No
+General,ad_agent,Partial,Yes,No
+General,agent,Partial,Yes,No
+General,agent-execution,Partial,Yes,No
+General,AGENTS,Partial,Yes,No
+General,AGENTS_1,Partial,Yes,No
+General,agent_1,Partial,Yes,No
+General,agent_3,Partial,Yes,No
+General,agent_loop,Partial,Yes,No
+General,agent_runner,Partial,Yes,No
+General,agent_test,Partial,Yes,No
+General,agent_trace,Partial,Yes,No
+General,agent_trace_test,Partial,Yes,No
+General,alerts,Partial,Yes,No
+General,alerts_1,Partial,Yes,No
+General,alienvault,Partial,Yes,No
+General,alterations,Metadata Only,No,No
+General,alterx,Partial,Yes,No
+General,amass,Partial,Yes,No
+General,amass_2,Partial,Yes,No
+General,analyze_repos,Partial,Yes,No
+General,anomaly_detector,Partial,Yes,No
+General,anomaly_engine,Partial,Yes,No
+General,anthropic,Partial,Yes,No
+General,anthropic_agent,Partial,Yes,No
+General,anthropic_official,Partial,Yes,No
+General,anubis,Partial,Yes,No
+General,apex,Partial,Yes,No
+General,api,Partial,Yes,No
+General,api-discoverer-agent,Partial,Yes,No
+General,api-discovery,Partial,Yes,No
+General,api-discoverytest,Partial,Yes,No
+General,api-docs,Partial,Yes,No
+General,api-schema-analyzer,Partial,Yes,No
+General,api-security,Partial,Yes,No
+General,apitest,Partial,Yes,No
+General,api_attack_surface,Partial,Yes,No
+General,api_authentication,Partial,Yes,No
+General,api_fingerprint,Partial,Yes,No
+General,api_models,Partial,Yes,No
+General,api_path_discovery,Partial,Yes,No
+General,api_pipeline,Partial,Yes,No
+General,api_security_agent,Partial,Yes,No
+General,api_surface_mapper,Partial,Yes,No
+General,app,Partial,Yes,No
+General,apply_triage_labels,Partial,Yes,No
+General,app_2,Partial,Yes,No
+General,app_3,Partial,Yes,No
+General,app_config,Partial,Yes,No
+General,aquatone,Partial,Yes,No
+General,arbiter,Partial,Yes,No
+General,architect-infer-agent,Partial,Yes,No
+General,ARCHITECTURE,Partial,Yes,No
+General,ARCHITECTURE_1,Partial,Yes,No
+General,ARCHITECTURE_2,Partial,Yes,No
+General,arjun_tool,Partial,Yes,No
+General,artifact-manifest,Partial,Yes,No
+General,asn,Complete,Yes,Yes
+General,asncache,Partial,Yes,No
+General,asnmap,Partial,Yes,No
+General,asn_intel,Complete,Yes,Yes
+General,assetfinder,Partial,Yes,No
+General,assets,Partial,Yes,No
+General,assets_test,Partial,Yes,No
+General,asset_classifier,Partial,Yes,No
+General,asset_decode,Partial,Yes,No
+Port Scanning,asset_secrets_scan,Partial,Yes,No
+General,assoc,Partial,Yes,No
+General,asvs-mapper,Partial,Yes,No
+General,async_prompt,Partial,Yes,No
+General,attach,Partial,Yes,No
+General,attach_test,Partial,Yes,No
+AI,attack-chain,Partial,Yes,No
+General,attack-planner,Partial,Yes,No
+General,attack-surface-enumeration,Partial,Yes,No
+AI,attackchain,Partial,Yes,No
+General,attack_surface_mapper,Partial,Yes,No
+General,attack_surface_mapping,Partial,Yes,No
+General,audit,Partial,Yes,No
+General,audit-logger,Partial,Yes,No
+General,audit-session,Partial,Yes,No
+General,audit_1,Partial,Yes,No
+General,aup_consent,Partial,Yes,No
+General,auth,Partial,Yes,No
+General,auth-flow-analyzer,Partial,Yes,No
+General,authed-findings,Partial,Yes,No
+General,authed-stderr,Partial,Yes,No
+Port Scanning,authenticated_scan,Partial,Yes,No
+General,auth_2,Partial,Yes,No
+General,auth_analyzer,Partial,Yes,No
+General,auth_cache,Partial,Yes,No
+General,auth_handler,Partial,Yes,No
+General,auth_manager,Partial,Yes,No
+General,auth_session,Partial,Yes,No
+General,autnum,Partial,Yes,No
+General,autsys,Partial,Yes,No
+General,autsys_1,Partial,Yes,No
+General,aws_recon,Metadata Only,No,No
+General,axiom,Partial,Yes,No
+General,backend,Partial,Yes,No
+General,backlog,Partial,Yes,No
+General,backlog_1,Partial,Yes,No
+General,backlog_test,Partial,Yes,No
+General,banner,Partial,Yes,No
+General,banners,Partial,Yes,No
+General,banner_3,Partial,Yes,No
+General,banner_analyzer,Partial,Yes,No
+General,banner_url,Partial,Yes,No
+General,base,Partial,Yes,No
+General,base-agent,Partial,Yes,No
+General,base_1,Partial,Yes,No
+General,base_3,Partial,Yes,No
+General,base_5,Partial,Yes,No
+General,base_tool,Partial,Yes,No
+Port Scanning,basic_scan,Partial,Yes,No
+General,batch_task,Partial,Yes,No
+General,batch_task_manager,Partial,Yes,No
+General,batch_task_mcp,Partial,Yes,No
+General,beacongo,Partial,Yes,No
+General,beacon_host,Partial,Yes,No
+General,benchmark_juice_shop,Partial,Yes,No
+General,bevigil,Partial,Yes,No
+General,bigbountyrecon,Partial,Yes,No
+General,billing-detection,Partial,Yes,No
+General,binaryedge,Partial,Yes,No
+General,bing,Partial,Yes,No
+General,blackbox-config-agent,Partial,Yes,No
+General,blackbox-context,Partial,Yes,No
+General,blacklist_test,Partial,Yes,No
+General,bloodhound,Partial,Yes,No
+General,book,Partial,Yes,No
+General,browser-crawler-agent,Partial,Yes,No
+General,browser_agent,Partial,Yes,No
+General,brute,Partial,Yes,No
+General,bruteforce-ftp,Partial,Yes,No
+Web Enumeration,bruteforce-http,Partial,Yes,No
+General,bruteforce-rdp,Partial,Yes,No
+General,bruteforce-smb,Partial,Yes,No
+General,bruteforce-ssh,Partial,Yes,No
+General,brute_test,Partial,Yes,No
+General,bucket_exposure_engine,Partial,Yes,No
+General,bufferover,Partial,Yes,No
+General,bufferoverrun,Partial,Yes,No
+General,bug,Partial,Yes,No
+General,bug-bounty,Partial,Yes,No
+General,bug_2,Partial,Yes,No
+Port Scanning,bug_report_2,Partial,Yes,No
+Port Scanning,bug_report_3,Partial,Yes,No
+General,build,Partial,Yes,No
+General,build-mvn,Partial,Yes,No
+General,build-test,Partial,Yes,No
+General,builder,Partial,Yes,No
+General,builtin-tools,Partial,Yes,No
+General,builtwith,Partial,Yes,No
+General,BurpExtender,Partial,Yes,No
+General,BurpExtender1,Partial,Yes,No
+General,burp_client,Partial,Yes,No
+General,burp_commands,Partial,Yes,No
+General,burp_suite,Partial,Yes,No
+General,business-logic-agent,Partial,Yes,No
+General,business_logic_fuzz,Partial,Yes,No
+General,c1ae665a_findings,Partial,Yes,No
+General,c1ae665a_run_A_default,Partial,Yes,No
+General,c2-operator,Partial,Yes,No
+General,c2_1,Partial,Yes,No
+General,c2_hitl_bridge,Partial,Yes,No
+General,c2_lifecycle,Partial,Yes,No
+General,c2_tools,Partial,Yes,No
+General,c99,Partial,Yes,No
+General,capability_map,Partial,Yes,No
+General,captcha_replay,Partial,Yes,No
+General,categories,Partial,Yes,No
+General,censys,Partial,Yes,No
+General,censys_test,Partial,Yes,No
+General,certspotter,Partial,Yes,No
+General,certspotter_2,Partial,Yes,No
+General,cgo_specific,Partial,Yes,No
+AI,chain,Partial,Yes,No
+AI,chain_agent,Partial,Yes,No
+General,CHANGELOG,Partial,Yes,No
+General,CHANGELOG_121,Partial,Yes,No
+General,CHANGELOG_122,Partial,Yes,No
+General,CHANGELOG_123,Partial,Yes,No
+General,CHANGELOG_13,Partial,Yes,No
+General,CHANGELOG_14,Partial,Yes,No
+General,CHANGELOG_15,Partial,Yes,No
+General,CHANGELOG_16,Partial,Yes,No
+General,CHANGELOG_17,Partial,Yes,No
+General,CHANGELOG_18,Partial,Yes,No
+General,CHANGELOG_181,Partial,Yes,No
+General,CHANGELOG_182,Partial,Yes,No
+General,CHANGELOG_19,Partial,Yes,No
+General,CHANGELOG_2,Partial,Yes,No
+General,CHANGELOG_20,Partial,Yes,No
+General,CHANGELOG_3,Partial,Yes,No
+General,chaos,Partial,Yes,No
+General,chaos_2,Partial,Yes,No
+General,chat-files,Partial,Yes,No
+General,chatgpt,Partial,Yes,No
+General,chatgpt_api,Partial,Yes,No
+General,chatgpt_config_sample,Partial,Yes,No
+General,chat_config,Partial,Yes,No
+General,chat_uploads,Partial,Yes,No
+General,check-env,Partial,Yes,No
+General,checkpoint,Partial,Yes,No
+General,checkpoint-manager,Partial,Yes,No
+General,check_artifacts,Partial,Yes,No
+General,check_artifacts_all,Partial,Yes,No
+General,chinaz,Partial,Yes,No
+General,chunk_eino,Partial,Yes,No
+General,ci-cd,Partial,Yes,No
+General,cicd-redteam,Partial,Yes,No
+General,citations,Partial,Yes,No
+AI,claims,Partial,Yes,No
+AI,clair,Partial,Yes,No
+General,CLAUDE,Partial,Yes,No
+General,CLAUDE_4,Partial,Yes,No
+General,claude_bridge,Partial,Yes,No
+General,claude_reasoning_roundtrip,Partial,Yes,No
+General,claude_reasoning_roundtrip_test,Partial,Yes,No
+General,cleanup-rollback,Partial,Yes,No
+General,cli,Metadata Only,No,No
+General,client,Partial,Yes,No
+General,client_1,Partial,Yes,No
+General,client_2,Partial,Yes,No
+General,client_4,Partial,Yes,No
+General,client_sdk,Partial,Yes,No
+General,clitest,Partial,Yes,No
+General,cli_1,Partial,Yes,No
+General,cli_2,Partial,Yes,No
+General,cli_3,Partial,Yes,No
+General,cli_4,Partial,Yes,No
+General,cli_5,Partial,Yes,No
+Cloud,cloud_fingerprint,Metadata Only,No,No
+Cloud,cloud_models,Metadata Only,No,No
+Cloud,cloud_pipeline,Metadata Only,No,No
+General,cmdi-agent,Partial,Yes,No
+General,cname,Partial,Yes,No
+General,codeclimate,Partial,Yes,No
+General,codecov,Partial,Yes,No
+General,codeql,Partial,Yes,No
+General,codeql-analysis,Partial,Yes,No
+General,CODE_OF_CONDUCT,Partial,Yes,No
+General,common,Partial,Yes,No
+General,commoncrawl,Partial,Yes,No
+General,common_2,Partial,Yes,No
+General,company_enrich,Partial,Yes,No
+General,company_rounds,Partial,Yes,No
+General,company_search,Partial,Yes,No
+General,compare_baseline,Partial,Yes,No
+General,compliance,Partial,Yes,No
+General,confidence_engine,Partial,Yes,No
+General,config,Partial,Yes,No
+General,config-loader,Partial,Yes,No
+General,config-parser,Partial,Yes,No
+General,config-schema,Partial,Yes,No
+General,config-schema_1,Partial,Yes,No
+General,configtest,Partial,Yes,No
+General,configure_mcp,Partial,Yes,No
+General,config_1,Partial,Yes,No
+General,config_2,Partial,Yes,No
+General,config_3,Partial,Yes,No
+General,config_4,Partial,Yes,No
+General,config_5,Partial,Yes,No
+General,config_6,Partial,Yes,No
+General,config_test,Partial,Yes,No
+General,conftest,Partial,Yes,No
+General,const,Partial,Yes,No
+General,constants,Partial,Yes,No
+General,constants_1,Partial,Yes,No
+General,contact,Partial,Yes,No
+AI,container-api,Partial,Yes,No
+General,content,Partial,Yes,No
+General,content-discovery-agent,Partial,Yes,No
+General,content_discovery,Complete,Yes,Yes
+General,content_fingerprint,Partial,Yes,No
+General,context_analyzer,Partial,Yes,No
+General,contracts,Partial,Yes,No
+General,CONTRIBUTING,Partial,Yes,No
+General,CONTRIBUTING_2,Partial,Yes,No
+General,CONTRIBUTING_3,Partial,Yes,No
+General,CONTRIBUTING_4,Partial,Yes,No
+General,CONTRIBUTING_5,Partial,Yes,No
+General,controller,Partial,Yes,No
+General,conversation,Partial,Yes,No
+General,conversation_manager,Partial,Yes,No
+General,cookie_prefix_bypass,Partial,Yes,No
+General,core,Partial,Yes,No
+General,corpus,Partial,Yes,No
+General,correlation_engine,Partial,Yes,No
+General,cors-probe-agent,Partial,Yes,No
+General,cors_reflection,Partial,Yes,No
+General,cortex,Partial,Yes,No
+General,cost,Partial,Yes,No
+General,coupon_forging,Partial,Yes,No
+General,COVERAGE,Partial,Yes,No
+General,COVERAGE_1,Partial,Yes,No
+General,crawler,Partial,Yes,No
+General,crawler-agent,Partial,Yes,No
+General,crawlercpython-313,Partial,Yes,No
+General,crawler_1,Partial,Yes,No
+General,crawler_2,Partial,Yes,No
+General,crawler_3,Partial,Yes,No
+General,createdFiles,Partial,Yes,No
+General,credential-tester,Partial,Yes,No
+Port Scanning,credentialed-scans,Partial,Yes,No
+General,credential_detector,Partial,Yes,No
+General,crlfuzz,Partial,Yes,No
+General,crtsh,Metadata Only,No,No
+General,crtsh_1,Partial,Yes,No
+General,crtsh_3,Partial,Yes,No
+General,csp_extractor,Complete,Yes,Yes
+General,CTF,Partial,Yes,No
+General,ctf-solver,Partial,Yes,No
+General,curl,Partial,Yes,No
+General,curl-known-security,Partial,Yes,No
+General,curl-robots,Partial,Yes,No
+General,cve_db,Partial,Yes,No
+General,cve_poc_primitives,Partial,Yes,No
+General,cvss-calculator,Partial,Yes,No
+AI,cyberstrikeai-burp-extension-100,Partial,Yes,No
+AI,CyberStrikeAIClient,Partial,Yes,No
+AI,CyberStrikeAIClient1,Partial,Yes,No
+AI,CyberStrikeAIClientAgentMode,Partial,Yes,No
+AI,CyberStrikeAIClientConfig,Partial,Yes,No
+AI,CyberStrikeAIClientStreamListener,Partial,Yes,No
+AI,CyberStrikeAITab1,Partial,Yes,No
+AI,CyberStrikeAITabDotIcon,Partial,Yes,No
+AI,CyberStrikeAITabTestRun,Partial,Yes,No
+AI,CyberStrikeAITabTestRunCellRenderer,Partial,Yes,No
+General,dalfox,Partial,Yes,No
+General,dark-matter,Partial,Yes,No
+General,dark-mattertest,Partial,Yes,No
+General,dashboard,Partial,Yes,No
+General,dashboard_1,Partial,Yes,No
+General,dashboard_2,Partial,Yes,No
+General,data-flow-mapper,Partial,Yes,No
+General,DATA-PRIVACY,Partial,Yes,No
+General,database_1,Partial,Yes,No
+General,datasources,Partial,Yes,No
+General,datasrcs,Partial,Yes,No
+General,datasrcs_test,Partial,Yes,No
+General,DeathNote_1,Partial,Yes,No
+General,debug,Partial,Yes,No
+General,debug-world-model,Partial,Yes,No
+General,DECISION,Partial,Yes,No
+General,decision_engine,Partial,Yes,No
+General,decision_engine_1,Partial,Yes,No
+General,dedup,Partial,Yes,No
+General,deduplicator,Partial,Yes,No
+General,deepseek,Partial,Yes,No
+General,deepseek_api,Partial,Yes,No
+General,deepsource,Partial,Yes,No
+General,default,Partial,Yes,No
+General,default_1,Partial,Yes,No
+General,default_single_system_prompt,Partial,Yes,No
+General,demo,Metadata Only,No,No
+General,dep-auto-merge,Partial,Yes,No
+General,dependabot_2,Partial,Yes,No
+General,DEPENDENCIES,Partial,Yes,No
+General,dependency_graph,Partial,Yes,No
+General,DEPLOYMENT,Partial,Yes,No
+General,deserialization,Partial,Yes,No
+General,DESIGN-FEATURES,Partial,Yes,No
+General,detection-engineer,Partial,Yes,No
+General,detection_engine,Partial,Yes,No
+General,detector,Partial,Yes,No
+General,development,Partial,Yes,No
+General,diff,Partial,Yes,No
+General,digitalyama,Partial,Yes,No
+General,digitorus,Partial,Yes,No
+General,ding,Partial,Yes,No
+General,dirbrute,Partial,Yes,No
+General,dirbuster,Partial,Yes,No
+General,dirbuster_2,Partial,Yes,No
+General,directories,Partial,Yes,No
+General,dirsearch,Partial,Yes,No
+General,dirsearch_2,Partial,Yes,No
+General,dirsearch_tool,Partial,Yes,No
+AI,DISCLAIMER_2,Partial,Yes,No
+General,dispatch,Partial,Yes,No
+General,dispatcher,Partial,Yes,No
+DNS / Subdomain Enumeration,dns,Partial,Yes,No
+DNS / Subdomain Enumeration,dns-reverse-lookup,Partial,Yes,No
+DNS / Subdomain Enumeration,dns-zone-transfer,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsdb,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsdumpster,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsenum,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsenum_tool,Partial,Yes,No
+DNS / Subdomain Enumeration,dnshistory,Partial,Yes,No
+DNS / Subdomain Enumeration,dnslog,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsrecon,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsrecon-subdomain-bruteforce,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsrecon_tool,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsrepo,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsrepo_2,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsx,Partial,Yes,No
+DNS / Subdomain Enumeration,dnsx_tool,Partial,Yes,No
+DNS / Subdomain Enumeration,dns_extractor,Partial,Yes,No
+DNS / Subdomain Enumeration,dns_intelligence,Complete,Yes,Yes
+DNS / Subdomain Enumeration,dns_pipeline,Partial,Yes,No
+DNS / Subdomain Enumeration,dns_test,Partial,Yes,No
+DNS / Subdomain Enumeration,dns_tool,Partial,Yes,No
+General,doc,Partial,Yes,No
+General,docker,Metadata Only,No,No
+General,Dockerfile,Partial,Yes,No
+General,Dockerfile_1,Partial,Yes,No
+General,Dockerfile_10,Partial,Yes,No
+General,Dockerfile_11,Partial,Yes,No
+General,Dockerfile_2,Partial,Yes,No
+General,Dockerfile_5,Partial,Yes,No
+General,Dockerfile_6,Partial,Yes,No
+General,Dockerfile_8,Partial,Yes,No
+General,dockerhub-push,Partial,Yes,No
+General,docs,Partial,Yes,No
+General,docs_1,Partial,Yes,No
+General,doctor,Partial,Yes,No
+General,documentation-agent,Partial,Yes,No
+General,doc_1,Partial,Yes,No
+General,doc_2,Partial,Yes,No
+General,doc_3,Partial,Yes,No
+AI,domain-profiler,Partial,Yes,No
+AI,domains,Metadata Only,No,No
+AI,domainsproject,Partial,Yes,No
+AI,domain_record,Partial,Yes,No
+General,dom_xss,Partial,Yes,No
+General,dot,Partial,Yes,No
+General,dotdotpwn,Partial,Yes,No
+General,dot_test,Partial,Yes,No
+General,DPA,Partial,Yes,No
+General,driftnet,Partial,Yes,No
+General,duckduckgo,Partial,Yes,No
+General,efd01c52_findings,Partial,Yes,No
+AI,efd01c52_llm_coordinated_run,Partial,Yes,No
+General,efd01c52_probe_runs,Partial,Yes,No
+General,eino,Partial,Yes,No
+General,eino_checkpoint,Partial,Yes,No
+General,eino_execute_monitor,Partial,Yes,No
+General,eino_execute_streaming_wrap,Partial,Yes,No
+General,eino_exit_fallback_test,Partial,Yes,No
+General,eino_filesystem_tool_monitor,Partial,Yes,No
+General,eino_input_telemetry,Partial,Yes,No
+General,eino_meta,Partial,Yes,No
+General,eino_middleware,Partial,Yes,No
+General,eino_middleware_test,Partial,Yes,No
+General,eino_model_facing_trace,Partial,Yes,No
+General,eino_model_rewrite_pipeline,Partial,Yes,No
+General,eino_orchestration,Partial,Yes,No
+General,eino_resume_segment,Partial,Yes,No
+AI,eino_retrieve_chain_test,Partial,Yes,No
+General,eino_single_agent,Partial,Yes,No
+General,eino_single_runner,Partial,Yes,No
+General,eino_skills,Partial,Yes,No
+General,eino_sse_sanitizer,Partial,Yes,No
+General,eino_sse_sanitizer_test,Partial,Yes,No
+General,eino_summarize,Partial,Yes,No
+General,eino_summarize_test,Partial,Yes,No
+General,eino_test,Partial,Yes,No
+General,eino_tool_name_injection,Partial,Yes,No
+General,eino_transient_retry,Partial,Yes,No
+General,eino_transient_retry_test,Partial,Yes,No
+AI,email,Partial,Yes,No
+OSINT,email-osint-agent,Metadata Only,No,No
+General,embedding,Partial,Yes,No
+General,employees,Partial,Yes,No
+General,en-US,Partial,Yes,No
+General,endpoint_classifier,Partial,Yes,No
+General,engagement-planning,Partial,Yes,No
+General,engine,Partial,Yes,No
+General,engineapi,Partial,Yes,No
+General,engineapi_test,Partial,Yes,No
+General,engine_1,Partial,Yes,No
+Port Scanning,enhanced-report,Partial,Yes,No
+General,entrypoint_1,Partial,Yes,No
+General,enum4linux,Partial,Yes,No
+General,enumerate,Partial,Yes,No
+General,enumerate_test,Partial,Yes,No
+General,envexpand,Partial,Yes,No
+General,envexpand_test,Partial,Yes,No
+General,env_1,Partial,Yes,No
+General,env_2,Partial,Yes,No
+General,env_4,Partial,Yes,No
+General,epistemic-reasoning,Partial,Yes,No
+General,EQBSL-Primer,Partial,Yes,No
+General,error,Partial,Yes,No
+General,error-formatter,Partial,Yes,No
+General,error-handling,Partial,Yes,No
+General,ErrorPatternAnalyzertest,Partial,Yes,No
+General,errors,Partial,Yes,No
+General,eslintconfig,Partial,Yes,No
+General,evaluator,Partial,Yes,No
+General,events,Partial,Yes,No
+General,events_1,Partial,Yes,No
+General,EVIDENCE,Partial,Yes,No
+General,evidence-graph,Partial,Yes,No
+General,evidence-normalizers,Partial,Yes,No
+General,EvidenceCommand,Partial,Yes,No
+General,example-blackbox-config,Partial,Yes,No
+General,example-config,Partial,Yes,No
+General,example-config_1,Partial,Yes,No
+General,example-detection-rule,Partial,Yes,No
+General,example-engagement-plan,Partial,Yes,No
+General,example-nmap-analysis,Partial,Yes,No
+Port Scanning,example-report-excerpt,Partial,Yes,No
+General,example_sqlmap,Partial,Yes,No
+General,example_sqlmap_1,Partial,Yes,No
+General,execute-python-script,Partial,Yes,No
+General,execution,Partial,Yes,No
+General,execution-log,Partial,Yes,No
+General,execution-runner,Partial,Yes,No
+General,execution_view,Partial,Yes,No
+General,executor,Partial,Yes,No
+General,executor_2,Partial,Yes,No
+General,executor_helpers,Partial,Yes,No
+General,exif_metadata,Partial,Yes,No
+General,explanation_engine,Partial,Yes,No
+AI,exploit-chainer,Metadata Only,No,No
+General,exploit-guide,Metadata Only,No,No
+General,exploit-ssrf,Metadata Only,No,No
+General,exploit-ssrf_2,Metadata Only,No,No
+Port Scanning,exporter,Partial,Yes,No
+General,exposure_classifier,Partial,Yes,No
+General,exposure_prioritizer,Partial,Yes,No
+General,express-scaffold,Partial,Yes,No
+General,external-recon,Partial,Yes,No
+General,external_manager,Partial,Yes,No
+General,external_manager_test,Partial,Yes,No
+General,external_mcp,Partial,Yes,No
+General,external_mcp_test,Partial,Yes,No
+General,extractor,Partial,Yes,No
+General,extract_cookie,Partial,Yes,No
+General,eyewitness,Partial,Yes,No
+General,facebook,Partial,Yes,No
+General,falco,Partial,Yes,No
+General,false_positive_filter,Partial,Yes,No
+General,fastapi-scaffold,Partial,Yes,No
+General,feature,Partial,Yes,No
+General,feature-collector,Partial,Yes,No
+General,feature_2,Partial,Yes,No
+General,feature_request,Partial,Yes,No
+General,feature_request_3,Partial,Yes,No
+General,feroxbuster,Partial,Yes,No
+General,ffuf,Partial,Yes,No
+General,ffuf_2,Partial,Yes,No
+General,ffuf_tool,Partial,Yes,No
+General,fierce,Partial,Yes,No
+General,fierce_tool,Partial,Yes,No
+General,file,Partial,Yes,No
+General,file-io,Partial,Yes,No
+General,file-operations,Partial,Yes,No
+General,files,Partial,Yes,No
+General,file_upload_validation,Partial,Yes,No
+General,filter,Partial,Yes,No
+General,filternet-bayes,Partial,Yes,No
+General,find,Partial,Yes,No
+General,findings,Metadata Only,No,No
+General,findings_1,Partial,Yes,No
+General,findings_db,Partial,Yes,No
+AI,findomain,Partial,Yes,No
+DNS / Subdomain Enumeration,findsubdomains,Partial,Yes,No
+General,fingerprinting,Complete,Yes,Yes
+General,fingerprints,Partial,Yes,No
+General,fingerprint_correlator,Partial,Yes,No
+General,fofa,Partial,Yes,No
+General,fofa_2,Partial,Yes,No
+General,fofa_search,Partial,Yes,No
+General,forced_error,Partial,Yes,No
+General,forensics-analyst,Partial,Yes,No
+General,fork-philosophy,Partial,Yes,No
+General,formatting,Partial,Yes,No
+General,fping_tool,Partial,Yes,No
+General,fqdn,Partial,Yes,No
+General,fqdn_endpoint,Partial,Yes,No
+General,fqdn_lookup,Partial,Yes,No
+General,frontend-i18n,Partial,Yes,No
+General,frontmatter,Partial,Yes,No
+General,fullhunt,Partial,Yes,No
+General,full_v0,Partial,Yes,No
+General,full_v1,Partial,Yes,No
+General,full_v2,Partial,Yes,No
+General,functional,Partial,Yes,No
+General,FUNDING_1,Partial,Yes,No
+General,fuzzy,Partial,Yes,No
+General,fuzz_wordlist,Partial,Yes,No
+General,gau,Partial,Yes,No
+General,gau_2,Partial,Yes,No
+General,gemini,Partial,Yes,No
+General,gemini_api,Partial,Yes,No
+General,generate-totp,Partial,Yes,No
+General,generator,Partial,Yes,No
+General,generatorcpython-313,Partial,Yes,No
+General,get-arch,Partial,Yes,No
+General,getting-started,Partial,Yes,No
+General,gexf,Partial,Yes,No
+General,gexf_test,Partial,Yes,No
+General,ghost-traffic,Partial,Yes,No
+General,ghost-traffictest,Partial,Yes,No
+General,git-manager,Partial,Yes,No
+General,gitbook,Partial,Yes,No
+General,github,Partial,Yes,No
+DNS / Subdomain Enumeration,github_subdomains,Partial,Yes,No
+General,gitlab,Partial,Yes,No
+General,gleif,Partial,Yes,No
+General,gleif_1,Partial,Yes,No
+General,glob,Partial,Yes,No
+General,global,Partial,Yes,No
+General,gobuster,Partial,Yes,No
+General,gobuster_2,Partial,Yes,No
+General,gobuster_tool,Partial,Yes,No
+General,goreleaser,Partial,Yes,No
+General,goreleaser_1,Partial,Yes,No
+General,gospider,Partial,Yes,No
+General,gosum,Partial,Yes,No
+General,go_1,Partial,Yes,No
+General,go_4,Partial,Yes,No
+General,gpt4all_api,Partial,Yes,No
+General,graph,Partial,Yes,No
+General,graphdb,Partial,Yes,No
+General,graphdb_test,Partial,Yes,No
+General,graphql,Partial,Yes,No
+Port Scanning,graphql-scanner,Partial,Yes,No
+General,graphql_introspection,Partial,Yes,No
+Port Scanning,graphql_scan,Partial,Yes,No
+General,graphql_tool,Partial,Yes,No
+General,grepapp,Partial,Yes,No
+General,ground-truth-agent,Partial,Yes,No
+General,ground-truth-validator,Partial,Yes,No
+General,group,Partial,Yes,No
+General,guided,Partial,Yes,No
+General,guided_recon,Partial,Yes,No
+General,guided_recon_1,Partial,Yes,No
+General,guided_recon_121,Partial,Yes,No
+General,guided_recon_122,Partial,Yes,No
+General,guided_view,Partial,Yes,No
+General,hackertarget,Partial,Yes,No
+General,hackertarget_1,Partial,Yes,No
+General,hackertarget_3,Partial,Yes,No
+General,hakrawler,Partial,Yes,No
+General,hakrawler_tool,Partial,Yes,No
+General,handlers,Partial,Yes,No
+General,harness,Partial,Yes,No
+General,hashpump,Partial,Yes,No
+General,headers,Partial,Yes,No
+General,headers_inject,Partial,Yes,No
+General,header_checker,Partial,Yes,No
+General,health-monitor,Partial,Yes,No
+AI,hexstrike-ai-mcp,Partial,Yes,No
+General,hexstrike_mcp,Partial,Yes,No
+General,hexstrike_server,Partial,Yes,No
+General,hidden_discovery,Partial,Yes,No
+General,hitl,Partial,Yes,No
+General,hitl_context,Partial,Yes,No
+General,hitl_middleware,Partial,Yes,No
+General,holder,Partial,Yes,No
+General,host_header_reset_poisoning,Partial,Yes,No
+General,HTB_challenge_Template,Partial,Yes,No
+Web Enumeration,http,Partial,Yes,No
+Web Enumeration,http-framework-test,Partial,Yes,No
+Web Enumeration,httpbinorg__20260515_233823,Partial,Yes,No
+Web Enumeration,HttpMessageFormatter,Partial,Yes,No
+Web Enumeration,HTTPMethodAnalyzertest,Partial,Yes,No
+Web Enumeration,httpx,Partial,Yes,No
+Web Enumeration,httpx_tool,Partial,Yes,No
+Web Enumeration,http_clients,Partial,Yes,No
+Web Enumeration,http_extractor,Partial,Yes,No
+Web Enumeration,http_headers,Complete,Yes,Yes
+Web Enumeration,http_test,Partial,Yes,No
+General,hudsonrock,Partial,Yes,No
+General,hunterio,Partial,Yes,No
+General,i18n,Partial,Yes,No
+General,idor_authenticated,Partial,Yes,No
+General,idor_authz_differential,Partial,Yes,No
+General,idor_sequential,Partial,Yes,No
+General,impact-exfiltration,Partial,Yes,No
+General,index,Partial,Yes,No
+General,indexer,Partial,Yes,No
+General,index_1,Partial,Yes,No
+General,index_10,Partial,Yes,No
+General,index_11,Partial,Yes,No
+General,index_12,Partial,Yes,No
+General,index_13,Partial,Yes,No
+General,index_14,Partial,Yes,No
+General,index_15,Partial,Yes,No
+General,index_16,Partial,Yes,No
+General,index_17,Partial,Yes,No
+General,index_2,Partial,Yes,No
+General,index_3,Partial,Yes,No
+General,index_4,Partial,Yes,No
+General,index_5,Metadata Only,No,No
+General,index_6,Partial,Yes,No
+General,index_7,Partial,Yes,No
+General,index_8,Partial,Yes,No
+General,index_9,Partial,Yes,No
+General,index_pipeline_test,Partial,Yes,No
+General,inference,Partial,Yes,No
+General,inferencetest,Partial,Yes,No
+General,info-collect,Partial,Yes,No
+General,infrastructure_view,Partial,Yes,No
+General,ini,Partial,Yes,No
+General,initialize,Partial,Yes,No
+General,input-validator,Partial,Yes,No
+General,inputFiles,Partial,Yes,No
+General,install,Partial,Yes,No
+General,install-git-hooks,Partial,Yes,No
+General,install-python-package,Partial,Yes,No
+General,installation,Partial,Yes,No
+General,install_1,Partial,Yes,No
+General,INSTALL_2,Partial,Yes,No
+General,install_4,Partial,Yes,No
+General,install_planner,Partial,Yes,No
+General,install_preferences,Partial,Yes,No
+General,install_wizard,Partial,Yes,No
+General,integration,Partial,Yes,No
+General,intelligence_concepts,Partial,Yes,No
+General,intelligence_pipeline,Partial,Yes,No
+General,intelx,Partial,Yes,No
+General,interactive,Partial,Yes,No
+General,interrupt,Partial,Yes,No
+General,introduction,Partial,Yes,No
+General,ipaddr,Partial,Yes,No
+General,ipaddr_endpoint,Partial,Yes,No
+General,ipnet,Partial,Yes,No
+General,ipverse,Partial,Yes,No
+General,ip_netblock,Partial,Yes,No
+Port Scanning,issue-report,Partial,Yes,No
+Port Scanning,issue_importer,Partial,Yes,No
+General,jaeles,Partial,Yes,No
+General,jarm,Partial,Yes,No
+General,jina,Partial,Yes,No
+General,js-analysis,Partial,Yes,No
+General,jsluice_patterns,Partial,Yes,No
+General,js_analyzer,Partial,Yes,No
+General,juice-shop,Partial,Yes,No
+General,juiceshop,Partial,Yes,No
+General,junit_xml,Partial,Yes,No
+General,jwt_jku_x5u_ssrf,Partial,Yes,No
+General,katana,Partial,Yes,No
+General,katana_2,Partial,Yes,No
+General,katana_tool,Partial,Yes,No
+General,Keygraph_Button,Partial,Yes,No
+General,kiterunner,Partial,Yes,No
+General,kiterunner_tool,Partial,Yes,No
+General,knowledge,Partial,Yes,No
+General,knowledge-base,Partial,Yes,No
+General,knowledgejs,Partial,Yes,No
+General,knowledge_base,Partial,Yes,No
+General,knowledge_base_1,Partial,Yes,No
+General,known_fqdn,Partial,Yes,No
+General,kubernetes_analyzer,Partial,Yes,No
+General,langfuse,Partial,Yes,No
+General,lark,Partial,Yes,No
+General,lateral-movement,Partial,Yes,No
+General,layout,Partial,Yes,No
+General,ldap-search,Partial,Yes,No
+General,ldap_injection,Partial,Yes,No
+General,leaked_credentials,Partial,Yes,No
+General,leakix,Partial,Yes,No
+General,leakix_2,Partial,Yes,No
+General,learning_mode,Partial,Yes,No
+General,ledger,Partial,Yes,No
+General,legacy,Partial,Yes,No
+General,LegacyPentestRunner,Partial,Yes,No
+General,lei_record,Partial,Yes,No
+General,lfi_wordlist,Partial,Yes,No
+General,libc-database,Partial,Yes,No
+General,library,Partial,Yes,No
+General,LICENSE,Partial,Yes,No
+General,LICENSE_1,Partial,Yes,No
+General,LICENSE_10,Partial,Yes,No
+General,LICENSE_12,Partial,Yes,No
+General,LICENSE_13,Partial,Yes,No
+General,LICENSE_14,Partial,Yes,No
+General,LICENSE_2,Partial,Yes,No
+General,LICENSE_3,Partial,Yes,No
+General,LICENSE_4,Partial,Yes,No
+General,LICENSE_6,Partial,Yes,No
+General,LICENSE_7,Partial,Yes,No
+General,LICENSE_9,Partial,Yes,No
+General,linkedin,Partial,Yes,No
+General,linpeas,Partial,Yes,No
+General,lint,Partial,Yes,No
+General,lint_python,Partial,Yes,No
+General,listener,Partial,Yes,No
+Web Enumeration,listener_http,Partial,Yes,No
+General,listener_tcp,Partial,Yes,No
+Web Enumeration,listener_websocket,Partial,Yes,No
+General,live_capture,Partial,Yes,No
+AI,llm,Partial,Yes,No
+AI,llm-analysis,Partial,Yes,No
+AI,llm-analyzer,Partial,Yes,No
+AI,llm-app-redteam,Partial,Yes,No
+AI,llm-client,Partial,Yes,No
+AI,llm-clienttest,Partial,Yes,No
+AI,llm-clienttest_1,Partial,Yes,No
+AI,llm-client_1,Partial,Yes,No
+AI,llm-redteam,Partial,Yes,No
+AI,llm_analysis,Partial,Yes,No
+AI,llm_api,Partial,Yes,No
+General,load,Partial,Yes,No
+General,loader_1,Partial,Yes,No
+General,LOCAL-SETUP,Partial,Yes,No
+General,local-source-generator,Partial,Yes,No
+General,location,Partial,Yes,No
+General,locations,Partial,Yes,No
+General,location_1,Partial,Yes,No
+General,log,Partial,Yes,No
+General,log-stream,Partial,Yes,No
+General,logger,Partial,Yes,No
+General,loggercpython-313,Partial,Yes,No
+General,logger_1,Partial,Yes,No
+General,logger_2,Partial,Yes,No
+General,login-instructions,Partial,Yes,No
+General,login-instructions_1,Partial,Yes,No
+General,logo,Partial,Yes,No
+General,logo_1,Partial,Yes,No
+General,logs,Partial,Yes,No
+General,lookup-sid,Partial,Yes,No
+AI,main,Partial,Yes,No
+AI,main_1,Partial,Yes,No
+AI,main_10,Partial,Yes,No
+AI,main_11,Partial,Yes,No
+AI,main_12,Partial,Yes,No
+AI,main_14,Partial,Yes,No
+AI,main_15,Partial,Yes,No
+AI,main_17,Partial,Yes,No
+AI,main_18,Partial,Yes,No
+AI,main_2,Partial,Yes,No
+AI,main_3,Partial,Yes,No
+AI,main_4,Partial,Yes,No
+AI,main_5,Partial,Yes,No
+AI,main_6,Partial,Yes,No
+AI,main_7,Partial,Yes,No
+AI,main_8,Partial,Yes,No
+AI,main_9,Partial,Yes,No
+Web Enumeration,main_server_http_redirect,Partial,Yes,No
+Web Enumeration,main_server_http_redirect_test,Partial,Yes,No
+AI,main_server_tls,Partial,Yes,No
+General,Makefile_2,Partial,Yes,No
+General,Makefile_3,Partial,Yes,No
+General,malicious,Complete,Yes,Yes
+General,maltego,Partial,Yes,No
+General,malware-analyst,Partial,Yes,No
+General,manager_1,Partial,Yes,No
+General,manager_2,Partial,Yes,No
+General,mapcidr,Partial,Yes,No
+General,mapping,Partial,Yes,No
+General,markdown,Partial,Yes,No
+General,MarkdownRenderer,Partial,Yes,No
+General,markdown_agents,Partial,Yes,No
+General,markdown_orchestrator_test,Partial,Yes,No
+General,markers,Partial,Yes,No
+General,marketplace,Partial,Yes,No
+Port Scanning,masscan,Partial,Yes,No
+Port Scanning,masscan_2,Partial,Yes,No
+DNS / Subdomain Enumeration,massdns,Partial,Yes,No
+DNS / Subdomain Enumeration,massdns_tool,Partial,Yes,No
+General,mass_assignment,Partial,Yes,No
+General,match,Partial,Yes,No
+General,mcp,Partial,Yes,No
+General,mcp-management,Partial,Yes,No
+General,mcp-stdio2,Partial,Yes,No
+General,mcp_client,Partial,Yes,No
+General,mcp_manager,Partial,Yes,No
+General,mcp_pent_claude_agent,Partial,Yes,No
+General,mcp_reverse_shell,Partial,Yes,No
+General,mcp_setup,Partial,Yes,No
+General,mcp_tools,Partial,Yes,No
+General,mcp_tools_test,Partial,Yes,No
+General,memory,Partial,Yes,No
+General,memory_compressor,Partial,Yes,No
+General,menu,Partial,Yes,No
+General,merklemap,Partial,Yes,No
+General,message-handlers,Partial,Yes,No
+General,meta,Partial,Yes,No
+General,meta-cognition,Partial,Yes,No
+General,metadata,Metadata Only,No,No
+General,metasploit-agent,Partial,Yes,No
+General,methodology_engine,Partial,Yes,No
+General,metrics,Partial,Yes,No
+General,metrics-tracker,Partial,Yes,No
+General,metrics_1,Partial,Yes,No
+General,mobile_agent,Partial,Yes,No
+General,mock_pipelinetest,Partial,Yes,No
+General,model-registry,Partial,Yes,No
+General,ModelCommand,Partial,Yes,No
+General,models,Partial,Yes,No
+General,models_1,Partial,Yes,No
+General,models_2,Partial,Yes,No
+General,models_5,Partial,Yes,No
+General,model_manager,Partial,Yes,No
+General,modes,Partial,Yes,No
+General,MODS,Partial,Yes,No
+Port Scanning,module_import,Partial,Yes,No
+General,monitor,Partial,Yes,No
+General,monitor_1,Partial,Yes,No
+General,MSSQLInjection,Partial,Yes,No
+General,multi_agent,Partial,Yes,No
+General,MULTI_AGENT_EINO,Partial,Yes,No
+General,multi_agent_prepare,Partial,Yes,No
+General,naabu,Complete,Yes,Yes
+General,naabu_tool,Partial,Yes,No
+General,namelist,Partial,Yes,No
+General,navigator,Partial,Yes,No
+Port Scanning,nbtscan,Partial,Yes,No
+General,netblock,Partial,Yes,No
+General,netblock_1,Partial,Yes,No
+General,netdiscover_tool,Partial,Yes,No
+General,netexec,Partial,Yes,No
+General,netlas,Partial,Yes,No
+General,network-recon,Partial,Yes,No
+General,networks,Partial,Yes,No
+General,network_discovery,Partial,Yes,No
+General,nextjs_rsc_rce,Partial,Yes,No
+General,next_step_predictor,Partial,Yes,No
+General,nikto_2,Partial,Yes,No
+General,nikto_tool,Partial,Yes,No
+General,nmap-ajp,Partial,Yes,No
+General,nmap-cassandra,Partial,Yes,No
+General,nmap-cups,Partial,Yes,No
+DNS / Subdomain Enumeration,nmap-dns,Partial,Yes,No
+General,nmap-finger,Partial,Yes,No
+General,nmap-ftp,Partial,Yes,No
+Web Enumeration,nmap-http,Partial,Yes,No
+General,nmap-imap,Partial,Yes,No
+General,nmap-irc,Partial,Yes,No
+General,nmap-kerberos,Partial,Yes,No
+General,nmap-ldap,Partial,Yes,No
+General,nmap-mongodb,Partial,Yes,No
+General,nmap-mountd,Partial,Yes,No
+General,nmap-msrpc,Partial,Yes,No
+General,nmap-mssql,Partial,Yes,No
+DNS / Subdomain Enumeration,nmap-multicast-dns,Partial,Yes,No
+General,nmap-mysql,Partial,Yes,No
+General,nmap-nfs,Partial,Yes,No
+General,nmap-nntp,Partial,Yes,No
+General,nmap-ntp,Partial,Yes,No
+General,nmap-oracle,Partial,Yes,No
+General,nmap-pop3,Partial,Yes,No
+General,nmap-rdp,Partial,Yes,No
+General,nmap-redis,Partial,Yes,No
+General,nmap-rmi,Partial,Yes,No
+General,nmap-rsync,Partial,Yes,No
+General,nmap-sip,Partial,Yes,No
+General,nmap-smb,Partial,Yes,No
+General,nmap-smtp,Partial,Yes,No
+General,nmap-snmp,Partial,Yes,No
+General,nmap-ssh,Partial,Yes,No
+General,nmap-telnet,Partial,Yes,No
+General,nmap-tftp,Partial,Yes,No
+General,nmap-vnc,Partial,Yes,No
+General,nmap_tool_1,Partial,Yes,No
+General,normalization,Partial,Yes,No
+General,normalize_streaming_delta_test,Partial,Yes,No
+General,normalize_streaming_eof_test,Partial,Yes,No
+General,nosql_fuzz,Partial,Yes,No
+General,notifications,Partial,Yes,No
+General,notify,Partial,Yes,No
+General,no_nested_task,Partial,Yes,No
+General,nuclei,Complete,Yes,Yes
+General,nuclei-agent,Partial,Yes,No
+General,nuclei-template-sha,Partial,Yes,No
+General,nuclei_2,Partial,Yes,No
+General,nuclei_tool,Partial,Yes,No
+General,oauth_pkce_downgrade,Partial,Yes,No
+General,ollama,Partial,Yes,No
+General,ollama_api,Partial,Yes,No
+General,one-gadget,Partial,Yes,No
+General,onesixtyone,Partial,Yes,No
+General,onyphe,Partial,Yes,No
+AI,openai,Partial,Yes,No
+General,openapi,Partial,Yes,No
+General,openapi-discovery-agent,Partial,Yes,No
+General,openapi_i18n,Partial,Yes,No
+General,openapi_parser,Partial,Yes,No
+AI,open_ai,Partial,Yes,No
+General,operations_center,Partial,Yes,No
+General,opsec-anonymizer,Partial,Yes,No
+General,opsec-evasion,Partial,Yes,No
+General,options,Partial,Yes,No
+General,options_2,Partial,Yes,No
+General,oracle-odat,Partial,Yes,No
+General,oracle-patator,Partial,Yes,No
+Port Scanning,oracle-scanner,Partial,Yes,No
+General,oracle-tnscmd,Partial,Yes,No
+General,OracleSQLInjection,Partial,Yes,No
+General,orchestrator,Metadata Only,No,No
+General,orchestrator-plan-execute,Partial,Yes,No
+General,orchestrator-supervisor,Partial,Yes,No
+General,orchestratortest,Partial,Yes,No
+General,orchestrator_instruction,Partial,Yes,No
+General,org,Partial,Yes,No
+General,orgs,Partial,Yes,No
+General,org_1,Partial,Yes,No
+General,org_lei,Partial,Yes,No
+General,orphan_tool_pruner_middleware,Partial,Yes,No
+General,orphan_tool_pruner_middleware_test,Partial,Yes,No
+OSINT,osint-collector,Metadata Only,No,No
+General,osrframework,Partial,Yes,No
+General,otel,Partial,Yes,No
+General,outputter,Partial,Yes,No
+General,output_parser,Partial,Yes,No
+General,package,Partial,Yes,No
+General,package-lock,Partial,Yes,No
+General,package-lock_1,Partial,Yes,No
+General,package_1,Partial,Yes,No
+General,package_2,Partial,Yes,No
+General,package_4,Partial,Yes,No
+General,package_5,Partial,Yes,No
+General,parallel,Partial,Yes,No
+Port Scanning,parallel_scans,Partial,Yes,No
+General,parameter_discovery,Partial,Yes,No
+General,parameter_mapper,Partial,Yes,No
+General,paramspider,Partial,Yes,No
+General,parse,Partial,Yes,No
+General,parsers,Partial,Yes,No
+General,parser_mixin,Partial,Yes,No
+General,parse_test,Partial,Yes,No
+General,passive,Partial,Yes,No
+General,passivetotal,Partial,Yes,No
+General,passive_recon,Partial,Yes,No
+General,password_reset_weak,Partial,Yes,No
+General,paths,Partial,Yes,No
+General,paths_1,Partial,Yes,No
+General,path_traversal,Partial,Yes,No
+General,payload-crafter,Partial,Yes,No
+General,payload_builder,Partial,Yes,No
+General,pcap_parser,Partial,Yes,No
+General,penetration,Partial,Yes,No
+AI,pentest-ai,Partial,Yes,No
+General,pentest-mcp-server,Partial,Yes,No
+Web Enumeration,PentestGPT-720WebShareName,Partial,Yes,No
+General,PentestGPT_design,Partial,Yes,No
+AI,pentestGPT_HTB_phonebook_failed,Partial,Yes,No
+General,pentestGPT_log_HTB_Precious,Partial,Yes,No
+General,pentesting,Partial,Yes,No
+General,pentest_agent,Partial,Yes,No
+General,pentest_gpt,Partial,Yes,No
+General,pentest_gpt_rebuilt,Partial,Yes,No
+General,pent_claude_agent_config,Partial,Yes,No
+General,permutations_list,Partial,Yes,No
+General,permutations_list_short,Partial,Yes,No
+General,perplexity,Partial,Yes,No
+AI,persistence-maintenance,Partial,Yes,No
+General,persistencetest,Partial,Yes,No
+General,phishing-operator,Partial,Yes,No
+General,pipeline,Metadata Only,No,No
+General,pipelines,Partial,Yes,No
+General,pipeline_engine,Partial,Yes,No
+General,planner,Partial,Yes,No
+General,plan_execute_executor,Partial,Yes,No
+General,plan_execute_steps_cap,Partial,Yes,No
+General,plan_execute_steps_cap_test,Partial,Yes,No
+General,plan_execute_text,Partial,Yes,No
+General,plan_execute_text_test,Partial,Yes,No
+General,playbook,Partial,Yes,No
+General,playwright-config-writer,Partial,Yes,No
+General,plugin,Partial,Yes,No
+General,plugin_1,Partial,Yes,No
+General,plugin_10,Partial,Yes,No
+General,plugin_11,Partial,Yes,No
+General,plugin_12,Partial,Yes,No
+General,plugin_2,Partial,Yes,No
+General,plugin_3,Partial,Yes,No
+General,plugin_4,Partial,Yes,No
+General,plugin_5,Partial,Yes,No
+General,plugin_6,Partial,Yes,No
+General,plugin_7,Partial,Yes,No
+General,plugin_8,Partial,Yes,No
+General,plugin_center,Partial,Yes,No
+General,plugin_loader,Partial,Yes,No
+General,plugin_loader_1,Partial,Yes,No
+General,plugin_manager,Partial,Yes,No
+General,pnpm-workspace,Partial,Yes,No
+General,poc_agent,Partial,Yes,No
+General,pom,Partial,Yes,No
+Port Scanning,portscan,Partial,Yes,No
+Port Scanning,portscan-all-tcp-ports,Partial,Yes,No
+Port Scanning,portscan-guess-tcp-ports,Partial,Yes,No
+Port Scanning,portscan-top-100-udp-ports,Partial,Yes,No
+Port Scanning,portscan-top-tcp-ports,Partial,Yes,No
+Port Scanning,port_prioritizer,Partial,Yes,No
+General,PostgreSQLInjection,Partial,Yes,No
+General,postman_parser,Partial,Yes,No
+General,pre-commit-config,Partial,Yes,No
+General,pre-commit-config_1,Partial,Yes,No
+General,pre-recon,Partial,Yes,No
+General,pre-recon-code_2,Partial,Yes,No
+General,pre-recon-code_3,Partial,Yes,No
+General,preflight,Partial,Yes,No
+General,preflight-check,Partial,Yes,No
+General,print,Partial,Yes,No
+General,PRIVACY,Partial,Yes,No
+General,privilege-escalation,Partial,Yes,No
+General,privilege_escalation_patch,Partial,Yes,No
+General,probes,Partial,Yes,No
+General,process,Partial,Yes,No
+General,process_registry,Partial,Yes,No
+General,production,Partial,Yes,No
+General,profundis,Partial,Yes,No
+General,progress-indicator,Partial,Yes,No
+General,progress-manager,Partial,Yes,No
+General,project_manager,Partial,Yes,No
+General,prompt-manager,Partial,Yes,No
+General,prompts,Partial,Yes,No
+General,prompt_class_v1,Partial,Yes,No
+General,prompt_class_v2,Partial,Yes,No
+General,prompt_select,Partial,Yes,No
+General,prospeo,Partial,Yes,No
+General,protocol_detector,Partial,Yes,No
+General,prototype_pollution,Partial,Yes,No
+General,proxy_controller,Partial,Yes,No
+General,pseudo-source-builder,Partial,Yes,No
+General,ptt_reasoning,Partial,Yes,No
+General,pugrecon,Partial,Yes,No
+General,PULL_REQUEST_TEMPLATE,Partial,Yes,No
+General,PULL_REQUEST_TEMPLATE_2,Partial,Yes,No
+DNS / Subdomain Enumeration,puredns,Partial,Yes,No
+DNS / Subdomain Enumeration,puredns_tool,Partial,Yes,No
+General,pure_go,Partial,Yes,No
+General,pwninit,Partial,Yes,No
+General,pyproject,Partial,Yes,No
+General,pyproject_2,Partial,Yes,No
+General,pyproject_4,Partial,Yes,No
+General,pyproject_5,Partial,Yes,No
+General,pyshark_engine,Partial,Yes,No
+General,pythonorg_headers_20241216_000049,Partial,Yes,No
+DNS / Subdomain Enumeration,pythonorg_subdomains_20241215_235829,Partial,Yes,No
+General,quake,Partial,Yes,No
+General,quake_search,Partial,Yes,No
+General,queue,Partial,Yes,No
+General,queue-validator,Partial,Yes,No
+General,quick_action_bar,Partial,Yes,No
+General,race_condition,Partial,Yes,No
+General,radare2,Partial,Yes,No
+General,ranger,Partial,Yes,No
+DNS / Subdomain Enumeration,rapiddns,Partial,Yes,No
+DNS / Subdomain Enumeration,rapiddns_2,Partial,Yes,No
+General,ratelimit_test,Partial,Yes,No
+General,rdap,Partial,Yes,No
+General,reactive-verifier,Partial,Yes,No
+General,README,Partial,Yes,No
+General,READMEzh-CN,Partial,Yes,No
+General,README_1,Partial,Yes,No
+General,README_10,Partial,Yes,No
+General,README_11,Partial,Yes,No
+General,README_12,Partial,Yes,No
+General,README_13,Partial,Yes,No
+General,README_14,Partial,Yes,No
+General,README_15,Partial,Yes,No
+General,README_16,Partial,Yes,No
+General,README_17,Partial,Yes,No
+General,README_18,Partial,Yes,No
+General,README_2,Partial,Yes,No
+General,README_20,Partial,Yes,No
+General,README_23,Partial,Yes,No
+General,README_24,Partial,Yes,No
+General,README_25,Partial,Yes,No
+General,README_26,Partial,Yes,No
+General,README_27,Partial,Yes,No
+General,README_3,Partial,Yes,No
+General,README_31,Partial,Yes,No
+General,README_32,Partial,Yes,No
+General,README_33,Partial,Yes,No
+General,README_34,Partial,Yes,No
+General,README_35,Partial,Yes,No
+General,README_36,Partial,Yes,No
+General,README_38,Partial,Yes,No
+General,README_39,Partial,Yes,No
+General,README_4,Partial,Yes,No
+General,README_40,Partial,Yes,No
+General,README_41,Partial,Yes,No
+General,README_42,Partial,Yes,No
+General,README_43,Partial,Yes,No
+General,README_44,Partial,Yes,No
+General,README_45,Partial,Yes,No
+General,README_47,Partial,Yes,No
+General,README_48,Partial,Yes,No
+General,README_49,Partial,Yes,No
+General,README_5,Partial,Yes,No
+General,README_50,Partial,Yes,No
+General,README_51,Partial,Yes,No
+General,README_52,Partial,Yes,No
+General,README_53,Partial,Yes,No
+General,README_54,Partial,Yes,No
+General,README_55,Partial,Yes,No
+General,README_57,Partial,Yes,No
+General,README_58,Partial,Yes,No
+General,README_6,Partial,Yes,No
+General,README_7,Partial,Yes,No
+General,README_8,Partial,Yes,No
+General,README_9,Partial,Yes,No
+General,README_CN,Partial,Yes,No
+General,README_CN_1,Partial,Yes,No
+General,README_CN_2,Partial,Yes,No
+General,README_CN_3,Partial,Yes,No
+General,README_EN,Partial,Yes,No
+General,realdemo,Partial,Yes,No
+General,realdemo-paced,Partial,Yes,No
+General,reasoning_trace,Partial,Yes,No
+General,reasoning_trace_test,Partial,Yes,No
+General,recommend,Partial,Yes,No
+General,recommendation_engine,Partial,Yes,No
+General,recommendation_engine_1,Partial,Yes,No
+General,recon,Partial,Yes,No
+General,recon-advisor,Partial,Yes,No
+Cloud,reconcloud,Metadata Only,No,No
+General,reconeer,Partial,Yes,No
+General,reconftw,Partial,Yes,No
+General,reconftw_1,Partial,Yes,No
+General,reconftw_full,Partial,Yes,No
+General,reconftw_prox_deploy,Partial,Yes,No
+General,reconftw_quick,Partial,Yes,No
+General,reconftw_stealth,Partial,Yes,No
+General,reconx,Metadata Only,No,No
+General,reconx_engine,Partial,Yes,No
+General,recon_2,Partial,Yes,No
+General,recon_3,Partial,Yes,No
+General,recon_agent,Partial,Yes,No
+General,recon_strategy,Partial,Yes,No
+General,recorder,Partial,Yes,No
+General,redhuntlabs,Partial,Yes,No
+General,redirect-host-discovery,Partial,Yes,No
+General,redis-cli,Partial,Yes,No
+General,REFERENCE,Partial,Yes,No
+General,reflected_xss,Partial,Yes,No
+General,registry,Partial,Yes,No
+General,registry_1,Partial,Yes,No
+General,registry_121,Partial,Yes,No
+General,registry_122,Partial,Yes,No
+General,registry_123,Partial,Yes,No
+General,registry_181,Partial,Yes,No
+General,registry_182,Partial,Yes,No
+General,registry_2,Partial,Yes,No
+General,registry_3,Partial,Yes,No
+General,registry_4,Partial,Yes,No
+General,registry_5,Partial,Yes,No
+General,registry_8,Partial,Yes,No
+General,registry_bridge,Partial,Yes,No
+General,registry_test,Partial,Yes,No
+General,reg_records,Partial,Yes,No
+General,related,Partial,Yes,No
+General,relationship_graph,Partial,Yes,No
+General,relationship_mapper,Partial,Yes,No
+General,release,Partial,Yes,No
+General,release-binary,Partial,Yes,No
+General,release-pypi,Partial,Yes,No
+General,release-test,Partial,Yes,No
+General,releaserc,Partial,Yes,No
+General,remediation-agent,Partial,Yes,No
+General,renderer,Partial,Yes,No
+General,renderers,Partial,Yes,No
+General,replay,Partial,Yes,No
+General,replay_engine,Partial,Yes,No
+Port Scanning,report-executive_1,Partial,Yes,No
+Port Scanning,report-executive_2,Partial,Yes,No
+Port Scanning,report-output-provider,Partial,Yes,No
+Port Scanning,report-snippet,Partial,Yes,No
+Port Scanning,reporter,Partial,Yes,No
+Port Scanning,reporthtml,Partial,Yes,No
+Port Scanning,reporting-cherrytree,Partial,Yes,No
+Port Scanning,reporting-markdown,Partial,Yes,No
+Port Scanning,reporting-remediation,Partial,Yes,No
+Port Scanning,report_121,Partial,Yes,No
+Port Scanning,report_14,Partial,Yes,No
+Port Scanning,report_15,Partial,Yes,No
+Port Scanning,report_16,Partial,Yes,No
+Port Scanning,report_17,Partial,Yes,No
+Port Scanning,report_18,Partial,Yes,No
+Port Scanning,report_agent,Partial,Yes,No
+Port Scanning,report_generator,Partial,Yes,No
+Port Scanning,report_injector,Partial,Yes,No
+Port Scanning,report_injector_1,Partial,Yes,No
+Port Scanning,report_injector_2,Partial,Yes,No
+General,requirements,Partial,Yes,No
+General,requirements_11,Partial,Yes,No
+General,requirements_12,Partial,Yes,No
+General,requirements_14,Partial,Yes,No
+General,requirements_15,Partial,Yes,No
+General,requirements_16,Partial,Yes,No
+General,requirements_2,Partial,Yes,No
+General,requirements_3,Partial,Yes,No
+General,requirements_5,Partial,Yes,No
+General,requirements_6,Partial,Yes,No
+General,requirements_8,Partial,Yes,No
+General,requirements_9,Partial,Yes,No
+General,reset_juice_shop,Partial,Yes,No
+General,resilience,Partial,Yes,No
+General,resiliencetest,Partial,Yes,No
+General,resolve,Partial,Yes,No
+General,resolvers,Partial,Yes,No
+General,resolvers_1,Partial,Yes,No
+General,resolvers_test,Partial,Yes,No
+General,resolver_manager,Partial,Yes,No
+General,resources,Partial,Yes,No
+AI,resource_availability,Partial,Yes,No
+General,responder,Partial,Yes,No
+General,response_headers,Partial,Yes,No
+General,RESPONSIBLE_DISCLOSURE,Partial,Yes,No
+General,rest_api,Partial,Yes,No
+General,result,Partial,Yes,No
+General,retrieval_postprocess,Partial,Yes,No
+General,retrieval_postprocess_test,Partial,Yes,No
+General,retry,Partial,Yes,No
+General,reverse,Partial,Yes,No
+General,reverse-engineer,Partial,Yes,No
+General,review,Partial,Yes,No
+General,riddler,Partial,Yes,No
+General,rigid,Partial,Yes,No
+General,rigid_test,Partial,Yes,No
+General,risk_mapper,Partial,Yes,No
+General,risk_scorer,Partial,Yes,No
+General,risk_scoring,Partial,Yes,No
+General,ROADMAP,Partial,Yes,No
+General,robot,Partial,Yes,No
+General,robot_en,Partial,Yes,No
+General,robtext,Partial,Yes,No
+General,role,Partial,Yes,No
+General,roles,Partial,Yes,No
+General,rollback-beta,Partial,Yes,No
+General,router,Partial,Yes,No
+General,route_correlator,Partial,Yes,No
+General,rpcclient,Partial,Yes,No
+General,rpcdump,Partial,Yes,No
+Cloud,rsecloud,Metadata Only,No,No
+General,rsync-list-files,Partial,Yes,No
+General,run,Partial,Yes,No
+General,run-shannon-blackbox,Partial,Yes,No
+General,RunCommand,Partial,Yes,No
+General,runner,Partial,Yes,No
+General,runner_1,Partial,Yes,No
+General,runner_3,Partial,Yes,No
+General,runner_reasoning_history_test,Partial,Yes,No
+General,run_all,Partial,Yes,No
+General,run_bench,Partial,Yes,No
+General,run_benchmarks,Partial,Yes,No
+General,run_context,Partial,Yes,No
+General,run_dvwa_engagement,Partial,Yes,No
+General,run_dvwa_full,Partial,Yes,No
+General,run_summary,Partial,Yes,No
+General,run_summary_1,Partial,Yes,No
+General,run_tests,Partial,Yes,No
+Port Scanning,rustscan,Partial,Yes,No
+Port Scanning,rustscan_2,Partial,Yes,No
+Port Scanning,rustscan_tool,Partial,Yes,No
+Port Scanning,s3scanner,Metadata Only,No,No
+Port Scanning,s3_scanner,Metadata Only,No,No
+General,saml_xsw,Partial,Yes,No
+General,sandbox,Partial,Yes,No
+General,sanitize,Partial,Yes,No
+General,save-deliverable,Partial,Yes,No
+General,save_results,Partial,Yes,No
+Port Scanning,scan4all,Complete,Yes,Yes
+Port Scanning,scanners,Partial,Yes,No
+Port Scanning,scanner_5,Partial,Yes,No
+Port Scanning,scan_optimizer,Partial,Yes,No
+General,scheduler,Partial,Yes,No
+General,schedulertest,Partial,Yes,No
+General,scheduler_2,Partial,Yes,No
+General,schema-gen-agent,Partial,Yes,No
+General,schemas,Partial,Yes,No
+General,schemas_1,Partial,Yes,No
+General,scope,Partial,Yes,No
+General,scope_1,Partial,Yes,No
+General,scope_test,Partial,Yes,No
+General,SCORE,Partial,Yes,No
+General,SCORE_1,Partial,Yes,No
+General,SCORE_2,Partial,Yes,No
+General,score_juiceshop,Partial,Yes,No
+General,Screenshot1,Partial,Yes,No
+General,search,Partial,Yes,No
+General,search_2,Partial,Yes,No
+General,secretscfg,Partial,Yes,No
+General,SECURITY,Partial,Yes,No
+General,security-header-analyzer,Partial,Yes,No
+General,SecurityHeaderAnalyzer,Partial,Yes,No
+General,SecurityHeaderAnalyzertest,Partial,Yes,No
+AI,securitytrails,Partial,Yes,No
+AI,securitytrails_2,Partial,Yes,No
+General,SECURITY_2,Partial,Yes,No
+General,security_tools,Partial,Yes,No
+General,sensitive_detector,Partial,Yes,No
+AI,sensitive_domains,Partial,Yes,No
+General,server,Partial,Yes,No
+General,server_1,Partial,Yes,No
+General,server_2,Partial,Yes,No
+General,server_3,Partial,Yes,No
+Web Enumeration,server_https_bootstrap,Partial,Yes,No
+General,service,Partial,Yes,No
+General,services_commands,Partial,Yes,No
+General,service_1,Partial,Yes,No
+General,service_correlator,Partial,Yes,No
+General,service_detection,Complete,Yes,Yes
+General,service_intelligence_view,Partial,Yes,No
+General,service_learning,Partial,Yes,No
+General,session,Partial,Yes,No
+General,session-manager,Metadata Only,No,No
+General,sessions,Partial,Yes,No
+General,session_manager,Partial,Yes,No
+General,settings,Partial,Yes,No
+General,settings_1,Partial,Yes,No
+General,settings_3,Partial,Yes,No
+General,settings_4,Partial,Yes,No
+General,setup_2,Partial,Yes,No
+General,severity_engine,Partial,Yes,No
+General,shadow-it,Partial,Yes,No
+General,shadow-ittest,Partial,Yes,No
+General,shannon,Partial,Yes,No
+General,shannon-action,Partial,Yes,No
+General,SHANNON-PRO,Partial,Yes,No
+Port Scanning,shannon-report-crapi,Partial,Yes,No
+Port Scanning,shannon-report-juice-shop,Partial,Yes,No
+Port Scanning,shannon-scan,Partial,Yes,No
+General,shannon-screen_1,Partial,Yes,No
+General,shared,Partial,Yes,No
+General,sherlock,Partial,Yes,No
+General,shodan,Metadata Only,No,No
+General,shodan_api,Partial,Yes,No
+General,shodan_apicpython-313,Partial,Yes,No
+General,shodan_recon_plugin,Partial,Yes,No
+General,shodan_search,Partial,Yes,No
+General,showmount,Partial,Yes,No
+DNS / Subdomain Enumeration,shuffledns,Partial,Yes,No
+DNS / Subdomain Enumeration,shuffledns_tool,Partial,Yes,No
+General,SimpleJson,Partial,Yes,No
+General,sipvicious,Partial,Yes,No
+General,sitedossier,Partial,Yes,No
+General,sitedossier_2,Partial,Yes,No
+General,sitemap-agent,Partial,Yes,No
+General,SKILL,Partial,Yes,No
+General,skills,Partial,Yes,No
+General,SKILL_11,Partial,Yes,No
+General,SKILL_13,Partial,Yes,No
+General,SKILL_19,Partial,Yes,No
+General,SKILL_2,Partial,Yes,No
+General,SKILL_20,Partial,Yes,No
+General,SKILL_22,Partial,Yes,No
+General,SKILL_23,Partial,Yes,No
+General,SKILL_3,Partial,Yes,No
+General,SKILL_5,Partial,Yes,No
+General,SKILL_6,Partial,Yes,No
+General,SKILL_7,Partial,Yes,No
+General,SKILL_8,Partial,Yes,No
+General,SKILL_9,Partial,Yes,No
+General,sleep,Partial,Yes,No
+Port Scanning,smart-scan,Partial,Yes,No
+Port Scanning,smart-scan-expanded-toolset,Partial,Yes,No
+Port Scanning,smart-scan-on-search,Partial,Yes,No
+General,smbclient,Partial,Yes,No
+General,smbmap,Partial,Yes,No
+General,snmpwalk,Partial,Yes,No
+General,solution,Partial,Yes,No
+General,solved-challenges,Partial,Yes,No
+General,source-gen-agent,Partial,Yes,No
+General,sources,Partial,Yes,No
+General,sources_test,Partial,Yes,No
+General,sources_wo_auth_test,Partial,Yes,No
+General,sources_w_auth_test,Partial,Yes,No
+General,spa_probes,Partial,Yes,No
+General,SPEC,Partial,Yes,No
+General,spiderfoot,Partial,Yes,No
+General,splash,Partial,Yes,No
+General,spotter,Partial,Yes,No
+General,sqli_fuzz,Partial,Yes,No
+General,sqli_login_bypass,Partial,Yes,No
+General,SQLmap,Partial,Yes,No
+General,sqlmap-agent,Partial,Yes,No
+General,srv,Partial,Yes,No
+General,sse_keepalive,Partial,Yes,No
+General,sse_stream,Partial,Yes,No
+General,ssh_manager,Partial,Yes,No
+General,ssl,Partial,Yes,No
+Port Scanning,sslscan,Partial,Yes,No
+General,SslTrustAll,Partial,Yes,No
+General,SslTrustAll1,Partial,Yes,No
+General,SslTrustAllTimeoutSslSocketFactory,Partial,Yes,No
+General,ssl_checker,Partial,Yes,No
+Cloud,ssrf_cloud_metadata,Metadata Only,No,No
+General,ssti_fuzz,Partial,Yes,No
+General,ssti_polyglot,Partial,Yes,No
+General,ssti_stored,Partial,Yes,No
+General,stage121_catalog,Partial,Yes,No
+Web Enumeration,stage121_web,Partial,Yes,No
+General,stage122_catalog,Partial,Yes,No
+General,stage123_catalog,Partial,Yes,No
+General,STAGE2,Partial,Yes,No
+General,start,Partial,Yes,No
+General,stats,Partial,Yes,No
+General,status,Partial,Yes,No
+General,stderr,Partial,Yes,No
+General,stderr_1,Partial,Yes,No
+General,stdout,Partial,Yes,No
+General,stdout_1,Partial,Yes,No
+General,stealth_crawler,Partial,Yes,No
+General,steghide,Partial,Yes,No
+General,stig-analyst,Partial,Yes,No
+General,stored_xss,Partial,Yes,No
+General,style,Partial,Yes,No
+General,styles,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomain,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomain-enumeration,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomain-hunter-agent,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomains,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomainstxt,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomains_1,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomains_2,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomains_v0,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomains_v1,Partial,Yes,No
+DNS / Subdomain Enumeration,subdomains_v2,Partial,Yes,No
+General,subfinder,Complete,Yes,Yes
+General,subfinder-logo,Partial,Yes,No
+General,subfinder-run,Partial,Yes,No
+General,subfinder_2,Partial,Yes,No
+General,sublist3r_tool,Partial,Yes,No
+General,submd,Partial,Yes,No
+General,SUBPROCESSORS,Partial,Yes,No
+General,subprocess_mixin,Partial,Yes,No
+General,subprocess_runner,Partial,Yes,No
+General,subs,Partial,Yes,No
+General,sub_agent_context,Partial,Yes,No
+General,sub_agent_context_test,Partial,Yes,No
+General,suggestion_engine,Partial,Yes,No
+General,SUMMARY,Partial,Yes,No
+General,summary-mapper,Partial,Yes,No
+Port Scanning,support,Partial,Yes,No
+Port Scanning,support_test,Partial,Yes,No
+General,surface_mapping,Complete,Yes,Yes
+General,swagger,Partial,Yes,No
+General,swagger_2,Partial,Yes,No
+General,swagger_parser,Partial,Yes,No
+General,swarm-orchestrator,Partial,Yes,No
+General,tag_engine,Partial,Yes,No
+General,takeover_detector,Partial,Yes,No
+General,target-model,Partial,Yes,No
+General,targets,Partial,Yes,No
+General,target_classifier,Partial,Yes,No
+General,task-management,Partial,Yes,No
+General,tasks,Partial,Yes,No
+General,task_handler,Partial,Yes,No
+General,task_manager,Partial,Yes,No
+General,task_processor,Partial,Yes,No
+General,task_tree_manager,Partial,Yes,No
+General,tech-fingerprinter-agent,Partial,Yes,No
+General,tech_detection,Complete,Yes,Yes
+General,telemetry,Partial,Yes,No
+General,templates,Partial,Yes,No
+General,template_manager,Partial,Yes,No
+General,terminal,Partial,Yes,No
+General,terminal_ws_unix,Partial,Yes,No
+General,TERMS,Partial,Yes,No
+Port Scanning,terrascan,Partial,Yes,No
+General,test-cortex-integration,Partial,Yes,No
+General,test-gen-agent,Partial,Yes,No
+General,test-lsg-v2,Partial,Yes,No
+General,test-multibar,Partial,Yes,No
+General,test-suite,Partial,Yes,No
+General,test1,Partial,Yes,No
+General,test2,Partial,Yes,No
+General,testLogin,Partial,Yes,No
+General,tests,Partial,Yes,No
+General,testssl,Partial,Yes,No
+General,test_agents_parallel,Partial,Yes,No
+General,test_agent_loop,Partial,Yes,No
+General,test_agent_mode_cli,Partial,Yes,No
+General,test_anthropic_agent,Partial,Yes,No
+General,test_api_security_e2e_smoke,Partial,Yes,No
+General,test_api_server,Partial,Yes,No
+General,test_arjun_integration,Partial,Yes,No
+General,test_async_prompt,Partial,Yes,No
+Port Scanning,test_authenticated_scan_coverage,Partial,Yes,No
+General,test_auth_profiles,Partial,Yes,No
+General,test_auth_profiles_smoke,Partial,Yes,No
+General,test_auth_profile_cli,Partial,Yes,No
+General,test_auth_runner,Partial,Yes,No
+Port Scanning,test_auth_scan_e2e_smoke,Partial,Yes,No
+General,test_auth_session,Partial,Yes,No
+General,test_auth_session_bearer_flow,Partial,Yes,No
+General,test_backend_interface,Partial,Yes,No
+General,test_base_agent_coverage,Partial,Yes,No
+General,test_benchmarks_scoring_common,Partial,Yes,No
+General,test_browser_agent,Partial,Yes,No
+General,test_browser_agent_e2e_smoke,Partial,Yes,No
+General,test_browser_crawler,Partial,Yes,No
+General,test_cache,Partial,Yes,No
+AI,test_chain,Partial,Yes,No
+AI,test_chain_quality,Partial,Yes,No
+General,test_checkpoint,Partial,Yes,No
+General,test_ci_mode,Partial,Yes,No
+General,test_cli,Partial,Yes,No
+General,test_cli_auth_coverage,Partial,Yes,No
+General,test_cli_vps_count,Partial,Yes,No
+General,test_common,Partial,Yes,No
+General,test_config,Partial,Yes,No
+General,test_connection,Partial,Yes,No
+General,test_controller,Partial,Yes,No
+General,test_core,Partial,Yes,No
+General,test_cost_tracker,Partial,Yes,No
+General,test_csrf_auth_e2e_smoke,Partial,Yes,No
+General,test_dashboard,Partial,Yes,No
+General,test_dedup,Partial,Yes,No
+DNS / Subdomain Enumeration,test_dns_resolver_auto,Partial,Yes,No
+General,test_e2e_probes,Partial,Yes,No
+General,test_engagement_lifecycle_e2e,Partial,Yes,No
+Web Enumeration,test_ensure_webs_all,Partial,Yes,No
+General,test_events,Partial,Yes,No
+General,test_evidence,Partial,Yes,No
+General,test_evidence_contract,Partial,Yes,No
+General,test_exec_context,Partial,Yes,No
+Port Scanning,test_exports,Partial,Yes,No
+Port Scanning,test_export_cli,Partial,Yes,No
+General,test_file_transfer,Partial,Yes,No
+General,test_full_flow,Partial,Yes,No
+General,test_full_workflow,Partial,Yes,No
+General,test_handlers_misc,Partial,Yes,No
+General,test_handler_meta,Partial,Yes,No
+Web Enumeration,test_handler_web_probes,Partial,Yes,No
+General,test_hitl_coverage,Partial,Yes,No
+General,test_injection,Partial,Yes,No
+General,test_install_planner,Partial,Yes,No
+General,test_install_preferences,Partial,Yes,No
+General,test_integration,Partial,Yes,No
+General,test_integration_dvwa,Partial,Yes,No
+General,test_juiceshop_e2e_smoke,Partial,Yes,No
+General,test_langfuse,Partial,Yes,No
+General,test_langfuse_1,Partial,Yes,No
+General,test_legacy_probe_migration,Partial,Yes,No
+General,test_list_targets,Partial,Yes,No
+AI,test_llm,Partial,Yes,No
+AI,test_llm_e2e_smoke,Partial,Yes,No
+AI,test_llm_redteam,Partial,Yes,No
+General,test_mcp_action_surface,Partial,Yes,No
+General,test_mcp_auth_profile,Partial,Yes,No
+General,test_mcp_auth_session_reuse,Partial,Yes,No
+General,test_mcp_client_and_hitl,Partial,Yes,No
+General,test_mcp_honeypot_e2e,Partial,Yes,No
+General,test_mcp_security_tools,Partial,Yes,No
+General,test_mcp_server,Partial,Yes,No
+General,test_mcp_server_coverage,Partial,Yes,No
+General,test_mcp_setup,Partial,Yes,No
+General,test_misc_coverage,Partial,Yes,No
+General,test_mobile_agent_e2e_smoke,Partial,Yes,No
+General,test_monitor,Partial,Yes,No
+General,test_monitor_mode,Partial,Yes,No
+General,test_new_high_roi_probes,Partial,Yes,No
+General,test_new_tool_integrations,Partial,Yes,No
+General,test_observation_normalization,Partial,Yes,No
+General,test_os_execution,Partial,Yes,No
+General,test_output_parser,Partial,Yes,No
+General,test_parallel,Partial,Yes,No
+General,test_payload_library,Partial,Yes,No
+General,test_perf_profile,Partial,Yes,No
+General,test_permutation_wordlist_select,Partial,Yes,No
+General,test_phase6,Partial,Yes,No
+General,test_playbook,Partial,Yes,No
+General,test_plugin_loader,Partial,Yes,No
+General,test_primitives_evidence_capture,Partial,Yes,No
+General,test_probe_asset_secrets,Partial,Yes,No
+General,test_probe_business_logic_fuzz,Partial,Yes,No
+General,test_probe_captcha_replay,Partial,Yes,No
+General,test_probe_cors_reflection,Partial,Yes,No
+General,test_probe_coupon_forging,Partial,Yes,No
+General,test_probe_crawler,Partial,Yes,No
+General,test_probe_cve_poc,Partial,Yes,No
+General,test_probe_deserialization,Partial,Yes,No
+General,test_probe_dom_xss,Partial,Yes,No
+General,test_probe_exif_metadata,Partial,Yes,No
+General,test_probe_file_upload_validation,Partial,Yes,No
+General,test_probe_forced_error,Partial,Yes,No
+General,test_probe_graphql_introspection,Partial,Yes,No
+General,test_probe_hidden_discovery,Partial,Yes,No
+General,test_probe_host_header_reset_poisoning,Partial,Yes,No
+General,test_probe_idor_authenticated,Partial,Yes,No
+General,test_probe_idor_authz_differential,Partial,Yes,No
+General,test_probe_idor_sequential,Partial,Yes,No
+General,test_probe_ldap_injection,Partial,Yes,No
+General,test_probe_leaked_credentials,Partial,Yes,No
+General,test_probe_mass_assignment,Partial,Yes,No
+General,test_probe_nosql_fuzz,Partial,Yes,No
+General,test_probe_oauth_pkce_downgrade,Partial,Yes,No
+General,test_probe_path_traversal,Partial,Yes,No
+General,test_probe_primitives,Partial,Yes,No
+General,test_probe_prototype_pollution,Partial,Yes,No
+General,test_probe_race_condition,Partial,Yes,No
+General,test_probe_reflected_xss,Partial,Yes,No
+General,test_probe_registry,Partial,Yes,No
+General,test_probe_response_headers,Partial,Yes,No
+General,test_probe_sqli_fuzz,Partial,Yes,No
+Cloud,test_probe_ssrf_cloud_metadata,Metadata Only,No,No
+General,test_probe_ssti_fuzz,Partial,Yes,No
+General,test_probe_ssti_polyglot,Partial,Yes,No
+General,test_probe_ssti_stored,Partial,Yes,No
+General,test_probe_stored_xss,Partial,Yes,No
+Web Enumeration,test_probe_web3,Partial,Yes,No
+Web Enumeration,test_probe_web_cache_deception,Partial,Yes,No
+General,test_probe_xss_fuzz,Partial,Yes,No
+General,test_probe_xxe_upload,Partial,Yes,No
+General,test_process_registry,Partial,Yes,No
+General,test_profile_migration,Partial,Yes,No
+General,test_providers,Partial,Yes,No
+General,test_registry_bridge,Partial,Yes,No
+General,test_registry_coverage,Partial,Yes,No
+General,test_registry_extended,Partial,Yes,No
+Port Scanning,test_reporting,Partial,Yes,No
+Port Scanning,test_report_only,Partial,Yes,No
+General,test_resolvers_external,Partial,Yes,No
+General,test_resolvers_hardening,Partial,Yes,No
+General,test_resolver_env,Partial,Yes,No
+General,test_sanitize,Partial,Yes,No
+Port Scanning,test_scanners,Partial,Yes,No
+General,test_scope,Partial,Yes,No
+General,test_secure_credential,Partial,Yes,No
+General,test_session,Partial,Yes,No
+General,test_severity_calibration,Partial,Yes,No
+General,test_shell_syntax,Partial,Yes,No
+General,test_smoke,Partial,Yes,No
+General,test_spa_probes,Partial,Yes,No
+General,test_specialist_agents_coverage,Partial,Yes,No
+General,test_stage1,Partial,Yes,No
+General,test_stage121_integration,Partial,Yes,No
+General,test_stage122_integration,Partial,Yes,No
+General,test_stage123_integration,Partial,Yes,No
+General,test_stage13_orchestration,Partial,Yes,No
+General,test_stage14_tui,Partial,Yes,No
+General,test_stage15_plugins,Partial,Yes,No
+General,test_stage181_burp,Partial,Yes,No
+General,test_stage182_traffic,Partial,Yes,No
+General,test_stage19_plugins,Partial,Yes,No
+General,test_stage2,Partial,Yes,No
+General,test_stage20_services,Partial,Yes,No
+General,test_stage2_integration,Partial,Yes,No
+General,test_stealth_crawler,Partial,Yes,No
+DNS / Subdomain Enumeration,test_subdomains_asn,Partial,Yes,No
+DNS / Subdomain Enumeration,test_subdomains_filtering,Partial,Yes,No
+General,test_sub_tls_no_match,Partial,Yes,No
+General,test_target_expander,Partial,Yes,No
+General,test_terminal_output_modes,Partial,Yes,No
+General,test_tool_bridge,Partial,Yes,No
+General,test_tool_bridge_e2e,Partial,Yes,No
+General,test_tool_installer,Partial,Yes,No
+General,test_tool_installer_coverage,Partial,Yes,No
+General,test_tool_installer_extended,Partial,Yes,No
+General,test_tool_result_persistence,Partial,Yes,No
+General,test_tracing_and_telemetry,Partial,Yes,No
+General,test_tracing_coverage,Partial,Yes,No
+General,test_trigger_system,Partial,Yes,No
+General,test_ui_snapshots,Partial,Yes,No
+General,test_utils,Partial,Yes,No
+General,test_validation,Partial,Yes,No
+General,test_verbosity,Partial,Yes,No
+General,test_vps_count_cli,Partial,Yes,No
+Web Enumeration,test_webprobe_full_formats,Partial,Yes,No
+Web Enumeration,test_web_agent_crawl_inject,Partial,Yes,No
+Web Enumeration,test_web_agent_set_auth,Partial,Yes,No
+General,test_working_memory,Partial,Yes,No
+General,THANKS,Partial,Yes,No
+General,thc,Partial,Yes,No
+General,theharvester,Partial,Yes,No
+General,threat-modeler,Partial,Yes,No
+General,threatbook,Partial,Yes,No
+General,threatcrowd,Partial,Yes,No
+General,threatcrowd_2,Partial,Yes,No
+General,threatminer,Partial,Yes,No
+General,throttle,Partial,Yes,No
+General,TIER2-EXECUTION,Partial,Yes,No
+General,TIMELINE,Partial,Yes,No
+General,tlsx,Partial,Yes,No
+General,tls_cert,Partial,Yes,No
+General,tls_cert_1,Partial,Yes,No
+General,tls_fingerprint,Partial,Yes,No
+General,tmux_manager,Partial,Yes,No
+General,tool-checker,Partial,Yes,No
+General,tool-responses,Partial,Yes,No
+General,tool-runner,Partial,Yes,No
+General,tools,Partial,Yes,No
+General,tools_commands,Partial,Yes,No
+General,tooltipcpython-313,Partial,Yes,No
+General,tool_bridge,Partial,Yes,No
+General,tool_browser,Partial,Yes,No
+AI,tool_chains,Partial,Yes,No
+General,tool_error_middleware,Partial,Yes,No
+General,tool_error_middleware_test,Partial,Yes,No
+General,tool_health,Partial,Yes,No
+General,tool_installer,Partial,Yes,No
+General,tool_invoke_notify,Partial,Yes,No
+General,tool_lessons,Partial,Yes,No
+General,tool_registry,Partial,Yes,No
+General,tool_result,Partial,Yes,No
+General,tool_schemas,Partial,Yes,No
+General,tool_versions,Partial,Yes,No
+General,totp-validator,Partial,Yes,No
+General,tracer,Partial,Yes,No
+General,tracing,Partial,Yes,No
+General,traffic_commands,Partial,Yes,No
+General,traffic_parser,Partial,Yes,No
+General,traffic_view,Partial,Yes,No
+AI,train-archnet,Partial,Yes,No
+AI,train-filternet,Partial,Yes,No
+AI,train-simple,Partial,Yes,No
+AI,training-data-2025-12-24T03-29-17-267Z,Partial,Yes,No
+AI,training-data-2025-12-24T03-31-48-760Z,Partial,Yes,No
+AI,training-data-2025-12-24T04-13-25-236Z,Partial,Yes,No
+AI,training-data-2025-12-24T04-32-35-147Z,Partial,Yes,No
+AI,training-data-2025-12-24T04-43-48-405Z,Partial,Yes,No
+General,transform,Partial,Yes,No
+General,transform_test,Partial,Yes,No
+General,transparentbanner,Partial,Yes,No
+General,triage,Partial,Yes,No
+General,triage-results,Partial,Yes,No
+General,triage-rubric,Partial,Yes,No
+General,triage-summary,Partial,Yes,No
+General,triage_sample,Partial,Yes,No
+General,trigger_system,Partial,Yes,No
+General,trivy,Partial,Yes,No
+General,TROUBLESHOOTING,Partial,Yes,No
+General,truncate,Partial,Yes,No
+General,truncate_test,Partial,Yes,No
+General,trusted_header_bypass,Partial,Yes,No
+General,tsconfig,Partial,Yes,No
+General,tsconfigbase,Partial,Yes,No
+General,tsconfig_1,Partial,Yes,No
+General,tsdownconfig,Partial,Yes,No
+General,tshark,Partial,Yes,No
+General,tshark_engine,Partial,Yes,No
+General,tui,Partial,Yes,No
+General,turbo,Partial,Yes,No
+General,txt,Partial,Yes,No
+General,txt_1,Partial,Yes,No
+General,type,Partial,Yes,No
+General,types,Partial,Yes,No
+General,types_1,Partial,Yes,No
+General,types_2,Partial,Yes,No
+General,types_6,Partial,Yes,No
+General,types_7,Partial,Yes,No
+General,types_9,Partial,Yes,No
+General,unauthed-decision-log,Partial,Yes,No
+General,unauthed-findings,Partial,Yes,No
+General,unauthed-findings_1,Partial,Yes,No
+General,update,Partial,Yes,No
+General,upgrade,Partial,Yes,No
+General,url,Partial,Yes,No
+Port Scanning,urlscan,Partial,Yes,No
+Port Scanning,urlscan_2,Partial,Yes,No
+General,utils,Partial,Yes,No
+General,utils_2,Partial,Yes,No
+General,uv_1,Partial,Yes,No
+General,validate,Partial,Yes,No
+General,validate-authentication,Partial,Yes,No
+General,validate_2,Partial,Yes,No
+General,validation-harness,Partial,Yes,No
+General,validator,Partial,Yes,No
+General,validatorcpython-313,Partial,Yes,No
+General,vars,Partial,Yes,No
+General,vault,Partial,Yes,No
+General,version,Partial,Yes,No
+Port Scanning,viewport,Partial,Yes,No
+General,virtual-host-enumeration,Partial,Yes,No
+General,virustotal,Partial,Yes,No
+General,virustotal_1,Partial,Yes,No
+General,virustotal_3,Partial,Yes,No
+General,viz,Partial,Yes,No
+General,volatility3,Partial,Yes,No
+General,vuln-hypothesizer,Metadata Only,No,No
+Port Scanning,vuln-scanner,Metadata Only,No,No
+General,vuln-ssrf,Metadata Only,No,No
+General,vuln-ssrf_2,Metadata Only,No,No
+General,vulnerability_concepts,Metadata Only,No,No
+General,vuln_analysis,Metadata Only,No,No
+General,wayback,Partial,Yes,No
+General,waybackarchive,Partial,Yes,No
+General,waybackurls,Partial,Yes,No
+General,waybackurls_2,Partial,Yes,No
+General,wayback_1,Partial,Yes,No
+General,waymore,Partial,Yes,No
+Web Enumeration,web,Partial,Yes,No
+Web Enumeration,web-app-quick,Partial,Yes,No
+Web Enumeration,web-hunter,Partial,Yes,No
+Web Enumeration,web3_probe,Partial,Yes,No
+Port Scanning,webhook-reporter,Partial,Yes,No
+Web Enumeration,webhooks,Partial,Yes,No
+Web Enumeration,webshell,Partial,Yes,No
+Web Enumeration,webshell-management,Partial,Yes,No
+Web Enumeration,webshell_context,Partial,Yes,No
+Web Enumeration,webshell_context_test,Partial,Yes,No
+Web Enumeration,webshell_probe,Partial,Yes,No
+Web Enumeration,websocket,Partial,Yes,No
+Web Enumeration,web_agent,Partial,Yes,No
+Web Enumeration,web_assets,Complete,Yes,Yes
+Web Enumeration,web_cache_deception,Partial,Yes,No
+Web Enumeration,web_enum,Partial,Yes,No
+Web Enumeration,web_intelligence_view,Partial,Yes,No
+Web Enumeration,web_parser,Partial,Yes,No
+Web Enumeration,web_pipeline,Partial,Yes,No
+Web Enumeration,web_probes,Partial,Yes,No
+Web Enumeration,web_recon,Complete,Yes,Yes
+General,wechat,Partial,Yes,No
+General,wechat-robot,Partial,Yes,No
+General,wechat_robot,Partial,Yes,No
+Web Enumeration,whatweb,Partial,Yes,No
+Web Enumeration,whatweb_2,Partial,Yes,No
+General,whois,Partial,Yes,No
+General,whoisxmlapi,Partial,Yes,No
+General,whois_lookup,Partial,Yes,No
+General,wildcard_detector,Partial,Yes,No
+General,windvane,Partial,Yes,No
+General,winrm-detection,Partial,Yes,No
+General,wireless-pentester,Partial,Yes,No
+General,wireless_agent,Partial,Yes,No
+General,wordlist,Partial,Yes,No
+General,wordlist_test,Partial,Yes,No
+General,workflow-errors,Partial,Yes,No
+General,workflow-logger,Partial,Yes,No
+General,workflow_builder,Partial,Yes,No
+General,workflow_definitions,Partial,Yes,No
+General,workflow_engine,Partial,Yes,No
+General,workflow_engine_1,Partial,Yes,No
+General,workflow_planner,Partial,Yes,No
+General,workflow_player,Partial,Yes,No
+General,workflow_recorder,Partial,Yes,No
+General,workflow_templates,Partial,Yes,No
+General,workspaces_1,Partial,Yes,No
+General,world-model,Partial,Yes,No
+General,WorldModel,Partial,Yes,No
+General,WorldModeltest,Partial,Yes,No
+Port Scanning,wpscan,Partial,Yes,No
+General,writer,Partial,Yes,No
+General,xbow-performance-comparison,Partial,Yes,No
+General,xss,Partial,Yes,No
+General,xss-validator-agent,Partial,Yes,No
+General,xss_fuzz,Partial,Yes,No
+Port Scanning,xss_scan,Complete,Yes,Yes
+General,xxe_upload,Partial,Yes,No
+General,zap,Partial,Yes,No
+General,zetalytics,Partial,Yes,No
+General,zoomeyeapi,Partial,Yes,No
+General,zoomeye_search,Partial,Yes,No
+General,zsteg,Partial,Yes,No
+General,_11,Partial,Yes,No
+General,_12,Partial,Yes,No
+General,_13,Partial,Yes,No
+General,_14,Partial,Yes,No
+General,_15,Partial,Yes,No
+General,_rules_1,Partial,Yes,No
+General,_scope-guard,Partial,Yes,No
+General,_target_1,Partial,Yes,No
+General,__init__cpython-313,Partial,Yes,No
+General,__init__cpython-313_1,Partial,Yes,No
+General,__init___105,Partial,Yes,No
+General,__init___106,Partial,Yes,No
+General,__init___107,Partial,Yes,No
+General,__init___109,Partial,Yes,No
+General,__init___11,Partial,Yes,No
+General,__init___112,Partial,Yes,No
+General,__init___115,Partial,Yes,No
+General,__init___116,Partial,Yes,No
+General,__init___117,Partial,Yes,No
+General,__init___121,Partial,Yes,No
+General,__init___122,Partial,Yes,No
+General,__init___129,Partial,Yes,No
+General,__init___135,Partial,Yes,No
+General,__init___141,Partial,Yes,No
+General,__init___142,Partial,Yes,No
+General,__init___144,Partial,Yes,No
+General,__init___146,Partial,Yes,No
+General,__init___147,Partial,Yes,No
+General,__init___148,Partial,Yes,No
+General,__init___149,Partial,Yes,No
+General,__init___153,Partial,Yes,No
+General,__init___156,Partial,Yes,No
+General,__init___17,Partial,Yes,No
+General,__init___201,Partial,Yes,No
+General,__init___202,Partial,Yes,No
+General,__init___203,Partial,Yes,No
+General,__init___205,Partial,Yes,No
+General,__init___207,Partial,Yes,No
+General,__init___211,Partial,Yes,No
+General,__init___212,Partial,Yes,No
+General,__init___213,Partial,Yes,No
+General,__init___214,Partial,Yes,No
+General,__init___215,Partial,Yes,No
+General,__init___216,Partial,Yes,No
+General,__init___217,Partial,Yes,No
+General,__init___218,Partial,Yes,No
+General,__init___219,Partial,Yes,No
+General,__init___22,Partial,Yes,No
+General,__init___224,Partial,Yes,No
+General,__init___231,Partial,Yes,No
+General,__init___28,Partial,Yes,No
+General,__init___29,Partial,Yes,No
+General,__init___30,Partial,Yes,No
+General,__init___31,Partial,Yes,No
+General,__init___33,Partial,Yes,No
+General,__init___34,Partial,Yes,No
+General,__init___35,Partial,Yes,No
+General,__init___36,Partial,Yes,No
+General,__init___37,Partial,Yes,No
+General,__init___38,Partial,Yes,No
+General,__init___43,Partial,Yes,No
+General,__init___50,Partial,Yes,No
+General,__init___51,Partial,Yes,No
+General,__init___52,Partial,Yes,No
+General,__init___54,Partial,Yes,No
+General,__init___55,Partial,Yes,No
+General,__init___57,Partial,Yes,No
+General,__init___58,Partial,Yes,No
+General,__init___6,Partial,Yes,No
+General,__init___64,Partial,Yes,No
+General,__init___70,Partial,Yes,No
+General,__init___71,Partial,Yes,No
+AI,__main__,Partial,Yes,No
+AI,__main___1,Partial,Yes,No
+Port Scanning,analyze_repos,Metadata Only,No,No
+Port Scanning,app,Metadata Only,No,No
+Port Scanning,aquatone,Metadata Only,No,No
+Port Scanning,artifact-manifest,Metadata Only,No,No
+Port Scanning,authed-stderr,Metadata Only,No,No
+Port Scanning,banner_3,Metadata Only,No,No
+Port Scanning,book,Metadata Only,No,No
+Port Scanning,bug_2,Metadata Only,No,No
+Port Scanning,bug_report_2,Metadata Only,No,No
+Port Scanning,capability_map,Metadata Only,No,No
+Port Scanning,check_artifacts_all,Metadata Only,No,No
+Port Scanning,chunk_eino,Metadata Only,No,No
+Port Scanning,compare_baseline,Metadata Only,No,No
+Port Scanning,config,Metadata Only,No,No
+Port Scanning,config_2,Metadata Only,No,No
+Port Scanning,config_test,Metadata Only,No,No
+Port Scanning,curl,Metadata Only,No,No
+Port Scanning,diff,Metadata Only,No,No
+Port Scanning,ding,Metadata Only,No,No
+Port Scanning,dirsearch,Metadata Only,No,No
+Port Scanning,execution,Metadata Only,No,No
+Port Scanning,fping_tool,Metadata Only,No,No
+Port Scanning,generator,Metadata Only,No,No
+Port Scanning,generatorcpython-313,Metadata Only,No,No
+Port Scanning,gitbook,Metadata Only,No,No
+Port Scanning,ground-truth-validator,Metadata Only,No,No
+Port Scanning,index_2,Metadata Only,No,No
+Port Scanning,index_6,Metadata Only,No,No
+Port Scanning,index_pipeline_test,Metadata Only,No,No
+Port Scanning,inputFiles,Metadata Only,No,No
+Port Scanning,lfi_wordlist,Metadata Only,No,No
+Port Scanning,listener_websocket,Metadata Only,No,No
+Port Scanning,main_10,Metadata Only,No,No
+Port Scanning,Makefile_2,Metadata Only,No,No
+Port Scanning,manager,Metadata Only,No,No
+Port Scanning,models,Metadata Only,No,No
+Port Scanning,netdiscover_tool,Metadata Only,No,No
+Port Scanning,plugins,Metadata Only,No,No
+Port Scanning,plugin_manager,Metadata Only,No,No
+Port Scanning,PULL_REQUEST_TEMPLATE,Metadata Only,No,No
+Port Scanning,radare2,Metadata Only,No,No
+Port Scanning,README_24,Metadata Only,No,No
+Port Scanning,renderer,Metadata Only,No,No
+Port Scanning,report-executive_1,Metadata Only,No,No
+Port Scanning,reporter,Metadata Only,No,No
+Port Scanning,reporting-cherrytree,Metadata Only,No,No
+Port Scanning,reporting-markdown,Metadata Only,No,No
+Port Scanning,report_15,Metadata Only,No,No
+Port Scanning,report_generator,Metadata Only,No,No
+Port Scanning,resource_availability,Metadata Only,No,No
+Port Scanning,rollback-beta,Metadata Only,No,No
+Port Scanning,run_benchmarks,Metadata Only,No,No
+Port Scanning,run_tests,Metadata Only,No,No
+Port Scanning,scan_optimizer,Metadata Only,No,No
+Port Scanning,session_manager,Metadata Only,No,No
+Port Scanning,SKILL_22,Metadata Only,No,No
+Port Scanning,ssh_manager,Metadata Only,No,No
+Port Scanning,sslscan,Metadata Only,No,No
+Port Scanning,targets,Metadata Only,No,No
+Port Scanning,testssl,Metadata Only,No,No
+Port Scanning,test_hitl_coverage,Metadata Only,No,No
+Port Scanning,test_list_targets,Metadata Only,No,No
+Port Scanning,test_parallel,Metadata Only,No,No
+Port Scanning,test_primitives_evidence_capture,Metadata Only,No,No
+Port Scanning,test_probe_captcha_replay,Metadata Only,No,No
+Port Scanning,test_probe_response_headers,Metadata Only,No,No
+Port Scanning,test_probe_ssti_polyglot,Metadata Only,No,No
+Port Scanning,test_stage2,Metadata Only,No,No
+Port Scanning,throttle,Metadata Only,No,No
+Port Scanning,tls_fingerprint,Metadata Only,No,No
+Port Scanning,tool-responses,Metadata Only,No,No
+Port Scanning,tool_health,Metadata Only,No,No
+Port Scanning,train-archnet,Metadata Only,No,No
+Port Scanning,training-data-2025-12-24T03-31-48-760Z,Metadata Only,No,No
+Port Scanning,training-data-2025-12-24T04-13-25-236Z,Metadata Only,No,No
+Port Scanning,training-data-2025-12-24T04-32-35-147Z,Metadata Only,No,No
+Port Scanning,training-data-2025-12-24T04-43-48-405Z,Metadata Only,No,No
+Port Scanning,types_6,Metadata Only,No,No
+Port Scanning,vuln-authz_1,Metadata Only,No,No
+Port Scanning,vuln-auth_1,Metadata Only,No,No
+Port Scanning,vuln-injection_1,Metadata Only,No,No
+Port Scanning,vulnerability,Metadata Only,No,No
+Port Scanning,webhook-reporter,Metadata Only,No,No
+Port Scanning,websocket,Metadata Only,No,No
+Port Scanning,workflow_player,Metadata Only,No,No
+Port Scanning,workflow_recorder,Metadata Only,No,No
+Port Scanning,workspaces_1,Metadata Only,No,No
+Port Scanning,__init___54,Metadata Only,No,No
+General,AGENT-GUIDE,Partial,Yes,No
+General,agent_mode_controller,Partial,Yes,No
+AI,attackchain_1,Partial,Yes,No
+Port Scanning,balanced-active-scan,Partial,Yes,No
+General,BigQueryInjection,Partial,Yes,No
+General,cache,Partial,Yes,No
+AI,CassandraInjection,Partial,Yes,No
+General,checkpoint-provider,Partial,Yes,No
+General,concurrency,Partial,Yes,No
+AI,container,Partial,Yes,No
+General,context,Partial,Yes,No
+General,conversation_1,Partial,Yes,No
+General,cve_mapper,Partial,Yes,No
+General,cvss,Partial,Yes,No
+General,database,Partial,Yes,No
+General,DB2Injection,Partial,Yes,No
+General,db_1,Partial,Yes,No
+General,db_test,Partial,Yes,No
+General,deliverables,Partial,Yes,No
+General,detection_agent,Partial,Yes,No
+General,eino_adk_run_loop,Partial,Yes,No
+General,eino_meta_test,Partial,Yes,No
+General,eino_retriever_adapter,Partial,Yes,No
+AI,eino_retrieve_chain,Partial,Yes,No
+General,eino_sqlite_indexer,Partial,Yes,No
+General,endpoint-prober,Partial,Yes,No
+General,ErrorPatternAnalyzer,Partial,Yes,No
+General,exploit,Partial,Yes,No
+General,exploit-authz_1,Partial,Yes,No
+General,exploit-authz_3,Partial,Yes,No
+General,exploit-auth_1,Partial,Yes,No
+General,exploit-auth_3,Partial,Yes,No
+AI,exploit-chainer,Partial,Yes,No
+General,exploit-guide,Partial,Yes,No
+General,exploit-injection_1,Partial,Yes,No
+General,exploit-injection_2,Partial,Yes,No
+General,exploit-injection_3,Partial,Yes,No
+General,exploit-ssrf,Partial,Yes,No
+General,exploit-ssrf_1,Partial,Yes,No
+General,exploit-ssrf_2,Partial,Yes,No
+General,exploit-ssrf_3,Partial,Yes,No
+General,exploit-xss_1,Partial,Yes,No
+General,exploit-xss_3,Partial,Yes,No
+General,exploitation-checker,Partial,Yes,No
+Port Scanning,export,Partial,Yes,No
+Port Scanning,export-metrics,Partial,Yes,No
+General,finalizers,Partial,Yes,No
+General,findings,Partial,Yes,No
+General,FINDINGS-DB,Partial,Yes,No
+General,findings-provider,Partial,Yes,No
+General,findings-renderer,Partial,Yes,No
+General,generators,Partial,Yes,No
+General,gowitness,Partial,Yes,No
+General,Hackable2_3,Partial,Yes,No
+General,handoff,Partial,Yes,No
+General,index_pipeline,Partial,Yes,No
+General,Kioptrix_level_1,Partial,Yes,No
+Web Enumeration,listener_http_test,Partial,Yes,No
+General,manager,Partial,Yes,No
+General,manager_start_test,Partial,Yes,No
+General,menu_system,Partial,Yes,No
+General,metasploit,Partial,Yes,No
+General,metasploit_aux,Partial,Yes,No
+General,metatron,Partial,Yes,No
+General,migrate,Partial,Yes,No
+General,net-recon-agent,Partial,Yes,No
+General,nikto,Partial,Yes,No
+General,nmap-distccd,Partial,Yes,No
+General,nmap_2,Partial,Yes,No
+General,notification,Partial,Yes,No
+General,output-formatter,Partial,Yes,No
+General,output-formatters,Partial,Yes,No
+General,payloads,Partial,Yes,No
+General,pentestTarget,Partial,Yes,No
+General,pipeline,Partial,Yes,No
+General,primitives,Partial,Yes,No
+General,prompt_class,Partial,Yes,No
+General,pwntools,Partial,Yes,No
+General,query-execution-result,Partial,Yes,No
+General,queue-schemas,Partial,Yes,No
+General,queue-validation,Partial,Yes,No
+Port Scanning,report-executive,Partial,Yes,No
+Port Scanning,report-executive_3,Partial,Yes,No
+Port Scanning,report-generator,Partial,Yes,No
+Port Scanning,reporting,Partial,Yes,No
+General,requester,Partial,Yes,No
+General,requestercpython-313,Partial,Yes,No
+General,retriever,Partial,Yes,No
+General,schema,Partial,Yes,No
+General,schema_migrate,Partial,Yes,No
+General,session-manager,Partial,Yes,No
+General,settings-writer,Partial,Yes,No
+General,SKILL_10,Partial,Yes,No
+General,SKILL_15,Partial,Yes,No
+General,SKILL_21,Partial,Yes,No
+General,smb-vuln,Partial,Yes,No
+General,target,Partial,Yes,No
+General,task,Partial,Yes,No
+General,test_aup_consent,Partial,Yes,No
+General,test_benchmark_registry,Partial,Yes,No
+AI,test_chain_dedup,Partial,Yes,No
+AI,test_chain_validation,Partial,Yes,No
+General,test_cve_db,Partial,Yes,No
+General,test_cvss,Partial,Yes,No
+General,test_diff,Partial,Yes,No
+General,test_findings,Partial,Yes,No
+General,test_findings_db_reaper,Partial,Yes,No
+General,test_findings_db_reconciler,Partial,Yes,No
+General,test_handler_finalizers,Partial,Yes,No
+General,test_intensity_safe,Partial,Yes,No
+General,test_orchestrator,Partial,Yes,No
+General,test_probe_cookie_prefix_bypass,Partial,Yes,No
+General,test_probe_jwt_jku_x5u_ssrf,Partial,Yes,No
+General,test_probe_nextjs_rsc_rce,Partial,Yes,No
+General,test_probe_saml_xsw,Partial,Yes,No
+General,test_probe_sqli_login_bypass,Partial,Yes,No
+General,test_sarif,Partial,Yes,No
+Web Enumeration,test_webhooks,Partial,Yes,No
+General,tls-analyzer,Partial,Yes,No
+General,TOKEN-OPTIMIZATION,Partial,Yes,No
+General,tool,Partial,Yes,No
+General,types_5,Partial,Yes,No
+General,vuln-authz_1,Partial,Yes,No
+General,vuln-authz_3,Partial,Yes,No
+General,vuln-auth_1,Partial,Yes,No
+General,vuln-auth_3,Partial,Yes,No
+General,vuln-hypothesizer,Partial,Yes,No
+General,vuln-injection_1,Partial,Yes,No
+General,vuln-injection_3,Partial,Yes,No
+General,vuln-mapper,Partial,Yes,No
+General,vuln-mappertest,Partial,Yes,No
+Port Scanning,vuln-scanner,Partial,Yes,No
+General,vuln-ssrf,Partial,Yes,No
+General,vuln-ssrf_1,Partial,Yes,No
+General,vuln-ssrf_2,Partial,Yes,No
+General,vuln-ssrf_3,Partial,Yes,No
+General,vuln-xss_1,Partial,Yes,No
+General,vuln-xss_3,Partial,Yes,No
+General,vulnerability,Partial,Yes,No
+General,vulnerability-triage,Partial,Yes,No
+General,vulnerability_1,Partial,Yes,No
+General,vulnerability_concepts,Partial,Yes,No
+General,vulns,Partial,Yes,No
+General,vuln_analysis,Partial,Yes,No
+General,vuln_correlator,Partial,Yes,No
+General,vuln_pipeline,Partial,Yes,No
+Port Scanning,vuln_scanner_agent,Partial,Yes,No
+General,worker,Partial,Yes,No
+General,workflows,Complete,Yes,Yes
+General,working_memory,Partial,Yes,No
+General,xsser,Partial,Yes,No
+General,_exploit-scope,Partial,Yes,No
+General,_exploit-scope_1,Partial,Yes,No
+General,_vuln-scope,Partial,Yes,No
+General,_vuln-scope_1,Partial,Yes,No
+Port Scanning,agent_loop,Metadata Only,No,No
+Port Scanning,API,Metadata Only,No,No
+Port Scanning,api-security,Metadata Only,No,No
+Port Scanning,api_security_agent,Metadata Only,No,No
+Port Scanning,api_surface_mapper,Metadata Only,No,No
+Port Scanning,apply_triage_labels,Metadata Only,No,No
+Port Scanning,arjun_tool,Metadata Only,No,No
+Port Scanning,base_5,Metadata Only,No,No
+Port Scanning,benchmark_juice_shop,Metadata Only,No,No
+Port Scanning,bug_report,Metadata Only,No,No
+Port Scanning,business_logic_fuzz,Metadata Only,No,No
+Port Scanning,chat_uploads,Metadata Only,No,No
+Port Scanning,ci-cd,Metadata Only,No,No
+Port Scanning,cicd-redteam,Metadata Only,No,No
+Port Scanning,compliance,Metadata Only,No,No
+Port Scanning,config,Metadata Only,No,No
+Port Scanning,config_2,Metadata Only,No,No
+Port Scanning,const,Metadata Only,No,No
+Port Scanning,constants_1,Metadata Only,No,No
+Port Scanning,crlfuzz,Metadata Only,No,No
+Port Scanning,dalfox,Metadata Only,No,No
+Port Scanning,demo,Metadata Only,No,No
+Port Scanning,dirbuster,Metadata Only,No,No
+Port Scanning,dirbuster_2,Metadata Only,No,No
+Port Scanning,dirsearch_2,Metadata Only,No,No
+Port Scanning,dirsearch_tool,Metadata Only,No,No
+Port Scanning,Dockerfile_6,Metadata Only,No,No
+Port Scanning,efd01c52_findings,Metadata Only,No,No
+Port Scanning,efd01c52_llm_coordinated_run,Metadata Only,No,No
+Port Scanning,eino_tool_name_injection,Metadata Only,No,No
+Port Scanning,enhanced-report,Metadata Only,No,No
+Port Scanning,example-report-excerpt,Metadata Only,No,No
+Port Scanning,example_sqlmap,Metadata Only,No,No
+Port Scanning,example_sqlmap_1,Metadata Only,No,No
+Port Scanning,executor,Metadata Only,No,No
+Port Scanning,exploit,Metadata Only,No,No
+Port Scanning,exploit-injection_2,Metadata Only,No,No
+Port Scanning,feroxbuster,Metadata Only,No,No
+Port Scanning,ffuf,Metadata Only,No,No
+Port Scanning,ffuf_tool,Metadata Only,No,No
+Port Scanning,findings,Metadata Only,No,No
+Port Scanning,findings_1,Metadata Only,No,No
+Port Scanning,generator,Metadata Only,No,No
+Port Scanning,ghost-traffic,Metadata Only,No,No
+Port Scanning,ghost-traffictest,Metadata Only,No,No
+Port Scanning,goreleaser,Metadata Only,No,No
+Port Scanning,go_2,Metadata Only,No,No
+Port Scanning,HTB_challenge_Template,Metadata Only,No,No
+Port Scanning,index_10,Metadata Only,No,No
+Port Scanning,INSTALL,Metadata Only,No,No
+Port Scanning,install_1,Metadata Only,No,No
+Port Scanning,install_planner,Metadata Only,No,No
+Port Scanning,library,Metadata Only,No,No
+Port Scanning,llm-app-redteam,Metadata Only,No,No
+Port Scanning,main,Metadata Only,No,No
+Port Scanning,main_11,Metadata Only,No,No
+Port Scanning,mapping,Metadata Only,No,No
+Port Scanning,mobile_agent,Metadata Only,No,No
+Port Scanning,mock_pipelinetest,Metadata Only,No,No
+Port Scanning,nmap-ajp,Metadata Only,No,No
+Port Scanning,nmap-cassandra,Metadata Only,No,No
+Port Scanning,nmap-cups,Metadata Only,No,No
+Port Scanning,nmap-ftp,Metadata Only,No,No
+Port Scanning,nmap-http,Metadata Only,No,No
+Port Scanning,nmap-imap,Metadata Only,No,No
+Port Scanning,nmap-ldap,Metadata Only,No,No
+Port Scanning,nmap-mongodb,Metadata Only,No,No
+Port Scanning,nmap-mountd,Metadata Only,No,No
+Port Scanning,nmap-mssql,Metadata Only,No,No
+Port Scanning,nmap-mysql,Metadata Only,No,No
+Port Scanning,nmap-nfs,Metadata Only,No,No
+Port Scanning,nmap-ntp,Metadata Only,No,No
+Port Scanning,nmap-oracle,Metadata Only,No,No
+Port Scanning,nmap-pop3,Metadata Only,No,No
+Port Scanning,nmap-rdp,Metadata Only,No,No
+Port Scanning,nmap-rsync,Metadata Only,No,No
+Port Scanning,nmap-smb,Metadata Only,No,No
+Port Scanning,nmap-smtp,Metadata Only,No,No
+Port Scanning,nmap-snmp,Metadata Only,No,No
+Port Scanning,nmap-vnc,Metadata Only,No,No
+Port Scanning,nuclei,Metadata Only,No,No
+Port Scanning,nuclei-agent,Metadata Only,No,No
+Port Scanning,nuclei-template-sha,Metadata Only,No,No
+Port Scanning,openapi,Metadata Only,No,No
+Port Scanning,parameter_discovery,Metadata Only,No,No
+Port Scanning,pentestGPT_HTB_phonebook_failed,Metadata Only,No,No
+Port Scanning,pentestGPT_log_HTB_Precious,Metadata Only,No,No
+Port Scanning,pentesting,Metadata Only,No,No
+Port Scanning,playbook,Metadata Only,No,No
+Port Scanning,plugin_12,Metadata Only,No,No
+Port Scanning,probes,Metadata Only,No,No
+Port Scanning,prompt_class_v1,Metadata Only,No,No
+Port Scanning,prompt_class_v2,Metadata Only,No,No
+Port Scanning,ptt_reasoning,Metadata Only,No,No
+Port Scanning,pyproject_4,Metadata Only,No,No
+Port Scanning,README_16,Metadata Only,No,No
+Port Scanning,README_23,Metadata Only,No,No
+Port Scanning,README_26,Metadata Only,No,No
+Port Scanning,README_36,Metadata Only,No,No
+Port Scanning,README_7,Metadata Only,No,No
+Port Scanning,README_EN,Metadata Only,No,No
+Port Scanning,realdemo,Metadata Only,No,No
+Port Scanning,realdemo-paced,Metadata Only,No,No
+Port Scanning,reconftw_quick,Metadata Only,No,No
+Port Scanning,release,Metadata Only,No,No
+Port Scanning,replay_engine,Metadata Only,No,No
+Port Scanning,requirements_9,Metadata Only,No,No
+Port Scanning,response_headers,Metadata Only,No,No
+Port Scanning,ROADMAP,Metadata Only,No,No
+Port Scanning,runner_1,Metadata Only,No,No
+Port Scanning,run_summary_1,Metadata Only,No,No
+Port Scanning,SCORE_1,Metadata Only,No,No
+Port Scanning,SCORE_2,Metadata Only,No,No
+Port Scanning,SECURITY,Metadata Only,No,No
+Port Scanning,SECURITY_2,Metadata Only,No,No
+Port Scanning,security_tools,Metadata Only,No,No
+Port Scanning,server_2,Metadata Only,No,No
+Port Scanning,server_3,Metadata Only,No,No
+Port Scanning,severity_engine,Metadata Only,No,No
+Port Scanning,SHANNON-PRO,Metadata Only,No,No
+Port Scanning,SKILL_19,Metadata Only,No,No
+Port Scanning,SKILL_2,Metadata Only,No,No
+Port Scanning,SKILL_23,Metadata Only,No,No
+Port Scanning,solution,Metadata Only,No,No
+Port Scanning,solved-challenges,Metadata Only,No,No
+Port Scanning,spa_probes,Metadata Only,No,No
+Port Scanning,SPEC,Metadata Only,No,No
+Port Scanning,sqli_login_bypass,Metadata Only,No,No
+Port Scanning,sqlmap,Metadata Only,No,No
+Port Scanning,ssti_stored,Metadata Only,No,No
+Port Scanning,STAGE2,Metadata Only,No,No
+Port Scanning,stdout,Metadata Only,No,No
+Port Scanning,stdout_1,Metadata Only,No,No
+Port Scanning,summary,Metadata Only,No,No
+Port Scanning,test_agents_parallel,Metadata Only,No,No
+Port Scanning,test_api_security_e2e_smoke,Metadata Only,No,No
+Port Scanning,test_cache,Metadata Only,No,No
+Port Scanning,test_core,Metadata Only,No,No
+Port Scanning,test_dedup,Metadata Only,No,No
+Port Scanning,test_evidence,Metadata Only,No,No
+Port Scanning,test_full_workflow,Metadata Only,No,No
+Port Scanning,test_install_preferences,Metadata Only,No,No
+Port Scanning,test_mcp_honeypot_e2e,Metadata Only,No,No
+Port Scanning,test_mcp_security_tools,Metadata Only,No,No
+Port Scanning,test_misc_coverage,Metadata Only,No,No
+Port Scanning,test_mobile_agent_e2e_smoke,Metadata Only,No,No
+Port Scanning,test_observation_normalization,Metadata Only,No,No
+Port Scanning,test_os_execution,Metadata Only,No,No
+Port Scanning,test_payload_library,Metadata Only,No,No
+Port Scanning,test_perf_profile,Metadata Only,No,No
+Port Scanning,test_probe_business_logic_fuzz,Metadata Only,No,No
+Port Scanning,test_severity_calibration,Metadata Only,No,No
+Port Scanning,test_tool_bridge,Metadata Only,No,No
+Port Scanning,test_tool_bridge_e2e,Metadata Only,No,No
+Port Scanning,test_tool_installer,Metadata Only,No,No
+Port Scanning,test_tool_installer_coverage,Metadata Only,No,No
+Port Scanning,test_tool_result_persistence,Metadata Only,No,No
+Port Scanning,tool_bridge,Metadata Only,No,No
+Port Scanning,triage-results,Metadata Only,No,No
+Port Scanning,triage-rubric,Metadata Only,No,No
+Port Scanning,triage-summary,Metadata Only,No,No
+Port Scanning,triage_sample,Metadata Only,No,No
+Port Scanning,types_2,Metadata Only,No,No
+Port Scanning,validator,Metadata Only,No,No
+Port Scanning,vars,Metadata Only,No,No
+Port Scanning,version,Metadata Only,No,No
+Port Scanning,vulns,Metadata Only,No,No
+Port Scanning,vuln_correlator,Metadata Only,No,No
+Port Scanning,vuln_pipeline,Metadata Only,No,No
+Port Scanning,vuln_scanner_agent,Metadata Only,No,No
+Port Scanning,webshell,Metadata Only,No,No
+Port Scanning,web_enum,Metadata Only,No,No
+Port Scanning,worker,Metadata Only,No,No
+Port Scanning,xss,Metadata Only,No,No
+Port Scanning,__init___135,Metadata Only,No,No
+Port Scanning,__init___218,Metadata Only,No,No
+Port Scanning,__init___35,Metadata Only,No,No
+Port Scanning,reporting,Broken,No,No

@@ -1,0 +1,16 @@
+name: poc_agent
+category: api_security
+language: .py
+execution_type: library
+entrypoint: poc_agent.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - poc_agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

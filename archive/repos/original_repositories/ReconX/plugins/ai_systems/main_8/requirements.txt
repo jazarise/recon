@@ -1,0 +1,10 @@
+__future__
+typing
+typer
+rich
+rich.console
+rich.panel
+rich.table
+rich.text
+spectre.core.app
+spectre.core.config

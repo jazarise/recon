@@ -1,0 +1,16 @@
+name: azure
+category: cloud_security
+language: .yaml
+execution_type: library
+entrypoint: azure.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - azure
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

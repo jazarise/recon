@@ -1,0 +1,16 @@
+name: nmap-vnc
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-vnc.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-vnc
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

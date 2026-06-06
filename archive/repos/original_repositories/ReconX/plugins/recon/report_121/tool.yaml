@@ -1,0 +1,16 @@
+name: report_121
+category: recon
+language: .py
+execution_type: library
+entrypoint: report_121.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - report_121
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,3 @@
+# test_primitives_evidence_capture Plugin
+
+Auto-generated scaffolding for test_primitives_evidence_capture.

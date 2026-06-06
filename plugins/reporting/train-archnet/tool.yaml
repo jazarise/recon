@@ -1,0 +1,16 @@
+name: train-archnet
+category: reporting
+language: .cjs
+execution_type: library
+entrypoint: train-archnet.cjs
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - train-archnet
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

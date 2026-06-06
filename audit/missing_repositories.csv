@@ -1,0 +1,7 @@
+Repository,Evidence Found,Missing Components,Priority
+toolname,subprocess call in generate_audit.py,Executable/Source,High
+dig,subprocess call in cli\new_tools.py,Executable/Source,High
+dig,subprocess call in intelligence\mail_hygiene_and_dork_engine.py,Executable/Source,High
+dig,subprocess call in intelligence\mail_hygiene_and_dork_engine.py,Executable/Source,High
+pip-audit,subprocess call in intelligence\analysis\sast_engine.py,Executable/Source,High
+npm,subprocess call in intelligence\analysis\sast_engine.py,Executable/Source,High

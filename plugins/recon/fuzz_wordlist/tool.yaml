@@ -1,0 +1,16 @@
+name: fuzz_wordlist
+category: recon
+language: .txt
+execution_type: api_server
+entrypoint: fuzz_wordlist.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - fuzz_wordlist
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: scan_pipeline
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: scan_pipeline.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - scan_pipeline
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

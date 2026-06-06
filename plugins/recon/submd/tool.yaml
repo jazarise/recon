@@ -1,0 +1,16 @@
+name: submd
+category: recon
+language: .go
+execution_type: library
+entrypoint: submd.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - submd
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

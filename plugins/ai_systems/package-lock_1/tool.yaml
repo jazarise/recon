@@ -1,0 +1,16 @@
+name: package-lock_1
+category: ai_systems
+language: .json
+execution_type: library
+entrypoint: package-lock_1.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - package-lock_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

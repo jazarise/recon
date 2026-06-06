@@ -1,0 +1,16 @@
+name: nuclei
+category: web_scanning
+language: .json
+execution_type: library
+entrypoint: nuclei.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nuclei
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

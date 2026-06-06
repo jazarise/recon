@@ -1,0 +1,16 @@
+name: announcements
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: announcements.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - announcements
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

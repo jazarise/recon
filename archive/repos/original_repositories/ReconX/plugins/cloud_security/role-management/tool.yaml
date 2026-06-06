@@ -1,0 +1,16 @@
+name: role-management
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: role-management.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - role-management
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

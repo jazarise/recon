@@ -1,0 +1,16 @@
+name: CHANGELOG_2
+category: recon
+language: .md
+execution_type: api_server
+entrypoint: CHANGELOG_2.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - CHANGELOG_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

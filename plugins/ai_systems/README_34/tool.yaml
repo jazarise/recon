@@ -1,0 +1,16 @@
+name: README_34
+category: ai_systems
+language: .md
+execution_type: library
+entrypoint: README_34.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_34
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

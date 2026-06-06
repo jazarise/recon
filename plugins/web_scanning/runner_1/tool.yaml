@@ -1,0 +1,16 @@
+name: runner_1
+category: web_scanning
+language: .go
+execution_type: library
+entrypoint: runner_1.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - runner_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

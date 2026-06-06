@@ -1,0 +1,12 @@
+name: scan4all_workflows
+version: 1.0.0
+description: "Native vulnerability workflows (ported from scan4all)"
+author: ReconX
+type: vulnerability
+stage: deep
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 14400

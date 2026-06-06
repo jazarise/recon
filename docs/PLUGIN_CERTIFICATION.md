@@ -1,0 +1,1 @@
+# Plugin Certification\nLevels: Official, Verified, Community, Experimental.

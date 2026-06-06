@@ -1,0 +1,16 @@
+name: efd01c52_probe_runs
+category: recon
+language: .json
+execution_type: api_server
+entrypoint: efd01c52_probe_runs.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - efd01c52_probe_runs
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

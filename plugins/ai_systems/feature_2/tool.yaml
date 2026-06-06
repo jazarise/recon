@@ -1,0 +1,16 @@
+name: feature_2
+category: ai_systems
+language: .yml
+execution_type: library
+entrypoint: feature_2.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - feature_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

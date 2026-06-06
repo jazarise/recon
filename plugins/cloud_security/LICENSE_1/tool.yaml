@@ -1,0 +1,16 @@
+name: LICENSE_1
+category: cloud_security
+language: unknown
+execution_type: library
+entrypoint: LICENSE_1
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - LICENSE_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

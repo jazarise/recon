@@ -1,0 +1,16 @@
+name: package_2
+category: ai_systems
+language: .json
+execution_type: library
+entrypoint: package_2.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - package_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

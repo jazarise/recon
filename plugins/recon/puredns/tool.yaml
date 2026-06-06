@@ -1,0 +1,16 @@
+name: puredns
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: puredns.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - puredns
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

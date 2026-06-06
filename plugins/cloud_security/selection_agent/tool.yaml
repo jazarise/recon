@@ -1,0 +1,16 @@
+name: selection_agent
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: selection_agent.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - selection_agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

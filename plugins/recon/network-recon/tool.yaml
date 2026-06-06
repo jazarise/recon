@@ -1,0 +1,16 @@
+name: network-recon
+category: recon
+language: .js
+execution_type: library
+entrypoint: network-recon.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - network-recon
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,12 @@
+Package,Source Repo,Required
+requests,core,YES
+rich,cli,YES
+fastapi,api,YES
+uvicorn,api,YES
+sqlalchemy,database,YES
+alembic,database,YES
+pyyaml,core,YES
+pydantic,core,YES
+aiohttp,plugins,YES
+jinja2,reports,YES
+pytest,tests,YES

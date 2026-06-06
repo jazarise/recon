@@ -1,0 +1,16 @@
+name: README_31
+category: ctf_automation
+language: .md
+execution_type: library
+entrypoint: README_31.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_31
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

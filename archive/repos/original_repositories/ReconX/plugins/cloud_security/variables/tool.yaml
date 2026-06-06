@@ -1,0 +1,16 @@
+name: variables
+category: cloud_security
+language: .tf
+execution_type: library
+entrypoint: variables.tf
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - variables
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

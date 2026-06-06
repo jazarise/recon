@@ -1,0 +1,16 @@
+name: cyberstrikeai-burp-extension-100
+category: ai_systems
+language: .jar
+execution_type: library
+entrypoint: cyberstrikeai-burp-extension-1.0.0.jar
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - cyberstrikeai-burp-extension-100
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

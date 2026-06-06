@@ -1,0 +1,16 @@
+name: config_test
+category: reporting
+language: .go
+execution_type: library
+entrypoint: config_test.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - config_test
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,5 @@
+name: passive_recon
+steps:
+  - subfinder
+  - amass
+  - assetfinder

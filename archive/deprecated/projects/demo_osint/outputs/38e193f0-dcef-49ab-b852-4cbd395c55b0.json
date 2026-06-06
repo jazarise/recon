@@ -1,0 +1,54 @@
+{
+  "workflow_id": "38e193f0-dcef-49ab-b852-4cbd395c55b0",
+  "workflow_name": "OSINT Workflow",
+  "target": "example.com",
+  "status": "completed",
+  "started_at": "2026-06-05T13:04:22.214447+00:00",
+  "completed_at": "2026-06-05T13:04:22.731408+00:00",
+  "steps": [
+    {
+      "step_id": "osint_s1",
+      "plugin": "bigbountyrecon",
+      "status": "failed",
+      "started_at": "2026-06-05T13:04:22.214465+00:00",
+      "completed_at": "2026-06-05T13:04:22.610560+00:00",
+      "output": null,
+      "error": "cannot import name 'Finding' from 'core.models' (E:\\ReconX\\Reconx_V_2.0.0\\core\\models.py)"
+    },
+    {
+      "step_id": "osint_s2",
+      "plugin": "reporting",
+      "status": "completed",
+      "started_at": "2026-06-05T13:04:22.610589+00:00",
+      "completed_at": "2026-06-05T13:04:22.731396+00:00",
+      "output": {
+        "plugin": "reporting",
+        "target": "example.com",
+        "reports": {
+          "markdown": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.md",
+          "json": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.json",
+          "csv": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.csv",
+          "html": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.html"
+        },
+        "report_path": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.html",
+        "findings": []
+      }
+    }
+  ],
+  "final_context": {
+    "target": "example.com",
+    "findings": [],
+    "reporting": {
+      "plugin": "reporting",
+      "target": "example.com",
+      "reports": {
+        "markdown": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.md",
+        "json": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.json",
+        "csv": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.csv",
+        "html": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.html"
+      },
+      "report_path": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780644862.html",
+      "findings": []
+    }
+  }
+}

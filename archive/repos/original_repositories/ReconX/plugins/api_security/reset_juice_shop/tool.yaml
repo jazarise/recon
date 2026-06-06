@@ -1,0 +1,16 @@
+name: reset_juice_shop
+category: api_security
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: reset_juice_shop.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reset_juice_shop
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

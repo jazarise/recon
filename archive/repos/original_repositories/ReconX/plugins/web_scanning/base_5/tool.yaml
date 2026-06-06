@@ -1,0 +1,16 @@
+name: base_5
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: base_5.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - base_5
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

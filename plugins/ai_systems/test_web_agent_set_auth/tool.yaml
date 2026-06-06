@@ -1,0 +1,16 @@
+name: test_web_agent_set_auth
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: test_web_agent_set_auth.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_web_agent_set_auth
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

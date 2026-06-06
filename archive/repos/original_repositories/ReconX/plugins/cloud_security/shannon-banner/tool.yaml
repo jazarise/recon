@@ -1,0 +1,16 @@
+name: shannon-banner
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: shannon-banner.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - shannon-banner
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

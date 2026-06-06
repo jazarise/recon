@@ -1,0 +1,16 @@
+name: vulns
+category: web_scanning
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: vulns.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - vulns
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

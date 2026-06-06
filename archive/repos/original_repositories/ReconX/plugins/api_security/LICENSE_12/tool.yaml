@@ -1,0 +1,16 @@
+name: LICENSE_12
+category: api_security
+language: unknown
+execution_type: library
+entrypoint: LICENSE_12
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - LICENSE_12
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

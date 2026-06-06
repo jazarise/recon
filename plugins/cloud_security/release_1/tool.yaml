@@ -1,0 +1,16 @@
+name: release_1
+category: cloud_security
+language: .yml
+execution_type: library
+entrypoint: release_1.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - release_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

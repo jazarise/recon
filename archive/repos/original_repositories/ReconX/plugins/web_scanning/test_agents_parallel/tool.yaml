@@ -1,0 +1,16 @@
+name: test_agents_parallel
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: test_agents_parallel.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_agents_parallel
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

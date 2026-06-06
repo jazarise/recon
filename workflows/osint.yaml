@@ -1,0 +1,15 @@
+name: OSINT & Intelligence Workflow
+description: Organization discovery to threat correlation
+steps:
+  - name: Organization Discovery
+    plugin: acquifinder
+  - name: Email Discovery
+    plugin: theharvester
+  - name: Username Intelligence
+    plugin: social_intel
+  - name: Breach Intelligence
+    plugin: breach-check
+  - name: Threat Intelligence
+    plugin: threat_intel
+  - name: Reporting
+    plugin: reporting

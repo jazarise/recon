@@ -1,0 +1,16 @@
+name: harness
+category: api_security
+language: .js
+execution_type: api_server
+entrypoint: harness.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - harness
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

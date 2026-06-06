@@ -1,0 +1,16 @@
+name: zh-CN
+category: cloud_security
+language: .json
+execution_type: library
+entrypoint: zh-CN.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - zh-CN
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: responder
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: responder.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - responder
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

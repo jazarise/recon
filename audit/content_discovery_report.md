@@ -1,0 +1,1 @@
+# Content Discovery Report\nIntegrated `ffuf`, `dirsearch`, `gobuster`.

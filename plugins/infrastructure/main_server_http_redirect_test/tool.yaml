@@ -1,0 +1,16 @@
+name: main_server_http_redirect_test
+category: infrastructure
+language: .go
+execution_type: library
+entrypoint: main_server_http_redirect_test.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main_server_http_redirect_test
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

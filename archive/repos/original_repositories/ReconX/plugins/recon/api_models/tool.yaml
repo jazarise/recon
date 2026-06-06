@@ -1,0 +1,16 @@
+name: api_models
+category: recon
+language: .py
+execution_type: library
+entrypoint: api_models.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - api_models
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

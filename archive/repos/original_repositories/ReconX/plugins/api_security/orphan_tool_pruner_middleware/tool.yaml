@@ -1,0 +1,16 @@
+name: orphan_tool_pruner_middleware
+category: api_security
+language: .go
+execution_type: library
+entrypoint: orphan_tool_pruner_middleware.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - orphan_tool_pruner_middleware
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

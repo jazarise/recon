@@ -1,0 +1,16 @@
+name: portscan-top-tcp-ports
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: portscan-top-tcp-ports.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - portscan-top-tcp-ports
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

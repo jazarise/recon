@@ -1,0 +1,16 @@
+name: subprocess_runner
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: subprocess_runner.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - subprocess_runner
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

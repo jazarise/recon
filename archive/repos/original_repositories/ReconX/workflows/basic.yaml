@@ -1,0 +1,27 @@
+name: Basic Recon Workflow
+description: Fast and lightweight reconnaissance. Estimated time 5-15 minutes.
+mode: basic
+steps:
+- id: s1
+  plugin: dns_intelligence
+  plugin_path: plugins/golden/dns_intelligence
+  timeout: 60
+  description: DNS Enumeration
+
+- id: s2
+  plugin: network_discovery
+  plugin_path: plugins/golden/network_discovery
+  timeout: 120
+  description: Basic Port Scan and Host Discovery
+
+- id: s3
+  plugin: web_recon
+  plugin_path: plugins/golden/web_recon
+  timeout: 60
+  description: HTTP Fingerprinting
+
+- id: s4
+  plugin: reporting
+  plugin_path: plugins/golden/reporting
+  timeout: 30
+  description: Generate Reports

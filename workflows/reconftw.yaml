@@ -1,0 +1,75 @@
+name: ReconFTW Complete Workflow
+description: Natively ported workflow from reconftw repository executing 14+ phases of advanced recon.
+mode: reconftw
+steps:
+- id: osint
+  plugin: osint_gather
+  plugin_path: plugins/intelligence/osint
+  timeout: 3600
+  description: Phase 1 - OSINT Gathering (Emails, Dorks, Meta info)
+
+- id: subdomains
+  plugin: passive_recon
+  plugin_path: plugins/deep/passive_recon
+  timeout: 7200
+  description: Phase 2 - Subdomain Enumeration (Passive & Active)
+
+- id: permutations
+  plugin: subdomain_permutations
+  plugin_path: plugins/discovery/subdomain_permutations
+  timeout: 7200
+  description: Phase 3 - Subdomain Permutations and Alterations
+
+- id: cloud
+  plugin: cloud_recon
+  plugin_path: plugins/discovery/cloud_recon
+  timeout: 3600
+  description: Phase 4 - Cloud Asset Discovery (S3, Azure, GCP)
+
+- id: ip_recon
+  plugin: asn_intel
+  plugin_path: plugins/deep/asn_intel
+  timeout: 3600
+  description: Phase 5 - IP & ASN Recon
+
+- id: ports
+  plugin: active_recon
+  plugin_path: plugins/deep/active_recon
+  timeout: 14400
+  description: Phase 6 - Port Scanning
+
+- id: http
+  plugin: http_probe
+  plugin_path: plugins/deep/active_recon
+  timeout: 3600
+  description: Phase 7 - HTTP Probing
+
+- id: crawling
+  plugin: content_discovery
+  plugin_path: plugins/deep/content_discovery
+  timeout: 14400
+  description: Phase 8 - Web Crawling & Content Discovery
+
+- id: js_analysis
+  plugin: js_analyzer
+  plugin_path: plugins/web/js_analyzer
+  timeout: 3600
+  description: Phase 9 - JavaScript File Analysis
+
+- id: screenshots
+  plugin: screenshotter
+  plugin_path: plugins/web/screenshotter
+  timeout: 3600
+  description: Phase 10 - Web Screenshots
+
+- id: vulnerabilities
+  plugin: nuclei
+  plugin_path: plugins/deep/nuclei
+  timeout: 14400
+  description: Phase 11 - Vulnerability Scanning
+
+- id: reporting
+  plugin: reporting
+  plugin_path: plugins/reporting/reporting
+  timeout: 600
+  description: Phase 12 - Report Generation

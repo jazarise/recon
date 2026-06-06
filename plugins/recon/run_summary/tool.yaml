@@ -1,0 +1,16 @@
+name: run_summary
+category: recon
+language: .md
+execution_type: library
+entrypoint: run_summary.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - run_summary
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

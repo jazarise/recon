@@ -1,0 +1,16 @@
+name: reverse-engineer
+category: recon
+language: .md
+execution_type: library
+entrypoint: reverse-engineer.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reverse-engineer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

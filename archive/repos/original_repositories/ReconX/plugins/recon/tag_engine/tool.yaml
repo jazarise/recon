@@ -1,0 +1,16 @@
+name: tag_engine
+category: recon
+language: .py
+execution_type: library
+entrypoint: tag_engine.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tag_engine
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

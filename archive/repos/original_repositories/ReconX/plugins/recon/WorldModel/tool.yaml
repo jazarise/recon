@@ -1,0 +1,16 @@
+name: WorldModel
+category: recon
+language: .js
+execution_type: library
+entrypoint: WorldModel.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - WorldModel
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

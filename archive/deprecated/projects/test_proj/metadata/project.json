@@ -1,0 +1,11 @@
+{
+  "name": "test_proj",
+  "display_name": "test_proj",
+  "target": "example.com",
+  "description": "test",
+  "tags": [],
+  "created_at": "2026-06-05T15:52:19.889467Z",
+  "last_scan": "2026-06-05T15:58:44.151777Z",
+  "scan_count": 4,
+  "status": "scanned"
+}

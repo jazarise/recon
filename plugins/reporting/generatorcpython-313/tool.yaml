@@ -1,0 +1,16 @@
+name: generatorcpython-313
+category: reporting
+language: .pyc
+execution_type: library
+entrypoint: generator.cpython-313.pyc
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - generatorcpython-313
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

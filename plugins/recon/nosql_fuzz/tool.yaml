@@ -1,0 +1,16 @@
+name: nosql_fuzz
+category: recon
+language: .py
+execution_type: library
+entrypoint: nosql_fuzz.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nosql_fuzz
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

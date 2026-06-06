@@ -1,0 +1,16 @@
+name: oracle-odat
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: oracle-odat.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - oracle-odat
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

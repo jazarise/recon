@@ -1,0 +1,16 @@
+name: test_observation_normalization
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: test_observation_normalization.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_observation_normalization
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

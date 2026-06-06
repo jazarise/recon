@@ -1,0 +1,16 @@
+name: mcp-management
+category: recon
+language: .png
+execution_type: library
+entrypoint: mcp-management.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - mcp-management
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

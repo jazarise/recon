@@ -1,0 +1,16 @@
+name: volatility3
+category: plugin_systems
+language: .yaml
+execution_type: library
+entrypoint: volatility3.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - volatility3
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

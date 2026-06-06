@@ -1,0 +1,16 @@
+name: api_fingerprint
+category: recon
+language: .py
+execution_type: api_server
+entrypoint: api_fingerprint.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - api_fingerprint
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

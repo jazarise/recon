@@ -1,0 +1,16 @@
+name: jwt_jku_x5u_ssrf
+category: api_security
+language: .py
+execution_type: library
+entrypoint: jwt_jku_x5u_ssrf.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - jwt_jku_x5u_ssrf
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

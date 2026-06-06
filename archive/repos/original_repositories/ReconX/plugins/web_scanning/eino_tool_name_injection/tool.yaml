@@ -1,0 +1,16 @@
+name: eino_tool_name_injection
+category: web_scanning
+language: .go
+execution_type: library
+entrypoint: eino_tool_name_injection.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - eino_tool_name_injection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

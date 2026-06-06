@@ -1,0 +1,16 @@
+name: en-US
+category: recon
+language: .json
+execution_type: library
+entrypoint: en-US.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - en-US
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

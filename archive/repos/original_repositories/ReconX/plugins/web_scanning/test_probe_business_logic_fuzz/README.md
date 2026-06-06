@@ -1,0 +1,3 @@
+# test_probe_business_logic_fuzz Plugin
+
+Auto-generated scaffolding for test_probe_business_logic_fuzz.

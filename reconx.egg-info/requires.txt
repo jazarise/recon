@@ -1,0 +1,9 @@
+typer
+rich
+fastapi
+uvicorn
+sqlalchemy
+alembic
+pydantic
+pydantic-settings
+pyyaml

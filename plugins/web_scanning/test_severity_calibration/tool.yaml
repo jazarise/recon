@@ -1,0 +1,16 @@
+name: test_severity_calibration
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: test_severity_calibration.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_severity_calibration
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

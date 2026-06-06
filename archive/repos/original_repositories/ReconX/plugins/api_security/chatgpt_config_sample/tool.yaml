@@ -1,0 +1,16 @@
+name: chatgpt_config_sample
+category: api_security
+language: .py
+execution_type: library
+entrypoint: chatgpt_config_sample.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - chatgpt_config_sample
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

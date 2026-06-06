@@ -1,0 +1,16 @@
+name: knowledgejs
+category: api_security
+language: .bak
+execution_type: library
+entrypoint: knowledge.js.bak
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - knowledgejs
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

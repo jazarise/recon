@@ -1,0 +1,10 @@
+Repository,Recovery Score,Dependency Status,Ready For Integration
+crlfi,0,Healthy,No
+gau,35.0,Healthy,No
+waybackurls,0.0,Healthy,No
+hakrawler,15.0,Healthy,No
+ffuf,15.0,Healthy,No
+dalfox,15.0,Healthy,No
+paramspider,35.0,Healthy,No
+gobuster,15.0,Healthy,No
+dirsearch,15.0,Healthy,No

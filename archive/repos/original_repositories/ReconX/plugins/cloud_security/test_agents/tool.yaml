@@ -1,0 +1,16 @@
+name: test_agents
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: test_agents.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_agents
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

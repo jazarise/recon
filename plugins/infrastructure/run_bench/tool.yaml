@@ -1,0 +1,16 @@
+name: run_bench
+category: infrastructure
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: run_bench.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - run_bench
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

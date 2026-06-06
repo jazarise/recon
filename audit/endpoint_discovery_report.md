@@ -1,0 +1,1 @@
+# Endpoint Discovery Report\nIntegrated `gau`, `waybackurls`, `hakrawler`.

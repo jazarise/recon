@@ -1,0 +1,16 @@
+name: webhooks
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: webhooks.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - webhooks
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

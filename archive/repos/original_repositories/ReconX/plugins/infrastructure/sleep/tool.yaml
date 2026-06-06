@@ -1,0 +1,16 @@
+name: sleep
+category: infrastructure
+language: unknown
+execution_type: library
+entrypoint: sleep
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - sleep
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

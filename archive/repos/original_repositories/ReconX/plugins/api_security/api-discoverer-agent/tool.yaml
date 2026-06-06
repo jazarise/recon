@@ -1,0 +1,16 @@
+name: api-discoverer-agent
+category: api_security
+language: .js
+execution_type: library
+entrypoint: api-discoverer-agent.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - api-discoverer-agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

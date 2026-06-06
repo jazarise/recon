@@ -1,0 +1,1 @@
+# Training Guide\nView the `training/` directories for labs and workspaces.

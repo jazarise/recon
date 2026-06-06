@@ -1,0 +1,3 @@
+# test_benchmarks_scoring_common Plugin
+
+Auto-generated scaffolding for test_benchmarks_scoring_common.

@@ -1,0 +1,16 @@
+name: install_4
+category: recon
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: install_4.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - install_4
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,158 @@
+# portwave — interactive installer for Windows (PowerShell 5+)
+# Builds the release binary, copies it to an install prefix, bundles the
+# top-ports list under <prefix>\..\share\portwave\ports\, and writes
+# %APPDATA%\portwave\config.env.
+#
+# Non-interactive: $env:NONINTERACTIVE = '1' then run this script.
+
+#Requires -Version 5.1
+$ErrorActionPreference = 'Stop'
+
+$RepoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+Set-Location $RepoRoot
+
+function Say  { param($m) Write-Host "==> $m"       -ForegroundColor Green }
+function Warn { param($m) Write-Host "[!] $m"       -ForegroundColor Yellow }
+function Die  { param($m) Write-Host "[x] $m"       -ForegroundColor Red; exit 1 }
+
+$NonInteractive = ($env:NONINTERACTIVE -eq '1')
+
+function Ask {
+    param([string]$Prompt, [string]$Default)
+    if ($NonInteractive) { return $Default }
+    if ($Default) {
+        $r = Read-Host -Prompt "? $Prompt [$Default]"
+        if ([string]::IsNullOrWhiteSpace($r)) { return $Default } else { return $r }
+    } else {
+        return Read-Host -Prompt "? $Prompt"
+    }
+}
+
+# Find first existing binary from a list of candidates (PATH first).
+function Find-Bin {
+    param([string]$Name, [string[]]$Extras = @())
+    $p = (Get-Command $Name -ErrorAction SilentlyContinue).Source
+    if ($p) { return $p }
+    foreach ($c in $Extras) {
+        if (Test-Path -PathType Leaf $c) { return $c }
+    }
+    return ''
+}
+
+Write-Host ''
+Write-Host 'portwave installer — platform: windows' -ForegroundColor Cyan
+Write-Host ''
+
+# ── 1. Rust toolchain ──
+$cargo = Get-Command cargo -ErrorAction SilentlyContinue
+if (-not $cargo) {
+    Warn 'cargo not found.'
+    $ans = Ask 'Install Rust via rustup now?' 'yes'
+    if ($ans -match '^[Yy]') {
+        $tmp = Join-Path $env:TEMP 'rustup-init.exe'
+        Invoke-WebRequest -UseBasicParsing -Uri 'https://win.rustup.rs/x86_64' -OutFile $tmp
+        & $tmp -y --default-toolchain stable
+        $cargoBin = Join-Path $env:USERPROFILE '.cargo\bin'
+        $env:Path = "$cargoBin;$env:Path"
+    } else {
+        Die 'cargo is required. Install Rust and retry.'
+    }
+}
+Say "cargo: $(cargo --version)"
+
+# ── 2. Default paths ──
+$DefaultOutput = Join-Path $env:USERPROFILE 'scans'
+$DefaultPrefix = Join-Path $env:USERPROFILE '.local\bin'
+$BundledPorts  = Join-Path $RepoRoot 'ports\portwave-top-ports.txt'
+
+# Auto-detect httpx / nuclei (PATH, %USERPROFILE%\go\bin, %USERPROFILE%\.local\bin, %ProgramFiles%)
+$DefaultHttpx  = Find-Bin 'httpx' @(
+    (Join-Path $env:USERPROFILE 'go\bin\httpx.exe'),
+    (Join-Path $env:USERPROFILE '.local\bin\httpx.exe'),
+    (Join-Path ${env:ProgramFiles} 'httpx\httpx.exe')
+)
+$DefaultNuclei = Find-Bin 'nuclei' @(
+    (Join-Path $env:USERPROFILE 'go\bin\nuclei.exe'),
+    (Join-Path $env:USERPROFILE '.local\bin\nuclei.exe'),
+    (Join-Path ${env:ProgramFiles} 'nuclei\nuclei.exe')
+)
+
+Write-Host ''
+# httpx / nuclei path prompts removed in v0.8.3 — portwave now resolves
+# them dynamically at scan time via the PATH scan (equivalent of
+# `where.exe httpx`) then env var then config. No need to bake paths
+# into the config file. Show detected paths purely as info.
+Write-Host 'Auto-detected tools (portwave will resolve these at scan time):'
+Write-Host ('  httpx  : ' + ($(if ($DefaultHttpx)  { $DefaultHttpx  } else { 'not found — will offer to install at scan time' })))
+Write-Host ('  nuclei : ' + ($(if ($DefaultNuclei) { $DefaultNuclei } else { 'not found — will offer to install at scan time' })))
+
+Write-Host ''
+Write-Host 'Configure paths (press Enter to accept defaults):'
+$OutputDir     = Ask 'Scan output directory' $DefaultOutput
+# 1400+ default ports are embedded in the binary since v0.5.3 and are
+# auto-refreshed by `portwave --update`. Leave blank to use the embedded
+# list. Only enter a path if you maintain a CUSTOM port list.
+$PortsFile     = Ask 'Custom ports file (optional, blank = embedded 1400+ ports)' ''
+$InstallPrefix = Ask 'Install binary to' $DefaultPrefix
+
+$ShareDir  = Join-Path (Split-Path -Parent $InstallPrefix) 'share\portwave'
+$ConfigDir = Join-Path $env:APPDATA 'portwave'
+$ConfigFile = Join-Path $ConfigDir 'config.env'
+
+New-Item -ItemType Directory -Force -Path $OutputDir    | Out-Null
+New-Item -ItemType Directory -Force -Path $ConfigDir    | Out-Null
+New-Item -ItemType Directory -Force -Path "$ShareDir\ports" | Out-Null
+New-Item -ItemType Directory -Force -Path $InstallPrefix | Out-Null
+
+# ── 3. Build ──
+Say 'Building release binary (this takes ~30–60 s on first run)…'
+cargo build --release
+if ($LASTEXITCODE -ne 0) { Die 'cargo build failed.' }
+
+$BinSrc = Join-Path $RepoRoot 'target\release\portwave.exe'
+if (-not (Test-Path -PathType Leaf $BinSrc)) {
+    Die "Build succeeded but binary not found at $BinSrc"
+}
+
+# ── 4. Install artefacts ──
+Copy-Item -Force $BinSrc        (Join-Path $InstallPrefix 'portwave.exe')
+Copy-Item -Force $BundledPorts  (Join-Path $ShareDir 'ports\portwave-top-ports.txt')
+
+# ── 5. Write config ──
+$cfg = @(
+    "# Generated by portwave install.ps1 on $(Get-Date -Format 'yyyy-MM-ddTHH:mm:ssZ')"
+    "PORTWAVE_OUTPUT_DIR=$OutputDir"
+)
+# Only write PORTWAVE_PORTS if the user supplied a custom path (blank =
+# embedded list, the default, which --update refreshes automatically).
+if ($PortsFile) { $cfg += "PORTWAVE_PORTS=$PortsFile" }
+# httpx / nuclei paths intentionally NOT written — scanner auto-resolves
+# via PATH at scan time (v0.8.3+). Users can still set PORTWAVE_HTTPX_BIN
+# / PORTWAVE_NUCLEI_BIN here manually for a specific binary.
+$cfg | Set-Content -Encoding UTF8 $ConfigFile
+Say "Wrote config: $ConfigFile"
+
+# ── 6. PATH hint / update ──
+$userPath = [Environment]::GetEnvironmentVariable('Path', 'User')
+if ($userPath -notlike "*$InstallPrefix*") {
+    $ans = Ask "Add $InstallPrefix to your user PATH now?" 'yes'
+    if ($ans -match '^[Yy]') {
+        [Environment]::SetEnvironmentVariable('Path', "$userPath;$InstallPrefix", 'User')
+        Say "PATH updated. Open a new shell for it to take effect."
+    } else {
+        Warn "$InstallPrefix is not on PATH. Add it manually via System Properties → Environment Variables."
+    }
+}
+
+# ── 7. Sanity ──
+$testBin = Join-Path $InstallPrefix 'portwave.exe'
+try {
+    $ver = & $testBin --version 2>$null
+    Say "Installed: $ver"
+} catch {
+    Die 'Install test failed.'
+}
+
+Write-Host ''
+Write-Host "Done. Try:  portwave demo 127.0.0.1/32 --no-httpx --no-nuclei" -ForegroundColor Green
+Write-Host ''

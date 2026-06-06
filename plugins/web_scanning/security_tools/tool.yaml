@@ -1,0 +1,16 @@
+name: security_tools
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: security_tools.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - security_tools
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

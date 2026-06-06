@@ -1,0 +1,16 @@
+name: intel-collection
+category: osint
+language: .md
+execution_type: library
+entrypoint: intel-collection.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - intel-collection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

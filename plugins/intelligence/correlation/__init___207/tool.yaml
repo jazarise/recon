@@ -1,0 +1,16 @@
+name: __init___207
+category: intelligence/correlation
+language: .py
+execution_type: library
+entrypoint: __init___207.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - __init___207
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

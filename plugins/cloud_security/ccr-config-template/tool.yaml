@@ -1,0 +1,16 @@
+name: ccr-config-template
+category: cloud_security
+language: .json
+execution_type: library
+entrypoint: ccr-config-template.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ccr-config-template
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

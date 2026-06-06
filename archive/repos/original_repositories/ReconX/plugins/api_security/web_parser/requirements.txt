@@ -1,0 +1,4 @@
+urllib.parse
+requests
+bs4
+googlesearch

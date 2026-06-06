@@ -1,0 +1,16 @@
+name: xss
+category: web_scanning
+language: .txt
+execution_type: library
+entrypoint: xss.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - xss
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

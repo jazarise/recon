@@ -1,0 +1,16 @@
+name: test_agent_loop
+category: api_security
+language: .py
+execution_type: library
+entrypoint: test_agent_loop.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_agent_loop
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

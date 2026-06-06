@@ -1,0 +1,16 @@
+name: payload-crafter
+category: recon
+language: .md
+execution_type: library
+entrypoint: payload-crafter.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - payload-crafter
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

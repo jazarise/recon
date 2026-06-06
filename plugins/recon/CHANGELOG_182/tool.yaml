@@ -1,0 +1,16 @@
+name: CHANGELOG_182
+category: recon
+language: .md
+execution_type: library
+entrypoint: CHANGELOG_182.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - CHANGELOG_182
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

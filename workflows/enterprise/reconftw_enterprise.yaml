@@ -1,0 +1,57 @@
+name: ReconFTW Enterprise Workflow
+description: Natively ported enterprise workflow from reconftw repository executing 14+ phases of advanced recon with diffing and scheduling.
+mode: enterprise
+steps:
+- id: osint
+  plugin: osint_gather
+  plugin_path: plugins/intelligence/osint
+  timeout: 3600
+  description: Phase 1 - OSINT Gathering
+
+- id: subdomains
+  plugin: passive_recon
+  plugin_path: plugins/deep/passive_recon
+  timeout: 7200
+  description: Phase 2 - Subdomain Enumeration
+
+- id: cloud
+  plugin: cloud_recon
+  plugin_path: plugins/discovery/cloud_recon
+  timeout: 3600
+  description: Phase 4 - Cloud Asset Discovery
+
+- id: ip_recon
+  plugin: asn_intel
+  plugin_path: plugins/intelligence/asn
+  timeout: 3600
+  description: Phase 5 - IP & ASN Recon
+
+- id: ports
+  plugin: active_recon
+  plugin_path: plugins/deep/active_recon
+  timeout: 14400
+  description: Phase 6 - Port Scanning
+
+- id: crawling
+  plugin: content_discovery
+  plugin_path: plugins/deep/content_discovery
+  timeout: 14400
+  description: Phase 8 - Web Crawling
+
+- id: surface_mapping
+  plugin: surface_mapping
+  plugin_path: plugins/discovery/surface_mapping
+  timeout: 3600
+  description: Phase 9 - Surface Mapping
+
+- id: vulnerabilities
+  plugin: scan4all_workflows
+  plugin_path: plugins/vulnerabilities/workflows
+  timeout: 14400
+  description: Phase 11 - Vulnerability Scanning
+
+- id: reporting
+  plugin: reporting
+  plugin_path: plugins/golden/reporting
+  timeout: 600
+  description: Phase 12 - Report Generation

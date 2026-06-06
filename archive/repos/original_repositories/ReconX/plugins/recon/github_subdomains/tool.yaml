@@ -1,0 +1,16 @@
+name: github_subdomains
+category: recon
+language: .py
+execution_type: library
+entrypoint: github_subdomains.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - github_subdomains
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

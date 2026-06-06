@@ -1,0 +1,16 @@
+name: registry_bridge
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: registry_bridge.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - registry_bridge
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

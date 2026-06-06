@@ -1,0 +1,169 @@
+{
+  "workflow_id": "3e082140-6019-4ae4-a32e-99281c30d4ea",
+  "workflow_name": "Golden Recon Workflow",
+  "target": "test-target-1.internal",
+  "status": "completed",
+  "started_at": "2026-06-03T12:00:33.926825+00:00",
+  "completed_at": "2026-06-03T12:00:35.886309+00:00",
+  "steps": [
+    {
+      "step_id": "s1",
+      "plugin": "network_discovery",
+      "status": "completed",
+      "started_at": "2026-06-03T12:00:33.926845+00:00",
+      "completed_at": "2026-06-03T12:00:34.162582+00:00",
+      "output": {
+        "plugin": "network_discovery",
+        "hosts": [
+          "test-target-1.internal"
+        ],
+        "services": [],
+        "open_ports": [],
+        "execution_time": 0.09,
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s2",
+      "plugin": "web_recon",
+      "status": "completed",
+      "started_at": "2026-06-03T12:00:34.162602+00:00",
+      "completed_at": "2026-06-03T12:00:34.397322+00:00",
+      "output": {
+        "plugin": "web_recon",
+        "urls": [],
+        "technologies": [],
+        "findings": [
+          {
+            "type": "web_error",
+            "url": "http://test-target-1.internal",
+            "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+          },
+          {
+            "type": "web_error",
+            "url": "https://test-target-1.internal",
+            "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "s3",
+      "plugin": "dns_intelligence",
+      "status": "completed",
+      "started_at": "2026-06-03T12:00:34.397346+00:00",
+      "completed_at": "2026-06-03T12:00:34.577961+00:00",
+      "output": {
+        "plugin": "dns_intelligence",
+        "records": {},
+        "subdomains": [],
+        "findings": [
+          {
+            "type": "dns_error",
+            "domain": "test-target-1.internal",
+            "error": "[Errno 11001] getaddrinfo failed"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "s4",
+      "plugin": "llm_analysis",
+      "status": "completed",
+      "started_at": "2026-06-03T12:00:34.578026+00:00",
+      "completed_at": "2026-06-03T12:00:35.732329+00:00",
+      "output": {
+        "plugin": "llm_analysis",
+        "summary": "LLM Analysis for test-target-1.internal: Analyzed 3 raw findings. Detected 0 open ports and 0 web technologies. Calculated risk score is 10/100.",
+        "recommendations": [
+          "No A records resolved for the target domain."
+        ],
+        "risk_score": 10
+      }
+    },
+    {
+      "step_id": "s5",
+      "plugin": "reporting",
+      "status": "completed",
+      "started_at": "2026-06-03T12:00:35.732351+00:00",
+      "completed_at": "2026-06-03T12:00:35.886303+00:00",
+      "output": {
+        "plugin": "reporting",
+        "report_path": "e:/ReconX/outputs\\report_test-target-1_internal_1780468235.md",
+        "report_type": "Markdown"
+      }
+    }
+  ],
+  "final_context": {
+    "target": "test-target-1.internal",
+    "findings": [
+      {
+        "type": "web_error",
+        "url": "http://test-target-1.internal",
+        "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      },
+      {
+        "type": "web_error",
+        "url": "https://test-target-1.internal",
+        "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+      },
+      {
+        "type": "dns_error",
+        "domain": "test-target-1.internal",
+        "error": "[Errno 11001] getaddrinfo failed"
+      }
+    ],
+    "network_discovery": {
+      "plugin": "network_discovery",
+      "hosts": [
+        "test-target-1.internal"
+      ],
+      "services": [],
+      "open_ports": [],
+      "execution_time": 0.09,
+      "findings": []
+    },
+    "web_recon": {
+      "plugin": "web_recon",
+      "urls": [],
+      "technologies": [],
+      "findings": [
+        {
+          "type": "web_error",
+          "url": "http://test-target-1.internal",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+        },
+        {
+          "type": "web_error",
+          "url": "https://test-target-1.internal",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+        }
+      ]
+    },
+    "dns_intelligence": {
+      "plugin": "dns_intelligence",
+      "records": {},
+      "subdomains": [],
+      "findings": [
+        {
+          "type": "dns_error",
+          "domain": "test-target-1.internal",
+          "error": "[Errno 11001] getaddrinfo failed"
+        }
+      ]
+    },
+    "llm_analysis": {
+      "plugin": "llm_analysis",
+      "summary": "LLM Analysis for test-target-1.internal: Analyzed 3 raw findings. Detected 0 open ports and 0 web technologies. Calculated risk score is 10/100.",
+      "recommendations": [
+        "No A records resolved for the target domain."
+      ],
+      "risk_score": 10
+    },
+    "reporting": {
+      "plugin": "reporting",
+      "report_path": "e:/ReconX/outputs\\report_test-target-1_internal_1780468235.md",
+      "report_type": "Markdown"
+    }
+  }
+}

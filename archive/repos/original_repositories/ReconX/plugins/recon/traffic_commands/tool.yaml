@@ -1,0 +1,16 @@
+name: traffic_commands
+category: recon
+language: .py
+execution_type: library
+entrypoint: traffic_commands.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - traffic_commands
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

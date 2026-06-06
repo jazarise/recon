@@ -1,0 +1,12 @@
+name: http_headers
+version: 1.0.0
+description: "Native HTTP header analysis (ported from FinalRecon)"
+author: ReconX
+type: intelligence
+stage: discovery
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 10

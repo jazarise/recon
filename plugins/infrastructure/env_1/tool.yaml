@@ -1,0 +1,16 @@
+name: env_1
+category: infrastructure
+language: .example
+execution_type: library
+entrypoint: .env_1.example
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - env_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

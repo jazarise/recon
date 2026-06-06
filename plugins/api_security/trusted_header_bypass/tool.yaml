@@ -1,0 +1,16 @@
+name: trusted_header_bypass
+category: api_security
+language: .py
+execution_type: library
+entrypoint: trusted_header_bypass.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - trusted_header_bypass
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

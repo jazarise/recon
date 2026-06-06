@@ -1,0 +1,16 @@
+name: ldap_injection
+category: api_security
+language: .py
+execution_type: library
+entrypoint: ldap_injection.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ldap_injection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

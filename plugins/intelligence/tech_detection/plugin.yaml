@@ -1,0 +1,12 @@
+name: tech_detection
+version: 1.0.0
+description: "Native Technology detection (ported from FinalRecon)"
+author: ReconX
+type: intelligence
+stage: discovery
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 10

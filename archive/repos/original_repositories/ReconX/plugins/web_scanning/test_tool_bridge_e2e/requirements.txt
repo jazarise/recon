@@ -1,0 +1,6 @@
+__future__
+os
+shutil
+socket
+urllib.parse
+pytest

@@ -1,0 +1,16 @@
+name: junit_xml
+category: intelligence/correlation
+language: .py
+execution_type: library
+entrypoint: junit_xml.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - junit_xml
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

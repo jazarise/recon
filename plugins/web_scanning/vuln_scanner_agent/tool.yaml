@@ -1,0 +1,16 @@
+name: vuln_scanner_agent
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: vuln_scanner_agent.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - vuln_scanner_agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

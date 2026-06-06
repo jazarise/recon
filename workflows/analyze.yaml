@@ -1,0 +1,11 @@
+name: AI Analysis Workflow
+description: End-to-end OSINT and Vuln scan with AI Correlation
+steps:
+  - name: Organization Discovery
+    plugin: acquifinder
+  - name: Vulnerability Checks (XSS)
+    plugin: dalfox
+  - name: AI Analysis
+    plugin: ai_analyzer
+  - name: Reporting
+    plugin: reporting

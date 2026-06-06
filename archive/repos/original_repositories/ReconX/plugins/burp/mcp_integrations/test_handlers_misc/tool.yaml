@@ -1,0 +1,16 @@
+name: test_handlers_misc
+category: burp/mcp_integrations
+language: .py
+execution_type: library
+entrypoint: test_handlers_misc.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_handlers_misc
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

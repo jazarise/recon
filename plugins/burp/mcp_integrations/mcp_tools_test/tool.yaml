@@ -1,0 +1,16 @@
+name: mcp_tools_test
+category: burp/mcp_integrations
+language: .go
+execution_type: library
+entrypoint: mcp_tools_test.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - mcp_tools_test
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

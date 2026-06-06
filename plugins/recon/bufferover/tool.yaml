@@ -1,0 +1,16 @@
+name: bufferover
+category: recon
+language: .go
+execution_type: library
+entrypoint: bufferover.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - bufferover
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

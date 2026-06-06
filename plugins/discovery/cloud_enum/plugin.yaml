@@ -1,0 +1,12 @@
+name: cloud_enum
+version: 1.0.0
+description: "Native cloud bucket enumeration"
+author: ReconX
+type: discovery
+stage: deep
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 60

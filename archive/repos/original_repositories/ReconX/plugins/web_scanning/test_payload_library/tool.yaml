@@ -1,0 +1,16 @@
+name: test_payload_library
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: test_payload_library.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_payload_library
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

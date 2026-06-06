@@ -1,0 +1,3 @@
+.massdns
+.shuffledns
+.puredns

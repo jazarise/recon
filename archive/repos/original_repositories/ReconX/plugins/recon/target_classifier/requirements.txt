@@ -1,0 +1,7 @@
+__future__
+re
+socket
+dataclasses
+ipaddress
+typing
+urllib.parse

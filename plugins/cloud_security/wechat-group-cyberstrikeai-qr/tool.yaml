@@ -1,0 +1,16 @@
+name: wechat-group-cyberstrikeai-qr
+category: cloud_security
+language: .jpg
+execution_type: library
+entrypoint: wechat-group-cyberstrikeai-qr.jpg
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - wechat-group-cyberstrikeai-qr
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

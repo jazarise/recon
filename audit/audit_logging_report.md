@@ -1,0 +1,1 @@
+# Audit Logging Report\nSQLite audit_log active.

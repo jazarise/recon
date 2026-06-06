@@ -1,0 +1,16 @@
+name: cookie_prefix_bypass
+category: recon
+language: .py
+execution_type: library
+entrypoint: cookie_prefix_bypass.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - cookie_prefix_bypass
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

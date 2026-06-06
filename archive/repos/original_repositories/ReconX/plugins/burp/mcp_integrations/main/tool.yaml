@@ -1,0 +1,16 @@
+name: main
+category: burp/mcp_integrations
+language: .go
+execution_type: cli_entrypoint
+entrypoint: main.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,3 @@
+# main_server_http_redirect_test Plugin
+
+Auto-generated scaffolding for main_server_http_redirect_test.

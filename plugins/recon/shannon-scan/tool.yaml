@@ -1,0 +1,16 @@
+name: shannon-scan
+category: recon
+language: .yml
+execution_type: library
+entrypoint: shannon-scan.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - shannon-scan
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

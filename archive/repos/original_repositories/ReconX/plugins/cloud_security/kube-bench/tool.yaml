@@ -1,0 +1,16 @@
+name: kube-bench
+category: cloud_security
+language: .yaml
+execution_type: library
+entrypoint: kube-bench.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - kube-bench
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

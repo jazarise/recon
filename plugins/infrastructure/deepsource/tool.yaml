@@ -1,0 +1,16 @@
+name: deepsource
+category: infrastructure
+language: .toml
+execution_type: library
+entrypoint: .deepsource.toml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - deepsource
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

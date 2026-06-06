@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconx"
+version = "2.1.0"
+description = "Enterprise-Grade Reconnaissance Intelligence Platform"
+authors = [{name = "ReconX Team"}]
+requires-python = ">=3.10"
+dependencies = [
+    "typer",
+    "rich",
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "alembic",
+    "pydantic",
+    "pydantic-settings",
+    "pyyaml"
+]
+
+[tool.setuptools.packages.find]
+include = ["api*", "cli*", "core*", "database*", "modules*", "reports*"]
+
+[project.scripts]
+reconx = "cli.main:app"

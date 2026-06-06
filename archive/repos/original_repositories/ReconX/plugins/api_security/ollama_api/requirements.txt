@@ -1,0 +1,10 @@
+dataclasses
+os
+re
+time
+typing
+uuid
+loguru
+requests
+tenacity
+pentestgpt.utils.llm_api

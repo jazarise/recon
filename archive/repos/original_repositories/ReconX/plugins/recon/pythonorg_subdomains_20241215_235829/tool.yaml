@@ -1,0 +1,16 @@
+name: pythonorg_subdomains_20241215_235829
+category: recon
+language: .txt
+execution_type: library
+entrypoint: python.org_subdomains_20241215_235829.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - pythonorg_subdomains_20241215_235829
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

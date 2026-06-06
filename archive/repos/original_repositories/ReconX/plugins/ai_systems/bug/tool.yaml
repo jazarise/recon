@@ -1,0 +1,16 @@
+name: bug
+category: ai_systems
+language: .yml
+execution_type: library
+entrypoint: bug.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - bug
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

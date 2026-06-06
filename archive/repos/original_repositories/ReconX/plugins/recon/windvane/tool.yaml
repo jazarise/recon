@@ -1,0 +1,16 @@
+name: windvane
+category: recon
+language: .go
+execution_type: library
+entrypoint: windvane.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - windvane
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

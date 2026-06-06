@@ -1,0 +1,16 @@
+name: attack-surface-enumeration
+category: recon
+language: .md
+execution_type: library
+entrypoint: attack-surface-enumeration.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - attack-surface-enumeration
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

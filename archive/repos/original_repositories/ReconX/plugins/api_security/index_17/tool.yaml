@@ -1,0 +1,16 @@
+name: index_17
+category: api_security
+language: .js
+execution_type: library
+entrypoint: index_17.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - index_17
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

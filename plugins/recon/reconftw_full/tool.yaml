@@ -1,0 +1,16 @@
+name: reconftw_full
+category: recon
+language: .cfg
+execution_type: library
+entrypoint: reconftw_full.cfg
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reconftw_full
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

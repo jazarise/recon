@@ -1,0 +1,16 @@
+name: gobuster
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: gobuster.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - gobuster
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

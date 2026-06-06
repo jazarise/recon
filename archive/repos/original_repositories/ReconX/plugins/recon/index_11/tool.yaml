@@ -1,0 +1,16 @@
+name: index_11
+category: recon
+language: .js
+execution_type: library
+entrypoint: index_11.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - index_11
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: api_path_discovery
+category: recon
+language: .py
+execution_type: library
+entrypoint: api_path_discovery.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - api_path_discovery
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

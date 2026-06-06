@@ -1,0 +1,16 @@
+name: filternet-bayes
+category: recon
+language: .json
+execution_type: library
+entrypoint: filternet-bayes.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - filternet-bayes
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

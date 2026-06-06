@@ -1,0 +1,16 @@
+name: social-engineer
+category: cloud_security
+language: .md
+execution_type: library
+entrypoint: social-engineer.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - social-engineer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

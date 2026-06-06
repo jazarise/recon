@@ -1,0 +1,16 @@
+name: task_processor
+category: ai_systems
+language: .py
+execution_type: cli_entrypoint
+entrypoint: task_processor.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - task_processor
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

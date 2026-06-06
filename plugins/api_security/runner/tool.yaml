@@ -1,0 +1,16 @@
+name: runner
+category: api_security
+language: .py
+execution_type: library
+entrypoint: runner.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - runner
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: tool_invoke_notify
+category: ai_systems
+language: .go
+execution_type: library
+entrypoint: tool_invoke_notify.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tool_invoke_notify
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

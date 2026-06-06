@@ -1,0 +1,16 @@
+name: postman_parser
+category: api_security
+language: .py
+execution_type: library
+entrypoint: postman_parser.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - postman_parser
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

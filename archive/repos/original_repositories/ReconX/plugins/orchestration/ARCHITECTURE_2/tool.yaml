@@ -1,0 +1,16 @@
+name: ARCHITECTURE_2
+category: orchestration
+language: .md
+execution_type: library
+entrypoint: ARCHITECTURE_2.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ARCHITECTURE_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

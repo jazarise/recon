@@ -1,0 +1,16 @@
+name: gitlab
+category: recon
+language: .go
+execution_type: library
+entrypoint: gitlab.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - gitlab
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

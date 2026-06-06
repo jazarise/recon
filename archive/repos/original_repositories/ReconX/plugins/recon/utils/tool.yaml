@@ -1,0 +1,16 @@
+name: utils
+category: recon
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: utils.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - utils
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

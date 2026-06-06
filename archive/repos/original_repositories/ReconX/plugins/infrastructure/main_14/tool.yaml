@@ -1,0 +1,16 @@
+name: main_14
+category: infrastructure
+language: .go
+execution_type: cli_entrypoint
+entrypoint: main_14.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main_14
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

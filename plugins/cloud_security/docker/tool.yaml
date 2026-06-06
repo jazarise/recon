@@ -1,0 +1,16 @@
+name: docker
+category: cloud_security
+language: .ts
+execution_type: library
+entrypoint: docker.ts
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - docker
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

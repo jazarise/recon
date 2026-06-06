@@ -1,0 +1,16 @@
+name: password_reset_weak
+category: api_security
+language: .py
+execution_type: library
+entrypoint: password_reset_weak.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - password_reset_weak
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

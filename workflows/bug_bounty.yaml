@@ -1,0 +1,14 @@
+name: bug_bounty
+steps:
+  - subfinder
+  - amass
+  - httpx:
+      depends_on:
+        - subfinder
+        - amass
+  - katana:
+      depends_on:
+        - httpx
+  - nuclei:
+      depends_on:
+        - httpx

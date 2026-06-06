@@ -1,0 +1,16 @@
+name: example_sqlmap
+category: web_scanning
+language: .py
+execution_type: cli_entrypoint
+entrypoint: example_sqlmap.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - example_sqlmap
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

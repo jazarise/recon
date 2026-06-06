@@ -1,0 +1,16 @@
+name: reconx_engine
+category: api_security
+language: .py
+execution_type: library
+entrypoint: reconx_engine.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reconx_engine
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

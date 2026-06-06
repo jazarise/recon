@@ -1,0 +1,16 @@
+name: tls_cert
+category: recon
+language: .go
+execution_type: library
+entrypoint: tls_cert.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tls_cert
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

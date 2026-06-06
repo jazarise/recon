@@ -1,0 +1,16 @@
+name: mock_pipelinetest
+category: web_scanning
+language: .js
+execution_type: library
+entrypoint: mock_pipeline.test.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - mock_pipelinetest
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

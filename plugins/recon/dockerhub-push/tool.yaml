@@ -1,0 +1,16 @@
+name: dockerhub-push
+category: recon
+language: .yml
+execution_type: library
+entrypoint: dockerhub-push.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - dockerhub-push
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

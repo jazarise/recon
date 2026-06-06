@@ -1,0 +1,16 @@
+name: risk_scoring
+category: recon
+language: .py
+execution_type: library
+entrypoint: risk_scoring.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - risk_scoring
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

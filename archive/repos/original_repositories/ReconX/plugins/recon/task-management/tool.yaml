@@ -1,0 +1,16 @@
+name: task-management
+category: recon
+language: .png
+execution_type: library
+entrypoint: task-management.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - task-management
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

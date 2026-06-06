@@ -1,0 +1,16 @@
+name: test_playbook
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: test_playbook.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_playbook
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

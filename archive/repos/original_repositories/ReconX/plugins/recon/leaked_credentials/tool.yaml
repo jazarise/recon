@@ -1,0 +1,16 @@
+name: leaked_credentials
+category: recon
+language: .py
+execution_type: library
+entrypoint: leaked_credentials.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - leaked_credentials
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

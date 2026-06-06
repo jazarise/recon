@@ -1,0 +1,16 @@
+name: training-data-2025-12-24T03-31-48-760Z
+category: reporting
+language: .jsonl
+execution_type: library
+entrypoint: training-data-2025-12-24T03-31-48-760Z.jsonl
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - training-data-2025-12-24T03-31-48-760Z
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,410 @@
+# Changelog
+
+All notable changes to portwave are documented here.
+Format is loosely based on [Keep a Changelog](https://keepachangelog.com/).
+Versions follow semantic versioning (Major.Minor.Patch).
+
+---
+
+## [0.8.0] — 2026-04-20
+
+### Changed — memory & speed at scale (no behavior change)
+
+- **Iterator-based producer.** `per_net: Vec<Vec<IpAddr>>` +
+  `round_robin: Vec<IpAddr>` materialisations (which copied every IP in the
+  scan scope into RAM twice) are gone. The producer now walks
+  `Vec<(IpNetwork, IpNetworkIterator)>` round-robin on the fly. Memory drops
+  from **O(IPs × 2)** to **O(nets)** — a `/8` scan went from ~128 MB up-front
+  to ~24 bytes per input net. Enables sustained scans of `/8+` ranges without
+  pressuring RAM.
+- **Numeric-order sort of `open_records`.** v0.7.x sorted by `(String, u16)`
+  which put `"10.0.0.1"` *before* `"9.0.0.1"` lexicographically. Now uses
+  `sort_by_cached_key` over `(IpAddr, u16)` — correct numeric order + parses
+  each IP once instead of on every comparison.
+- **Bounded `hit_tx` channel (was unbounded).** Capped at 2048 so Phase A
+  workers can't let the hit-queue grow without bound on pathological scans.
+- **FxHashSet for resume skip/prior sets.** ~4× faster lookups on the hot
+  path (SocketAddr key). `HashSet<SocketAddr>` → `FxHashSet<SocketAddr>`.
+- **Batched `pb.inc()`.** Workers accumulate 64 probes locally before
+  touching indicatif's internal mutex. Removes 3-5 % of CPU spent on bar
+  contention at 10–15 K probes/sec × 1500 workers.
+- **Fast-path semaphore bypass.** Workers now check
+  `stats.adaptive_shrunk: AtomicBool` before `sem.acquire_owned()`. In the
+  common "not shrunk" state (which is true 100 % of the time on healthy
+  networks) the semaphore call is skipped entirely — it was always a no-op
+  there anyway. 3-5 % additional hot-path CPU saving.
+- **Throttled `pb.set_message`.** Previously a String-allocating format on
+  every open; now rate-limited to 1 Hz per worker. Cleaner logs on hot /24s.
+
+### Fixed
+
+- **Producer hang on Ctrl+C during backpressure.** `send_or_shutdown()`
+  replaces raw `tx.send_async(sa).await` — try_send fast path, and on a
+  backpressured channel races the send against a 100 ms timer so a
+  shutdown flag flip is observed within ≤ 100 ms. Previously a
+  Ctrl+C while the producer was waiting on a full channel could take
+  seconds to propagate.
+- **Phase B hang on Ctrl+C.** The enrichment JoinSet drain loop now
+  checks `stats.shutdown` after each task completes and calls
+  `set.abort_all()` on detection. Previously a scan with 10k hits could
+  take a minute or more of enrichment to drain after Ctrl+C.
+- **Panic on semaphore close during Phase B.** `enrich_sem.acquire_owned()
+  .await.unwrap()` → `let Ok(p) = ... else { break; };`. Graceful.
+- **Monitor-abort no longer triggers Phase B shutdown.** Previous versions
+  set `stats.shutdown = true` after Phase A to stop the adaptive monitor,
+  but now that Phase B treats that flag as "user cancelled", we abort the
+  monitor's `JoinHandle` directly instead.
+
+### Added — observability
+
+- **`[priority]` heartbeat line.** A background task watches
+  `stats.priority_done`; prints one line the moment the top-20 sweep has
+  been fully enqueued ("top-20 ports enqueued — N open so far, continuing").
+  Gives users a mid-scan heartbeat on long runs.
+- **Phase timing in `scan_summary.json`.** New fields `phase_a_ms`,
+  `phase_b_ms`, `udp_ms`, `httpx_ms`, `nuclei_ms`. Summary is rewritten
+  after httpx + nuclei finish so the file always reflects the final state.
+
+### Verified
+
+- Linux `cargo build --release` clean, zero warnings.
+- Windows `cargo check --target x86_64-pc-windows-gnu --release` clean.
+- Localhost `/32` smoke: 15 opens, sort order numeric
+  (`22 → 80 → 443 → 631 → 1080 → 3389 → …`), `phase_a_ms=128`,
+  `phase_b_ms=1205`.
+- Scope-filter (v0.7.1 regression): still drops prior-scope entries.
+- CDN tagging regression: `104.16.1.1:80 [http, cdn:cloudflare]` works.
+- Port-range parser regression: `"80,443,8000-8002,9998"` → 6 ports.
+
+## [0.7.1] — 2026-04-20
+
+### Fixed
+- **Resume + scan_diff leaked IPs from previous-scope scans.** When the same
+  folder name was reused across different target inputs (e.g. one day
+  `portwave local 192.168.1.0/24`, next day `portwave local 185.80.124.0/22`),
+  the prior `open_ports.jsonl` was fully loaded without scope filtering —
+  so the new scan's OPEN PORTS block, output files, and diff baseline all
+  included old 192.168.1.* entries unrelated to the current CIDR. Resume
+  state (`preserved`, `skip_set`) and the diff baseline (`prior_set`) are
+  now scope-filtered against the current `<CIDR_INPUT>` minus `--exclude`
+  before anything downstream reads them. Log lines explain the cull:
+  `Resume: discarded N prior open port(s) outside the current scan scope.`
+- **`scan_diff.json` could go stale across re-runs.** v0.7.0 skipped writing
+  a diff when both current and prior sets were empty, leaving the diff
+  file from a previous (different-scope) run on disk. Diff is now written
+  every single run — empty state reads `{prior_opens:0, current_opens:0,
+  new:[], closed:[], unchanged:0}` plus the log line
+  `Diff: no opens this run (and no prior in scope)`.
+
+## [0.7.0] — 2026-04-17
+
+### Added
+- **Smart port prioritization.** The producer now runs a **two-pass sweep**:
+  pass 1 scans a curated top-20 priority list (`80, 443, 22, 21, 25, 53,
+  8080, 8443, 3389, 110, 143, 445, 3306, 5432, 6379, 27017, 9200, 1883,
+  5900, 11211`) across every IP, pass 2 does the remainder. On long scans
+  users see HTTP/SSH/DB hits in the first few seconds instead of waiting
+  for the full port sweep to finish. Priority order is stable regardless
+  of input source (`--ports`, `--port-file`, embedded).
+- **`scan_diff.json`.** Every scan reads the prior `open_ports.jsonl` before
+  overwriting it and writes a diff to `scan_diff.json`:
+  `{prior_opens, current_opens, new:[…], closed:[…], unchanged:N}`.
+  Independent of `--no-resume` — diff always runs when a prior file exists.
+  Perfect for continuous-monitoring cron + webhook workflows.
+- **`--webhook <URL>`.** POSTs `scan_summary.json` (with `scan_diff.json`
+  merged under a `diff` key) to the URL when the workflow finishes. Silent
+  on failure so a flaky collector never breaks the exit code. Works with
+  Slack/Discord/custom endpoints.
+- **`--udp` opt-in UDP discovery phase.** Curated set of protocol-specific
+  probes against ~15 well-known UDP services: DNS 53, NTP 123, SNMP 161,
+  SSDP 1900, mDNS 5353, NetBIOS 137, MSSQL-browser 1434, portmap 111,
+  TFTP 69, IKE 500, OpenVPN 1194, memcached 11211, WireGuard 51820,
+  NFS 2049, QUIC 443. Responses appear in `open_ports.jsonl` with
+  `protocol: "udp/<label>"` and a best-effort ASCII-cleaned banner.
+  Off by default because UDP without ICMP port-unreachable reads (which
+  would require root) only catches services that actively reply to our
+  specific probe.
+- **`--refresh-cdn`.** Re-fetches live edge ranges from Cloudflare
+  (`https://www.cloudflare.com/ips-v4`) + Fastly (`https://api.fastly.com/
+  public-ip-list`), merges with the embedded snapshot's non-API providers
+  (akamai/sucuri/imperva/stackpath/bunnycdn/cachefly/keycdn), writes to
+  `~/.cache/portwave/cdn-ranges.txt` (Unix) or
+  `%LOCALAPPDATA%\portwave\cdn-ranges.txt` (Windows). `load_cdn_ranges()`
+  prefers this cache file over the compiled-in snapshot at runtime, so
+  users can keep CDN coverage current between portwave releases.
+
+## [0.6.6] — 2026-04-17
+
+### Changed
+- Narrowed the nuclei non-HTTP port filter from ~70 ports down to 18.
+  The v0.6.4 blocklist excluded SSH/22, Redis/6379, MongoDB/27017,
+  VNC/5900, MQTT/1883, MySQL/3306, etc. — all ports where nuclei has
+  working templates (`ssh-auth-methods`, `redis-default-login`,
+  `mongodb-unauth`, `vnc-without-pass`, `mqtt-*`, `mysql-weak-auth`).
+  Filter was silently dropping real findings. Now blocks only ports with
+  essentially zero nuclei coverage: 7/9/13/17/19/37 (toy services), 53
+  (DNS-TCP), 67/68 (DHCP), 69 (TFTP), 109 (POP2), 111 (portmap), 123
+  (NTP), 137/138 (NetBIOS name/dgram), 161/162 (SNMP), 179 (BGP), 514
+  (syslog), 543/544 (klogin/kshell), 4789 (VXLAN).
+- Removed the banner-protocol short-circuit in `is_http_candidate` —
+  the banner classifier correctly tags SSH/SMTP/FTP/POP3/IMAP, which
+  are all protocols nuclei explicitly supports.
+
+## [0.6.5] — 2026-04-17
+
+### Changed
+- `--nuclei-concurrency` default lowered 50 → 25 to match
+  `--nuclei-max-host-error`. Silences nuclei's "concurrency value is
+  higher than max-host-error" warning and removes the silent cap nuclei
+  was applying. Users who want higher concurrency can pass both flags.
+
+## [0.6.4] — 2026-04-17
+
+### Added
+- `--nuclei-max-host-error` (default `25`) — passes `-mhe 25` to nuclei
+  so doomed hosts fail fast.
+- Non-HTTP port filter on `nuclei_targets.txt` (can be disabled with
+  `--nuclei-all-ports`). Aggressive in this version — narrowed in 0.6.6.
+
+## [0.6.3] — 2026-04-17
+
+### Changed
+- Replaced the block-font ASCII banner (which piled up backslashes in
+  the `W`+`A` glyphs and rendered chaotically on narrow terminals) with
+  the standard figlet mixed-case font for "portwave".
+
+## [0.6.2] — 2026-04-17
+
+### Fixed
+- **Adaptive controller mistook firewalled targets for local saturation.**
+  Previous versions shrank the worker pool when `timeouts / attempts`
+  exceeded 30 %. But 100 % timeouts has two totally different causes:
+  (a) local resource exhaustion (correct response: shrink), or
+  (b) the target is firewalled (correct response: do nothing). The
+  heuristic couldn't tell them apart and always assumed (a). On a /24
+  with 99 %+ dead IPs — including localhost `127.0.0.0/24` — it would
+  shrink from 1500 to 64 workers, turning a 3-minute scan into 30 min.
+  Rewrote the controller to watch actual local-resource errors only
+  (`AddrNotAvailable`, `EMFILE`, `ENFILE`, `ENOBUFS`, `EAGAIN` via
+  `raw_os_error`). Timeouts are now purely informational.
+
+## [0.6.1] — 2026-04-17
+
+### Fixed
+- **Adaptive controller shrinking too aggressively.** With `--retries 1` (the
+  new default), every timed-out probe incremented the `timeouts` counter
+  twice (once per retry). The adaptive monitor's `timeouts / attempts`
+  ratio exceeded 100 % (shown as "200 %" in logs) and shrank the worker
+  pool exponentially — down to ~64 workers per scan against heavily
+  firewalled /24s. Now a timed-out probe increments the counter exactly
+  once, and the ratio stays in `[0.0, 1.0]` as intended.
+
+## [0.6.0] — 2026-04-17
+
+### Added
+- **`--input-file PATH`** — one target per line (CIDR / IP / IP range, `#`
+  comments). Accepts stdin via `-`.
+- **`--asn AS13335,AS15169`** — expands ASN to announced prefixes via the
+  public RIPE stat API (no API key needed). Multi-ASN comma-separated.
+- **`--exclude LIST`** — skip CIDRs / IPs / IP ranges (scope discipline).
+  Same input format as `<CIDR_INPUT>`.
+- **`--ports "22,80,443,8000-9000"`** — inline port-range syntax.
+  Overrides `--port-file` and the embedded list.
+- **IP-range input everywhere**: `1.2.3.10-1.2.3.20` → minimal covering
+  CIDR blocks, accepted anywhere a target is expected.
+- **CDN / WAF edge tagging.** Every open port on an IP in a known CDN
+  range is tagged `[cdn:<provider>]` (cloudflare, fastly, akamai,
+  imperva, sucuri, stackpath, bunnycdn, cachefly, keycdn). Bundled
+  static list of 89 IPv4 CIDRs compiled into the binary via
+  `include_str!`. `scan_summary.json` gains `by_cdn` + `cdn_count`.
+- **ASCII startup banner.** Cyan `portwave` art + "by assassin_marcos"
+  byline, auto-suppressed on non-TTY stderr.
+- **`--no-art` + `-q, --quiet`** flags.
+- **`ureq` dep (~400 KB)** for the GitHub tags API peek (see below).
+
+### Changed
+- **`--check-update`** now peeks the GitHub tags API alongside the
+  releases API. When a tag is pushed but CI hasn't uploaded release
+  assets yet, reports "tag vX is pushed but CI is still building" —
+  no more "says up-to-date, but `-u` finds newer" confusion.
+- **README fully rewritten** for v0.6.x usage. No more install-section
+  duplication from incremental edits across 0.5.x.
+
+### Fixed
+- **`refresh_bundled_ports_files()` now follows `PORTWAVE_PORTS`** from
+  env + config. Older installs whose config pointed at the repo-clone
+  `/ports/portwave-top-ports.txt` were never refreshed on `--update`.
+  Now they are, canonicalised for de-dup.
+
+## [0.5.6] — 2026-04-17
+
+### Added
+- **`--- OPEN PORTS (N) ---`** summary block printed between scan
+  completion and the httpx step. Shows `ip:port [protocol, tls, cdn]
+  banner` so it's obvious why httpx might report fewer URLs than the
+  open-port count (non-HTTP services like SSH drop out silently).
+
+## [0.5.5] — 2026-04-17
+
+### Changed
+- **Default `--threads` 4000 → 1500.** 4000 exhausts the ephemeral port
+  range on long scans (99 %+ timeout rate observed). 1500 is the sweet
+  spot across typical Linux / macOS / Windows defaults.
+- **Default `--timeout-ms` 600 → 800.** Catches slow-but-responsive
+  hosts without bloating total runtime on cold targets.
+- **Default `--retries` 0 → 1.** Covers transient SYN drops without
+  doubling scan time (only timeouts retry, never RST/refused).
+
+### Added
+- **`SO_LINGER = 0` on every TCP connect.** Sends RST on close,
+  returning the ephemeral port to the OS immediately instead of
+  waiting 60 s in TIME_WAIT. Fixes the ephemeral-port-exhaustion
+  cascade at scale.
+- **`TCP_NODELAY` on every TCP connect.** Disables Nagle; shaves
+  ~40 ms of ACK coalescing latency off each successful connect.
+- **New `tcp_probe()` helper** replaces `TcpStream::connect()`
+  everywhere (Phase A, Phase B, TLS sniff).
+- **+28 common service ports** added to the embedded list
+  (1405 → 1433): MQTT 1883/8883, ZooKeeper 2181, Cassandra 9042,
+  Kafka 9092–9094, Salt 4505/4506, Zabbix-trapper 10051, Redis
+  Sentinel 26379, ActiveMQ 61616, kube-scheduler 10251, kube-
+  controller 10252, kubelet-ro 10255, kube-proxy-health 10256,
+  STUN 3478, Erlang EPMD 4369, VXLAN 4789, Logstash 5044, Vite
+  5173, CoAP 5683, TeamViewer 5938, WebSphere 9060/9061.
+
+### Fixed
+- **`install.sh` + `install.ps1`** stop writing `PORTWAVE_PORTS=<repo-
+  clone>/ports/portwave-top-ports.txt` by default. The embedded list
+  is the default now; `--update` auto-refreshes it. Users can still
+  enter a custom path when prompted.
+
+## [0.5.4] — 2026-04-16
+
+### Fixed
+- **CI hang on macOS Intel.** GitHub-hosted `macos-13` runners had
+  very limited availability (jobs sat in the queue 28+ minutes across
+  v0.5.1/0.5.2/0.5.3 and never picked up). Switched to building
+  *both* Mac architectures from a single `macos-14` (Apple Silicon)
+  runner using `cargo build --target x86_64-apple-darwin` — the
+  Apple-bundled toolchain cross-compiles natively. One job, two
+  binaries, no queue wait.
+- **`install.sh` picked a prefix not on `$PATH`.** On macOS the first
+  writable candidate was `~/.local/bin` which isn't on bash's default
+  `$PATH`, causing `portwave: command not found` after install. New
+  order: `/opt/homebrew/bin` → `/usr/local/bin` → `~/.local/bin`. If
+  the chosen prefix is still not on `$PATH`, the installer offers to
+  append an `export PATH=...` line to the right shell rc (`~/.zshrc`
+  / `~/.bash_profile` / `~/.bashrc`).
+- **`install.sh` missed many tool locations.** Expanded auto-detect
+  to `$HOME/go/bin`, `$HOME/.local/bin`, `/opt/homebrew/bin`,
+  `/usr/local/bin`, `/usr/local/go/bin`, `/opt/local/bin` (MacPorts),
+  `/home/go/bin`, `$GOBIN`, `$GOPATH/bin`, and any `/home/*/go/bin`.
+  `~/.pdtm/go/bin` (ProjectDiscovery's tool manager) is picked up
+  automatically via `$PATH`.
+
+### Changed
+- README rewritten end-to-end; removed install-section duplication
+  introduced by incremental 0.5.0 → 0.5.3 edits.
+
+## [0.5.3] — 2026-04-17
+
+### Added
+- **Default port list is now embedded** via `include_str!`. The binary
+  *is* the port list — `--update` always ships the current list, no
+  separate asset to manage.
+- **`refresh_bundled_ports_files()` called after `--update`.** Rewrites
+  every on-disk copy of `portwave-top-ports.txt` it finds under the
+  install prefix's `share/portwave/ports/` — so configs pointing at
+  the share copy stay in sync.
+
+### Removed
+- `find_bundled_ports()` runtime lookup — no longer needed.
+
+## [0.5.2] — 2026-04-17
+
+### Fixed
+- **Producer bailed early on `/24+` ranges starting with the network
+  address.** `any = true` was set *after* `is_usable_ipv4_host()` in
+  the round-robin loop. For a `/24` the first IP yielded is `.0`
+  (network), which is unusable → `continue` → `any` stayed `false` →
+  outer loop bailed after consuming a single IP. Zero probes sent to
+  workers, "open: 0" in 0 ms, progress bar forced to 100 % by
+  `pb.finish_with_message`. Bug only manifested on `/24`–`/30` IPv4
+  (our localhost `/32` smoke tests didn't trigger it). `any = true`
+  is now set as soon as the iterator yields *any* value.
+
+### Added
+- **1405-port bundled list** (up from 443). The old list was HTTP-
+  heavy and missing critical service ports — most damagingly **22
+  (SSH)**, plus 25/53/110/143/445/587/993/995, 3389 (RDP), 5432
+  (postgres), 5900 (VNC), 6379 (redis), 9200 (elasticsearch), 11211
+  (memcached), 27017 (mongo), and many more. New list is the union
+  of the old 443 + nmap-top-1000 + curated bug-bounty / modern-app
+  additions (docker 2375/76, etcd 2379/80, k8s api 6443, hadoop
+  50070/75/90, rabbitmq 15672, etc.).
+
+## [0.5.1] — 2026-04-17
+
+### Added
+- **`-u, --update`** — downloads the prebuilt binary for the current
+  OS+arch from the latest GitHub Release and atomically replaces the
+  running executable. Powered by `self_update` over rustls + reqwest.
+- **`--check-update`** — prints "Update available: X → Y" or "Up to
+  date", then exits.
+- **Startup update-available banner.** Cached under
+  `~/.cache/portwave/last_check` (Unix) or
+  `%LOCALAPPDATA%\portwave\last_check` (Windows), 24 h TTL, 3 s
+  timeout so slow networks never block a scan.
+- **`--no-update-check`** + `PORTWAVE_NO_UPDATE_CHECK=1` env.
+- **`.github/workflows/release.yml`** — builds binaries for
+  `x86_64-unknown-linux-gnu`, `x86_64-apple-darwin`,
+  `aarch64-apple-darwin`, `x86_64-pc-windows-msvc` on every `v*`
+  tag. Each artefact is a `tar.gz` (Unix) or `zip` (Windows) named
+  `portwave-<target-triple>.{tar.gz,zip}` so `self_update` auto-
+  matches on the host.
+
+### Changed
+- Positional args `<FOLDER_NAME>` + `<CIDR_INPUT>` are now `Option`
+  so `--update` / `--check-update` can run without them.
+
+## [0.5.0] — 2026-04-16
+
+### Added
+- **Cross-platform support.** Linux, macOS (Apple Silicon + Intel),
+  and Windows. Guarded `raise_fd_limit()` with `#[cfg(unix)]`,
+  platform-aware config file path (`%APPDATA%` on Windows vs
+  `$HOME/.config` on Unix), broader bundled-ports lookup covering
+  `%LOCALAPPDATA%` and exe-relative paths.
+- **`install.sh` + `install.ps1`** — interactive installers with
+  rustup auto-install, tool auto-detect, path-prefix picker, config
+  file writer, PATH hint.
+- **`uninstall.sh` + `uninstall.ps1`**.
+- **First GitHub public release.** Repo live at
+  `https://github.com/assassin-marcos/portwave`, 20 SEO topics set,
+  MIT licensed.
+
+### Changed
+- Renamed package + binary from `ipv6scanner` to `portwave`.
+- `libc` moved to `[target.'cfg(unix)'.dependencies]`.
+
+### Before v0.5.0
+
+Tool lived as `ipv6scanner` internally at v0.3.x / v0.4.x. Big
+rewrites:
+
+#### v0.4.0 (internal) — Architectural overhaul
+- Bounded worker pool with `flume` MPMC queue. Memory O(threads),
+  not O(IPs × ports).
+- Dedicated writer task; `Arc<Mutex<File>>` on the hot path removed.
+- `JoinSet` instead of `Vec<JoinHandle>`.
+- `indicatif` progress bar with ETA + spinner mode for > 10 M probes.
+- Structural IPv6 URL formatting — `http://[::1]` not `http://[::1`.
+- Graceful `Ctrl+C` (drain workers + flush writer before exit).
+- Dropped `-path /actuator,/.git/HEAD` httpx hardcode.
+- Resume via append-only `open_ports.jsonl`.
+- Two-phase scan: fast discovery (Phase A) + banner/TLS enrichment
+  (Phase B).
+
+#### v0.3.0 (original)
+- Hybrid IPv4/IPv6 scanner with full TCP connect + httpx + nuclei
+  chain.

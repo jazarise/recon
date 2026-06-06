@@ -1,0 +1,16 @@
+name: httpbinorg__20260515_233823
+category: recon
+language: .json
+execution_type: library
+entrypoint: httpbin.org__20260515_233823.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - httpbinorg__20260515_233823
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: port_prioritizer
+category: recon
+language: .py
+execution_type: library
+entrypoint: port_prioritizer.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - port_prioritizer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

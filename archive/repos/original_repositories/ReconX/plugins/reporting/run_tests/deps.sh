@@ -1,0 +1,2 @@
+#!/bin/bash
+# Dependency script

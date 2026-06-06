@@ -1,0 +1,16 @@
+name: LICENSE_4
+category: api_security
+language: unknown
+execution_type: library
+entrypoint: LICENSE_4
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - LICENSE_4
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

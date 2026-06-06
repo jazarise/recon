@@ -1,0 +1,12 @@
+name: scan4all_fingerprinting
+version: 1.0.0
+description: "Native technology fingerprinting (ported from scan4all)"
+author: ReconX
+type: intelligence
+stage: deep
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 3600

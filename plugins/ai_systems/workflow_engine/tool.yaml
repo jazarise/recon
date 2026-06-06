@@ -1,0 +1,16 @@
+name: workflow_engine
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: workflow_engine.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - workflow_engine
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: robot
+category: api_security
+language: .md
+execution_type: library
+entrypoint: robot.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - robot
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

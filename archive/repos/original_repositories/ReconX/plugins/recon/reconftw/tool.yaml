@@ -1,0 +1,16 @@
+name: reconftw
+category: recon
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: reconftw.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reconftw
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

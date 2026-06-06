@@ -1,0 +1,33 @@
+name: Deep Recon Workflow
+description: Maximum intelligence gathering. Estimated time 1-6+ hours.
+mode: deep
+steps:
+- id: s1
+  plugin: dns_intelligence
+  plugin_path: plugins/golden/dns_intelligence
+  timeout: 300
+  description: Deep DNS Enumeration with Historical Records
+
+- id: s2
+  plugin: network_discovery
+  plugin_path: plugins/golden/network_discovery
+  timeout: 600
+  description: Full Port Scan, ASN Mapping, Service Analysis
+
+- id: s3
+  plugin: web_recon
+  plugin_path: plugins/golden/web_recon
+  timeout: 600
+  description: Advanced Web Enumeration, Content Discovery, Technology Detection
+
+- id: s4
+  plugin: llm_analysis
+  plugin_path: plugins/golden/llm_analysis
+  timeout: 300
+  description: AI-Powered Attack Surface Mapping and Vulnerability Correlation
+
+- id: s5
+  plugin: reporting
+  plugin_path: plugins/golden/reporting
+  timeout: 120
+  description: Generate Full Intelligence Report (MD, JSON, CSV, HTML)

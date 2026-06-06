@@ -1,0 +1,16 @@
+name: project_manager
+category: api_security
+language: .py
+execution_type: library
+entrypoint: project_manager.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - project_manager
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

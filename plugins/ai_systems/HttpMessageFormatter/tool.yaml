@@ -1,0 +1,16 @@
+name: HttpMessageFormatter
+category: ai_systems
+language: .java
+execution_type: library
+entrypoint: HttpMessageFormatter.java
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - HttpMessageFormatter
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: analyze_repos
+category: reporting
+language: .py
+execution_type: library
+entrypoint: analyze_repos.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - analyze_repos
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

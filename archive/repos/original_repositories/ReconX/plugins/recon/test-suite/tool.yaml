@@ -1,0 +1,16 @@
+name: test-suite
+category: recon
+language: .mjs
+execution_type: api_server
+entrypoint: test-suite.mjs
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test-suite
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

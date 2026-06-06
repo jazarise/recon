@@ -1,0 +1,16 @@
+name: target_classifier
+category: recon
+language: .py
+execution_type: library
+entrypoint: target_classifier.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - target_classifier
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

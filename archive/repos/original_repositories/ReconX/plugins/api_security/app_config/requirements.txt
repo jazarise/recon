@@ -1,0 +1,4 @@
+os
+typing
+dotenv
+openai

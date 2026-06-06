@@ -1,0 +1,16 @@
+name: vuln-ssrf_3
+category: api_security
+language: .txt
+execution_type: library
+entrypoint: vuln-ssrf_3.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - vuln-ssrf_3
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

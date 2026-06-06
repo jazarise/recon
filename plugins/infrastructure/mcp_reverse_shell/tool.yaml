@@ -1,0 +1,16 @@
+name: mcp_reverse_shell
+category: infrastructure
+language: .py
+execution_type: cli_entrypoint
+entrypoint: mcp_reverse_shell.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - mcp_reverse_shell
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

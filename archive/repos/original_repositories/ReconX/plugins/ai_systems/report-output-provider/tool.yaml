@@ -1,0 +1,16 @@
+name: report-output-provider
+category: ai_systems
+language: .ts
+execution_type: library
+entrypoint: report-output-provider.ts
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - report-output-provider
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

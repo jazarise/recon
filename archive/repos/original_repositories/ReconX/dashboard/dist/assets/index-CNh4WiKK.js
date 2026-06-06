@@ -1,0 +1,1 @@
+const e=[{value:"basic",label:"Basic",description:"Passive DNS + HTTP probe",estimated:"5–15 min"},{value:"medium",label:"Medium",description:"Port scan + LLM analysis",estimated:"15–60 min"},{value:"deep",label:"Deep",description:"Full-depth intelligence",estimated:"1–6+ hrs"}];export{e as S};

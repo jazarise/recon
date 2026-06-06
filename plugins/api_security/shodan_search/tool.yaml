@@ -1,0 +1,16 @@
+name: shodan_search
+category: api_security
+language: .yaml
+execution_type: library
+entrypoint: shodan_search.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - shodan_search
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

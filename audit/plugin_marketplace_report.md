@@ -1,0 +1,1 @@
+# Plugin Marketplace Report\nRegistry active.

@@ -1,0 +1,16 @@
+name: solution
+category: web_scanning
+language: .md
+execution_type: library
+entrypoint: solution.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - solution
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

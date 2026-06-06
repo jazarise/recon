@@ -1,0 +1,16 @@
+name: options
+category: burp/mcp_integrations
+language: .go
+execution_type: library
+entrypoint: options.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - options
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

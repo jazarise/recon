@@ -1,0 +1,199 @@
+{
+  "workflow_id": "bdee22de-439c-427d-a9ca-019832dfb5c2",
+  "workflow_name": "Deep Recon Workflow",
+  "target": "example.com",
+  "status": "completed",
+  "started_at": "2026-06-05T11:53:11.918713+00:00",
+  "completed_at": "2026-06-05T11:53:20.917298+00:00",
+  "steps": [
+    {
+      "step_id": "s1",
+      "plugin": "passive_recon",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:11.918766+00:00",
+      "completed_at": "2026-06-05T11:53:12.122745+00:00",
+      "output": {
+        "plugin": "passive_recon",
+        "target": "example.com",
+        "subdomains_found": 0,
+        "output_file": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\projects\\example.com\\subdomains.txt",
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s2",
+      "plugin": "active_recon",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:12.122777+00:00",
+      "completed_at": "2026-06-05T11:53:12.270519+00:00",
+      "output": {
+        "plugin": "active_recon",
+        "target": "example.com",
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s3",
+      "plugin": "asn_intel",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:12.270548+00:00",
+      "completed_at": "2026-06-05T11:53:17.955409+00:00",
+      "output": {
+        "plugin": "asn_intel",
+        "target": "example.com",
+        "findings": [
+          {
+            "type": "ip",
+            "ip": "104.20.23.154",
+            "domain": "example.com"
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "s4",
+      "plugin": "csp_extractor",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:17.955439+00:00",
+      "completed_at": "2026-06-05T11:53:19.599583+00:00",
+      "output": {
+        "plugin": "csp_extractor",
+        "target": "example.com",
+        "domains_found": 0,
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s5",
+      "plugin": "content_discovery",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:19.599615+00:00",
+      "completed_at": "2026-06-05T11:53:19.763071+00:00",
+      "output": {
+        "plugin": "content_discovery",
+        "target": "example.com",
+        "endpoints_found": 0,
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s6",
+      "plugin": "nuclei",
+      "status": "failed",
+      "started_at": "2026-06-05T11:53:19.763097+00:00",
+      "completed_at": "2026-06-05T11:53:19.930346+00:00",
+      "output": null,
+      "error": "nuclei binary not found in PATH"
+    },
+    {
+      "step_id": "s7",
+      "plugin": "xss_scan",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:19.930383+00:00",
+      "completed_at": "2026-06-05T11:53:20.080901+00:00",
+      "output": {
+        "plugin": "xss_scan",
+        "target": "example.com",
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s8",
+      "plugin": "graphql_scan",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:20.080928+00:00",
+      "completed_at": "2026-06-05T11:53:20.737607+00:00",
+      "output": {
+        "plugin": "graphql_scan",
+        "target": "example.com",
+        "findings": []
+      }
+    },
+    {
+      "step_id": "s9",
+      "plugin": "reporting",
+      "status": "completed",
+      "started_at": "2026-06-05T11:53:20.737653+00:00",
+      "completed_at": "2026-06-05T11:53:20.917286+00:00",
+      "output": {
+        "plugin": "reporting",
+        "target": "example.com",
+        "reports": {
+          "markdown": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.md",
+          "json": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.json",
+          "csv": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.csv",
+          "html": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.html"
+        },
+        "report_path": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.html",
+        "findings": []
+      }
+    }
+  ],
+  "final_context": {
+    "target": "example.com",
+    "findings": [
+      {
+        "type": "ip",
+        "ip": "104.20.23.154",
+        "domain": "example.com"
+      }
+    ],
+    "passive_recon": {
+      "plugin": "passive_recon",
+      "target": "example.com",
+      "subdomains_found": 0,
+      "output_file": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\projects\\example.com\\subdomains.txt",
+      "findings": []
+    },
+    "active_recon": {
+      "plugin": "active_recon",
+      "target": "example.com",
+      "findings": []
+    },
+    "asn_intel": {
+      "plugin": "asn_intel",
+      "target": "example.com",
+      "findings": [
+        {
+          "type": "ip",
+          "ip": "104.20.23.154",
+          "domain": "example.com"
+        }
+      ]
+    },
+    "csp_extractor": {
+      "plugin": "csp_extractor",
+      "target": "example.com",
+      "domains_found": 0,
+      "findings": []
+    },
+    "content_discovery": {
+      "plugin": "content_discovery",
+      "target": "example.com",
+      "endpoints_found": 0,
+      "findings": []
+    },
+    "xss_scan": {
+      "plugin": "xss_scan",
+      "target": "example.com",
+      "findings": []
+    },
+    "graphql_scan": {
+      "plugin": "graphql_scan",
+      "target": "example.com",
+      "findings": []
+    },
+    "reporting": {
+      "plugin": "reporting",
+      "target": "example.com",
+      "reports": {
+        "markdown": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.md",
+        "json": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.json",
+        "csv": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.csv",
+        "html": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.html"
+      },
+      "report_path": "E:\\ReconX\\Reconx_V_2.0.0\\outputs\\report_example_com_1780640600.html",
+      "findings": []
+    }
+  }
+}

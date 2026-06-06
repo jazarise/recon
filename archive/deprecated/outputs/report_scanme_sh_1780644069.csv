@@ -1,0 +1,7 @@
+Category,Key,Value
+Network,open_port,80
+Network,open_port,22
+Network,service,port=80 state=open
+Network,service,port=22 state=open
+Web,url,http://scanme.sh
+DNS,A,128.199.158.128

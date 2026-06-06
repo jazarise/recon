@@ -1,0 +1,3 @@
+# test_probe_ssrf_cloud_metadata Plugin
+
+Auto-generated scaffolding for test_probe_ssrf_cloud_metadata.

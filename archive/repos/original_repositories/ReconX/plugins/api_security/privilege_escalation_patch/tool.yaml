@@ -1,0 +1,16 @@
+name: privilege_escalation_patch
+category: api_security
+language: .py
+execution_type: library
+entrypoint: privilege_escalation_patch.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - privilege_escalation_patch
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: solved-challenges
+category: web_scanning
+language: .csv
+execution_type: library
+entrypoint: solved-challenges.csv
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - solved-challenges
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,90 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:14.4-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - db:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init_db.sql
+    ports:
+      # WARNING : DB **SHOULD NEVER** BE EXPOSED IN THE PROD INSTANCE. Be careful when using the local docker compose.
+      - 5431:5432
+  cache:
+    image: redis:7.0.4
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    volumes:
+      - cache:/data
+  ingestor:
+    build:
+      context: ./
+      dockerfile: ./deploy/backend/Dockerfile
+    command: yarn start-collector
+    # image: metlo/backend
+    container_name: metlo-ingestor
+    depends_on:
+      - cache
+    restart: unless-stopped
+    ports:
+      - 8081:8081
+    environment:
+      - DB_URL=postgres://postgres:postgres@db:5432/metlo_api_security
+    volumes:
+      - ./metlo-config.yaml:/usr/src/app/backend/metlo-config.yaml
+  backend:
+    build:
+      context: ./
+      dockerfile: ./deploy/backend/Dockerfile
+    # image: metlo/backend
+    container_name: metlo-backend
+    depends_on:
+      - cache
+    restart: unless-stopped    
+    environment:
+      - DB_URL=postgres://postgres:postgres@db:5432/metlo_api_security
+      - REDIS_URL=redis://:eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81@cache:6379
+      - ENCRYPTION_KEY=AB3IBTaL80Ytjw6ZjbiU+AM1d+Mgp37MR1/1S2fekrU=
+      ###  BACKEND_URL should point to externally accessible url for ingestor  ###
+      - BACKEND_URL=http://localhost:8081
+      - EXPRESS_SECRET=617f8d1a-7a48-4053-a845-d9eae66e0bbe
+  jobs:
+    image: metlo/jobrunner
+    container_name: metlo-jobs
+    restart: unless-stopped
+    environment:
+      - DB_URL=postgres://postgres:postgres@db:5432/metlo_api_security
+      - REDIS_URL=redis://:eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81@cache:6379
+  analyzer:
+    build:
+      context: ./
+      dockerfile: ./deploy/jobrunner/Dockerfile
+    # image: metlo/jobrunner:${DOCKER_IMAGE_TAG:-latest}
+    container_name: metlo-analyzer
+    command: yarn start-analyzer
+    depends_on:
+      - ingestor
+    restart: unless-stopped
+    environment:
+      - DB_URL=postgres://postgres:postgres@db:5432/metlo_api_security
+      - REDIS_URL=redis://:eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81@cache:6379
+  frontend:
+    # image: metlo/frontend
+    build:
+      context: ./
+      dockerfile: ./deploy/frontend/Dockerfile
+    container_name: metlo-frontend
+    restart: unless-stopped
+    environment:
+      - BACKEND_URL=http://backend:8080
+    ports:
+      - 8000:3000
+
+volumes:
+  db:
+    driver: local
+  cache:
+    driver: local

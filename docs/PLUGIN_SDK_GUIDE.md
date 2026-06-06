@@ -1,0 +1,1 @@
+# Plugin SDK Guide\nUse `reconx plugin create` to scaffold a new ReconX adapter.

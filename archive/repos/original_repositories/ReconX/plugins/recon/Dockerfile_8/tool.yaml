@@ -1,0 +1,16 @@
+name: Dockerfile_8
+category: recon
+language: unknown
+execution_type: library
+entrypoint: Dockerfile_8
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - Dockerfile_8
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

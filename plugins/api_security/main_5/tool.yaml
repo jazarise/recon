@@ -1,0 +1,16 @@
+name: main_5
+category: api_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: main_5.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main_5
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

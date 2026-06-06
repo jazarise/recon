@@ -1,0 +1,16 @@
+name: content-discovery-agent
+category: recon
+language: .js
+execution_type: library
+entrypoint: content-discovery-agent.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - content-discovery-agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

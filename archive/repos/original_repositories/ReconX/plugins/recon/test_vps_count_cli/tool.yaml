@@ -1,0 +1,16 @@
+name: test_vps_count_cli
+category: recon
+language: .bats
+execution_type: library
+entrypoint: test_vps_count_cli.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_vps_count_cli
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

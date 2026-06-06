@@ -1,0 +1,16 @@
+name: quick_action_bar
+category: recon
+language: .py
+execution_type: library
+entrypoint: quick_action_bar.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - quick_action_bar
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

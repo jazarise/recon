@@ -1,0 +1,16 @@
+name: test-cortex-integration
+category: api_security
+language: .js
+execution_type: library
+entrypoint: test-cortex-integration.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test-cortex-integration
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

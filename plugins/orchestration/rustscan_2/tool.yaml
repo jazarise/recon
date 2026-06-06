@@ -1,0 +1,16 @@
+name: rustscan_2
+category: orchestration
+language: .yaml
+execution_type: library
+entrypoint: rustscan_2.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - rustscan_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

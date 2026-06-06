@@ -1,0 +1,12 @@
+name: osint_metadata
+version: 1.0.0
+description: "Native OSINT metadata extraction (ported from recon-ng)"
+author: ReconX
+type: intelligence
+stage: discovery
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 10

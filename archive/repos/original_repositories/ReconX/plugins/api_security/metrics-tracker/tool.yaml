@@ -1,0 +1,16 @@
+name: metrics-tracker
+category: api_security
+language: .ts
+execution_type: library
+entrypoint: metrics-tracker.ts
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - metrics-tracker
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

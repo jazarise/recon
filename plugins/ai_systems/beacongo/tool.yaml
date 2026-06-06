@@ -1,0 +1,16 @@
+name: beacongo
+category: ai_systems
+language: .tmpl
+execution_type: cli_entrypoint
+entrypoint: beacon.go.tmpl
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - beacongo
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

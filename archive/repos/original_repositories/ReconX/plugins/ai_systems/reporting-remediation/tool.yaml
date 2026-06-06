@@ -1,0 +1,16 @@
+name: reporting-remediation
+category: ai_systems
+language: .md
+execution_type: library
+entrypoint: reporting-remediation.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reporting-remediation
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

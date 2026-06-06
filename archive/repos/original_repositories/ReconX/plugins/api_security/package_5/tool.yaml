@@ -1,0 +1,16 @@
+name: package_5
+category: api_security
+language: .json
+execution_type: library
+entrypoint: package_5.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - package_5
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: validation-harness
+category: ai_systems
+language: .js
+execution_type: library
+entrypoint: validation-harness.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - validation-harness
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

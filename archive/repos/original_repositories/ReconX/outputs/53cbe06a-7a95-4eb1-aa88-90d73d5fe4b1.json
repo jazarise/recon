@@ -1,0 +1,23 @@
+{
+  "workflow_id": "53cbe06a-7a95-4eb1-aa88-90d73d5fe4b1",
+  "workflow_name": "Crash Workflow",
+  "target": "localhost",
+  "status": "completed",
+  "started_at": "2026-06-03T11:58:11.830196+00:00",
+  "completed_at": "2026-06-03T11:58:11.944825+00:00",
+  "steps": [
+    {
+      "step_id": "s1",
+      "plugin": "malicious",
+      "status": "failed",
+      "started_at": "2026-06-03T11:58:11.830217+00:00",
+      "completed_at": "2026-06-03T11:58:11.944820+00:00",
+      "output": null,
+      "error": "Subprocess failed with code 1: e:\\ReconX\\core\\subprocess_runner.py:40: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\r\n  if asyncio.iscoroutinefunction(adapter.execute):"
+    }
+  ],
+  "final_context": {
+    "target": "localhost",
+    "findings": []
+  }
+}

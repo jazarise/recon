@@ -1,0 +1,16 @@
+name: LICENSE_7
+category: api_security
+language: unknown
+execution_type: library
+entrypoint: LICENSE_7
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - LICENSE_7
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

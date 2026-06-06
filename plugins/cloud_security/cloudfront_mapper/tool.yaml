@@ -1,0 +1,16 @@
+name: cloudfront_mapper
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: cloudfront_mapper.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - cloudfront_mapper
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

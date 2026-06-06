@@ -1,0 +1,16 @@
+name: dns_pipeline
+category: recon
+language: .py
+execution_type: library
+entrypoint: dns_pipeline.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - dns_pipeline
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

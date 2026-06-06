@@ -1,0 +1,16 @@
+name: naabu
+category: orchestration
+language: .yaml
+execution_type: library
+entrypoint: naabu.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - naabu
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

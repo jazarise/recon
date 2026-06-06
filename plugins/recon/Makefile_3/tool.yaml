@@ -1,0 +1,16 @@
+name: Makefile_3
+category: recon
+language: unknown
+execution_type: library
+entrypoint: Makefile_3
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - Makefile_3
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

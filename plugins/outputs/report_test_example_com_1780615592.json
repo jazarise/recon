@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "tool": "ReconX",
+    "version": "1.0.0",
+    "target": "test.example.com",
+    "generated_at": "2026-06-05T04:56:32.472650Z"
+  },
+  "network_discovery": {
+    "open_ports": [
+      80,
+      443
+    ],
+    "services": [
+      {
+        "port": 80,
+        "state": "open"
+      }
+    ]
+  },
+  "web_recon": {
+    "urls": [
+      "http://test.example.com"
+    ],
+    "technologies": [
+      "nginx"
+    ]
+  },
+  "dns_intelligence": {
+    "records": {
+      "A": [
+        "1.2.3.4"
+      ]
+    },
+    "subdomains": []
+  },
+  "llm_analysis": {
+    "risk_score": 25,
+    "risk_level": "LOW",
+    "summary": "Test summary",
+    "recommendations": [],
+    "key_findings": []
+  },
+  "findings": []
+}

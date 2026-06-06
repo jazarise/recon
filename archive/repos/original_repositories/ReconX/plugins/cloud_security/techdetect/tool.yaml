@@ -1,0 +1,16 @@
+name: techdetect
+category: cloud_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: techdetect.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - techdetect
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

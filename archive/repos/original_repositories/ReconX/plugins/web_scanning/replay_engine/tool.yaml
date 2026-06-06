@@ -1,0 +1,16 @@
+name: replay_engine
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: replay_engine.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - replay_engine
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

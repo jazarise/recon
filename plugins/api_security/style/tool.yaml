@@ -1,0 +1,16 @@
+name: style
+category: api_security
+language: .css
+execution_type: library
+entrypoint: style.css
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - style
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

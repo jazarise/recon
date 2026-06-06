@@ -1,0 +1,16 @@
+name: test_probe_graphql_introspection
+category: api_security
+language: .py
+execution_type: library
+entrypoint: test_probe_graphql_introspection.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_probe_graphql_introspection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

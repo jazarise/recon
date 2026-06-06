@@ -1,0 +1,50 @@
+{
+  "workflow_id": "0ed337d7-75c5-4e34-a713-dcccb8f377c0",
+  "workflow_name": "Basic Recon Workflow",
+  "target": "example.com",
+  "status": "completed",
+  "started_at": "2026-06-05T15:52:20.164362+00:00",
+  "completed_at": "2026-06-05T15:52:20.636739+00:00",
+  "steps": [
+    {
+      "step_id": "s1",
+      "plugin": "dns_intelligence",
+      "status": "failed",
+      "started_at": "2026-06-05T15:52:20.164383+00:00",
+      "completed_at": "2026-06-05T15:52:20.290893+00:00",
+      "output": null,
+      "error": "Adapter not found at E:\\ReconX\\Reconx_V_2.0.0\\plugins\\golden\\dns_intelligence\\adapter.py"
+    },
+    {
+      "step_id": "s2",
+      "plugin": "network_discovery",
+      "status": "failed",
+      "started_at": "2026-06-05T15:52:20.290920+00:00",
+      "completed_at": "2026-06-05T15:52:20.408506+00:00",
+      "output": null,
+      "error": "Adapter not found at E:\\ReconX\\Reconx_V_2.0.0\\plugins\\golden\\network_discovery\\adapter.py"
+    },
+    {
+      "step_id": "s3",
+      "plugin": "web_recon",
+      "status": "failed",
+      "started_at": "2026-06-05T15:52:20.408532+00:00",
+      "completed_at": "2026-06-05T15:52:20.521007+00:00",
+      "output": null,
+      "error": "Adapter not found at E:\\ReconX\\Reconx_V_2.0.0\\plugins\\golden\\web_recon\\adapter.py"
+    },
+    {
+      "step_id": "s4",
+      "plugin": "reporting",
+      "status": "failed",
+      "started_at": "2026-06-05T15:52:20.521033+00:00",
+      "completed_at": "2026-06-05T15:52:20.636728+00:00",
+      "output": null,
+      "error": "Adapter not found at E:\\ReconX\\Reconx_V_2.0.0\\plugins\\golden\\reporting\\adapter.py"
+    }
+  ],
+  "final_context": {
+    "target": "example.com",
+    "findings": []
+  }
+}

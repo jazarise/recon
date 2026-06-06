@@ -1,0 +1,16 @@
+name: netexec
+category: plugin_systems
+language: .yaml
+execution_type: library
+entrypoint: netexec.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - netexec
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

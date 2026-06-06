@@ -1,0 +1,16 @@
+name: README_4
+category: recon
+language: .md
+execution_type: cli_entrypoint
+entrypoint: README_4.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_4
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

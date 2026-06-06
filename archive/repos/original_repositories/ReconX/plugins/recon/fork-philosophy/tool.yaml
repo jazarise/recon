@@ -1,0 +1,16 @@
+name: fork-philosophy
+category: recon
+language: .md
+execution_type: library
+entrypoint: fork-philosophy.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - fork-philosophy
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

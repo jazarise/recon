@@ -1,0 +1,16 @@
+name: detector
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: detector.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - detector
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

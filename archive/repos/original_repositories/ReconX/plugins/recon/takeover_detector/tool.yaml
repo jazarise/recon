@@ -1,0 +1,16 @@
+name: takeover_detector
+category: recon
+language: .py
+execution_type: library
+entrypoint: takeover_detector.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - takeover_detector
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

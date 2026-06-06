@@ -1,0 +1,16 @@
+name: web_recon
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: web_recon.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - web_recon
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

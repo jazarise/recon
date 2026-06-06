@@ -1,0 +1,16 @@
+name: llm-clienttest
+category: api_security
+language: .js
+execution_type: library
+entrypoint: llm-client.test.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - llm-clienttest
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

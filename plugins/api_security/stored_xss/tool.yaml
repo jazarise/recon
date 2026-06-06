@@ -1,0 +1,16 @@
+name: stored_xss
+category: api_security
+language: .py
+execution_type: api_server
+entrypoint: stored_xss.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - stored_xss
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

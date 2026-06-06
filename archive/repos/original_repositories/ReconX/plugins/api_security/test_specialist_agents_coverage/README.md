@@ -1,0 +1,3 @@
+# test_specialist_agents_coverage Plugin
+
+Auto-generated scaffolding for test_specialist_agents_coverage.

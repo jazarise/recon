@@ -1,0 +1,16 @@
+name: quick-start
+category: cloud_security
+language: .md
+execution_type: library
+entrypoint: quick-start.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - quick-start
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

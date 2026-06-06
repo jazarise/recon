@@ -1,0 +1,16 @@
+name: test_stage182_traffic
+category: recon
+language: .py
+execution_type: cli_entrypoint
+entrypoint: test_stage182_traffic.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_stage182_traffic
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

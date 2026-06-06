@@ -1,0 +1,7 @@
+pathlib
+pytest
+pentestgpt.core.backend
+pentestgpt.core.config
+pentestgpt.core.controller
+pentestgpt.core.session
+tests.conftest

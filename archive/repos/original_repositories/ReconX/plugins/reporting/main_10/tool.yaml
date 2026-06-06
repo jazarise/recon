@@ -1,0 +1,16 @@
+name: main_10
+category: reporting
+language: .py
+execution_type: library
+entrypoint: main_10.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main_10
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

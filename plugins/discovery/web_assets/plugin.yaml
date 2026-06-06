@@ -1,0 +1,12 @@
+name: surface_mapping
+version: 1.0.0
+description: "Native Technology fingerprinting and surface mapping (ported from WEBFANG)"
+author: ReconX
+type: reconnaissance
+stage: discovery
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 10

@@ -1,0 +1,16 @@
+name: report_generator
+category: reporting
+language: .py
+execution_type: cli_entrypoint
+entrypoint: report_generator.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - report_generator
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

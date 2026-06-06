@@ -1,0 +1,16 @@
+name: bruteforce-http
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: bruteforce-http.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - bruteforce-http
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

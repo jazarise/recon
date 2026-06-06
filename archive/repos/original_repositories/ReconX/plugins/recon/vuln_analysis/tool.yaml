@@ -1,0 +1,16 @@
+name: vuln_analysis
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: vuln_analysis.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - vuln_analysis
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

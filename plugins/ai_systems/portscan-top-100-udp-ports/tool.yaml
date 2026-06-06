@@ -1,0 +1,16 @@
+name: portscan-top-100-udp-ports
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: portscan-top-100-udp-ports.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - portscan-top-100-udp-ports
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

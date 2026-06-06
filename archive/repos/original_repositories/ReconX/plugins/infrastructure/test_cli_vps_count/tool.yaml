@@ -1,0 +1,16 @@
+name: test_cli_vps_count
+category: infrastructure
+language: .bats
+execution_type: library
+entrypoint: test_cli_vps_count.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_cli_vps_count
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

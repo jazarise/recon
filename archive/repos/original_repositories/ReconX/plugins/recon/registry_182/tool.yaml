@@ -1,0 +1,16 @@
+name: registry_182
+category: recon
+language: .py
+execution_type: library
+entrypoint: registry_182.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - registry_182
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

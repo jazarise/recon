@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "tool": "ReconX",
+    "version": "1.0.0",
+    "target": "scanme.sh",
+    "generated_at": "2026-06-05T12:51:09.033072Z"
+  },
+  "network_discovery": {
+    "plugin": "network_discovery",
+    "hosts": [
+      "scanme.sh"
+    ],
+    "services": [
+      {
+        "port": 80,
+        "state": "open"
+      },
+      {
+        "port": 22,
+        "state": "open"
+      }
+    ],
+    "open_ports": [
+      80,
+      22
+    ],
+    "execution_time": 1.01,
+    "findings": [
+      {
+        "type": "open_port",
+        "port": 80,
+        "target": "scanme.sh"
+      },
+      {
+        "type": "open_port",
+        "port": 22,
+        "target": "scanme.sh"
+      }
+    ]
+  },
+  "web_recon": {
+    "plugin": "web_recon",
+    "urls": [
+      "http://scanme.sh"
+    ],
+    "technologies": [],
+    "findings": [
+      {
+        "type": "web_service",
+        "url": "http://scanme.sh",
+        "status": 200,
+        "server": "Unknown"
+      }
+    ]
+  },
+  "dns_intelligence": {
+    "plugin": "dns_intelligence",
+    "records": {
+      "A": [
+        "128.199.158.128"
+      ]
+    },
+    "subdomains": [],
+    "findings": [
+      {
+        "type": "dns_a_record",
+        "domain": "scanme.sh",
+        "ip": "128.199.158.128"
+      }
+    ]
+  },
+  "llm_analysis": {},
+  "findings": [
+    {
+      "type": "dns_a_record",
+      "domain": "scanme.sh",
+      "ip": "128.199.158.128"
+    },
+    {
+      "type": "open_port",
+      "port": 80,
+      "target": "scanme.sh"
+    },
+    {
+      "type": "open_port",
+      "port": 22,
+      "target": "scanme.sh"
+    },
+    {
+      "type": "web_service",
+      "url": "http://scanme.sh",
+      "status": 200,
+      "server": "Unknown"
+    }
+  ]
+}

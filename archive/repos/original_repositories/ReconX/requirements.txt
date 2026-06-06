@@ -1,0 +1,35 @@
+# ReconX — Python dependencies
+# Install: pip install -r requirements.txt
+
+# Web framework / API
+fastapi>=0.111
+uvicorn[standard]>=0.30
+websockets>=12.0
+python-multipart>=0.0.9
+
+# Configuration & data
+PyYAML>=6.0
+pydantic>=2.0
+
+# Database
+SQLAlchemy>=2.0.0
+
+# CLI / TUI
+rich>=13.7
+questionary>=2.0
+
+# HTTP / requests
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# DNS
+dnspython>=2.6.0
+
+# Scheduling
+APScheduler>=3.10.1
+
+# Optional: AI analysis (leave blank to use rule-based fallback)
+# openai>=1.14.0
+
+# Optional: Nmap Python bindings
+# python-nmap>=0.7.1

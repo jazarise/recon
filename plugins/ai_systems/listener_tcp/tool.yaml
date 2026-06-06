@@ -1,0 +1,16 @@
+name: listener_tcp
+category: ai_systems
+language: .go
+execution_type: library
+entrypoint: listener_tcp.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - listener_tcp
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

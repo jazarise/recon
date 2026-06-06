@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReconX Operator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+</head>
+<body hx-ext="ws" ws-connect="/ws">
+    <div class="sidebar">
+        <h2>ReconX</h2>
+        <nav>
+            <a class="nav-link" hx-get="/overview" hx-target="#content" hx-push-url="true">Overview</a>
+            <a class="nav-link" hx-get="/scans" hx-target="#content" hx-push-url="true">Scans</a>
+            <a class="nav-link" hx-get="/findings" hx-target="#content" hx-push-url="true">Findings</a>
+            <a class="nav-link" hx-get="/workflows" hx-target="#content" hx-push-url="true">Workflows</a>
+        </nav>
+        
+        <div id="ws-notifications" style="margin-top: 40px; font-size: 0.8em; color: var(--text-muted);">
+            <!-- Websocket events will stream here temporarily -->
+        </div>
+    </div>
+    
+    <div class="main-content" id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script>
+        document.body.addEventListener('htmx:wsAfterMessage', function(e) {
+            const data = JSON.parse(e.detail.message);
+            const notif = document.getElementById('ws-notifications');
+            notif.innerHTML = `<div style="padding:5px; background:var(--border); border-radius:3px; margin-top:5px;">
+                <strong>${data.event}</strong><br/>
+                Target: ${data.data.target || 'N/A'}
+            </div>` + notif.innerHTML;
+        });
+    </script>
+</body>
+</html>

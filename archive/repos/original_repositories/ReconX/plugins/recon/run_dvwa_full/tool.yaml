@@ -1,0 +1,16 @@
+name: run_dvwa_full
+category: recon
+language: .py
+execution_type: cli_entrypoint
+entrypoint: run_dvwa_full.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - run_dvwa_full
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

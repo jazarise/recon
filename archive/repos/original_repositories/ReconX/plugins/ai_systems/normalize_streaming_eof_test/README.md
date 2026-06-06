@@ -1,0 +1,3 @@
+# normalize_streaming_eof_test Plugin
+
+Auto-generated scaffolding for normalize_streaming_eof_test.

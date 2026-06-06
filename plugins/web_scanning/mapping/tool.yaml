@@ -1,0 +1,16 @@
+name: mapping
+category: web_scanning
+language: .csv
+execution_type: library
+entrypoint: mapping.csv
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - mapping
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

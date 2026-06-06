@@ -1,0 +1,16 @@
+name: agent_loop
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: agent_loop.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - agent_loop
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

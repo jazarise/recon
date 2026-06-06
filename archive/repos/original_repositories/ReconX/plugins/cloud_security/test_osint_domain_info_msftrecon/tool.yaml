@@ -1,0 +1,16 @@
+name: test_osint_domain_info_msftrecon
+category: cloud_security
+language: .bats
+execution_type: library
+entrypoint: test_osint_domain_info_msftrecon.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_osint_domain_info_msftrecon
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

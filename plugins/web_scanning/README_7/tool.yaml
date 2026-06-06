@@ -1,0 +1,16 @@
+name: README_7
+category: web_scanning
+language: .md
+execution_type: library
+entrypoint: README_7.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_7
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

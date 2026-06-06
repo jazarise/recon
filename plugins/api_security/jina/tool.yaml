@@ -1,0 +1,16 @@
+name: jina
+category: api_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: jina.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - jina
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

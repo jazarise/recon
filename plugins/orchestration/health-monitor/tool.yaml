@@ -1,0 +1,16 @@
+name: health-monitor
+category: orchestration
+language: .js
+execution_type: library
+entrypoint: health-monitor.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - health-monitor
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

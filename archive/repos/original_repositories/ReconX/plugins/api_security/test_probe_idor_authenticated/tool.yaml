@@ -1,0 +1,16 @@
+name: test_probe_idor_authenticated
+category: api_security
+language: .py
+execution_type: library
+entrypoint: test_probe_idor_authenticated.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_probe_idor_authenticated
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

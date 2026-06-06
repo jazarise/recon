@@ -1,0 +1,13 @@
+dataclasses
+json
+os
+re
+sys
+time
+pathlib
+typing
+uuid
+loguru
+openai
+requests
+pentestgpt.config.chat_config

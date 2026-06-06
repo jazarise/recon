@@ -1,0 +1,1 @@
+# ReconX Roadmap\nShort-term: CI Automation\nMedium-term: Extended OSINT\nLong-term: Full Autonomous Correlation.

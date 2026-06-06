@@ -1,0 +1,16 @@
+name: memory
+category: ai_systems
+language: .md
+execution_type: library
+entrypoint: memory.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - memory
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

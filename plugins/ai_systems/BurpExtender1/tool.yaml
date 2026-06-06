@@ -1,0 +1,16 @@
+name: BurpExtender1
+category: ai_systems
+language: .class
+execution_type: library
+entrypoint: BurpExtender$1.class
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - BurpExtender1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

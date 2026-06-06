@@ -1,0 +1,16 @@
+name: webshell-management
+category: recon
+language: .png
+execution_type: library
+entrypoint: webshell-management.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - webshell-management
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

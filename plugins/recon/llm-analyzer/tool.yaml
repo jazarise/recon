@@ -1,0 +1,16 @@
+name: llm-analyzer
+category: recon
+language: .js
+execution_type: library
+entrypoint: llm-analyzer.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - llm-analyzer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

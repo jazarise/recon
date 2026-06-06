@@ -1,0 +1,16 @@
+name: juice-shop
+category: recon
+language: .md
+execution_type: api_server
+entrypoint: juice-shop.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - juice-shop
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

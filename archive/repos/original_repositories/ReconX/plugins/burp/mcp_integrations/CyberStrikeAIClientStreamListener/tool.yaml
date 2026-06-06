@@ -1,0 +1,16 @@
+name: CyberStrikeAIClientStreamListener
+category: burp/mcp_integrations
+language: .class
+execution_type: library
+entrypoint: CyberStrikeAIClient$StreamListener.class
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - CyberStrikeAIClientStreamListener
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

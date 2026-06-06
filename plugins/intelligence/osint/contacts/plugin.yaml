@@ -1,0 +1,12 @@
+name: osint_contacts
+version: 1.0.0
+description: "Native OSINT contacts enumeration (ported from recon-ng)"
+author: ReconX
+type: intelligence
+stage: discovery
+
+execution:
+  handler: adapter.ToolAdapter
+
+config:
+  timeout: 10

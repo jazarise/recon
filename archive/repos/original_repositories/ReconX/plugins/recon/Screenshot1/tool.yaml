@@ -1,0 +1,16 @@
+name: Screenshot1
+category: recon
+language: .png
+execution_type: library
+entrypoint: Screenshot 1.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - Screenshot1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: sublist3r_tool
+category: recon
+language: .py
+execution_type: library
+entrypoint: sublist3r_tool.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - sublist3r_tool
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

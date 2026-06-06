@@ -1,0 +1,1 @@
+# Telemetry Policy\nOpt-in only. Collects crash reports anonymously.

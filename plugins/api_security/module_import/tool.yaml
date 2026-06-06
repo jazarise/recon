@@ -1,0 +1,16 @@
+name: module_import
+category: api_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: module_import.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - module_import
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

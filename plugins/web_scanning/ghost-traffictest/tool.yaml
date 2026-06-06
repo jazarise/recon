@@ -1,0 +1,16 @@
+name: ghost-traffictest
+category: web_scanning
+language: .js
+execution_type: library
+entrypoint: ghost-traffic.test.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ghost-traffictest
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

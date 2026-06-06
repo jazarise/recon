@@ -1,0 +1,16 @@
+name: smart-scan-on-search
+category: recon
+language: .json
+execution_type: library
+entrypoint: smart-scan-on-search.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - smart-scan-on-search
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

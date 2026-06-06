@@ -1,0 +1,16 @@
+name: findings
+category: web_scanning
+language: .jsonl
+execution_type: library
+entrypoint: findings.jsonl
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - findings
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

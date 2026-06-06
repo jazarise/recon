@@ -1,0 +1,16 @@
+name: test_e2e_probes
+category: recon
+language: .py
+execution_type: library
+entrypoint: test_e2e_probes.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_e2e_probes
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

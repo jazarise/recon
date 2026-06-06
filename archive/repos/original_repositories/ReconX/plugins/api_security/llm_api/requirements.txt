@@ -1,0 +1,12 @@
+dataclasses
+inspect
+os
+re
+time
+typing
+uuid
+loguru
+openai
+tiktoken
+tenacity
+pentestgpt.config.chat_config

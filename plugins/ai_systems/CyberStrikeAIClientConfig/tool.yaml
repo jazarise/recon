@@ -1,0 +1,16 @@
+name: CyberStrikeAIClientConfig
+category: ai_systems
+language: .class
+execution_type: library
+entrypoint: CyberStrikeAIClient$Config.class
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - CyberStrikeAIClientConfig
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

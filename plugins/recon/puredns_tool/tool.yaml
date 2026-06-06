@@ -1,0 +1,16 @@
+name: puredns_tool
+category: recon
+language: .py
+execution_type: library
+entrypoint: puredns_tool.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - puredns_tool
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

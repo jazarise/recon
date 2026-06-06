@@ -1,0 +1,1 @@
+# Knowledge Base Index\nWelcome to the ReconX architectural index.

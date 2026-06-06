@@ -1,0 +1,16 @@
+name: tools_commands
+category: plugin_systems
+language: .py
+execution_type: library
+entrypoint: tools_commands.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tools_commands
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

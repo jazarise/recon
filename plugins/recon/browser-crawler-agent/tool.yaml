@@ -1,0 +1,16 @@
+name: browser-crawler-agent
+category: recon
+language: .js
+execution_type: library
+entrypoint: browser-crawler-agent.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - browser-crawler-agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

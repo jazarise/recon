@@ -1,0 +1,16 @@
+name: main_8
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: main_8.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main_8
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

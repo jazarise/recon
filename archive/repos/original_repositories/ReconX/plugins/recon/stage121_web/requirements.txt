@@ -1,0 +1,3 @@
+.dirbuster
+.feroxbuster
+.eyewitness

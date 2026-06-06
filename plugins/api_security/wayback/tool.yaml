@@ -1,0 +1,16 @@
+name: wayback
+category: api_security
+language: .py
+execution_type: library
+entrypoint: wayback.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - wayback
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

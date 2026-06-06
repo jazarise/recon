@@ -1,0 +1,16 @@
+name: nmap-rdp
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-rdp.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-rdp
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: tcp_beacon_server
+category: cloud_security
+language: .go
+execution_type: library
+entrypoint: tcp_beacon_server.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tcp_beacon_server
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

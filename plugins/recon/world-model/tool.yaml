@@ -1,0 +1,16 @@
+name: world-model
+category: recon
+language: .json
+execution_type: library
+entrypoint: world-model.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - world-model
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

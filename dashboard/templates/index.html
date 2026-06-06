@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<div hx-get="/overview" hx-trigger="load" hx-swap="outerHTML">
+    <p>Loading Dashboard...</p>
+</div>
+{% endblock %}

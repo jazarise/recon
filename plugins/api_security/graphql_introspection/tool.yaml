@@ -1,0 +1,16 @@
+name: graphql_introspection
+category: api_security
+language: .py
+execution_type: library
+entrypoint: graphql_introspection.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - graphql_introspection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

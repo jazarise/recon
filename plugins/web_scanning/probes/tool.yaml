@@ -1,0 +1,16 @@
+name: probes
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: probes.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - probes
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

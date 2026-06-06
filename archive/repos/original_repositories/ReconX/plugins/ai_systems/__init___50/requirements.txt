@@ -1,0 +1,4 @@
+.server
+.ssh_manager
+.tmux_manager
+.config

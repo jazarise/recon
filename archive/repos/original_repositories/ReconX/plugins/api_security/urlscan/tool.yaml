@@ -1,0 +1,16 @@
+name: urlscan
+category: api_security
+language: .go
+execution_type: library
+entrypoint: urlscan.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - urlscan
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

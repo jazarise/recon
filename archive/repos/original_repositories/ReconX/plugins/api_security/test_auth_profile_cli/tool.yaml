@@ -1,0 +1,16 @@
+name: test_auth_profile_cli
+category: api_security
+language: .py
+execution_type: library
+entrypoint: test_auth_profile_cli.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_auth_profile_cli
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

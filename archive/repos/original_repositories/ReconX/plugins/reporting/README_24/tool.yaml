@@ -1,0 +1,16 @@
+name: README_24
+category: reporting
+language: .md
+execution_type: library
+entrypoint: README_24.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_24
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

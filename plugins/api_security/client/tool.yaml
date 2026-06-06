@@ -1,0 +1,16 @@
+name: client
+category: api_security
+language: .go
+execution_type: library
+entrypoint: client.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - client
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

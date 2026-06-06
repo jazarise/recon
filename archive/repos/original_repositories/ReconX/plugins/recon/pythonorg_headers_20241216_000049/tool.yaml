@@ -1,0 +1,16 @@
+name: pythonorg_headers_20241216_000049
+category: recon
+language: .txt
+execution_type: library
+entrypoint: python.org_headers_20241216_000049.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - pythonorg_headers_20241216_000049
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

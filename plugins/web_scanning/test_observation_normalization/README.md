@@ -1,0 +1,3 @@
+# test_observation_normalization Plugin
+
+Auto-generated scaffolding for test_observation_normalization.

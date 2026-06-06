@@ -1,0 +1,16 @@
+name: shared
+category: api_security
+language: .ts
+execution_type: library
+entrypoint: shared.ts
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - shared
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

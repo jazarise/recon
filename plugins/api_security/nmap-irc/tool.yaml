@@ -1,0 +1,16 @@
+name: nmap-irc
+category: api_security
+language: .py
+execution_type: library
+entrypoint: nmap-irc.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-irc
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

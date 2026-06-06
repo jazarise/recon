@@ -1,0 +1,16 @@
+name: demo_1
+category: cloud_security
+language: .gif
+execution_type: library
+entrypoint: demo_1.gif
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - demo_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,3 @@
+# default_single_system_prompt Plugin
+
+Auto-generated scaffolding for default_single_system_prompt.

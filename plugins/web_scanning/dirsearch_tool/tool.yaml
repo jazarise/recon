@@ -1,0 +1,16 @@
+name: dirsearch_tool
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: dirsearch_tool.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - dirsearch_tool
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

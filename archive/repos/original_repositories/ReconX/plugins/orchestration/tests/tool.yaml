@@ -1,0 +1,16 @@
+name: tests
+category: orchestration
+language: .yml
+execution_type: library
+entrypoint: tests.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tests
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

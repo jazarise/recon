@@ -1,0 +1,16 @@
+name: enhanced-report
+category: web_scanning
+language: .js
+execution_type: library
+entrypoint: enhanced-report.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - enhanced-report
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

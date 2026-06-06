@@ -1,0 +1,16 @@
+name: test_primitives_evidence_capture
+category: reporting
+language: .py
+execution_type: library
+entrypoint: test_primitives_evidence_capture.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_primitives_evidence_capture
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

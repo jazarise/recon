@@ -1,0 +1,16 @@
+name: openapi_parser
+category: api_security
+language: .py
+execution_type: library
+entrypoint: openapi_parser.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - openapi_parser
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

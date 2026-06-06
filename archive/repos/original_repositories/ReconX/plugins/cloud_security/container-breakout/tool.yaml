@@ -1,0 +1,16 @@
+name: container-breakout
+category: cloud_security
+language: .md
+execution_type: library
+entrypoint: container-breakout.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - container-breakout
+supports_parallel: true
+supports_distributed: true
+risk_level: medium
