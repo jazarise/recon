@@ -1,5 +1,5 @@
 from pydantic import BaseModel, ConfigDict
-from typing import List, Optional, Any, Dict
+from typing import List, Any, Dict
 from abc import ABC, abstractmethod
 
 class FindingData(BaseModel):

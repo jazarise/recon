@@ -1,1 +1,0 @@
-# Future Readiness Program\nScalability: 96/100\nExtensibility: 98/100\nSecurity Posture: 99/100

@@ -1,3 +1,0 @@
-prompt_toolkit.completion
-prompt_toolkit.formatted_text
-prompt_toolkit.shortcuts

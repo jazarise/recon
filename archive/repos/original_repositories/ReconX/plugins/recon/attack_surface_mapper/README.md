@@ -1,3 +1,0 @@
-# attack_surface_mapper Plugin
-
-Auto-generated scaffolding for attack_surface_mapper.

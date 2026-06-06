@@ -4,8 +4,6 @@ Origin Repository: crlfi-main
 Classification: REQUIRES_WRAPPER (Language: JavaScript)
 """
 
-import subprocess
-import json
 from typing import Dict, Any
 
 class CrlfInjectionWrapper:

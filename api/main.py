@@ -3,7 +3,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from api.routes import projects, assets, scans, findings, reports, auth
-import os
 
 app = FastAPI(title="ReconX API", version="2.0.0", docs_url="/api/docs", openapi_url="/api/openapi.json")
 

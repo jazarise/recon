@@ -1,5 +1,4 @@
 from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import OrganizationProfile
 from core.engine.correlation_engine import CorrelationEngine
 import json
 import os

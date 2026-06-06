@@ -1,6 +1,5 @@
 from core.plugin_manager.interface import ReconXPlugin
 from core.schemas import IPAddress
-import subprocess
 import socket
 
 class ActiveIPPlugin(ReconXPlugin):

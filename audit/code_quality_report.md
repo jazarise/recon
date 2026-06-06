@@ -1,1 +1,0 @@
-# Code Quality Review\nMaintainability Index: 92\nComplexity Score: Low\nTechnical Debt: Minimal

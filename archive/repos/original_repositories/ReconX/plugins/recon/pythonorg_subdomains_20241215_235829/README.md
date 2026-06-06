@@ -1,3 +1,0 @@
-# pythonorg_subdomains_20241215_235829 Plugin
-
-Auto-generated scaffolding for pythonorg_subdomains_20241215_235829.

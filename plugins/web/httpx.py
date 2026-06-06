@@ -1,5 +1,5 @@
 from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import URL, Technology
+from core.schemas import URL
 import subprocess
 import json
 

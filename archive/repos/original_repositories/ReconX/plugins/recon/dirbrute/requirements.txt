@@ -1,3 +1,0 @@
-requests
-concurrent.futures
-urllib3

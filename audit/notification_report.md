@@ -1,1 +1,0 @@
-# Notification Report\nSlack/Email dispatcher active.

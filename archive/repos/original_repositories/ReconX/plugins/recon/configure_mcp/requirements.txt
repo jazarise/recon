@@ -1,7 +1,0 @@
-json
-os
-shutil
-subprocess
-platform
-pathlib
-colorama

@@ -1,5 +1,4 @@
 import aiohttp
-import asyncio
 from typing import Optional, Dict, Any
 
 class HttpClient:

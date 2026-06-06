@@ -1,1 +1,0 @@
-# Threat Intelligence Report\nIntegrated threat indicator correlation.

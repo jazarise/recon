@@ -1,21 +1,21 @@
-from .target import Target
-from .host import Host
-from .subdomain import Subdomain
-from .port import Port
-from .service import Service
-from .technology import Technology
-from .vulnerability import Vulnerability
+from .enums import AssetType, Severity, RelationshipType
+from .asset import Asset
 from .finding import Finding
+from .relationship import Relationship
+from .evidence import Evidence
 from .scan import Scan
+from .project import Project
+from .adapter_result import AdapterResult
 
 __all__ = [
-    "Target",
-    "Host",
-    "Subdomain",
-    "Port",
-    "Service",
-    "Technology",
-    "Vulnerability",
+    "AssetType",
+    "Severity",
+    "RelationshipType",
+    "Asset",
     "Finding",
-    "Scan"
+    "Relationship",
+    "Evidence",
+    "Scan",
+    "Project",
+    "AdapterResult"
 ]

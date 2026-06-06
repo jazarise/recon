@@ -1,5 +1,4 @@
-import pytest
-from core.workflow_engine import WorkflowEngine, DependencyError
+from core.workflow_engine import WorkflowEngine
 
 def test_workflow_engine_load():
     engine = WorkflowEngine(workflows_dir="workflows")

@@ -1,6 +1,5 @@
 import typer
 from rich.console import Console
-from core.workflow_engine import workflow_engine
 import asyncio
 from core.orchestrator import orchestrator
 

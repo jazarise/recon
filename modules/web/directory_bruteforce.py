@@ -4,8 +4,6 @@ Origin Repository: dalfox-main
 Classification: REQUIRES_WRAPPER (Language: Rust)
 """
 
-import subprocess
-import json
 from typing import Dict, Any
 
 class DirectoryBruteforceWrapper:

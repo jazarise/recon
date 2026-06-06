@@ -1,2 +1,0 @@
-spectre.plugins.base
-spectre.plugins.registry

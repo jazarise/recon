@@ -1,7 +1,0 @@
-__future__
-asyncio
-socket
-pytest
-aiohttp
-engine.auth_session
-engine.authenticated_scan

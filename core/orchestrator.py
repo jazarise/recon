@@ -1,7 +1,6 @@
 import asyncio
 import uuid
 import importlib
-from typing import Optional
 from core.workflow_engine import workflow_engine, WorkflowContext
 from core.logger import logger
 from core.event_bus import event_bus

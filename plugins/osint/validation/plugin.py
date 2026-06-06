@@ -1,5 +1,4 @@
 from core.plugin_manager.interface import ReconXPlugin
-from core.http.client import HttpClient
 class ToolAdapter(ReconXPlugin):
     def validate(self, options):
         pass

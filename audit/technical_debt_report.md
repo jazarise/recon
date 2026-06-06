@@ -1,1 +1,0 @@
-# Technical Debt Tracking\nDebt Score: 5/100\nRisk Score: Low\nRefactor Priority: Minimal

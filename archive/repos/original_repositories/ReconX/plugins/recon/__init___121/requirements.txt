@@ -1,4 +1,0 @@
-.dnsenum_tool
-.dnsrecon_tool
-.fierce_tool
-.sublist3r_tool

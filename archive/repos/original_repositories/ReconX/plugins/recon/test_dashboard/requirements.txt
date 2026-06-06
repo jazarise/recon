@@ -1,5 +1,0 @@
-__future__
-os
-re
-tempfile
-pytest

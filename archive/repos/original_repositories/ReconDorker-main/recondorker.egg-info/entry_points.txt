@@ -1,2 +1,0 @@
-[console_scripts]
-recondorker = recondorker.cli:main

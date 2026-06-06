@@ -1,1 +1,0 @@
-# Workflow Certification\n`recon`, `webassess`, `osint`, `analyze` workflows all successfully validated.

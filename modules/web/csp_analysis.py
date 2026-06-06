@@ -4,8 +4,6 @@ Origin Repository: csprecon-main
 Classification: REQUIRES_WRAPPER (Language: Go)
 """
 
-import subprocess
-import json
 from typing import Dict, Any
 
 class CspAnalysisWrapper:

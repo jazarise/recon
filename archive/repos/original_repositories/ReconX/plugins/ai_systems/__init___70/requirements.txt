@@ -1,3 +1,0 @@
-pentestgpt.core.agent
-pentestgpt.core.config
-pentestgpt.core.tracer

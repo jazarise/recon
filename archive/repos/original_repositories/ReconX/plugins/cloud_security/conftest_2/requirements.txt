@@ -1,6 +1,0 @@
-tempfile
-pathlib
-pytest
-pentestgpt.core.backend
-pentestgpt.core.config
-pentestgpt.core.events

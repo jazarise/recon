@@ -4,8 +4,6 @@ Origin Repository: breach-check-main
 Classification: DIRECTLY_USABLE
 """
 
-import os
-import sys
 from typing import Dict, Any
 
 class OsintCollectionAdapter:

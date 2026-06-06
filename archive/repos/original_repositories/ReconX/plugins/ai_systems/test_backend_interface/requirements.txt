@@ -1,2 +1,0 @@
-pytest
-pentestgpt.core.backend

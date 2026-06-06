@@ -1,5 +1,4 @@
 from pathlib import Path
-import json
 
 class EvidenceManager:
     def __init__(self, workspace="default"):

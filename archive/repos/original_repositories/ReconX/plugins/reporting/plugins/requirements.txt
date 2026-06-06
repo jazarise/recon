@@ -1,5 +1,0 @@
-asyncio
-typing
-autorecon.config
-autorecon.io
-autorecon.targets

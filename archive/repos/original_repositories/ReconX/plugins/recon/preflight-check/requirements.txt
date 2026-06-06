@@ -1,6 +1,0 @@
-__future__
-sys
-urllib.error
-urllib.request
-concurrent.futures
-dataclasses

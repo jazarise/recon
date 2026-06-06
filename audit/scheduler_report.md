@@ -1,1 +1,0 @@
-# Job Scheduler Report\nCron orchestration active.

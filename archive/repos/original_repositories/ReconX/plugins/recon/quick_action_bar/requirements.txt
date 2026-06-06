@@ -1,7 +1,0 @@
-__future__
-typing
-rich
-rich.console
-rich.panel
-rich.table
-rich.text

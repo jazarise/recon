@@ -1,7 +1,0 @@
-Category,Key,Value
-Network,open_port,80
-Network,open_port,443
-Network,service,port=80 state=open
-Web,url,http://test.example.com
-Web,technology,nginx
-DNS,A,1.2.3.4

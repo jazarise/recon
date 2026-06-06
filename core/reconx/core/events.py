@@ -22,7 +22,7 @@ class EventBus:
                 else:
                     try:
                         callback(**kwargs)
-                    except Exception as e:
+                    except Exception:
                         logger.error(f"Error in sync event callback for {event_type}", exc_info=True)
             
             if tasks:

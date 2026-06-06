@@ -1,9 +1,0 @@
-argparse
-pathlib
-loguru
-openai
-rich.console
-pentestgpt._version
-pentestgpt.config.chat_config
-pentestgpt.utils.APIs.chatgpt_api
-pentestgpt.utils.chatgpt

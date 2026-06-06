@@ -1,5 +1,0 @@
-__future__
-re
-dataclasses
-urllib.parse
-...config.settings

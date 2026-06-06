@@ -1,3 +1,0 @@
-# test_probe_prototype_pollution Plugin
-
-Auto-generated scaffolding for test_probe_prototype_pollution.

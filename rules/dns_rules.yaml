@@ -1,0 +1,8 @@
+- match:
+    source: SUBDOMAIN
+    target: IP
+  relationship: RESOLVES_TO
+- match:
+    source: DOMAIN
+    target: SUBDOMAIN
+  relationship: OWNS

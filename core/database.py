@@ -2,7 +2,6 @@ from core.paths import BASE_DIR
 
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
-from pathlib import Path
 from core.models import Base
 
 

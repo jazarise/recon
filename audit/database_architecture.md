@@ -1,1 +1,0 @@
-# Database Architecture\nImplemented SQLite tracking.

@@ -4,8 +4,6 @@ Origin Repository: go-dork-master
 Classification: REQUIRES_WRAPPER (Language: Go)
 """
 
-import subprocess
-import json
 from typing import Dict, Any
 
 class DorkingWrapper:

@@ -1,4 +1,0 @@
-.cloud_fingerprint
-.s3_scanner
-.kubernetes_analyzer
-.aws_recon

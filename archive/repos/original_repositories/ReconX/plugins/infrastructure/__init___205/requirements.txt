@@ -1,4 +1,0 @@
-spectre.core.app
-spectre.core.config
-spectre.core.logger
-spectre.core.settings

@@ -1,6 +1,0 @@
-pytest
-engine.dedup
-engine.evidence
-engine.findings_db
-engine.orchestrator
-engine.scope

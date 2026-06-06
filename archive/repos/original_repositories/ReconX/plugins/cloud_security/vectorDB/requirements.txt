@@ -1,8 +1,0 @@
-os
-time
-uuid
-pinecone
-langchain.document_loaders
-langchain.embeddings.openai
-langchain.text_splitter
-langchain.vectorstores

@@ -9,7 +9,6 @@ import json
 import asyncio
 import inspect
 import importlib.util
-from pathlib import Path
 
 from core.paths import BASE_DIR
 

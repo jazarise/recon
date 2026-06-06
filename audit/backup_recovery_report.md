@@ -1,1 +1,0 @@
-# Backup Report\nZip archival active.

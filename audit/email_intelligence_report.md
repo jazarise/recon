@@ -1,1 +1,0 @@
-# Email Intelligence Report\nIntegrated `theHarvester`.

@@ -1,4 +1,0 @@
-reconx.sdk
-.contracts
-.base_tool
-.metadata

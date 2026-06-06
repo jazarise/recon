@@ -1,3 +1,0 @@
-# test_probe_file_upload_validation Plugin
-
-Auto-generated scaffolding for test_probe_file_upload_validation.

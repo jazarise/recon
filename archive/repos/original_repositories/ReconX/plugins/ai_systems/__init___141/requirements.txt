@@ -1,8 +1,0 @@
-.checkpoint
-.engine
-.guided
-.planner
-.recorder
-.replay
-.schemas
-.templates

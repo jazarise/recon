@@ -1,4 +1,0 @@
-pathlib
-typing
-pydantic
-pydantic_settings

@@ -1,4 +1,3 @@
-import pytest
 from core.config import settings
 
 def test_config_defaults():

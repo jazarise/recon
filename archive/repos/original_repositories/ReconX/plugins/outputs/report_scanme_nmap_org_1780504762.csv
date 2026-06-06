@@ -1,4 +1,0 @@
-Category,Key,Value
-Network,open_port,80
-Network,open_port,443
-DNS,A,45.33.32.156

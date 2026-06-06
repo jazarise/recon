@@ -1,3 +1,0 @@
-# test_permutation_wordlist_select Plugin
-
-Auto-generated scaffolding for test_permutation_wordlist_select.

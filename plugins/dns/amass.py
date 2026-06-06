@@ -1,7 +1,6 @@
 from core.plugin_manager.interface import ReconXPlugin
 from core.schemas import DNSRecord
 import subprocess
-import json
 
 class AmassPlugin(ReconXPlugin):
     name = "amass"

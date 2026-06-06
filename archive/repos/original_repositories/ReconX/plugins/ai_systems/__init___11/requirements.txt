@@ -1,4 +1,0 @@
-.adapter
-.agent
-.corpus
-.detector

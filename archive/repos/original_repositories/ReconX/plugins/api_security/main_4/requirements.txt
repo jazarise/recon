@@ -1,9 +1,0 @@
-dataclasses
-os
-sys
-typing
-argparse
-loguru
-pentestgpt.test_connection
-pentestgpt.utils.pentest_gpt
-pentestgpt.utils.APIs.module_import

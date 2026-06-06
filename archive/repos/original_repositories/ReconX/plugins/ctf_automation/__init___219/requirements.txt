@@ -1,2 +1,0 @@
-spectre.sessions.manager
-spectre.sessions.models

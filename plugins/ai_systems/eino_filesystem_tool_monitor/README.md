@@ -1,3 +1,0 @@
-# eino_filesystem_tool_monitor Plugin
-
-Auto-generated scaffolding for eino_filesystem_tool_monitor.

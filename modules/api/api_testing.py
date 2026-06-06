@@ -4,8 +4,6 @@ Origin Repository: Bug-Bounty-Agents-main
 Classification: REQUIRES_WRAPPER (Language: Shell)
 """
 
-import subprocess
-import json
 from typing import Dict, Any
 
 class ApiTestingWrapper:

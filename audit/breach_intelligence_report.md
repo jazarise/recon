@@ -1,1 +1,0 @@
-# Breach Intelligence Report\nIntegrated `breach-check`.

@@ -1,4 +1,0 @@
-os
-typing
-dotenv
-openai

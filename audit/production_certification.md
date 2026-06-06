@@ -1,1 +1,0 @@
-# Production Certification\n**Status:** Certified\nAll requirements met.

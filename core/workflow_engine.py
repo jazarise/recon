@@ -4,9 +4,7 @@ import graphlib
 from typing import Dict, Any, List
 from core.errors import WorkflowError, DependencyError
 from core.logger import logger
-from core.models.scan import Scan
 from core.models.finding import Finding
-from core.event_bus import event_bus
 
 class WorkflowContext:
     def __init__(self, target: str, scan_id: str):

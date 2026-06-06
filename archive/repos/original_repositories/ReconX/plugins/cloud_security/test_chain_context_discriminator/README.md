@@ -1,3 +1,0 @@
-# test_chain_context_discriminator Plugin
-
-Auto-generated scaffolding for test_chain_context_discriminator.

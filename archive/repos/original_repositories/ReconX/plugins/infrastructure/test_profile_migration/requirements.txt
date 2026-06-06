@@ -1,5 +1,0 @@
-__future__
-pytest
-typer.testing
-cli.auth_profiles
-cli.main

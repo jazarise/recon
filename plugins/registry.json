@@ -1,0 +1,56 @@
+{
+  "subfinder": {
+    "version": "2.6.0",
+    "capability": "discovery.subdomains",
+    "type": "external",
+    "author": "projectdiscovery",
+    "entrypoint": "modules.adapters.subfinder_adapter.SubfinderAdapter",
+    "status": "active",
+    "dependencies": ["subfinder"]
+  },
+  "amass": {
+    "version": "4.0.0",
+    "capability": "discovery.subdomains",
+    "type": "external",
+    "author": "owasp",
+    "entrypoint": "modules.adapters.amass_adapter.AmassAdapter",
+    "status": "active",
+    "dependencies": ["amass"]
+  },
+  "assetfinder": {
+    "version": "0.1.1",
+    "capability": "discovery.subdomains",
+    "type": "external",
+    "author": "tomnomnom",
+    "entrypoint": "modules.adapters.assetfinder_adapter.AssetfinderAdapter",
+    "status": "active",
+    "dependencies": ["assetfinder"]
+  },
+  "katana": {
+    "version": "1.1.0",
+    "capability": "content.crawl",
+    "type": "external",
+    "author": "projectdiscovery",
+    "entrypoint": "modules.adapters.katana_adapter.KatanaAdapter",
+    "status": "active",
+    "dependencies": ["katana"]
+  },
+  "dalfox": {
+    "version": "2.9.1",
+    "capability": "vuln.xss",
+    "type": "external",
+    "author": "hahwul",
+    "entrypoint": "modules.adapters.dalfox_adapter.DalfoxAdapter",
+    "status": "active",
+    "dependencies": ["dalfox"]
+  },
+  "nuclei": {
+    "version": "3.1.0",
+    "capability": "vuln.templates",
+    "type": "external",
+    "author": "projectdiscovery",
+    "entrypoint": "modules.adapters.nuclei_adapter.NucleiAdapter",
+    "status": "active",
+    "dependencies": ["nuclei"]
+  }
+}

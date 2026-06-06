@@ -1,9 +1,12 @@
-from dataclasses import dataclass
-from typing import Optional, Dict, Any
+import uuid
+from typing import Optional
+from pydantic import BaseModel, Field
+from .enums import Severity
 
-@dataclass
-class Finding:
-    category: str
-    value: str
-    source: Optional[str] = None
-    metadata: Optional[Dict[str, Any]] = None
+class Finding(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    title: str
+    severity: Severity
+    asset_id: Optional[str] = None
+    capability: str
+    source: str = "unknown"

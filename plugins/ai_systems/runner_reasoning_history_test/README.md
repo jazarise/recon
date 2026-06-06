@@ -1,3 +1,0 @@
-# runner_reasoning_history_test Plugin
-
-Auto-generated scaffolding for runner_reasoning_history_test.

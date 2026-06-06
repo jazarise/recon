@@ -1,1 +1,0 @@
-# Social Intelligence Report\nIntegrated social profiles and username tracking.

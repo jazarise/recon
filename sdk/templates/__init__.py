@@ -1,1 +1,0 @@
-# SDK Templates Package

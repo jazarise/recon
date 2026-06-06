@@ -1,3 +1,0 @@
-unittest.mock
-typer.testing
-cli.main

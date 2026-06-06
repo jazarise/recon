@@ -1,5 +1,5 @@
 from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Organization, Confidence
+from core.schemas import Organization
 import subprocess
 import json
 

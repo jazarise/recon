@@ -1,3 +1,0 @@
-# test_probe_idor_authz_differential Plugin
-
-Auto-generated scaffolding for test_probe_idor_authz_differential.

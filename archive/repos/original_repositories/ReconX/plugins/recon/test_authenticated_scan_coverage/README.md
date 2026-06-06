@@ -1,3 +1,0 @@
-# test_authenticated_scan_coverage Plugin
-
-Auto-generated scaffolding for test_authenticated_scan_coverage.

@@ -1,2 +1,0 @@
-[tpl-high] [http] [high] https://a.example.com
-[tpl-high2] [http] [high] https://c.example.com

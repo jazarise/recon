@@ -1,9 +1,0 @@
-__future__
-logging
-re
-dataclasses
-html.parser
-typing
-urllib.parse
-httpx
-engine.auth_session

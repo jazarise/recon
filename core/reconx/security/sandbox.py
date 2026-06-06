@@ -1,5 +1,4 @@
 import ipaddress
-import socket
 from typing import List
 from reconx.utils.logger import logger
 

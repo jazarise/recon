@@ -1,30 +1,41 @@
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
-from core.event_bus import event_bus
-import asyncio
+from typing import List
+from core.events.event_stream import event_stream
 
 router = APIRouter()
-connected_clients = []
+
+class ConnectionManager:
+    def __init__(self):
+        self.active_connections: List[WebSocket] = []
+        # Subscribe to internal events
+        event_stream.subscribe(self.broadcast)
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self.active_connections.append(websocket)
+        print(f"[+] WebSocket client connected. Total: {len(self.active_connections)}")
+
+    def disconnect(self, websocket: WebSocket):
+        self.active_connections.remove(websocket)
+        print(f"[-] WebSocket client disconnected. Total: {len(self.active_connections)}")
+
+    async def broadcast(self, message: str):
+        for connection in self.active_connections:
+            try:
+                await connection.send_text(message)
+            except Exception:
+                pass
+
+manager = ConnectionManager()
 
 @router.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    connected_clients.append(websocket)
+    await manager.connect(websocket)
     try:
         while True:
+            # We don't expect much input from clients, just ping/pong or basic commands
             data = await websocket.receive_text()
+            if data == "ping":
+                await websocket.send_text("pong")
     except WebSocketDisconnect:
-        connected_clients.remove(websocket)
-
-def broadcast_event(event_type: str, **kwargs):
-    try:
-        loop = asyncio.get_running_loop()
-        for client in connected_clients:
-            loop.create_task(client.send_json({"event": event_type, "data": kwargs}))
-    except RuntimeError:
-        pass # No running event loop
-
-event_bus.subscribe("PluginStarted", lambda **kw: broadcast_event("PluginStarted", **kw))
-event_bus.subscribe("FindingCreated", lambda **kw: broadcast_event("FindingCreated", **kw))
-event_bus.subscribe("PluginFinished", lambda **kw: broadcast_event("PluginFinished", **kw))
-event_bus.subscribe("ScanStarted", lambda **kw: broadcast_event("ScanStarted", **kw))
-event_bus.subscribe("WorkflowCompleted", lambda **kw: broadcast_event("WorkflowCompleted", **kw))
+        manager.disconnect(websocket)

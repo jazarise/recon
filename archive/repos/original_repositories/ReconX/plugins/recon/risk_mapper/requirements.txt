@@ -1,5 +1,0 @@
-__future__
-dataclasses
-typing
-.severity_engine
-.vuln_correlator

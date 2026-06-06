@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from datetime import datetime
 from core.database import DatabaseManager
 from core.models import ScanHistory

@@ -1,6 +1,5 @@
 from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Organization, Confidence
-import subprocess
+from core.schemas import Organization
 
 class BigBountyReconPlugin(ReconXPlugin):
     name = "bigbountyrecon"

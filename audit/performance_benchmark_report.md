@@ -1,1 +1,0 @@
-# Performance Benchmarking\nCPU Max: 40%\nMemory Max: 300MB\nLatency: 2ms local

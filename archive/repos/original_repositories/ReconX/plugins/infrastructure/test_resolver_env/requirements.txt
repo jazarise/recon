@@ -1,4 +1,0 @@
-__future__
-pytest
-cli.credential_resolvers
-cli.credential_resolvers.env

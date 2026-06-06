@@ -7,13 +7,10 @@ from core.paths import BASE_DIR, WORKFLOWS_DIR, PLUGINS_DIR
 import os
 import json
 import shutil
-import subprocess
 import sys
-from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 
-from core.config.manager import config
 
 REQUIRED_PYTHON_PACKAGES = [
     "rich", "yaml", "fastapi", "uvicorn", "sqlalchemy",

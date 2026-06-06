@@ -1,1 +1,0 @@
-# Continuous Security\n`reconx security-check` configured to scan local dependencies.

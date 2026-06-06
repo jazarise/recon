@@ -3,7 +3,6 @@ from core.paths import BASE_DIR
 import yaml
 import os
 import threading
-from pathlib import Path
 
 
 class ConfigManager:

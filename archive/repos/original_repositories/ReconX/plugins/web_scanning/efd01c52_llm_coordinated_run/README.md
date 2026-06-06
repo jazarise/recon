@@ -1,3 +1,0 @@
-# efd01c52_llm_coordinated_run Plugin
-
-Auto-generated scaffolding for efd01c52_llm_coordinated_run.

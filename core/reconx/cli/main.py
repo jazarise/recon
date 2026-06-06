@@ -2,10 +2,8 @@ import typer
 import asyncio
 from rich.console import Console
 from rich.table import Table
-from reconx.utils.logger import logger
 from reconx.config.settings import settings
 from reconx.plugins.loader import PluginManager
-import sys
 
 app = typer.Typer(
     name="reconx",
@@ -98,7 +96,6 @@ def dashboard(dev: bool = typer.Option(False, "--dev", help="Run in development 
         console.print("[green]Starting production dashboard...[/green]")
         console.print("Assuming frontend is built in reconx/dashboard/frontend/dist")
     
-    import uvicorn
     # uvicorn.run("reconx.dashboard.api:app", host=settings.API_HOST, port=settings.API_PORT, reload=dev)
     console.print(f"Server would start at {settings.API_HOST}:{settings.API_PORT}")
 

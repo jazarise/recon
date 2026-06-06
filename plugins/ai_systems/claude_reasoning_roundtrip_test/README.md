@@ -1,3 +1,0 @@
-# claude_reasoning_roundtrip_test Plugin
-
-Auto-generated scaffolding for claude_reasoning_roundtrip_test.

@@ -1,1 +1,0 @@
-# Cache Report\nTTL Cache manager active.

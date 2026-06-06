@@ -1,6 +1,4 @@
 import os
-import glob
-from pathlib import Path
 from dotenv import load_dotenv
 import logging
 from .paths import BASE_DIR

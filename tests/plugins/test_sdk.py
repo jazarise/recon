@@ -1,7 +1,6 @@
 import pytest
 from sdk.plugin_base import BasePlugin
 from core.models.finding import Finding
-import asyncio
 
 class DummyPlugin(BasePlugin):
     name = "Dummy"

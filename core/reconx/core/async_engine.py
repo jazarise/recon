@@ -1,5 +1,5 @@
 import asyncio
-from typing import Callable, Coroutine, Any
+from typing import Coroutine, Any
 from reconx.utils.logger import logger
 
 class AsyncExecutor:
