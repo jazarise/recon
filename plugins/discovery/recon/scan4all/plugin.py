@@ -1,3 +1,4 @@
+from core.plugin_base import standardize_output
 from core.http.client import HttpClient
 import asyncio
 import os
@@ -43,7 +44,8 @@ class Plugin:
             return [{"error": str(e)}]
         return []
 
-    async def run(target: str, context: dict) -> dict -> dict:
+    @standardize_output
+    async def run(target: str, context: dict) -> dict:
         target = context.get("target", "")
         if not target:
             return {"assets": [], "findings": [], "metadata": {}}
@@ -72,3 +74,24 @@ class Plugin:
             "findings": findings,
             "metadata": metadata
         }
+
+# Auto-injected Metadata
+PLUGIN_NAME = "scan4all"
+PLUGIN_VERSION = "1.0"
+PLUGIN_CATEGORY = "Discovery"
+PLUGIN_DESCRIPTION = "Auto-generated description for scan4all"
+
+
+@standardize_output
+async def run(target: str, context: dict) -> dict:
+    if hasattr(Plugin, 'run'):
+        return await Plugin.run(target, context)
+    return {"success": True, "data": "Plugin class executed"}
+
+PLUGIN_AUTHOR = "ReconX"
+
+PLUGIN_TAGS = ["discovery"]
+
+PLUGIN_DEPENDENCIES = []
+
+PLUGIN_EXTERNAL_TOOLS = ["nuclei"]

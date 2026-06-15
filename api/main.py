@@ -6,6 +6,32 @@ from api.routes import projects, assets, scans, findings, reports, auth
 
 app = FastAPI(title="ReconX API", version="2.0.0", docs_url="/api/docs", openapi_url="/api/openapi.json")
 
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from api.schemas.common import StandardResponse
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    return JSONResponse(
+        status_code=422,
+        content=StandardResponse(
+            success=False,
+            message="Validation Error",
+            errors=[str(e) for e in exc.errors()]
+        ).model_dump()
+    )
+
+@app.exception_handler(Exception)
+async def generic_exception_handler(request: Request, exc: Exception):
+    return JSONResponse(
+        status_code=500,
+        content=StandardResponse(
+            success=False,
+            message="Internal Server Error",
+            errors=[str(exc)]
+        ).model_dump()
+    )
+
 # API Routes
 app.include_router(auth.router, prefix="/api/auth", tags=["auth"])
 app.include_router(projects.router, prefix="/api/projects", tags=["projects"])

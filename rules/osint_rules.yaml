@@ -1,4 +1,0 @@
-- match:
-    source: EMAIL
-    target: DOMAIN
-  relationship: BELONGS_TO

@@ -1,3 +1,4 @@
+from core.plugin_base import standardize_output
 from core.http.client import HttpClient
 import os
 import json
@@ -10,7 +11,8 @@ from pathlib import Path
 class Plugin:
     name = 'nuclei'
     category = 'recon'
-    async def run(target: str, context: dict) -> dict -> dict:
+    @standardize_output
+    async def run(target: str, context: dict) -> dict:
         target = context.get("target")
         if not target:
             raise ValueError("No target provided to nuclei plugin")
@@ -91,3 +93,24 @@ class Plugin:
             "vulnerabilities_found": len(findings),
             "findings": findings
         }
+
+# Auto-injected Metadata
+PLUGIN_NAME = "nuclei"
+PLUGIN_VERSION = "1.0"
+PLUGIN_CATEGORY = "Discovery"
+PLUGIN_DESCRIPTION = "Auto-generated description for nuclei"
+
+
+@standardize_output
+async def run(target: str, context: dict) -> dict:
+    if hasattr(Plugin, 'run'):
+        return await Plugin.run(target, context)
+    return {"success": True, "data": "Plugin class executed"}
+
+PLUGIN_AUTHOR = "ReconX"
+
+PLUGIN_TAGS = ["discovery"]
+
+PLUGIN_DEPENDENCIES = []
+
+PLUGIN_EXTERNAL_TOOLS = ["nuclei"]

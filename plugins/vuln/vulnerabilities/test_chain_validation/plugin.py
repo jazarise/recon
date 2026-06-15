@@ -14,3 +14,34 @@ class ToolAdapter(ReconXPlugin):
 
     def cleanup(self):
         pass
+
+# Auto-injected Metadata
+PLUGIN_NAME = "test_chain_validation"
+PLUGIN_VERSION = "1.0"
+PLUGIN_CATEGORY = "Vulnerability"
+PLUGIN_DESCRIPTION = "Auto-generated description for test_chain_validation"
+
+from core.plugin_base import standardize_output
+import inspect
+import sys
+
+@standardize_output
+async def run(target: str, context: dict) -> dict:
+    mod = sys.modules[__name__]
+    for name, obj in inspect.getmembers(mod, inspect.isclass):
+        if hasattr(obj, 'execute') and obj.__module__ == __name__:
+            instance = obj()
+            if hasattr(instance, 'prepare'): instance.prepare(target, context)
+            raw = instance.execute(target, context) if hasattr(instance, 'execute') else {}
+            norm = instance.normalize(raw) if hasattr(instance, 'normalize') else raw
+            if hasattr(instance, 'cleanup'): instance.cleanup()
+            return {"success": True, "data": norm}
+    return {"success": True, "data": "No executable class found"}
+
+PLUGIN_AUTHOR = "ReconX"
+
+PLUGIN_TAGS = ["vulnerability"]
+
+PLUGIN_DEPENDENCIES = []
+
+PLUGIN_EXTERNAL_TOOLS = []

@@ -1,11 +1,8 @@
 from fastapi import APIRouter
+from api.schemas.common import StandardResponse
 
 router = APIRouter()
 
-@router.get("/")
+@router.get("/", response_model=StandardResponse)
 def get_reports():
-    return [{"id": 1, "name": "Scan_Report_1"}]
-
-@router.post("/")
-def create_report(scan_id: str):
-    return {"id": 2, "name": f"Scan_Report_{scan_id}"}
+    return StandardResponse(success=True, message="Reports retrieved", data={"reports": []})

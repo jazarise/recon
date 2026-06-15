@@ -1,1 +1,0 @@
-# Issue Template\nDescribe the bug or feature.

@@ -1,8 +1,10 @@
 # Changelog
-
-## v2.1.0 (Release Candidate)
-- **Added:** Unified Workflow Engine & Orchestrator
-- **Added:** HTMX Dashboard and REST API
-- **Added:** Intelligence & Risk Correlation Layer
-- **Changed:** Restructured all modules into a consolidated monolith
-- **Removed:** Legacy isolated scripts and broken NPM dependencies
+## [3.0.0] - 2026-06-15
+### Added
+- Complete async orchestration engine.
+- Pydantic schema validation.
+- FastApi boundary enforcement.
+- React Vitest dashboard integration.
+### Fixed
+- Security hardening to mitigate shell=True injections.
+- SQLite WAL database deadlocks.

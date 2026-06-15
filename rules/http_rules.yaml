@@ -1,8 +1,0 @@
-- match:
-    source: URL
-    target: TECHNOLOGY
-  relationship: USES
-- match:
-    source: IP
-    target: URL
-  relationship: EXPOSES

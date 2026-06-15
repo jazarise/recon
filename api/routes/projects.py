@@ -1,11 +1,8 @@
 from fastapi import APIRouter
+from api.schemas.common import StandardResponse
 
 router = APIRouter()
 
-@router.get("/")
+@router.get("/", response_model=StandardResponse)
 def get_projects():
-    return [{"id": 1, "name": "Default Project"}]
-
-@router.post("/")
-def create_project(name: str):
-    return {"id": 2, "name": name}
+    return StandardResponse(success=True, message="Projects retrieved", data={"projects": []})

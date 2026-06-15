@@ -1,3 +1,5 @@
+from core.plugin_base import standardize_output
+def setup_logger(*args, **kwargs): pass
 from core.http.client import HttpClient
 """
 ReconX LLM Analysis Plugin — AI-powered attack surface analysis.
@@ -40,7 +42,8 @@ MED_RISK_PORTS  = {22, 3306, 5432, 1433, 5900, 8080}
 class Plugin:
     name = 'llm_analysis'
     category = 'recon'
-    async def run(target: str, context: dict) -> dict -> dict:
+    @standardize_output
+    async def run(target: str, context: dict) -> dict:
         target   = context.get("target", "unknown")
         api_key  = os.getenv("OPENAI_API_KEY", "")
 
@@ -228,3 +231,24 @@ Respond ONLY with valid JSON — no markdown, no explanation."""
             "findings":         [],
             "generated_at":     datetime.now(timezone.utc).isoformat() + "Z",
         }
+
+# Auto-injected Metadata
+PLUGIN_NAME = "llm_analysis"
+PLUGIN_VERSION = "1.0"
+PLUGIN_CATEGORY = "Discovery"
+PLUGIN_DESCRIPTION = "Auto-generated description for llm_analysis"
+
+
+@standardize_output
+async def run(target: str, context: dict) -> dict:
+    if hasattr(Plugin, 'run'):
+        return await Plugin.run(target, context)
+    return {"success": True, "data": "Plugin class executed"}
+
+PLUGIN_AUTHOR = "ReconX"
+
+PLUGIN_TAGS = ["discovery"]
+
+PLUGIN_DEPENDENCIES = []
+
+PLUGIN_EXTERNAL_TOOLS = []

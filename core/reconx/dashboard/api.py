@@ -2,8 +2,8 @@ import os
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from reconx.config.settings import settings
-from reconx.utils.logger import logger
+from core.reconx.config.settings import settings
+from core.reconx.utils.logger import logger
 
 app = FastAPI(title="ReconX API", version=settings.VERSION)
 

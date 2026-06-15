@@ -1,21 +1,36 @@
-venv/
+# Virtual Environments
 .venv/
-.env
+venv/
+env/
+
+# Python
 __pycache__/
-.pytest_cache/
 *.pyc
 *.pyo
+*.pyd
 
-reports/
-output/
-tmp/
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
 
-*.log
+# Linting
+.ruff_cache/
+.mypy_cache/
 
-.idea/
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/*.log
+logs/*.tmp
+
+# IDE
 .vscode/
+.idea/
 
-*.sqlite
-*.db
-
-archive/generated/
+# OS
+.DS_Store
+Thumbs.db

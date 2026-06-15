@@ -3,8 +3,8 @@ import asyncio
 import datetime
 import shutil
 from typing import List
-from reconx.plugins.base import ReconXPlugin, FindingData
-from reconx.utils.logger import logger
+from core.reconx.plugins.base import ReconXPlugin, FindingData
+from core.reconx.utils.logger import logger
 
 class SubfinderPlugin(ReconXPlugin):
     name = "subfinder"

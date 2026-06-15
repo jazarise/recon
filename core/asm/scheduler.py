@@ -21,7 +21,7 @@ class AsmScheduler:
                 
                 await asyncio.sleep(interval_seconds)
 
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         task = loop.create_task(job_loop())
         self.jobs[name] = task
         print(f"[+] Scheduled job '{name}' every {interval_seconds}s")

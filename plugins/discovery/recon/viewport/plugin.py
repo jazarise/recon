@@ -1,3 +1,4 @@
+from core.plugin_base import standardize_output
 from core.http.client import HttpClient
 """
 ReconX Reporting Plugin — generates MD, JSON, CSV, and HTML reports
@@ -22,7 +23,8 @@ def _escape(s: str) -> str:
 
 
 class Plugin:
-    async def run(target: str, context: dict) -> dict -> dict:
+    @standardize_output
+    async def run(target: str, context: dict) -> dict:
         target    = context.get("target", "unknown")
         nd        = context.get("network_discovery", {}) or {}
         wr        = context.get("web_recon", {}) or {}
@@ -362,3 +364,24 @@ body::after{{content:'';position:fixed;inset:0;background:repeating-linear-gradi
         path = Path(str(base) + ".html")
         path.write_text(html, encoding="utf-8")
         return path
+
+# Auto-injected Metadata
+PLUGIN_NAME = "viewport"
+PLUGIN_VERSION = "1.0"
+PLUGIN_CATEGORY = "Discovery"
+PLUGIN_DESCRIPTION = "Auto-generated description for viewport"
+
+
+@standardize_output
+async def run(target: str, context: dict) -> dict:
+    if hasattr(Plugin, 'run'):
+        return await Plugin.run(target, context)
+    return {"success": True, "data": "Plugin class executed"}
+
+PLUGIN_AUTHOR = "ReconX"
+
+PLUGIN_TAGS = ["discovery"]
+
+PLUGIN_DEPENDENCIES = []
+
+PLUGIN_EXTERNAL_TOOLS = []

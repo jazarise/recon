@@ -1,7 +1,8 @@
 from fastapi import APIRouter
+from api.schemas.common import StandardResponse
 
 router = APIRouter()
 
-@router.get("/")
+@router.get("/", response_model=StandardResponse)
 def get_findings():
-    return [{"id": 1, "category": "vulnerability", "value": "XSS on api.example.com"}]
+    return StandardResponse(success=True, message="Findings retrieved", data={"findings": []})

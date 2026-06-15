@@ -1,10 +1,11 @@
+import core.reconx as reconx
 import importlib
 import pkgutil
 import inspect
 from typing import Dict, Type
-from reconx.utils.logger import logger
-from reconx.plugins.base import ReconXPlugin
-import reconx.integrations
+from core.reconx.utils.logger import logger
+from core.reconx.plugins.base import ReconXPlugin
+import core.reconx.integrations
 
 class PluginManager:
     def __init__(self):

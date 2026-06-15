@@ -1,6 +1,6 @@
 import ipaddress
 from typing import List
-from reconx.utils.logger import logger
+from core.reconx.utils.logger import logger
 
 class SecuritySandbox:
     """Provides security boundaries and validation for ReconX execution."""

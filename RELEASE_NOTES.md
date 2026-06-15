@@ -1,1 +1,0 @@
-# ReconX_v3.0.0_RC1\nRelease Notes:\n- Fully Containerized Enterprise Platform\n- Intelligence-Driven Correlation\n- Persistent Workspaces.

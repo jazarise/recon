@@ -1,3 +1,4 @@
+from core.plugin_base import standardize_output
 from core.http.client import HttpClient
 import os
 import json
@@ -10,7 +11,8 @@ from pathlib import Path
 class Plugin:
     name = 'content_discovery'
     category = 'recon'
-    async def run(target: str, context: dict) -> dict -> dict:
+    @standardize_output
+    async def run(target: str, context: dict) -> dict:
         target = context.get("target")
         if not target:
             raise ValueError("No target provided to content_discovery plugin")
@@ -96,3 +98,24 @@ class Plugin:
             "endpoints_found": len(endpoints),
             "findings": findings
         }
+
+# Auto-injected Metadata
+PLUGIN_NAME = "content_discovery"
+PLUGIN_VERSION = "1.0"
+PLUGIN_CATEGORY = "Discovery"
+PLUGIN_DESCRIPTION = "Auto-generated description for content_discovery"
+
+
+@standardize_output
+async def run(target: str, context: dict) -> dict:
+    if hasattr(Plugin, 'run'):
+        return await Plugin.run(target, context)
+    return {"success": True, "data": "Plugin class executed"}
+
+PLUGIN_AUTHOR = "ReconX"
+
+PLUGIN_TAGS = ["discovery"]
+
+PLUGIN_DEPENDENCIES = []
+
+PLUGIN_EXTERNAL_TOOLS = ["katana"]

@@ -23,7 +23,7 @@ class PlatformAdapter:
         """
         Safely resolves a path string across operating systems.
         Expands ~ to the user's home directory.
-        If a hardcoded windows path (C:\ or E:\) is given on Linux, it remaps to ~/ReconX.
+        If a hardcoded windows path (C:\\ or E:\\) is given on Linux, it remaps to ~/ReconX.
         """
         if PlatformAdapter.detect_os() != "windows":
             if path_str.startswith("C:\\") or path_str.startswith("E:\\"):

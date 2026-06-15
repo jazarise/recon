@@ -1,1 +1,0 @@
-# ReconX Strategic Roadmap V4.0\n## Short-Term\n- Stability & Performance\n- Developer Experience\n## Mid-Term\n- Cloud Support\n- API Enhancements\n## Long-Term\n- Large Scale Deployments\n- Advanced Industry Integrations

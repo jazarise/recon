@@ -1,11 +1,8 @@
 from fastapi import APIRouter
+from api.schemas.common import StandardResponse
 
 router = APIRouter()
 
-@router.get("/")
+@router.get("/", response_model=StandardResponse)
 def get_assets():
-    return [{"id": 1, "value": "example.com"}]
-
-@router.post("/")
-def create_asset(value: str):
-    return {"id": 2, "value": value}
+    return StandardResponse(success=True, message="Assets retrieved", data={"assets": []})

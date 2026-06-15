@@ -1,1 +1,0 @@
-# ReconX Long-Term Maintenance Plan\nRelease Cycle: Quarterly\nVersioning Policy: SemVer 2.0.0\nSecurity Patch Process: Hotfix Branches.

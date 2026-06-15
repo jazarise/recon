@@ -23,16 +23,16 @@ class WorkflowEngine:
     def load_workflows(self):
         if not os.path.exists(self.workflows_dir):
             return
-        for file in os.listdir(self.workflows_dir):
-            if file.endswith(".yaml") or file.endswith(".yml"):
-                path = os.path.join(self.workflows_dir, file)
-                try:
-                    with open(path, "r", encoding="utf-8") as f:
-                        data = yaml.safe_load(f)
-                        if data and "name" in data:
-                            self.workflows[data["name"]] = data
-                except Exception as e:
-                    logger.error(f"Failed to load workflow {file}: {e}")
+        import glob
+        pattern = os.path.join(self.workflows_dir, "**", "*.y*ml")
+        for path in glob.glob(pattern, recursive=True):
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    data = yaml.safe_load(f)
+                    if data and isinstance(data, dict) and "name" in data:
+                        self.workflows[data["name"]] = data
+            except Exception as e:
+                logger.error(f"Failed to load workflow {path}: {e}")
 
     def validate_workflow(self, workflow_name: str):
         if workflow_name not in self.workflows:
@@ -54,7 +54,7 @@ class WorkflowEngine:
             elif isinstance(step, dict):
                 for plugin_name, config in step.items():
                     all_plugins.append(plugin_name)
-                    depends_on = config.get("depends_on", [])
+                    depends_on = config.get("depends_on", []) if isinstance(config, dict) else []
                     graph[plugin_name] = set(depends_on)
                     
         sorter = graphlib.TopologicalSorter(graph)

@@ -1,6 +1,6 @@
 import asyncio
 from typing import Callable, Dict, List, Any
-from reconx.utils.logger import logger
+from core.reconx.utils.logger import logger
 
 class EventBus:
     def __init__(self):

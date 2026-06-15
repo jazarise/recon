@@ -1,9 +1,10 @@
+import core.reconx as reconx
 import typer
 import asyncio
 from rich.console import Console
 from rich.table import Table
-from reconx.config.settings import settings
-from reconx.plugins.loader import PluginManager
+from core.reconx.config.settings import settings
+from core.reconx.plugins.loader import PluginManager
 
 app = typer.Typer(
     name="reconx",

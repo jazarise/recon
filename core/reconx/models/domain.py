@@ -1,7 +1,7 @@
 from typing import List, Optional
 from sqlalchemy import String, ForeignKey, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from reconx.models.base import Base, TimestampMixin
+from core.reconx.models.base import Base, TimestampMixin
 import enum
 
 class Severity(str, enum.Enum):

@@ -1,6 +1,6 @@
 import asyncio
 from typing import Coroutine, Any
-from reconx.utils.logger import logger
+from core.reconx.utils.logger import logger
 
 class AsyncExecutor:
     """Manages execution of tasks using asyncio.TaskGroup."""

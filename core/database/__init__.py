@@ -6,3 +6,6 @@ __all__ = [
     "DBTechnology", "DBVulnerability", "DBFinding", "DBScan",
     "engine", "SessionLocal", "init_db"
 ]
+
+class DatabaseManager:
+    pass

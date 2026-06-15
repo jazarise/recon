@@ -35,7 +35,7 @@ class PolicyEngine:
 
     def _launch_capability(self, capability: str, target: str):
         from core.capabilities import capability_manager
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         if loop.is_running():
             loop.run_in_executor(None, capability_manager.run, capability, target)
         else:

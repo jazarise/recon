@@ -1,2 +1,0 @@
-{"timestamp": "2026-06-06T17:02:55.778802", "user": "analyst1", "action": "launch_scan", "target": "example.com", "status": "SUCCESS", "details": ""}
-{"timestamp": "2026-06-06T17:02:57.790097", "user": "viewer1", "action": "launch_scan", "target": "hacker.com", "status": "FAILED", "details": "Permission denied (requires ANALYST)"}

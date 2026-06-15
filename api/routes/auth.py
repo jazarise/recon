@@ -1,7 +1,8 @@
 from fastapi import APIRouter
+from api.schemas.common import StandardResponse
 
 router = APIRouter()
 
-@router.post("/login")
-def login(username: str):
-    return {"access_token": "fake-jwt-token", "token_type": "bearer"}
+@router.post("/login", response_model=StandardResponse)
+def login():
+    return StandardResponse(success=True, message="Login successful", data={"token": "mock_token"})

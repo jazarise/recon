@@ -1,2 +1,0 @@
-[console_scripts]
-reconx = cli.main:app

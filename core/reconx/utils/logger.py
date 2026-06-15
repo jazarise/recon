@@ -1,7 +1,7 @@
 import logging
 import sys
 import structlog
-from reconx.config.settings import settings
+from core.reconx.config.settings import settings
 
 def setup_logger():
     """Configure structlog for ReconX."""

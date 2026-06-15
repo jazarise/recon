@@ -4,7 +4,7 @@ import socket
 class DnsResolver:
     @staticmethod
     async def resolve_a(hostname: str) -> list:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         try:
             # simple async dns wrapper
             ips = await loop.run_in_executor(None, socket.gethostbyname_ex, hostname)

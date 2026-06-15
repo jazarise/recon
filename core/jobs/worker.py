@@ -22,16 +22,16 @@ class JobWorker:
     async def process_job(self, job: dict):
         print(f"[WORKER {self.worker_id}] Processing Job {job['id']} -> {job['capability']} on {job['target']}")
         
-        start_time = asyncio.get_event_loop().time()
+        start_time = asyncio.get_running_loop().time()
         
         # Simulate execution
         from core.capabilities import capability_manager
         
         # Run capability in a thread pool to avoid blocking the async worker
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         await loop.run_in_executor(None, capability_manager.run, job['capability'], job['target'])
         
-        duration = asyncio.get_event_loop().time() - start_time
+        duration = asyncio.get_running_loop().time() - start_time
         metrics.record_scan(job['capability'], duration)
         
         print(f"[WORKER {self.worker_id}] Completed Job {job['id']} in {duration:.2f}s")
