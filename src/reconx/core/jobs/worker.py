@@ -1,6 +1,6 @@
 import asyncio
-from core.jobs.queue import job_queue
-from core.observability.metrics import metrics
+from reconx.core.jobs.queue import job_queue
+from reconx.core.observability.metrics import metrics
 
 class JobWorker:
     def __init__(self, worker_id: str):

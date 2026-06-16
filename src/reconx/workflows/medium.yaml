@@ -1,7 +1,7 @@
 name: Medium Recon Workflow
 description: Balanced reconnaissance scan. Estimated time 15-60 minutes.
 mode: medium
-steps:
+stages:
 - id: s1
   plugin: dns_intelligence
   plugin_path: plugins/recon/dns_intelligence

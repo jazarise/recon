@@ -1,4 +1,4 @@
-from core.plugin_manager.interface import ReconXPlugin
+from reconx.core.plugin_manager.interface import ReconXPlugin
 """
 ReconX — httpx Tool Adapter
 Executes the httpx binary, captures JSON-lines output, and normalises it
@@ -182,7 +182,7 @@ PLUGIN_VERSION = "1.0"
 PLUGIN_CATEGORY = "Discovery"
 PLUGIN_DESCRIPTION = "Auto-generated description for httpx"
 
-from core.plugin_base import standardize_output
+from reconx.core.plugin_base import standardize_output
 import inspect
 import sys
 

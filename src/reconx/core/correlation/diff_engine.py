@@ -1,5 +1,5 @@
 from typing import List, Dict
-from core.models import Asset
+from reconx.core.models import Asset
 
 class DiffEngine:
     """Calculates differences between two asset sets (e.g. historical vs current scans)."""

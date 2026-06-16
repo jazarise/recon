@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Organization
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Organization
 import subprocess
 import json
 

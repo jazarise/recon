@@ -1,5 +1,5 @@
 from typing import List, Dict
-from core.models import Asset
+from reconx.core.models import Asset
 
 class Deduplicator:
     """Normalizes and deduplicates assets."""

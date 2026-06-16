@@ -1,4 +1,4 @@
-from core.models import Relationship, RelationshipType
+from reconx.core.models import Relationship, RelationshipType
 
 class RelationshipNormalizer:
     @staticmethod

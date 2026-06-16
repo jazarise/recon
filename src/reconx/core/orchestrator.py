@@ -5,11 +5,11 @@ import json
 import os
 from pathlib import Path
 
-from core.workflow_engine import workflow_engine, WorkflowContext
-from core.logger import logger
-from core.event_bus import event_bus
-from core.errors import PluginError
-from core.models.scan import Scan
+from reconx.core.workflow_engine import workflow_engine, WorkflowContext
+from reconx.core.logger import logger
+from reconx.core.event_bus import event_bus
+from reconx.core.errors import PluginError
+from reconx.core.models.scan import Scan
 
 ROOT = Path(__file__).parent.parent
 

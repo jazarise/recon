@@ -1,4 +1,4 @@
-from core.models.enums import AssetType
+from reconx.core.models.enums import AssetType
 
 class MitreMapper:
     """Translates generic asset findings into standardized MITRE ATT&CK techniques."""

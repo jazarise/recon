@@ -1,10 +1,10 @@
 from typing import Dict, Type
-from modules.base_module import BaseNativeModule
+from reconx.modules.base_module import BaseNativeModule
 
-from modules.discovery.subdomains import NativeSubdomainDiscovery
-from modules.dns.resolver import NativeDnsResolver
-from modules.web.probe import NativeWebProbe
-from modules.osint.email import NativeOsintEmail
+from reconx.modules.discovery.subdomains import NativeSubdomainDiscovery
+from reconx.modules.dns.resolver import NativeDnsResolver
+from reconx.modules.web.probe import NativeWebProbe
+from reconx.modules.osint.email import NativeOsintEmail
 
 # The absolute source of truth mapping a Capability -> 1 Canonical Native Module
 NATIVE_MODULES_REGISTRY: Dict[str, Type[BaseNativeModule]] = {

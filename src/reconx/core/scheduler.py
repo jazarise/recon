@@ -1,7 +1,7 @@
 import schedule
 import time
 import threading
-from core.logger import logger
+from reconx.core.logger import logger
 
 class Scheduler:
     def __init__(self):

@@ -1,7 +1,7 @@
 name: Basic Recon Workflow
 description: Fast and lightweight reconnaissance. Estimated time 5-15 minutes.
 mode: basic
-steps:
+stages:
 - id: s1
   plugin: dns_intelligence
   plugin_path: plugins/recon/dns_intelligence

@@ -1,4 +1,4 @@
-from core.utils.http_client import HttpClient
+from reconx.core.utils.http_client import HttpClient
 
 class ProbeEngine:
     def __init__(self):

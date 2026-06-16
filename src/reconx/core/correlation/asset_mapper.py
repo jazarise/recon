@@ -1,7 +1,7 @@
 import re
 from typing import List
-from core.models import Asset, AssetType
-from core.normalization import AssetNormalizer
+from reconx.core.models import Asset, AssetType
+from reconx.core.normalization import AssetNormalizer
 
 class AssetMapper:
     """Extracts implicit assets from explicit ones (e.g., extracting IP from a URL string)."""

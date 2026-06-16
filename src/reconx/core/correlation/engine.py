@@ -1,4 +1,4 @@
-from core.models import AdapterResult
+from reconx.core.models import AdapterResult
 from .deduplicator import Deduplicator
 from .asset_mapper import AssetMapper
 from .rule_engine import RuleEngine

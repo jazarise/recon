@@ -1,11 +1,11 @@
 import time
 from typing import Dict, Any, List
-from core.registry import capability_registry, SelectionStrategy
-from core.models import AdapterResult
-from core.correlation import CorrelationEngine
-from core.registry.plugins import plugin_registry_system, PluginSandbox, PluginValidator
-from core.registry.modules import get_native_module
-from core.events.event_stream import event_stream
+from reconx.core.registry import capability_registry, SelectionStrategy
+from reconx.core.models import AdapterResult
+from reconx.core.correlation import CorrelationEngine
+from reconx.core.registry.plugins import plugin_registry_system, PluginSandbox, PluginValidator
+from reconx.core.registry.modules import get_native_module
+from reconx.core.events.event_stream import event_stream
 
 class CapabilityManager:
     def __init__(self):

@@ -1,8 +1,8 @@
 import typer
 from rich.console import Console
 from rich.table import Table
-from core.capabilities import capability_manager
-from core.registry import load_adapters
+from reconx.core.capabilities import capability_manager
+from reconx.core.registry import load_adapters
 
 app = typer.Typer()
 console = Console()

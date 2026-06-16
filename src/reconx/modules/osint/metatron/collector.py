@@ -1,5 +1,5 @@
 import subprocess
-from core.models import Finding
+from reconx.core.models import Finding
 from typing import List
 
 class MetatronCollector:

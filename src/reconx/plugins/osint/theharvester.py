@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Email, Confidence
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Email, Confidence
 import subprocess
 
 class TheHarvesterPlugin(ReconXPlugin):

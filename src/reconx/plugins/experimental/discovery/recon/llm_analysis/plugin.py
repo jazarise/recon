@@ -1,6 +1,6 @@
-from core.plugin_base import standardize_output
+from reconx.core.plugin_base import standardize_output
 def setup_logger(*args, **kwargs): pass
-from core.http.client import HttpClient
+from reconx.core.http.client import HttpClient
 """
 ReconX LLM Analysis Plugin — AI-powered attack surface analysis.
 Uses OpenAI when available; falls back to rule-based local analysis

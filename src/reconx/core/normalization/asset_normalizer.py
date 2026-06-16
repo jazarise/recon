@@ -1,4 +1,4 @@
-from core.models import Asset, AssetType
+from reconx.core.models import Asset, AssetType
 
 class AssetNormalizer:
     @staticmethod

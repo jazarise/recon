@@ -1,0 +1,2 @@
+# Testing
+`pytest --cov=src`

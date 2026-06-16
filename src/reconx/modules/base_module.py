@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any
-from core.models import AdapterResult
+from reconx.core.models import AdapterResult
 
 class BaseNativeModule(ABC):
     """

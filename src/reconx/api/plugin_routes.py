@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from core.registry.plugins import plugin_registry_system
-from core.registry.plugins.plugin_health import PluginHealthCheck
+from reconx.core.registry.plugins import plugin_registry_system
+from reconx.core.registry.plugins.plugin_health import PluginHealthCheck
 
 router = APIRouter(prefix="/api/plugins", tags=["Plugin Management"])
 

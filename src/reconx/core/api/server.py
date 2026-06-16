@@ -1,4 +1,4 @@
-from core.database.db import DatabaseManager
+from reconx.core.database.db import DatabaseManager
 # Scaffold for FastAPI
 class ReconXAPI:
     def __init__(self):

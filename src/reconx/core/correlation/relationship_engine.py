@@ -1,6 +1,6 @@
 from typing import List
-from core.models import Relationship, RelationshipType
-from core.normalization import RelationshipNormalizer
+from reconx.core.models import Relationship, RelationshipType
+from reconx.core.normalization import RelationshipNormalizer
 
 class RelationshipEngine:
     """Manages the creation and deduplication of relationships."""

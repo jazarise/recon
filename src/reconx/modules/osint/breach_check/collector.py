@@ -1,5 +1,5 @@
 import requests
-from core.models import Finding
+from reconx.core.models import Finding
 from typing import List
 
 class BreachCheckCollector:

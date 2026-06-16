@@ -1,5 +1,5 @@
 import typer
-from cli import scan, workflow, report, project, doctor, dashboard, capability
+from reconx.cli import scan, workflow, report, project, doctor, dashboard, capability
 
 app = typer.Typer(help="ReconX Unified Command Line Interface")
 

@@ -1,5 +1,5 @@
 name: full_recon
-steps:
+stages:
   - osint
   - subdomains:
       depends_on:

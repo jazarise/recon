@@ -1,7 +1,7 @@
 name: ReconFTW Complete Workflow
 description: Natively ported workflow from reconftw repository executing 14+ phases of advanced recon.
 mode: reconftw
-steps:
+stages:
 - id: osint
   plugin: osint_gather
   plugin_path: plugins/intelligence/osint

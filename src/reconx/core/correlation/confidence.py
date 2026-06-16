@@ -1,5 +1,5 @@
 from typing import List
-from core.models import Asset
+from reconx.core.models import Asset
 
 class ConfidenceScorer:
     """Applies heuristic scoring formulas to rate the reliability of an Asset."""

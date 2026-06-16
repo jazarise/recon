@@ -1,4 +1,4 @@
-from modules.javascript.crawler import js_crawler
+from reconx.modules.javascript.crawler import js_crawler
 
 class JSCollector:
     def collect(self, target: str) -> dict:

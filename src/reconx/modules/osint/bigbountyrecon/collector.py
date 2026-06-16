@@ -1,6 +1,6 @@
 import urllib.parse
 from typing import List
-from core.models import Finding
+from reconx.core.models import Finding
 
 class BigBountyReconCollector:
     def __init__(self):

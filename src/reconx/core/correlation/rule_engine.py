@@ -1,7 +1,7 @@
 import os
 import yaml
 from typing import List, Dict, Any
-from core.models import Asset, Relationship, RelationshipType
+from reconx.core.models import Asset, Relationship, RelationshipType
 
 class RuleEngine:
     """Loads declarative YAML rules and infers relationships."""

@@ -1,0 +1,16 @@
+name: ReconX Continuous Intelligence Pipeline
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Nightly Scanning
+
+jobs:
+  recon_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger ReconX Enterprise Backend
+        run: |
+          curl -X POST https://reconx.internal.corp/scan \
+          -H "Authorization: Bearer ${{ secrets.RECONX_API_KEY }}" \
+          -H "Content-Type: application/json" \
+          -d '{"target": "scanme.nmap.org"}'

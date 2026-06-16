@@ -1,6 +1,6 @@
 import json
 import asyncio
-from core.events.event_stream import event_stream
+from reconx.core.events.event_stream import event_stream
 
 class PolicyEngine:
     def __init__(self):

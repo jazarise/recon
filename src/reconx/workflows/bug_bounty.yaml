@@ -1,5 +1,5 @@
 name: bug_bounty
-steps:
+stages:
   - subfinder
   - amass
   - httpx:

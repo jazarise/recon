@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Vulnerability, Severity
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Vulnerability, Severity
 import subprocess
 import json
 

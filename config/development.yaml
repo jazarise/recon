@@ -1,0 +1,12 @@
+environment: development
+logging:
+  level: DEBUG
+  format: text
+database:
+  pool_size: 5
+  timeout: 10
+workers:
+  count: 5
+  timeout: 600
+cache:
+  type: local

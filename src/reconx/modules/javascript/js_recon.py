@@ -1,9 +1,9 @@
 import uuid
-from modules.base_module import BaseNativeModule
-from core.models import AdapterResult, Asset, AssetType, Relationship, RelationshipType
-from modules.javascript.collector import js_collector
-from modules.javascript.endpoint_extractor import endpoint_extractor
-from modules.javascript.secret_detector import secret_detector
+from reconx.modules.base_module import BaseNativeModule
+from reconx.core.models import AdapterResult, Asset, AssetType, Relationship, RelationshipType
+from reconx.modules.javascript.collector import js_collector
+from reconx.modules.javascript.endpoint_extractor import endpoint_extractor
+from reconx.modules.javascript.secret_detector import secret_detector
 
 class NativeJsRecon(BaseNativeModule):
     @property

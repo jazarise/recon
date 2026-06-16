@@ -10,7 +10,7 @@ import asyncio
 import inspect
 import importlib.util
 
-from core.paths import BASE_DIR
+from reconx.core.paths import BASE_DIR
 
 # Ensure project root is in sys.path for core.* imports in plugins
 if str(BASE_DIR) not in sys.path:

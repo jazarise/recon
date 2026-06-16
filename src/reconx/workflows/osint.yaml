@@ -1,6 +1,6 @@
 name: OSINT & Intelligence Workflow
 description: Organization discovery to threat correlation
-steps:
+stages:
   - name: Organization Discovery
     plugin: acquifinder
   - name: Email Discovery

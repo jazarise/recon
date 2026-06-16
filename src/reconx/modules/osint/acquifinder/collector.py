@@ -1,6 +1,6 @@
 import os
 import re
-from core.models import Finding
+from reconx.core.models import Finding
 
 class AcquiFinderCollector:
     def __init__(self):

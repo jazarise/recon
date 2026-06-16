@@ -1,36 +1,44 @@
-# Virtual Environments
-.venv/
-venv/
-env/
-
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Testing
+# Virtual Environments
+venv/
+.env/
+reconx-test-env/
+
+# Test
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Linting
-.ruff_cache/
+# Type Checking
 .mypy_cache/
 
-# Build
-dist/
-build/
-*.egg-info/
-
-# Logs
-logs/*.log
-logs/*.tmp
+# Lint
+.ruff_cache/
 
 # IDE
 .vscode/
 .idea/
 
+# Runtime
+workspace/logs/*
+workspace/results/*
+workspace/outputs/*
+workspace/temp/*
+
+!workspace/logs/.gitkeep
+!workspace/results/.gitkeep
+!workspace/outputs/.gitkeep
+!workspace/temp/.gitkeep
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Secrets
+.env
+.env.*
+secrets/*

@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import ThreatIndicator, Confidence
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import ThreatIndicator, Confidence
 
 class ThreatIntelPlugin(ReconXPlugin):
     name = "threat_intel"

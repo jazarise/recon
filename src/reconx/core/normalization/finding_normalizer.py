@@ -1,4 +1,4 @@
-from core.models import Finding, Severity
+from reconx.core.models import Finding, Severity
 
 class FindingNormalizer:
     @staticmethod

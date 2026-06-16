@@ -1,8 +1,8 @@
 import subprocess
 from .base_adapter import BaseAdapter
-from core.registry import adapter_registry, tool_registry
-from core.models import AdapterResult
-from core.normalization import AssetNormalizer, EvidenceNormalizer
+from reconx.core.registry import adapter_registry, tool_registry
+from reconx.core.models import AdapterResult
+from reconx.core.normalization import AssetNormalizer, EvidenceNormalizer
 
 class SubfinderAdapter(BaseAdapter):
     def validate(self, **kwargs) -> bool:

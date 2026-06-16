@@ -1,5 +1,5 @@
 from typing import List, Dict, Any
-from core.models import Asset, Relationship, Finding
+from reconx.core.models import Asset, Relationship, Finding
 
 class GraphBuilder:
     """Transforms unified models into a structured Node/Edge graph suitable for visualization and AI."""

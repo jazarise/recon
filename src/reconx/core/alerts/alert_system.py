@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-from core.events.event_stream import event_stream
+from reconx.core.events.event_stream import event_stream
 
 class AlertSystem:
     def __init__(self):

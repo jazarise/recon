@@ -1,7 +1,7 @@
 name: Deep Recon Workflow
 description: Maximum intelligence gathering using the full Phase 8 Recon Pipeline. Estimated time 1-6+ hours.
 mode: deep
-steps:
+stages:
 - id: s1
   plugin: passive_recon
   plugin_path: plugins/deep/passive_recon

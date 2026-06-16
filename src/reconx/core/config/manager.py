@@ -1,4 +1,4 @@
-from core.paths import BASE_DIR
+from reconx.core.paths import BASE_DIR
 
 import yaml
 import os

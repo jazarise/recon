@@ -1,7 +1,7 @@
 """
 ReconX Doctor — system health checks for dependencies, config, and environment.
 """
-from core.paths import BASE_DIR, WORKFLOWS_DIR, PLUGINS_DIR
+from reconx.core.paths import BASE_DIR, WORKFLOWS_DIR, PLUGINS_DIR
 
 
 import os

@@ -1,9 +1,9 @@
 import json
 from datetime import datetime
-from core.database import DatabaseManager
-from core.models import ScanHistory
+from reconx.core.database import DatabaseManager
+from reconx.core.models import ScanHistory
 import asyncio
-from core.logging.logger import setup_logger
+from reconx.core.logging.logger import setup_logger
 
 logger = setup_logger("ResultStore")
 

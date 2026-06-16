@@ -1,7 +1,7 @@
 import typer
 from rich.console import Console
 import asyncio
-from core.orchestrator import orchestrator
+from reconx.core.orchestrator import orchestrator
 
 app = typer.Typer()
 console = Console()

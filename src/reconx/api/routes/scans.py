@@ -1,10 +1,10 @@
 import uuid
 import asyncio
 from fastapi import APIRouter, Depends, HTTPException
-from core.orchestrator import orchestrator
-from core.db_manager import DatabaseManager
-from database.schema.models import ScanModel
-from api.schemas.common import StandardResponse, ScanRequest
+from reconx.core.orchestrator import orchestrator
+from reconx.core.db_manager import DatabaseManager
+from reconx.database.schema.models import ScanModel
+from reconx.api.schemas.common import StandardResponse, ScanRequest
 
 router = APIRouter()
 

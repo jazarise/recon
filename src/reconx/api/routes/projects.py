@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from api.schemas.common import StandardResponse
+from reconx.api.schemas.common import StandardResponse
 
 router = APIRouter()
 

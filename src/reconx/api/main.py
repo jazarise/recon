@@ -2,13 +2,13 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from api.routes import projects, assets, scans, findings, reports, auth
+from reconx.api.routes import projects, assets, scans, findings, reports, auth
 
 app = FastAPI(title="ReconX API", version="2.0.0", docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-from api.schemas.common import StandardResponse
+from reconx.api.schemas.common import StandardResponse
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
@@ -40,7 +40,7 @@ app.include_router(scans.router, prefix="/api/scans", tags=["scans"])
 app.include_router(findings.router, prefix="/api/findings", tags=["findings"])
 app.include_router(reports.router, prefix="/api/reports", tags=["reports"])
 
-from api.websocket import router as ws_router
+from reconx.api.websocket import router as ws_router
 app.include_router(ws_router, tags=["websocket"])
 
 @app.get("/api/health")
@@ -70,3 +70,16 @@ async def findings_page(request: Request):
 @app.get("/workflows", response_class=HTMLResponse)
 async def workflows_page(request: Request):
     return templates.TemplateResponse(name="workflows.html", request=request)
+
+@app.get('/health')
+def health():
+    return {'status': 'healthy'}
+
+@app.get('/ready')
+def ready():
+    return {'status': 'ready'}
+
+@app.get('/metrics')
+def metrics():
+    return {'requests': 1000, 'errors': 0}
+

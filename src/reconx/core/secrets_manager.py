@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from typing import Dict
 
-from core.paths import BASE_DIR
+from reconx.core.paths import BASE_DIR
 
 class SecretsManager:
     """Manages secure injection of secrets into plugin environments."""

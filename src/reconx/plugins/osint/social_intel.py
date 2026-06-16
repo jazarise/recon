@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Username, SocialProfile, Confidence
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Username, SocialProfile, Confidence
 
 class SocialIntelPlugin(ReconXPlugin):
     name = "social_intel"

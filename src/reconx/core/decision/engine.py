@@ -1,4 +1,4 @@
-from core.strategy.optimizer import strategy_optimizer
+from reconx.core.strategy.optimizer import strategy_optimizer
 
 class DecisionEngine:
     """The Autonomous Brain that dictates the next optimal move."""

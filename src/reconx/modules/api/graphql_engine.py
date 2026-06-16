@@ -1,5 +1,5 @@
 import json
-from core.utils.http_client import HttpClient
+from reconx.core.utils.http_client import HttpClient
 
 class GraphQLEngine:
     def __init__(self):

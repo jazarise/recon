@@ -1,7 +1,7 @@
 import json
 from typing import Dict, Any, List
-from core.events.event_stream import event_stream
-from core.models import AdapterResult
+from reconx.core.events.event_stream import event_stream
+from reconx.core.models import AdapterResult
 
 class DriftDetector:
     def __init__(self):

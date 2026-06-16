@@ -1,7 +1,7 @@
-from core.security.auth import auth_system
-from core.security.rbac import has_permission, PermissionDeniedError
-from core.audit.audit_logger import audit_logger
-from core.api_gateway.rate_limiter import rate_limiter
+from reconx.core.security.auth import auth_system
+from reconx.core.security.rbac import has_permission, PermissionDeniedError
+from reconx.core.audit.audit_logger import audit_logger
+from reconx.core.api_gateway.rate_limiter import rate_limiter
 
 class GatewayRouter:
     def handle_request(self, token: str, endpoint: str, required_role: str, action: str, target: str):

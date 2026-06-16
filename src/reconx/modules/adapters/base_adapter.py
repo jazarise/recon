@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Any
-from core.models import AdapterResult
+from reconx.core.models import AdapterResult
 
 class BaseAdapter(ABC):
     

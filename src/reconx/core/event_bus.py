@@ -1,21 +1,26 @@
-from typing import Callable, Dict, List, Any
-from collections import defaultdict
-from core.logger import logger
+import asyncio
+import logging
+
+logger = logging.getLogger("reconx")
 
 class EventBus:
     def __init__(self):
-        self.subscribers: Dict[str, List[Callable]] = defaultdict(list)
+        self.subscribers = {}
+        self.queue = asyncio.Queue()
 
-    def subscribe(self, event_type: str, callback: Callable):
+    def subscribe(self, event_type: str, callback):
+        if event_type not in self.subscribers:
+            self.subscribers[event_type] = []
         self.subscribers[event_type].append(callback)
-        logger.debug(f"Subscribed to {event_type}")
 
-    def emit(self, event_type: str, **kwargs: Any):
-        logger.info(f"Event: {event_type} | {kwargs}")
-        for callback in self.subscribers.get(event_type, []):
-            try:
-                callback(**kwargs)
-            except Exception as e:
-                logger.error(f"Error in event subscriber for {event_type}: {e}")
+    async def publish(self, event_type: str, data: dict):
+        logger.debug(f"EventBus Emitting: {event_type}")
+        await self.queue.put((event_type, data))
 
-event_bus = EventBus()
+    async def process_events(self):
+        while True:
+            event_type, data = await self.queue.get()
+            if event_type in self.subscribers:
+                for callback in self.subscribers[event_type]:
+                    asyncio.create_task(callback(data))
+            self.queue.task_done()

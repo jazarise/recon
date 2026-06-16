@@ -1,7 +1,7 @@
 import uuid
 from typing import Any
-from core.models import AdapterResult, Asset, AssetType
-from modules.base_module import BaseNativeModule
+from reconx.core.models import AdapterResult, Asset, AssetType
+from reconx.modules.base_module import BaseNativeModule
 
 class NativeOsintEmail(BaseNativeModule):
     def run(self, target: str) -> Any:

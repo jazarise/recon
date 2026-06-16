@@ -1,8 +1,8 @@
 import subprocess
 from .base_adapter import BaseAdapter
-from core.registry import adapter_registry, tool_registry
-from core.models import AdapterResult, Severity
-from core.normalization import FindingNormalizer, EvidenceNormalizer
+from reconx.core.registry import adapter_registry, tool_registry
+from reconx.core.models import AdapterResult, Severity
+from reconx.core.normalization import FindingNormalizer, EvidenceNormalizer
 
 class NucleiAdapter(BaseAdapter):
     def validate(self, **kwargs) -> bool:

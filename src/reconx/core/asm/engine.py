@@ -1,4 +1,4 @@
-from core.asm.scheduler import asm_scheduler
+from reconx.core.asm.scheduler import asm_scheduler
 
 class AsmEngine:
     """The central orchestrator for the Continuous ASM system."""

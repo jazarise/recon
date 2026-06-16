@@ -1,7 +1,7 @@
 name: ReconFTW Enterprise Workflow
 description: Natively ported enterprise workflow from reconftw repository executing 14+ phases of advanced recon with diffing and scheduling.
 mode: enterprise
-steps:
+stages:
 - id: osint
   plugin: osint_gather
   plugin_path: plugins/intelligence/osint

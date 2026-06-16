@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Endpoint
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Endpoint
 import subprocess
 
 class GobusterPlugin(ReconXPlugin):

@@ -1,6 +1,6 @@
 name: Web Security Assessment Workflow
 description: Discovery through parameter mining and vulnerability checks
-steps:
+stages:
   - name: Subdomain Enumeration
     plugin: subfinder
   - name: DNS Intelligence

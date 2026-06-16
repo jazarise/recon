@@ -1,5 +1,5 @@
-from core.database.session import SessionLocal
-from core.database.models import DBFinding
+from reconx.core.database.session import SessionLocal
+from reconx.core.database.models import DBFinding
 
 class SearchEngine:
     def search(self, query: str):

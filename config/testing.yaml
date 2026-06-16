@@ -1,0 +1,13 @@
+environment: testing
+logging:
+  level: DEBUG
+  format: text
+database:
+  url: sqlite:///:memory:
+  pool_size: 5
+  timeout: 10
+workers:
+  count: 2
+  timeout: 60
+cache:
+  type: memory

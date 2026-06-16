@@ -1,28 +1,67 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "reconx"
-version = "2.1.0"
-description = "Enterprise-Grade Reconnaissance Intelligence Platform"
+version = "3.0.0"
+description = "ReconX Security Automation Platform"
+readme = "README.md"
+requires-python = ">=3.11"
 authors = [{name = "ReconX Team"}]
-requires-python = ">=3.10"
 dependencies = [
+    "fastapi>=0.100.0",
+    "pydantic>=2.0",
+    "sqlalchemy>=2.0.0",
     "typer",
-    "rich",
-    "fastapi",
-    "uvicorn",
-    "sqlalchemy",
-    "alembic",
-    "pydantic",
+    "rich>=13.0.0",
+    "uvicorn>=0.23.0",
+    "alembic>=1.11.0",
+    "pyyaml>=6.0",
+    "aiohttp>=3.8.0",
+    "requests>=2.31.0",
+    "jinja2>=3.1.2",
+    "apify-client",
+    "beautifulsoup4",
+    "python-dotenv",
     "pydantic-settings",
-    "pyyaml"
+    "questionary",
+    "structlog",
+    "schedule",
+    "aiosqlite"
 ]
 
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "ruff",
+  "mypy",
+  "coverage"
+]
+
+ai = [
+  "openai",
+  "transformers",
+  "torch"
+]
+
+docs = [
+  "mkdocs"
+]
+
+full = [
+  "reconx[dev,ai,docs]"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
 [tool.setuptools.packages.find]
-include = ["api*", "cli*", "core*", "database*", "modules*", "reports*"]
-exclude = ["archive*", "deprecated*", "legacy*"]
+where = ["src"]
+
+[tool.setuptools.package-data]
+reconx = ["config/*.yaml"]
 
 [project.scripts]
-reconx = "cli.main:app"
+reconx = "reconx.cli.main:app"

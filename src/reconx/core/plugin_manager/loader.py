@@ -3,14 +3,14 @@ ReconX Plugin Loader — discovers and loads plugins from the plugins/ directory
 Supports both flat (plugins/<name>/adapter.py) and nested
 (plugins/<category>/<name>/adapter.py) layouts.
 """
-from core.paths import PLUGINS_DIR
+from reconx.core.paths import PLUGINS_DIR
 
 
 import importlib.util
 from pathlib import Path
 
-from core.plugin_manager.interface import ReconXPlugin
-from core.logging.logger import setup_logger
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.logging.logger import setup_logger
 
 logger = setup_logger("PluginManager")
 

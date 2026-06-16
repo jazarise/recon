@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.engine.correlation_engine import CorrelationEngine
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.engine.correlation_engine import CorrelationEngine
 import json
 import os
 

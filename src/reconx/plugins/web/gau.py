@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Endpoint, Parameter
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Endpoint, Parameter
 import subprocess
 
 class GauPlugin(ReconXPlugin):

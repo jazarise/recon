@@ -1,6 +1,6 @@
 name: Core Recon Workflow
 description: End-to-end asset discovery and enumeration
-steps:
+stages:
   - name: Subdomain Enumeration
     plugin: subfinder
     config:

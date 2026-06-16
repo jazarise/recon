@@ -1,10 +1,10 @@
 import uuid
-from modules.base_module import BaseNativeModule
-from core.models import AdapterResult, Asset, AssetType, Relationship, RelationshipType
-from modules.api.schema_inference import schema_inference_engine
-from modules.api.graphql_engine import graphql_engine
-from modules.api.probe_engine import probe_engine
-from modules.api.classifier import api_classifier
+from reconx.modules.base_module import BaseNativeModule
+from reconx.core.models import AdapterResult, Asset, AssetType, Relationship, RelationshipType
+from reconx.modules.api.schema_inference import schema_inference_engine
+from reconx.modules.api.graphql_engine import graphql_engine
+from reconx.modules.api.probe_engine import probe_engine
+from reconx.modules.api.classifier import api_classifier
 
 class NativeApiRecon(BaseNativeModule):
     @property

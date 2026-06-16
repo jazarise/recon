@@ -1,8 +1,8 @@
-from core.paths import BASE_DIR
+from reconx.core.paths import BASE_DIR
 
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
-from database.schema.models import Base
+from reconx.database.schema.models import Base
 
 
 class DatabaseManager:

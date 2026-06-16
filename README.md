@@ -1,17 +1,17 @@
 # ReconX v3.0
 
-[![Tests](https://github.com/reconx/reconx/actions/workflows/python-tests.yml/badge.svg)](https://github.com/reconx/reconx/actions)
-[![Coverage](https://img.shields.io/badge/Coverage-5.2%25-red.svg)](https://github.com/reconx/reconx)
+ReconX is an autonomous, declarative Offensive Security Reconnaissance Framework.
 
-ReconX is a highly scalable, asynchronous reconnaissance and workflow execution framework. 
-It supports dynamic plugin loading, high-throughput REST APIs, and extensible CLI tools.
+## Features
+- **Declarative YAML Workflows:** Chain plugins as a Directed Acyclic Graph.
+- **Async Execution:** Heavy parallelization using asyncio and thread pools.
+- **Plugin Architecture:** Write tools in bash or python and wrap them natively.
+- **REST API:** Control execution dynamically via FastAPI.
 
 ## Quick Start
 ```bash
 git clone https://github.com/reconx/reconx.git
-cd reconx
-pip install -r requirements.txt
-python -m reconx.cli --help
+pip install -e .
+reconx init
+reconx run workflow deep_scan
 ```
-
-For detailed documentation, see the `docs/` folder.

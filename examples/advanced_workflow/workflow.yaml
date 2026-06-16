@@ -1,0 +1,8 @@
+name: advanced
+description: Complex multi-stage workflow
+stages:
+  - id: enum
+    plugin: subfinder
+  - id: scan
+    plugin: nuclei
+    depends_on: [enum]

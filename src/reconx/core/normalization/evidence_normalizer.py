@@ -1,4 +1,4 @@
-from core.models import Evidence
+from reconx.core.models import Evidence
 from typing import Any
 
 class EvidenceNormalizer:

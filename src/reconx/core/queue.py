@@ -1,5 +1,5 @@
 import queue
-from core.logger import logger
+from reconx.core.logger import logger
 
 class TaskQueue:
     def __init__(self):

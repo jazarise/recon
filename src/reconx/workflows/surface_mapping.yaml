@@ -1,5 +1,5 @@
 name: surface_mapping
-steps:
+stages:
   - subfinder
   - httpx:
       depends_on:

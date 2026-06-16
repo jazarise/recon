@@ -1,4 +1,4 @@
-from core.database.db import DatabaseManager
+from reconx.core.database.db import DatabaseManager
 
 class DashboardManager:
     def __init__(self, workspace="default"):

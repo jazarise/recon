@@ -1,5 +1,5 @@
-from core.plugin_manager.interface import ReconXPlugin
-from core.schemas import Parameter
+from reconx.core.plugin_manager.interface import ReconXPlugin
+from reconx.core.schemas import Parameter
 import subprocess
 
 class ParamspiderPlugin(ReconXPlugin):

@@ -1,0 +1,37 @@
+site_name: ReconX
+site_description: Autonomous Offensive Security Reconnaissance Framework
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: light blue
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Quickstart: getting-started/quickstart.md
+      - Installation: getting-started/installation.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Core: architecture/core.md
+      - Plugins: architecture/plugins.md
+      - Database: architecture/database.md
+      - API: architecture/api.md
+      - Workflows: architecture/workflows.md
+      - Event System: architecture/event_system.md
+      - Scheduler: architecture/scheduler.md
+  - API Reference: api/reference.md
+  - Plugins: plugins/plugin_development.md
+  - Workflows: workflows/workflow_authoring.md
+  - CLI: cli/reference.md
+  - Configuration: configuration/reference.md
+  - Developer Guide:
+      - Setup: developer/development_setup.md
+      - Testing: developer/testing.md
+      - Debugging: developer/debugging.md
+      - Releases: developer/release_process.md
+  - Operations:
+      - Runbook: runbooks/startup_procedures.md
+      - SLOs: operations/slo.md
+  - Knowledge Base: knowledge-base/index.md
+  - Releases: releases/index.md

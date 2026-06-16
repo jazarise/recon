@@ -1,4 +1,4 @@
-from core.plugin_manager.interface import ReconXPlugin
+from reconx.core.plugin_manager.interface import ReconXPlugin
 from .collector import AcquiFinderCollector
 
 class Plugin(ReconXPlugin):

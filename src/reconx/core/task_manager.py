@@ -1,5 +1,5 @@
 from enum import Enum
-from core.logger import logger
+from reconx.core.logger import logger
 from typing import Dict, Any
 
 class TaskState(Enum):

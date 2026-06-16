@@ -1,0 +1,12 @@
+environment: staging
+logging:
+  level: DEBUG
+  format: text
+database:
+  pool_size: 10
+  timeout: 30
+workers:
+  count: 10
+  timeout: 3600
+cache:
+  type: local

@@ -1,5 +1,5 @@
 import time
-from core.models import AdapterResult
+from reconx.core.models import AdapterResult
 from typing import Any
 
 class PluginSandbox:

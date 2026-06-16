@@ -2,7 +2,7 @@
 ReconX Project Manager — create, list, and manage reconnaissance projects.
 Each project gets its own directory tree and SQLite database.
 """
-from core.paths import BASE_DIR
+from reconx.core.paths import BASE_DIR
 
 
 import json
@@ -12,8 +12,8 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any
 
 
-from core.database import DatabaseManager
-from core.logging.logger import setup_logger
+from reconx.core.database import DatabaseManager
+from reconx.core.logging.logger import setup_logger
 
 logger = setup_logger("ProjectManager")
 
