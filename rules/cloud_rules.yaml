@@ -1,0 +1,4 @@
+- match:
+    source: SUBDOMAIN
+    target: CLOUD_BUCKET
+  relationship: LINKED_TO
