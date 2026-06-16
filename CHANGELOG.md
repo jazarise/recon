@@ -1,10 +1,9 @@
 # Changelog
-## [3.0.0] - 2026-06-15
+All notable changes to this project will be documented in this file.
+
+## [3.0.0] - Unreleased
 ### Added
-- Complete async orchestration engine.
-- Pydantic schema validation.
-- FastApi boundary enforcement.
-- React Vitest dashboard integration.
-### Fixed
-- Security hardening to mitigate shell=True injections.
-- SQLite WAL database deadlocks.
+- Complete AST-based static optimization.
+- Comprehensive `pytest` infrastructure.
+- 13-stage performance benchmarks.
+- Full `docs/` and `examples/` suites.

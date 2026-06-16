@@ -1,4 +1,3 @@
 # API Reference
 
-The JSON REST API handles Scans, Projects, Assets, Findings, and Reports.
-Auto-generated Swagger docs are available at `/api/docs`.
+The API is powered by an ASGI server. Endpoints include `/api/v1/workflows`.

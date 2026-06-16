@@ -1,5 +1,3 @@
-# Configuration Guide
+# Configuration Standardization
 
-ReconX uses a `.env` file at the repository root.
-Configure database URLs and API keys (Shodan, VirusTotal, etc.) here.
-See `core/config.py` for default variables.
+All settings must be declared via Pydantic `BaseSettings`. Environment variables override local `.env` files.

@@ -1,5 +1,3 @@
-# Plugins
+# Plugins Guide
 
-Plugins execute atomic tasks (e.g. Subfinder, Nmap).
-They are dynamically loaded by the `Orchestrator` based on workflow dependencies.
-Each plugin must return `Finding` objects.
+Plugins must expose `run` or `execute` methods, and a `metadata` dict.
