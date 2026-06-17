@@ -1,0 +1,16 @@
+﻿name: web_recon
+tasks:
+  - id: subfinder
+    plugin: subfinder
+  - id: httpx
+    plugin: httpx
+    depends_on:
+      - subfinder
+  - id: katana
+    plugin: katana
+    depends_on:
+      - httpx
+  - id: report
+    plugin: report
+    depends_on:
+      - katana

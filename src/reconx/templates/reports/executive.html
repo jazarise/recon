@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Executive Report</title>
+</head>
+<body>
+    <h1>Executive Report - {{ data.project }}</h1>
+    <h2>Summary</h2>
+    <p>Total Assets: {{ data.executive_summary.total_assets }}</p>
+    <p>Project Risk Score: {{ data.executive_summary.project_risk_score }}</p>
+    <p>Most Exposed Asset: {{ data.executive_summary.most_exposed_asset }}</p>
+    
+    <h2>Recommendations</h2>
+    <ul>
+    {% for rec in data.executive_summary.recommendations %}
+        <li>{{ rec }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Assets</h2>
+    <table border="1">
+        <tr><th>Type</th><th>Value</th><th>Source</th></tr>
+        {% for asset in data.assets %}
+        <tr>
+            <td>{{ asset.type }}</td>
+            <td>{{ asset.value }}</td>
+            <td>{{ asset.source }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,37 +1,88 @@
-site_name: ReconX
-site_description: Autonomous Offensive Security Reconnaissance Framework
+site_name: ReconX Documentation
+site_description: "ReconX Security Automation Platform Documentation"
+site_author: "ReconX Team"
+
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
   palette:
-    scheme: default
-    primary: indigo
-    accent: light blue
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
 nav:
   - Home: index.md
   - Getting Started:
-      - Quickstart: getting-started/quickstart.md
-      - Installation: getting-started/installation.md
-  - Architecture:
-      - Overview: architecture/overview.md
-      - Core: architecture/core.md
-      - Plugins: architecture/plugins.md
-      - Database: architecture/database.md
-      - API: architecture/api.md
-      - Workflows: architecture/workflows.md
-      - Event System: architecture/event_system.md
-      - Scheduler: architecture/scheduler.md
-  - API Reference: api/reference.md
-  - Plugins: plugins/plugin_development.md
-  - Workflows: workflows/workflow_authoring.md
-  - CLI: cli/reference.md
-  - Configuration: configuration/reference.md
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - First Scan: getting-started/first-scan.md
+    - FAQ: getting-started/faq.md
+  - User Guide:
+    - Overview: user-guide/index.md
   - Developer Guide:
-      - Setup: developer/development_setup.md
-      - Testing: developer/testing.md
-      - Debugging: developer/debugging.md
-      - Releases: developer/release_process.md
+    - Overview: developer-guide/index.md
+  - API Reference:
+    - Overview: api/index.md
+  - Architecture:
+    - System Overview: architecture/system-overview.md
+    - Database: architecture/database.md
+    - Workflow Engine: architecture/workflow-engine.md
+    - Plugin Framework: architecture/plugin-framework.md
+    - Intelligence Layer: architecture/intelligence-layer.md
+    - Reporting: architecture/reporting.md
+  - Plugins:
+    - Development: plugins/plugin-development.md
+    - Security: plugins/plugin-security.md
+    - Publishing: plugins/plugin-publishing.md
+  - Workflows:
+    - Format: workflows/workflow-format.md
+    - Examples: workflows/workflow-examples.md
+    - Security: workflows/workflow-security.md
+  - Security:
+    - Authentication: security/authentication.md
+    - Authorization: security/authorization.md
+    - Plugin Security: security/plugin-security.md
+    - Reporting Security: security/reporting-security.md
   - Operations:
-      - Runbook: runbooks/startup_procedures.md
-      - SLOs: operations/slo.md
-  - Knowledge Base: knowledge-base/index.md
-  - Releases: releases/index.md
+    - Deployment: operations/deployment.md
+    - Monitoring: operations/monitoring.md
+    - Backups: operations/backup.md
+    - Recovery: operations/recovery.md
+    - Upgrades: operations/upgrade.md
+  - Community:
+    - Contributing: https://github.com/reconx/reconx/blob/main/CONTRIBUTING.md
+    - Code of Conduct: https://github.com/reconx/reconx/blob/main/CODE_OF_CONDUCT.md
+    - Changelog: https://github.com/reconx/reconx/blob/main/CHANGELOG.md
+    - Roadmap: https://github.com/reconx/reconx/blob/main/ROADMAP.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables

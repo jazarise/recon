@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''threads: 20
+    "config.yaml": """threads: 20
 timeout: 5
 retries: 3
 output_format: json
@@ -23,9 +23,8 @@ ai_engine:
   attack_graph: true
   noise_filtering: true
   suggestion_mode: active
-''',
-
-    'src/reconx/ai/heuristics.py': '''class HeuristicsEngine:
+""",
+    "src/reconx/ai/heuristics.py": """class HeuristicsEngine:
     HIGH_RISK_KEYWORDS = ["admin", "login", "api", "dashboard", "portal"]
     LOW_RISK_KEYWORDS = ["cdn", "static", "assets", "fonts", "css"]
 
@@ -46,9 +45,8 @@ ai_engine:
         if port in [80, 443] and any("PHP" in t for t in tech):
             return "MEDIUM (Legacy Web Stack)"
         return "LOW"
-''',
-
-    'src/reconx/ai/graph.py': '''import json
+""",
+    "src/reconx/ai/graph.py": """import json
 
 class AttackGraph:
     def __init__(self):
@@ -65,9 +63,8 @@ class AttackGraph:
             "nodes": list(self.nodes),
             "edges": list(self.edges)
         }
-''',
-
-    'src/reconx/ai/memory.py': '''class ContextMemory:
+""",
+    "src/reconx/ai/memory.py": """class ContextMemory:
     def __init__(self):
         self._scanned = set()
         self._failed = set()
@@ -82,9 +79,8 @@ class AttackGraph:
         if target in self._scanned or target in self._failed:
             return False
         return True
-''',
-
-    'src/reconx/ai/prioritization.py': '''from typing import List, Dict
+""",
+    "src/reconx/ai/prioritization.py": """from typing import List, Dict
 
 class PrioritizationEngine:
     @staticmethod
@@ -98,9 +94,8 @@ class PrioritizationEngine:
             else:
                 actions.append(f"Run deep port scan on high-value asset {target}")
         return actions
-''',
-
-    'src/reconx/ai/engine.py': '''from reconx.ai.heuristics import HeuristicsEngine
+""",
+    "src/reconx/ai/engine.py": '''from reconx.ai.heuristics import HeuristicsEngine
 from reconx.ai.graph import AttackGraph
 from reconx.ai.memory import ContextMemory
 from reconx.ai.prioritization import PrioritizationEngine
@@ -146,8 +141,7 @@ class IntelligenceEngine:
 
         return report
 ''',
-
-    'src/reconx/reporting/ai_exporter.py': '''import json
+    "src/reconx/reporting/ai_exporter.py": '''import json
 
 def export_intelligence_report(report_data: dict, filepath: str):
     """Outputs the structured AI reasoning report."""
@@ -167,8 +161,7 @@ def export_intelligence_report(report_data: dict, filepath: str):
         for action in report_data['recommendations']:
             f.write(f"- {action}\\n")
 ''',
-
-    'tests/test_ai_engine.py': '''def test_ai_prioritization():
+    "tests/test_ai_engine.py": """def test_ai_prioritization():
     from reconx.ai.engine import IntelligenceEngine
     
     engine = IntelligenceEngine()
@@ -185,9 +178,8 @@ def export_intelligence_report(report_data: dict, filepath: str):
     assert "cdn.example.com" in result["attack_surface"]["low_risk"]
     assert "Port 22" in result["attack_surface"]["high_risk"]
     assert len(result["recommendations"]) >= 2
-''',
-
-    'docs/reports/stage14_ai_engine.md': '''# Stage 14: AI Engine Architecture
+""",
+    "docs/reports/stage14_ai_engine.md": """# Stage 14: AI Engine Architecture
 
 ## Heuristics Filtering
 We implemented `src/reconx/ai/heuristics.py` to natively classify discovered vectors. Subdomains with keywords like `admin` or `api` are auto-elevated to HIGH, while `cdn` or `static` nodes are demoted to LOW noise.
@@ -197,12 +189,12 @@ The `AttackGraph` module locally tracks nodes mapping DNS relationships (e.g., `
 
 ## Next-Best Action Prioritization
 Instead of blindly dumping `Port 22` open logs, the `PrioritizationEngine` generates actionable plain-text output in the `ai_exporter.py` recommending specific actions like *"Test authentication bypass on admin.example.com"*.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

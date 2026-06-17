@@ -1,0 +1,16 @@
+name: ci_cd_cloud
+category: cloud_security
+language: .yaml
+execution_type: library
+entrypoint: ci_cd_cloud.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ci_cd_cloud
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

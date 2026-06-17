@@ -3,56 +3,51 @@ Name: reconx
 Version: 3.0.0
 Summary: ReconX Security Automation Platform
 Author: ReconX Team
-Requires-Python: >=3.11
+Requires-Python: <3.15,>=3.11
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: fastapi>=0.100.0
-Requires-Dist: pydantic>=2.0
+Requires-Dist: uvicorn>=0.23.0
 Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: aiosqlite
+Requires-Dist: pydantic>=2.0
+Requires-Dist: pydantic-settings
+Requires-Dist: alembic>=1.11.0
 Requires-Dist: typer
 Requires-Dist: rich>=13.0.0
-Requires-Dist: uvicorn>=0.23.0
-Requires-Dist: alembic>=1.11.0
-Requires-Dist: pyyaml>=6.0
+Requires-Dist: structlog
 Requires-Dist: aiohttp>=3.8.0
 Requires-Dist: requests>=2.31.0
 Requires-Dist: jinja2>=3.1.2
-Requires-Dist: apify-client
-Requires-Dist: beautifulsoup4
+Requires-Dist: pyyaml>=6.0
 Requires-Dist: python-dotenv
-Requires-Dist: pydantic-settings
-Requires-Dist: questionary
-Requires-Dist: structlog
-Requires-Dist: schedule
-Requires-Dist: aiosqlite
+Requires-Dist: passlib[bcrypt]
+Requires-Dist: PyJWT
 Provides-Extra: dev
 Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
 Requires-Dist: pytest-cov; extra == "dev"
 Requires-Dist: ruff; extra == "dev"
 Requires-Dist: mypy; extra == "dev"
-Requires-Dist: coverage; extra == "dev"
-Provides-Extra: ai
-Requires-Dist: openai; extra == "ai"
-Requires-Dist: transformers; extra == "ai"
-Requires-Dist: torch; extra == "ai"
-Provides-Extra: docs
-Requires-Dist: mkdocs; extra == "docs"
-Provides-Extra: full
-Requires-Dist: reconx[ai,dev,docs]; extra == "full"
+Requires-Dist: bandit; extra == "dev"
+Requires-Dist: mkdocs; extra == "dev"
+Requires-Dist: mkdocs-material; extra == "dev"
+Dynamic: license-file
 
 # ReconX v3.0
 
-[![Tests](https://github.com/reconx/reconx/actions/workflows/python-tests.yml/badge.svg)](https://github.com/reconx/reconx/actions)
-[![Coverage](https://img.shields.io/badge/Coverage-5.2%25-red.svg)](https://github.com/reconx/reconx)
+ReconX is an autonomous, declarative Offensive Security Reconnaissance Framework.
 
-ReconX is a highly scalable, asynchronous reconnaissance and workflow execution framework. 
-It supports dynamic plugin loading, high-throughput REST APIs, and extensible CLI tools.
+## Features
+- **Declarative YAML Workflows:** Chain plugins as a Directed Acyclic Graph.
+- **Async Execution:** Heavy parallelization using asyncio and thread pools.
+- **Plugin Architecture:** Write tools in bash or python and wrap them natively.
+- **REST API:** Control execution dynamically via FastAPI.
 
 ## Quick Start
 ```bash
 git clone https://github.com/reconx/reconx.git
-cd reconx
-pip install -r requirements.txt
-python -m reconx.cli --help
+pip install -e .
+reconx init
+reconx run workflow deep_scan
 ```
-
-For detailed documentation, see the `docs/` folder.

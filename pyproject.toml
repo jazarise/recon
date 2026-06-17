@@ -7,51 +7,38 @@ name = "reconx"
 version = "3.0.0"
 description = "ReconX Security Automation Platform"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.15"
 authors = [{name = "ReconX Team"}]
 dependencies = [
     "fastapi>=0.100.0",
-    "pydantic>=2.0",
+    "uvicorn>=0.23.0",
     "sqlalchemy>=2.0.0",
+    "aiosqlite",
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "alembic>=1.11.0",
     "typer",
     "rich>=13.0.0",
-    "uvicorn>=0.23.0",
-    "alembic>=1.11.0",
-    "pyyaml>=6.0",
+    "structlog",
     "aiohttp>=3.8.0",
     "requests>=2.31.0",
     "jinja2>=3.1.2",
-    "apify-client",
-    "beautifulsoup4",
+    "pyyaml>=6.0",
     "python-dotenv",
-    "pydantic-settings",
-    "questionary",
-    "structlog",
-    "schedule",
-    "aiosqlite"
+    "passlib[bcrypt]",
+    "PyJWT"
 ]
 
 [project.optional-dependencies]
 dev = [
   "pytest",
+  "pytest-asyncio",
   "pytest-cov",
   "ruff",
   "mypy",
-  "coverage"
-]
-
-ai = [
-  "openai",
-  "transformers",
-  "torch"
-]
-
-docs = [
-  "mkdocs"
-]
-
-full = [
-  "reconx[dev,ai,docs]"
+  "bandit",
+  "mkdocs",
+  "mkdocs-material"
 ]
 
 [tool.setuptools]

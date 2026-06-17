@@ -5,6 +5,6 @@ class PlannerAgent:
                 "Passive DNS collection",
                 "Subdomain discovery (high confidence sources)",
                 "Filter live hosts",
-                "Deep scan only high-risk endpoints"
+                "Deep scan only high-risk endpoints",
             ]
         return ["Default wide scan"]

@@ -1,85 +1,25 @@
-from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
-from reconx.api.routes import projects, assets, scans, findings, reports, auth
+from fastapi import FastAPI
+from reconx.api.routes import assets, reports, auth, plugins, users, workflows, admin
+from reconx.observability.health import router as health_router
+from reconx.observability.monitoring import router as monitoring_router
+from reconx.observability.tracing import TracingMiddleware
 
-app = FastAPI(title="ReconX API", version="2.0.0", docs_url="/api/docs", openapi_url="/api/openapi.json")
+app = FastAPI(
+    title="ReconX API",
+    version="3.0.0",
+    docs_url="/api/docs",
+    openapi_url="/api/openapi.json",
+)
 
-from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
-from reconx.api.schemas.common import StandardResponse
+app.add_middleware(TracingMiddleware)
 
-@app.exception_handler(RequestValidationError)
-async def validation_exception_handler(request: Request, exc: RequestValidationError):
-    return JSONResponse(
-        status_code=422,
-        content=StandardResponse(
-            success=False,
-            message="Validation Error",
-            errors=[str(e) for e in exc.errors()]
-        ).model_dump()
-    )
+app.include_router(auth.router, prefix="/api/v1", tags=["auth"])
+app.include_router(users.router, prefix="/api/v1", tags=["users"])
+app.include_router(admin.router, prefix="/api/v1", tags=["admin"])
+app.include_router(assets.router, prefix="/api/v1", tags=["assets"])
+app.include_router(reports.router, prefix="/api/v1", tags=["reports"])
+app.include_router(plugins.router, prefix="/api/v1", tags=["plugins"])
+app.include_router(workflows.router, prefix="/api/v1", tags=["workflows"])
 
-@app.exception_handler(Exception)
-async def generic_exception_handler(request: Request, exc: Exception):
-    return JSONResponse(
-        status_code=500,
-        content=StandardResponse(
-            success=False,
-            message="Internal Server Error",
-            errors=[str(exc)]
-        ).model_dump()
-    )
-
-# API Routes
-app.include_router(auth.router, prefix="/api/auth", tags=["auth"])
-app.include_router(projects.router, prefix="/api/projects", tags=["projects"])
-app.include_router(assets.router, prefix="/api/assets", tags=["assets"])
-app.include_router(scans.router, prefix="/api/scans", tags=["scans"])
-app.include_router(findings.router, prefix="/api/findings", tags=["findings"])
-app.include_router(reports.router, prefix="/api/reports", tags=["reports"])
-
-from reconx.api.websocket import router as ws_router
-app.include_router(ws_router, tags=["websocket"])
-
-@app.get("/api/health")
-def health_check():
-    return {"status": "ok"}
-
-# Static and Templates
-app.mount("/static", StaticFiles(directory="dashboard/static"), name="static")
-templates = Jinja2Templates(directory="dashboard/templates")
-
-@app.get("/", response_class=HTMLResponse)
-async def dashboard_index(request: Request):
-    return templates.TemplateResponse(name="index.html", request=request)
-
-@app.get("/overview", response_class=HTMLResponse)
-async def overview_page(request: Request):
-    return templates.TemplateResponse(name="overview.html", request=request)
-
-@app.get("/scans", response_class=HTMLResponse)
-async def scans_page(request: Request):
-    return templates.TemplateResponse(name="scans.html", request=request)
-
-@app.get("/findings", response_class=HTMLResponse)
-async def findings_page(request: Request):
-    return templates.TemplateResponse(name="findings.html", request=request)
-
-@app.get("/workflows", response_class=HTMLResponse)
-async def workflows_page(request: Request):
-    return templates.TemplateResponse(name="workflows.html", request=request)
-
-@app.get('/health')
-def health():
-    return {'status': 'healthy'}
-
-@app.get('/ready')
-def ready():
-    return {'status': 'ready'}
-
-@app.get('/metrics')
-def metrics():
-    return {'requests': 1000, 'errors': 0}
-
+app.include_router(health_router)
+app.include_router(monitoring_router)

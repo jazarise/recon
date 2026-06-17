@@ -1,0 +1,13 @@
+{
+  "project_id": "1",
+  "project_name": "Example Assessment",
+  "total_assets": 1,
+  "total_findings": 0,
+  "assets": [
+    {
+      "id": "1",
+      "type": "domain",
+      "value": "example.com"
+    }
+  ]
+}

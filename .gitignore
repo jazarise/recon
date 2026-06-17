@@ -1,44 +1,18 @@
-# Python
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
 
-# Virtual Environments
-venv/
-.env/
-reconx-test-env/
-
-# Test
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Type Checking
-.mypy_cache/
-
-# Lint
-.ruff_cache/
-
-# IDE
-.vscode/
-.idea/
-
-# Runtime
-workspace/logs/*
-workspace/results/*
-workspace/outputs/*
-workspace/temp/*
-
-!workspace/logs/.gitkeep
-!workspace/results/.gitkeep
-!workspace/outputs/.gitkeep
-!workspace/temp/.gitkeep
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Secrets
 .env
 .env.*
-secrets/*
+
+archive/
+workspace/
+
+node_modules/
+dist/
+build/
+
+.pytest_cache/
+.mypy_cache/
+
+coverage/
+htmlcov/

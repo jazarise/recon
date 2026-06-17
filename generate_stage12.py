@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''threads: 20
+    "config.yaml": """threads: 20
 timeout: 5
 retries: 3
 output_format: json
@@ -10,9 +10,8 @@ plugins_enabled:
   - subdomain_enum
   - port_scan
   - tech_detect
-''',
-
-    'src/reconx/core/loader.py': '''import importlib
+""",
+    "src/reconx/core/loader.py": '''import importlib
 import os
 import inspect
 import logging
@@ -35,8 +34,7 @@ class PluginLoader:
         logger.info(f"Loaded {len(self.plugins)} plugins.")
         return self.plugins
 ''',
-
-    'src/reconx/core/event_bus.py': '''import asyncio
+    "src/reconx/core/event_bus.py": """import asyncio
 import logging
 
 logger = logging.getLogger("reconx")
@@ -62,9 +60,8 @@ class EventBus:
                 for callback in self.subscribers[event_type]:
                     asyncio.create_task(callback(data))
             self.queue.task_done()
-''',
-
-    'src/reconx/core/data_model.py': '''from pydantic import BaseModel
+""",
+    "src/reconx/core/data_model.py": """from pydantic import BaseModel
 from typing import List, Dict, Any
 
 class ReconResult(BaseModel):
@@ -75,9 +72,8 @@ class ReconResult(BaseModel):
     tech_stack: List[str] = []
     vulnerabilities: List[str] = []
     metadata: Dict[str, Any] = {}
-''',
-
-    'src/reconx/core/guardrails.py': '''import logging
+""",
+    "src/reconx/core/guardrails.py": '''import logging
 
 logger = logging.getLogger("reconx")
 
@@ -94,40 +90,35 @@ def is_allowed(target: str) -> bool:
         raise Exception(f"Target {target} is not in the authorized scope.")
     return True
 ''',
-
-    'src/reconx/plugins/dns_enum.py': '''class Plugin:
+    "src/reconx/plugins/dns_enum.py": """class Plugin:
     name = "dns_enum"
 
     async def run(self, target: str):
         # Simulated DNS query
         return {"subdomains": [f"www.{target}", f"api.{target}"]}
-''',
-
-    'src/reconx/plugins/port_scan.py': '''class Plugin:
+""",
+    "src/reconx/plugins/port_scan.py": """class Plugin:
     name = "port_scan"
 
     async def run(self, target: str):
         # Simulated Port scan
         return {"ports": [80, 443]}
-''',
-
-    'src/reconx/plugins/subdomain_enum.py': '''class Plugin:
+""",
+    "src/reconx/plugins/subdomain_enum.py": """class Plugin:
     name = "subdomain_enum"
 
     async def run(self, target: str):
         # Simulated Subdomain scan
         return {"subdomains": [f"dev.{target}", f"staging.{target}"]}
-''',
-
-    'src/reconx/plugins/tech_detect.py': '''class Plugin:
+""",
+    "src/reconx/plugins/tech_detect.py": """class Plugin:
     name = "tech_detect"
 
     async def run(self, target: str):
         # Simulated Tech detection
         return {"tech_stack": ["nginx/1.18.0", "PHP/7.4.3"]}
-''',
-
-    'src/reconx/reporting/multi_exporter.py': '''import json
+""",
+    "src/reconx/reporting/multi_exporter.py": """import json
 import csv
 
 def export_json(data: dict, filepath: str):
@@ -150,9 +141,8 @@ def export_markdown(data: dict, filepath: str):
     with open(filepath, 'w') as f:
         f.write(f"# Recon Report: {data.get('target')}\\n")
         f.write(f"**Ports Open:** {data.get('ports')}\\n")
-''',
-
-    'tests/test_plugins.py': '''def test_dns_enum_plugin():
+""",
+    "tests/test_plugins.py": """def test_dns_enum_plugin():
     from reconx.plugins.dns_enum import Plugin
     import asyncio
     
@@ -168,9 +158,8 @@ def test_guardrails():
         is_allowed("google.com")
     except Exception as e:
         assert "not in the authorized scope" in str(e)
-''',
-
-    'docs/reports/stage12_enterprise_architecture.md': '''# Stage 12: Enterprise Architecture Overview
+""",
+    "docs/reports/stage12_enterprise_architecture.md": """# Stage 12: Enterprise Architecture Overview
 
 ## Modular Plugin Framework
 ReconX now strictly executes isolated modules inside `src/reconx/plugins/`. The `loader.py` layer guarantees drop-in extendability without modifying the core.
@@ -180,12 +169,12 @@ The `EventBus` pub/sub queue entirely decoupled the DAG linear engine. Plugins n
 
 ## Safety Guardrails
 `guardrails.py` ensures execution completely halts if an unauthorized target domain is fed to the engine, strictly adhering to authorized/ethical testing paradigms.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

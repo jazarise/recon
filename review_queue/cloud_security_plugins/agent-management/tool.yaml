@@ -1,0 +1,16 @@
+name: agent-management
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: agent-management.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - agent-management
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

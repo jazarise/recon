@@ -4,6 +4,7 @@ import logging
 
 logger = logging.getLogger("reconx")
 
+
 class DatabaseLayer:
     def __init__(self, db_path="reconx.db"):
         self.db_path = db_path
@@ -28,7 +29,7 @@ class DatabaseLayer:
         cursor = conn.cursor()
         cursor.execute(
             "REPLACE INTO campaigns (id, target, status, results) VALUES (?, ?, ?, ?)",
-            (campaign_id, target, status, json.dumps(results))
+            (campaign_id, target, status, json.dumps(results)),
         )
         conn.commit()
         conn.close()
@@ -36,7 +37,9 @@ class DatabaseLayer:
     def get_campaign(self, campaign_id: str) -> dict:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        cursor.execute("SELECT target, status, results FROM campaigns WHERE id=?", (campaign_id,))
+        cursor.execute(
+            "SELECT target, status, results FROM campaigns WHERE id=?", (campaign_id,)
+        )
         row = cursor.fetchone()
         conn.close()
         if row:

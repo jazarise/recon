@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''threads: 20
+    "config.yaml": """threads: 20
 timeout: 5
 retries: 3
 output_format: json
@@ -17,9 +17,8 @@ stealth:
   passive_only: true
   user_agent_rotation: true
   proxy_enabled: false
-''',
-
-    'src/reconx/core/opsec.py': '''from enum import Enum
+""",
+    "src/reconx/core/opsec.py": '''from enum import Enum
 import logging
 
 logger = logging.getLogger("reconx")
@@ -40,8 +39,7 @@ class DetectionEngine:
             return False
         return True
 ''',
-
-    'src/reconx/core/http_client.py': '''import asyncio
+    "src/reconx/core/http_client.py": """import asyncio
 import logging
 import random
 
@@ -71,9 +69,8 @@ class StealthHTTPClient:
         # Simulated Network Call
         await asyncio.sleep(0.1)
         return {"status": 200, "url": url}
-''',
-
-    'src/reconx/core/suppression.py': '''class ScanSuppressor:
+""",
+    "src/reconx/core/suppression.py": '''class ScanSuppressor:
     def __init__(self):
         self.resolved_hosts = set()
     
@@ -84,8 +81,7 @@ class StealthHTTPClient:
         self.resolved_hosts.add(host)
         return True
 ''',
-
-    'src/reconx/plugins/port_scan.py': '''from reconx.core.opsec import RiskScore
+    "src/reconx/plugins/port_scan.py": """from reconx.core.opsec import RiskScore
 
 class Plugin:
     name = "port_scan"
@@ -98,9 +94,8 @@ class Plugin:
         
         # Simulated Port scan
         return {"ports": [80, 443]}
-''',
-
-    'src/reconx/main.py': '''import sys
+""",
+    "src/reconx/main.py": '''import sys
 import argparse
 import asyncio
 from typing import List
@@ -154,8 +149,7 @@ def main():
 if __name__ == "__main__":
     main()
 ''',
-
-    'docs/reports/stage13_opsec_tuning.md': '''# Stage 13: OPSEC Architecture Report
+    "docs/reports/stage13_opsec_tuning.md": """# Stage 13: OPSEC Architecture Report
 
 ## Detection Engine
 We mapped the `RiskScore` enum against all native plugins. `RiskScore.HIGH` (Port Scanning) is now natively intercepted and suppressed by the `DetectionEngine` whenever the `--mode stealth` CLI flag is utilized.
@@ -165,12 +159,12 @@ The `StealthHTTPClient` dynamically overrides raw request timers, injecting rand
 
 ## Smart Suppression
 The `ScanSuppressor` implements early-exit hashing, ensuring duplicate subdomain vectors don't trigger cascading redundant queries that could alert SOC analysts.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

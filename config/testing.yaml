@@ -1,13 +1,10 @@
-environment: testing
+app:
+  name: "ReconX"
+  env: "testing"
+  debug: true
+  auto_reload: false
+  secure_cookies: false
 logging:
-  level: DEBUG
-  format: text
+  level: "ERROR"
 database:
-  url: sqlite:///:memory:
-  pool_size: 5
-  timeout: 10
-workers:
-  count: 2
-  timeout: 60
-cache:
-  type: memory
+  url: "sqlite+aiosqlite:///:memory:"

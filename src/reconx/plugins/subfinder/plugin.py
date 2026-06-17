@@ -1,5 +1,6 @@
-﻿from reconx.core.plugins.base import ReconXPlugin, PluginResult
+from reconx.core.plugins.base import ReconXPlugin, PluginResult
 from reconx.integrations.subfinder import SubfinderAdapter
+
 
 class SubfinderPlugin(ReconXPlugin):
     async def validate(self) -> bool:
@@ -12,13 +13,12 @@ class SubfinderPlugin(ReconXPlugin):
             return PluginResult(
                 status="success",
                 findings=findings,
-                assets=[{"type": "domain", "value": f.get("host", target)} for f in findings]
+                assets=[
+                    {"type": "domain", "value": f.get("host", target)} for f in findings
+                ],
             )
         except Exception as e:
-            return PluginResult(
-                status="error",
-                errors=[str(e)]
-            )
+            return PluginResult(status="error", errors=[str(e)])
 
     async def cleanup(self) -> None:
         pass

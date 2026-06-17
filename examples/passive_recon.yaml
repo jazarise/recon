@@ -1,0 +1,10 @@
+name: passive_recon
+description: "Passive reconnaissance pipeline for discovering subdomains."
+
+tasks:
+  - id: enumerate_subfinder
+    plugin:
+      name: subfinder
+  - id: enumerate_assetfinder
+    plugin:
+      name: assetfinder

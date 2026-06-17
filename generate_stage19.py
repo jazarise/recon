@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''global_intelligence:
+    "config.yaml": """global_intelligence:
   continuous_monitoring: true
   predictive_modeling: true
   noise_suppression: true
@@ -46,9 +46,8 @@ stealth:
 ai_engine:
   enabled: true
   prioritization: true
-''',
-
-    'src/reconx/global/confidence.py': '''import logging
+""",
+    "src/reconx/global/confidence.py": """import logging
 
 logger = logging.getLogger("reconx")
 
@@ -68,9 +67,8 @@ class NoiseController:
             logger.debug(f"[NOISE SUPPRESSION] Dropped unverified OSINT signal for {asset}")
             return False
         return True
-''',
-
-    'src/reconx/global/timeline.py': '''import datetime
+""",
+    "src/reconx/global/timeline.py": """import datetime
 import logging
 
 logger = logging.getLogger("reconx")
@@ -98,9 +96,8 @@ class TimelineEngine:
         if diffs:
             logger.warning(f"[TIMELINE] Change Detected on {target}: {diffs}")
         return diffs
-''',
-
-    'src/reconx/global/graph.py': '''class NetworkGraph:
+""",
+    "src/reconx/global/graph.py": """class NetworkGraph:
     def __init__(self):
         self.nodes = set()
         self.edges = set()
@@ -109,9 +106,8 @@ class TimelineEngine:
         self.nodes.add(source_ip)
         self.nodes.add(domain)
         self.edges.add(f"{source_ip} <-> {domain}")
-''',
-
-    'src/reconx/global/correlation.py': '''from reconx.global_intel.graph import NetworkGraph
+""",
+    "src/reconx/global/correlation.py": """from reconx.global_intel.graph import NetworkGraph
 
 class CorrelationEngine:
     def __init__(self):
@@ -129,9 +125,8 @@ class CorrelationEngine:
             "critical_clusters": len(self.graph.edges),
             "status": "Global Risk Map Updated"
         }
-''',
-
-    'src/reconx/global/predictive.py': '''class PredictiveEngine:
+""",
+    "src/reconx/global/predictive.py": """class PredictiveEngine:
     @staticmethod
     def analyze_trends(diffs: list) -> list:
         predictions = []
@@ -141,9 +136,8 @@ class CorrelationEngine:
             predictions.append("Predictive Alert: High likelihood of incoming unauthenticated API exposure within 7 days. Action required.")
             
         return predictions
-''',
-
-    'src/reconx/global/streaming.py': '''import asyncio
+""",
+    "src/reconx/global/streaming.py": """import asyncio
 import logging
 from reconx.global_intel.timeline import TimelineEngine
 from reconx.global_intel.confidence import NoiseController
@@ -171,9 +165,8 @@ class StreamingPipeline:
             logger.critical(f"[AI PREDICTION] {pred}")
 
         return diffs, predictions
-''',
-
-    'src/reconx/reporting/global_exporter.py': '''import json
+""",
+    "src/reconx/reporting/global_exporter.py": """import json
 
 def export_global_analytics(diffs: list, predictions: list, filepath: str):
     with open(filepath, 'w') as f:
@@ -189,9 +182,8 @@ def export_global_analytics(diffs: list, predictions: list, filepath: str):
             f.write("- No immediate predictive threats modeled.\\n")
         for pred in predictions:
             f.write(f"- {pred}\\n")
-''',
-
-    'tests/test_timeline.py': '''def test_timeline_diffs():
+""",
+    "tests/test_timeline.py": """def test_timeline_diffs():
     from reconx.global_intel.timeline import TimelineEngine
     engine = TimelineEngine()
     
@@ -209,9 +201,8 @@ def export_global_analytics(diffs: list, predictions: list, filepath: str):
     diffs_t3 = engine.detect_changes("example.com", ["Port 443"])
     assert len(diffs_t3) == 1
     assert "Endpoint closed: Port 80" in diffs_t3[0]["event"]
-''',
-
-    'docs/reports/stage19_global_intelligence.md': '''# Stage 19: Global Intelligence Tracking Architecture
+""",
+    "docs/reports/stage19_global_intelligence.md": """# Stage 19: Global Intelligence Tracking Architecture
 
 ## Timeline Differential Engine
 ReconX is no longer bound by static snapshots. The `TimelineEngine` inherently compares newly streamed intelligence against the previous historical state to derive programmatic diffs. We can now precisely pinpoint the exact timestamp a new service was exposed.
@@ -221,12 +212,12 @@ The `PredictiveEngine` analyzes velocity. By tracking the acceleration of new su
 
 ## Confidence Tiering
 Because Internet-Scale OSINT is overwhelmingly noisy, the `NoiseController` aggressively filters out low-confidence signals (such as unverified scraping tools) to preserve the integrity of the Global Attack Surface Graph.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

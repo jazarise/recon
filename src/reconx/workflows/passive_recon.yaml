@@ -1,5 +1,11 @@
-name: passive_recon
-stages:
-  - subfinder
-  - amass
-  - assetfinder
+﻿name: passive_recon
+tasks:
+  - id: subfinder
+    plugin: subfinder
+  - id: assetfinder
+    plugin: assetfinder
+  - id: report
+    plugin: report
+    depends_on:
+      - subfinder
+      - assetfinder

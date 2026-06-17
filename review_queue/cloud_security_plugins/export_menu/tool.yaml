@@ -1,0 +1,16 @@
+name: export_menu
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: export_menu.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - export_menu
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,3 +1,0 @@
-name: Example Workflow
-steps:
-  - plugin: dummy_plugin

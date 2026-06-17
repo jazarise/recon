@@ -4,5 +4,5 @@ class HealthMonitor:
             "status": "Healthy",
             "cpu_usage": "15%",
             "memory_usage": "250MB",
-            "queue_depth": 0
+            "queue_depth": 0,
         }

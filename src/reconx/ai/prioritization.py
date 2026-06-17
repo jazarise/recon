@@ -1,5 +1,6 @@
 from typing import List
 
+
 class PrioritizationEngine:
     @staticmethod
     def generate_next_actions(high_risk_targets: List[str]) -> List[str]:

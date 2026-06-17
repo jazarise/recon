@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reconx-api
+  labels:
+    app: reconx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: reconx
+  template:
+    metadata:
+      labels:
+        app: reconx
+    spec:
+      containers:
+      - name: reconx
+        image: reconx:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: reconx-config
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        securityContext:
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 999 # reconx user
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+              - ALL

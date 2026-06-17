@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''meta_learning:
+    "config.yaml": """meta_learning:
   self_optimize: true
   auto_disable_plugins: true
   yield_threshold: 0.05
@@ -51,9 +51,8 @@ stealth:
 ai_engine:
   enabled: true
   prioritization: true
-''',
-
-    'src/reconx/meta/scoring.py': '''class QualityScorer:
+""",
+    "src/reconx/meta/scoring.py": """class QualityScorer:
     @staticmethod
     def evaluate_node(asset: str, source: str) -> dict:
         relevance = 0.9 if "api" in asset or "admin" in asset else 0.4
@@ -69,9 +68,8 @@ ai_engine:
             "confidence": confidence,
             "total_score": (relevance + risk + confidence) / 3
         }
-''',
-
-    'src/reconx/meta/optimizer.py': '''import logging
+""",
+    "src/reconx/meta/optimizer.py": """import logging
 
 logger = logging.getLogger("reconx_meta")
 
@@ -91,9 +89,8 @@ class PluginOptimizer:
                     logger.critical(f"[META-OPTIMIZER] Plugin '{plugin}' yield rate ({yield_rate*100}%) is below 5%. Auto-disabling.")
                     disabled.append(plugin)
         return disabled
-''',
-
-    'src/reconx/meta/workflow.py': '''import logging
+""",
+    "src/reconx/meta/workflow.py": """import logging
 
 logger = logging.getLogger("reconx_meta")
 
@@ -112,9 +109,8 @@ class WorkflowEvolver:
             
         self.current_sequence = new_seq
         return self.current_sequence
-''',
-
-    'src/reconx/meta/suppression.py': '''class GraphPruner:
+""",
+    "src/reconx/meta/suppression.py": """class GraphPruner:
     @staticmethod
     def compress_graph(nodes: list, scores: dict) -> list:
         # Aggressively strip low value nodes
@@ -123,9 +119,8 @@ class WorkflowEvolver:
             if scores.get(node, {}).get("total_score", 0) > 0.3:
                 compressed.append(node)
         return compressed
-''',
-
-    'src/reconx/meta/priority.py': '''class AutonomousScheduler:
+""",
+    "src/reconx/meta/priority.py": """class AutonomousScheduler:
     @staticmethod
     def determine_frequency(risk_score: float) -> str:
         if risk_score >= 0.8:
@@ -133,9 +128,8 @@ class WorkflowEvolver:
         elif risk_score >= 0.5:
             return "Periodic (24h polling)"
         return "Archived (7d polling)"
-''',
-
-    'src/reconx/meta/meta_brain.py': '''import logging
+""",
+    "src/reconx/meta/meta_brain.py": """import logging
 from reconx.meta.scoring import QualityScorer
 from reconx.meta.optimizer import PluginOptimizer
 from reconx.meta.workflow import WorkflowEvolver
@@ -170,9 +164,8 @@ class MetaDecisionEngine:
             "disabled_plugins": disabled,
             "new_workflow": new_workflow
         }
-''',
-
-    'src/reconx/reporting/meta_exporter.py': '''def export_optimization_report(meta_data: dict, filepath: str):
+""",
+    "src/reconx/reporting/meta_exporter.py": """def export_optimization_report(meta_data: dict, filepath: str):
     with open(filepath, 'w') as f:
         f.write("SYSTEM PERFORMANCE REPORT\\n")
         f.write("=========================\\n\\n")
@@ -185,9 +178,8 @@ class MetaDecisionEngine:
             f.write(f"- Disable low-yield plugin: {plugin}\\n")
             
         f.write(f"\\nNew Adaptive Workflow Path: {' -> '.join(meta_data['new_workflow'])}\\n")
-''',
-
-    'tests/test_meta_brain.py': '''def test_meta_evolution():
+""",
+    "tests/test_meta_brain.py": """def test_meta_evolution():
     from reconx.meta.meta_brain import MetaDecisionEngine
     
     brain = MetaDecisionEngine()
@@ -198,9 +190,8 @@ class MetaDecisionEngine:
     
     # Assert tech_detect was promoted in the evolutionary workflow
     assert result["new_workflow"][0] == "tech_detect"
-''',
-
-    'docs/reports/stage20_meta_ecosystem.md': '''# Stage 20: Meta-Learning Ecosystem Architecture
+""",
+    "docs/reports/stage20_meta_ecosystem.md": """# Stage 20: Meta-Learning Ecosystem Architecture
 
 ## The Meta-Brain Feedback Loop
 We achieved full system autonomy. The `MetaDecisionEngine` sits strictly above the execution layer. It periodically halts processing to reflect on its own historical efficacy. By evaluating the Intelligence Quality Scoring matrix, it natively answers the question: "Am I scanning efficiently?"
@@ -209,12 +200,12 @@ We achieved full system autonomy. The `MetaDecisionEngine` sits strictly above t
 If the MetaBrain determines a plugin sequence is causing mathematical drag (e.g., `port_scan` generating 0 assets over 10 cycles), the `WorkflowEvolver` will physically bypass the user's `config.yaml` to permanently drop the module from execution, dynamically promoting higher-yield modules like `tech_detect` to the front of the queue.
 
 ReconX is officially a self-optimizing ecosystem.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

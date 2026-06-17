@@ -1,12 +1,10 @@
-environment: production
+app:
+  name: "ReconX"
+  env: "production"
+  debug: false
+  auto_reload: false
+  secure_cookies: true
 logging:
-  level: INFO
-  format: json
+  level: "WARNING"
 database:
-  pool_size: 20
-  timeout: 30
-workers:
-  count: 50
-  timeout: 3600
-cache:
-  type: redis
+  url: "postgresql+asyncpg://reconx:reconx@postgres/reconx"

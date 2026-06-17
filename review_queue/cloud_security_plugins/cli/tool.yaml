@@ -1,0 +1,16 @@
+name: cli
+category: cloud_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: cli.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - cli
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

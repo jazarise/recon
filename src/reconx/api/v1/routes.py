@@ -7,6 +7,7 @@ import logging
 
 logger = logging.getLogger("reconx")
 
+
 class APIRouterV1:
     @staticmethod
     async def post_campaign(token: str, payload: dict):
@@ -34,6 +35,8 @@ class APIRouterV1:
 
         # 5. Dispatch & Stream
         logger.info(f"[API V1] Dispatching Campaign for {tenant_id} on {target}")
-        await streamer.broadcast_to_tenant(tenant_id, f"[Live] Campaign Initiated against {target}")
+        await streamer.broadcast_to_tenant(
+            tenant_id, f"[Live] Campaign Initiated against {target}"
+        )
 
         return {"status": 202, "message": "Campaign Queued"}

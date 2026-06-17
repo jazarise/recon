@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''distributed:
+    "config.yaml": """distributed:
   enabled: true
   workers: 5
   load_balancing: true
@@ -36,9 +36,8 @@ stealth:
 ai_engine:
   enabled: true
   prioritization: true
-''',
-
-    'src/reconx/distributed/queue.py': '''from pydantic import BaseModel
+""",
+    "src/reconx/distributed/queue.py": """from pydantic import BaseModel
 import uuid
 import asyncio
 
@@ -70,9 +69,8 @@ class JobQueue:
             
     def get_in_flight(self) -> list:
         return list(self._in_flight.values())
-''',
-
-    'src/reconx/distributed/messaging.py': '''import asyncio
+""",
+    "src/reconx/distributed/messaging.py": """import asyncio
 import logging
 
 logger = logging.getLogger("reconx")
@@ -103,9 +101,8 @@ class MessageBroker:
                 for callback in self.subscribers[event_type]:
                     asyncio.create_task(callback(data))
             self.queue.task_done()
-''',
-
-    'src/reconx/distributed/aggregator.py': '''import logging
+""",
+    "src/reconx/distributed/aggregator.py": """import logging
 
 logger = logging.getLogger("reconx")
 
@@ -132,9 +129,8 @@ class CentralAggregator:
             "nodes": list(self.global_nodes),
             "edges": list(self.global_edges)
         }
-''',
-
-    'src/reconx/distributed/master.py': '''import asyncio
+""",
+    "src/reconx/distributed/master.py": """import asyncio
 import logging
 from reconx.distributed.queue import JobQueue
 from reconx.distributed.aggregator import CentralAggregator
@@ -168,9 +164,8 @@ class MasterNode:
         
         # Start broker listener in background
         asyncio.create_task(self.broker.run_listener())
-''',
-
-    'src/reconx/distributed/worker.py': '''import asyncio
+""",
+    "src/reconx/distributed/worker.py": """import asyncio
 import logging
 import random
 from reconx.distributed.queue import JobQueue
@@ -201,9 +196,8 @@ class WorkerNode:
                 await self.broker.publish("DATA_RETURNED", {"target": job.target, "results": simulated_findings})
                 
             self.queue.mark_completed(job.job_id)
-''',
-
-    'src/reconx/reporting/campaign_exporter.py': '''def generate_campaign_report(targets: list, aggregator, filepath: str):
+""",
+    "src/reconx/reporting/campaign_exporter.py": """def generate_campaign_report(targets: list, aggregator, filepath: str):
     with open(filepath, 'w') as f:
         f.write("CAMPAIGN SUMMARY\\n\\n")
         f.write(f"Targets scanned: {len(targets)}\\n")
@@ -214,9 +208,8 @@ class WorkerNode:
         
         f.write("Shared infrastructure detected:\\n")
         f.write("3 clusters (Simulated Analysis)\\n")
-''',
-
-    'src/reconx/main.py': '''import sys
+""",
+    "src/reconx/main.py": '''import sys
 import argparse
 import asyncio
 import logging
@@ -274,8 +267,7 @@ def main():
 if __name__ == "__main__":
     main()
 ''',
-
-    'docs/reports/stage16_distributed_cluster.md': '''# Stage 16: Distributed Cluster Architecture
+    "docs/reports/stage16_distributed_cluster.md": """# Stage 16: Distributed Cluster Architecture
 
 ## Master-Worker Topology
 The framework successfully decoupled into a `MasterNode` managing the stateful `JobQueue` and stateless `WorkerNode`s. Heavy workloads (e.g., executing multiple plugins across massive target lists) are now seamlessly balanced across worker pools.
@@ -285,12 +277,12 @@ The simulated `MessageBroker` implements robust fault tolerance. If a worker pro
 
 ## Global Attack Surface Map
 Instead of localized targets, the `CentralAggregator` intercepts findings from all workers and binds them into a `Global Attack Surface Graph`. This allows the detection of cross-domain shared infrastructure (e.g., two distinct target domains pointing to the same backend AWS node).
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

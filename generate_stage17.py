@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'src/reconx/db/storage.py': '''import sqlite3
+    "src/reconx/db/storage.py": '''import sqlite3
 import json
 import logging
 
@@ -46,8 +46,7 @@ class DatabaseLayer:
             return {"target": row[0], "status": row[1], "results": json.loads(row[2])}
         return None
 ''',
-
-    'src/reconx/api/auth.py': '''class RBACLayer:
+    "src/reconx/api/auth.py": """class RBACLayer:
     API_KEYS = {
         "rex_admin_999": {"role": "admin", "scopes": ["scan:run", "results:read", "campaign:delete"]},
         "rex_analyst_123": {"role": "analyst", "scopes": ["scan:run", "results:read"]},
@@ -64,9 +63,8 @@ class DatabaseLayer:
             return False
             
         return True
-''',
-
-    'src/reconx/api/webhooks.py': '''import logging
+""",
+    "src/reconx/api/webhooks.py": """import logging
 
 logger = logging.getLogger("reconx")
 
@@ -84,9 +82,8 @@ class WebhookDispatcher:
         }
         logger.warning(f"[WEBHOOK] Dispatched {event_type} to {self.endpoint_url}")
         # Simulated POST request logic
-''',
-
-    'src/reconx/core/guardrails.py': '''class ScopeEnforcer:
+""",
+    "src/reconx/core/guardrails.py": """class ScopeEnforcer:
     ALLOWED_SCOPES = [".example.com", "scanme.nmap.org"]
 
     @classmethod
@@ -95,9 +92,8 @@ class WebhookDispatcher:
             if target.endswith(scope) or target == scope:
                 return True
         return False
-''',
-
-    'src/reconx/api/server.py': '''import json
+""",
+    "src/reconx/api/server.py": """import json
 import uuid
 import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -172,9 +168,8 @@ def start_server(port=8000):
     server = HTTPServer(('0.0.0.0', port), ReconXAPIHandler)
     print(f"[+] ReconX API Service listening on 0.0.0.0:{port}")
     server.serve_forever()
-''',
-
-    'src/reconx/main.py': '''import sys
+""",
+    "src/reconx/main.py": '''import sys
 import argparse
 from reconx.logger import setup_logging
 from reconx.version import __version__
@@ -203,8 +198,7 @@ def main():
 if __name__ == "__main__":
     main()
 ''',
-
-    'Dockerfile': '''FROM python:3.10-slim
+    "Dockerfile": """FROM python:3.10-slim
 
 WORKDIR /app
 COPY requirements.txt .
@@ -214,9 +208,8 @@ COPY . .
 
 EXPOSE 8000
 CMD ["python", "src/reconx/main.py", "api", "--port", "8000"]
-''',
-
-    'docker-compose.yml': '''version: '3.8'
+""",
+    "docker-compose.yml": """version: '3.8'
 
 services:
   reconx-api:
@@ -227,9 +220,8 @@ services:
       - ./reconx.db:/app/reconx.db
     environment:
       - LOG_LEVEL=INFO
-''',
-
-    '.github/workflows/reconx-ci.yml': '''name: ReconX Continuous Intelligence Pipeline
+""",
+    ".github/workflows/reconx-ci.yml": """name: ReconX Continuous Intelligence Pipeline
 
 on:
   schedule:
@@ -245,9 +237,8 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.RECONX_API_KEY }}" \\
           -H "Content-Type: application/json" \\
           -d '{"target": "scanme.nmap.org"}'
-''',
-
-    'docs/reports/stage17_saas_architecture.md': '''# Stage 17: Enterprise Service Architecture
+""",
+    "docs/reports/stage17_saas_architecture.md": """# Stage 17: Enterprise Service Architecture
 
 ## API Service Layer
 ReconX is now fully headless. Execution is completely driven via HTTP REST payloads mapping to `src/reconx/api/server.py`. 
@@ -257,12 +248,12 @@ The API strictly enforces `Role-Based Access Control`. Tokens must be passed via
 
 ## Persistent Storage
 Memory states have been upgraded to `src/reconx/db/storage.py`, persisting all campaign metadata to a resilient SQLite database, ensuring job states survive container restarts.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

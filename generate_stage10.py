@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'src/reconx/main.py': '''import sys
+    "src/reconx/main.py": '''import sys
 import argparse
 import asyncio
 from typing import List
@@ -57,8 +57,7 @@ def main():
 if __name__ == "__main__":
     main()
 ''',
-
-    'src/reconx/logger.py': '''import logging
+    "src/reconx/logger.py": """import logging
 from logging.handlers import RotatingFileHandler
 import os
 
@@ -93,9 +92,8 @@ def setup_logging():
         logger.addHandler(console_handler)
         
     return logger
-''',
-
-    'requirements.txt': '''fastapi==0.104.1
+""",
+    "requirements.txt": """fastapi==0.104.1
 uvicorn==0.24.0.post1
 pydantic==2.5.2
 pydantic-settings==2.1.0
@@ -108,9 +106,8 @@ pytest==7.4.3
 ruff==0.1.6
 mypy==1.7.1
 build==1.0.3
-''',
-
-    'build.py': '''import os
+""",
+    "build.py": """import os
 import subprocess
 
 def build_executable():
@@ -125,9 +122,8 @@ def build_executable():
 
 if __name__ == "__main__":
     build_executable()
-''',
-
-    'USAGE.md': '''# ReconX Usage Guide
+""",
+    "USAGE.md": """# ReconX Usage Guide
 
 ## Basic Invocation
 ```bash
@@ -141,9 +137,8 @@ reconx doctor
 
 ## Logs
 Execution logs are stored safely in `logs/reconx.log` and `logs/errors.log` utilizing 10MB file rotation limits.
-''',
-
-    'docs/reports/stage10_final_release.md': '''# Stage 10 Final Release Sanity Check
+""",
+    "docs/reports/stage10_final_release.md": """# Stage 10 Final Release Sanity Check
 
 ## Checklist Validations
 - [x] **No hardcoded secrets:** Verified statically via `ruff`.
@@ -154,12 +149,12 @@ Execution logs are stored safely in `logs/reconx.log` and `logs/errors.log` util
 - [x] **Packaging Ready:** `build.py` orchestrates the pyinstaller standalone freeze.
 
 ReconX v3.0 FINAL is packaged and ready for deployment.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

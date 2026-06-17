@@ -1,12 +1,14 @@
 import uuid
 
+
 class Organization:
     def __init__(self, name: str, plan: str):
         self.tenant_id = str(uuid.uuid4())
         self.name = name
-        self.plan = plan # Free, Pro, Enterprise
+        self.plan = plan  # Free, Pro, Enterprise
         self.users = []
         self.projects = []
+
 
 class TenantContext:
     _current_tenant = None
@@ -18,5 +20,7 @@ class TenantContext:
     @classmethod
     def get_tenant(cls) -> str:
         if not cls._current_tenant:
-            raise PermissionError("CRITICAL: No active Tenant ID isolated in current execution context.")
+            raise PermissionError(
+                "CRITICAL: No active Tenant ID isolated in current execution context."
+            )
         return cls._current_tenant

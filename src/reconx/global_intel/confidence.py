@@ -2,6 +2,7 @@ import logging
 
 logger = logging.getLogger("reconx")
 
+
 class NoiseController:
     @staticmethod
     def assign_confidence(source: str, asset: str) -> str:
@@ -15,6 +16,8 @@ class NoiseController:
     @classmethod
     def filter_noise(cls, source: str, asset: str) -> bool:
         if cls.assign_confidence(source, asset) == "Low":
-            logger.debug(f"[NOISE SUPPRESSION] Dropped unverified OSINT signal for {asset}")
+            logger.debug(
+                f"[NOISE SUPPRESSION] Dropped unverified OSINT signal for {asset}"
+            )
             return False
         return True

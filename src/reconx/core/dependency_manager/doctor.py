@@ -1,6 +1,7 @@
 """
 ReconX Doctor — system health checks for dependencies, config, and environment.
 """
+
 from reconx.core.paths import BASE_DIR, WORKFLOWS_DIR, PLUGINS_DIR
 
 
@@ -11,42 +12,43 @@ import sys
 from typing import Dict, List
 
 
-
 REQUIRED_PYTHON_PACKAGES = [
-    "rich", "yaml", "fastapi", "uvicorn", "sqlalchemy",
-    "questionary", "requests",
+    "rich",
+    "yaml",
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+    "questionary",
+    "requests",
 ]
 
 OPTIONAL_TOOLS = [
-    ("subfinder",  "Subdomain discovery (passive)"),
-    ("amass",      "Advanced subdomain enumeration"),
-    ("nmap",       "Port scanning and service detection"),
-    ("naabu",      "Fast port scanner"),
-    ("httpx",      "HTTP probing and fingerprinting"),
-    ("katana",     "Fast web crawler"),
-    ("hakrawler",  "Web crawler"),
-    ("dnsx",       "DNS resolution and enumeration"),
-    ("nuclei",     "Vulnerability scanning"),
-    ("ffuf",       "Web fuzzer / content discovery"),
-    ("gobuster",   "Directory/DNS brute-force"),
-    ("feroxbuster","Recursive content discovery"),
-    ("gowitness",  "Web screenshot capture"),
-    ("gau",        "Historical URL gathering"),
-    ("waybackurls","Wayback Machine URL discovery"),
-    ("assetfinder","Subdomain discovery"),
-    ("findomain",  "Fast subdomain discovery"),
-    ("masscan",    "Mass port scanner"),
+    ("subfinder", "Subdomain discovery (passive)"),
+    ("amass", "Advanced subdomain enumeration"),
+    ("nmap", "Port scanning and service detection"),
+    ("naabu", "Fast port scanner"),
+    ("httpx", "HTTP probing and fingerprinting"),
+    ("katana", "Fast web crawler"),
+    ("hakrawler", "Web crawler"),
+    ("dnsx", "DNS resolution and enumeration"),
+    ("nuclei", "Vulnerability scanning"),
+    ("ffuf", "Web fuzzer / content discovery"),
+    ("gobuster", "Directory/DNS brute-force"),
+    ("feroxbuster", "Recursive content discovery"),
+    ("gowitness", "Web screenshot capture"),
+    ("gau", "Historical URL gathering"),
+    ("waybackurls", "Wayback Machine URL discovery"),
+    ("assetfinder", "Subdomain discovery"),
+    ("findomain", "Fast subdomain discovery"),
+    ("masscan", "Mass port scanner"),
 ]
 
-NODEJS_TOOLS = [
-    ("node", "Node.js runtime"),
-    ("npm", "Node package manager")
-]
+NODEJS_TOOLS = [("node", "Node.js runtime"), ("npm", "Node package manager")]
 
 SYSTEM_BINARIES = [
     ("git", "Version control"),
     ("docker", "Containerization"),
-    ("curl", "HTTP client")
+    ("curl", "HTTP client"),
 ]
 
 
@@ -68,12 +70,9 @@ class Doctor:
         self._check_config()
         self._check_database_write()
         return self.checks
-        
+
     def generate_report(self, path: str = "dependency_report.json"):
-        report = {
-            "summary": self.summary(),
-            "checks": self.checks
-        }
+        report = {"summary": self.summary(), "checks": self.checks}
         with open(path, "w", encoding="utf-8") as f:
             json.dump(report, f, indent=4)
 
@@ -93,23 +92,25 @@ class Doctor:
         for pkg in REQUIRED_PYTHON_PACKAGES:
             try:
                 if pkg == "yaml":
-                    import yaml
+                    import yaml  # noqa: F401
                 elif pkg == "rich":
-                    import rich
+                    import rich  # noqa: F401
                 elif pkg == "fastapi":
-                    import fastapi
+                    import fastapi  # noqa: F401
                 elif pkg == "uvicorn":
-                    import uvicorn
+                    import uvicorn  # noqa: F401
                 elif pkg == "sqlalchemy":
-                    import sqlalchemy
+                    import sqlalchemy  # noqa: F401
                 elif pkg == "questionary":
-                    import questionary
+                    import questionary  # noqa: F401
                 elif pkg == "requests":
-                    import requests
+                    import requests  # noqa: F401
                 self._add(f"Python package: {pkg}", True, "installed")
             except ImportError:
                 self._add(
-                    f"Python package: {pkg}", False, "missing",
+                    f"Python package: {pkg}",
+                    False,
+                    "missing",
                     f"Run: pip install {pkg}",
                     is_warning=False,
                 )
@@ -121,7 +122,8 @@ class Doctor:
                 self._add(f"Tool: {tool}", True, path, category="tools")
             else:
                 self._add(
-                    f"Tool: {tool}", None,
+                    f"Tool: {tool}",
+                    None,
                     f"not found — {desc}",
                     f"Install {tool} for enhanced capabilities",
                     is_warning=True,
@@ -135,7 +137,8 @@ class Doctor:
                 self._add(f"NodeJS Tool: {tool}", True, path, category="nodejs")
             else:
                 self._add(
-                    f"NodeJS Tool: {tool}", None,
+                    f"NodeJS Tool: {tool}",
+                    None,
                     f"not found — {desc}",
                     f"Install {tool}",
                     is_warning=True,
@@ -149,7 +152,8 @@ class Doctor:
                 self._add(f"System Binary: {tool}", True, path, category="system")
             else:
                 self._add(
-                    f"System Binary: {tool}", False,
+                    f"System Binary: {tool}",
+                    False,
                     f"not found — {desc}",
                     f"Install {tool}",
                     is_warning=False,
@@ -179,7 +183,11 @@ class Doctor:
         for path in dirs_to_check:
             if path.exists():
                 writable = os.access(path, os.W_OK)
-                self._add(f"Permission (Write): {path.name}", writable, "Writable" if writable else "Not writable")
+                self._add(
+                    f"Permission (Write): {path.name}",
+                    writable,
+                    "Writable" if writable else "Not writable",
+                )
 
     def _check_workflows(self):
         for wf in ["basic.yaml", "medium.yaml", "deep.yaml"]:
@@ -193,7 +201,13 @@ class Doctor:
 
     def _check_plugins(self):
         golden = PLUGINS_DIR / "golden"
-        for plugin in ["dns_intelligence", "network_discovery", "web_recon", "reporting", "llm_analysis"]:
+        for plugin in [
+            "dns_intelligence",
+            "network_discovery",
+            "web_recon",
+            "reporting",
+            "llm_analysis",
+        ]:
             adapter = golden / plugin / "adapter.py"
             self._add(
                 f"Golden plugin: {plugin}",
@@ -208,31 +222,40 @@ class Doctor:
         self._add(
             "Env file: .env",
             env_path.exists(),
-            str(env_path) if env_path.exists() else "not found (optional — needed for API keys)",
+            str(env_path)
+            if env_path.exists()
+            else "not found (optional — needed for API keys)",
             is_warning=True,
         )
 
     def _check_database_write(self):
         try:
             from core.database import DatabaseManager
+
             db = DatabaseManager("__doctor_test__")
             sess = db.get_session()
             sess.close()
             db.close()  # Release SQLite file handles before rmtree
             # Clean up
             import shutil as sh
+
             test_dir = BASE_DIR / "projects" / "__doctor_test__"
             if test_dir.exists():
                 sh.rmtree(test_dir, ignore_errors=True)
             self._add("Database write test", True, "SQLite OK")
         except Exception as e:
-            self._add("Database write test", False, str(e), "Check SQLite/SQLAlchemy installation")
+            self._add(
+                "Database write test",
+                False,
+                str(e),
+                "Check SQLite/SQLAlchemy installation",
+            )
 
     # ── helper ──────────────────────────────────────────────────────────
     def _add(
         self,
         name: str,
-        status,       # True=pass, False=fail, None=warn
+        status,  # True=pass, False=fail, None=warn
         detail: str = "",
         fix: str = None,
         is_warning: bool = False,
@@ -240,17 +263,24 @@ class Doctor:
     ):
         if status is False and is_warning:
             status = None
-        self.checks.append({
-            "name": name,
-            "status": status,   # True / False / None(warn)
-            "detail": detail,
-            "fix": fix,
-            "category": category,
-        })
+        self.checks.append(
+            {
+                "name": name,
+                "status": status,  # True / False / None(warn)
+                "detail": detail,
+                "fix": fix,
+                "category": category,
+            }
+        )
 
     # ── summary ─────────────────────────────────────────────────────────
     def summary(self) -> Dict:
         passed = sum(1 for c in self.checks if c["status"] is True)
         failed = sum(1 for c in self.checks if c["status"] is False)
         warned = sum(1 for c in self.checks if c["status"] is None)
-        return {"passed": passed, "failed": failed, "warned": warned, "total": len(self.checks)}
+        return {
+            "passed": passed,
+            "failed": failed,
+            "warned": warned,
+            "total": len(self.checks),
+        }

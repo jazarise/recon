@@ -1,8 +1,9 @@
 import socket
 
+
 class DnsClient:
     """Canonical Unified DNS Resolver, replacing repetitive custom scripts."""
-    
+
     @staticmethod
     def resolve_a(domain: str) -> list:
         """Resolves A records natively."""

@@ -1,0 +1,16 @@
+name: __init___78
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: __init___78.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - __init___78
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

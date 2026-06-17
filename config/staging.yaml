@@ -1,12 +1,10 @@
-environment: staging
+app:
+  name: "ReconX"
+  env: "staging"
+  debug: false
+  auto_reload: false
+  secure_cookies: true
 logging:
-  level: DEBUG
-  format: text
+  level: "INFO"
 database:
-  pool_size: 10
-  timeout: 30
-workers:
-  count: 10
-  timeout: 3600
-cache:
-  type: local
+  url: "postgresql+asyncpg://reconx:reconx@localhost/reconx_staging"

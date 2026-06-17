@@ -2,8 +2,10 @@ import asyncio
 import json
 from typing import Callable, List, Any
 
+
 class EventStream:
     """A simple Pub/Sub event bus for live recon monitoring."""
+
     def __init__(self):
         self.subscribers: List[Callable[[str], Any]] = []
 
@@ -34,5 +36,6 @@ class EventStream:
         except RuntimeError:
             # If no running loop, just run it
             asyncio.run(self.emit(event_type, data))
+
 
 event_stream = EventStream()

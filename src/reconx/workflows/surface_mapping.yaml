@@ -1,9 +1,0 @@
-name: surface_mapping
-stages:
-  - subfinder
-  - httpx:
-      depends_on:
-        - subfinder
-  - katana:
-      depends_on:
-        - httpx

@@ -1,18 +1,28 @@
-name: full_recon
-stages:
-  - osint
-  - subdomains:
-      depends_on:
-        - osint
-  - ports:
-      depends_on:
-        - subdomains
-  - technologies:
-      depends_on:
-        - ports
-  - vulnerabilities:
-      depends_on:
-        - technologies
-  - reports:
-      depends_on:
-        - vulnerabilities
+﻿name: full_recon
+tasks:
+  - id: subfinder
+    plugin: subfinder
+  - id: assetfinder
+    plugin: assetfinder
+  - id: httpx
+    plugin: httpx
+    depends_on:
+      - subfinder
+      - assetfinder
+  - id: katana
+    plugin: katana
+    depends_on:
+      - httpx
+  - id: nuclei
+    plugin: nuclei
+    depends_on:
+      - katana
+  - id: dalfox
+    plugin: dalfox
+    depends_on:
+      - katana
+  - id: report
+    plugin: report
+    depends_on:
+      - nuclei
+      - dalfox

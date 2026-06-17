@@ -1,15 +1,36 @@
 import typer
-from reconx.cli import scan, workflow, report, project, doctor, dashboard, capability
+from reconx.cli.plugins import app as plugins_app
+from reconx.cli.workflow import app as workflow_app
+from reconx.cli.assets import app as assets_app
+from reconx.cli.reports import app as reports_app
 
-app = typer.Typer(help="ReconX Unified Command Line Interface")
+app = typer.Typer(help="ReconX CLI")
+app.add_typer(plugins_app, name="plugins")
+app.add_typer(workflow_app, name="workflow")
+app.add_typer(assets_app, name="assets")
+app.add_typer(reports_app, name="reports")
 
-app.add_typer(scan.app, name="scan", help="Manage and launch scans")
-app.add_typer(workflow.app, name="workflow", help="Manage workflows")
-app.add_typer(report.app, name="report", help="Generate reports")
-app.add_typer(project.app, name="projects", help="Manage projects")
-app.add_typer(doctor.app, name="doctor", help="Check system health")
-app.add_typer(dashboard.app, name="dashboard", help="Manage the web dashboard")
-app.add_typer(capability.app, name="capability", help="Manage capabilities")
+
+@app.command("dashboard")
+def main_dashboard():
+    from reconx.cli.reports import dashboard
+
+    dashboard()
+
+
+@app.command("findings")
+def findings():
+    from reconx.cli.assets import list_findings
+
+    list_findings()
+
+
+@app.command("risk")
+def risk():
+    from reconx.cli.assets import risk_summary
+
+    risk_summary()
+
 
 if __name__ == "__main__":
     app()

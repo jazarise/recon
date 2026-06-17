@@ -3,6 +3,7 @@ from reconx.ai.graph import AttackGraph
 from reconx.ai.memory import ContextMemory
 from reconx.ai.prioritization import PrioritizationEngine
 
+
 class IntelligenceEngine:
     def __init__(self):
         self.memory = ContextMemory()
@@ -12,12 +13,8 @@ class IntelligenceEngine:
         """Transforms raw output into structured intelligence."""
         report = {
             "target": target,
-            "attack_surface": {
-                "high_risk": [],
-                "medium_risk": [],
-                "low_risk": []
-            },
-            "recommendations": []
+            "attack_surface": {"high_risk": [], "medium_risk": [], "low_risk": []},
+            "recommendations": [],
         }
 
         # Subdomain Evaluation
@@ -33,7 +30,9 @@ class IntelligenceEngine:
 
         # Service Evaluation
         for port in data.get("ports", []):
-            risk_label = HeuristicsEngine.evaluate_service(port, data.get("tech_stack", []))
+            risk_label = HeuristicsEngine.evaluate_service(
+                port, data.get("tech_stack", [])
+            )
             if "HIGH" in risk_label:
                 report["attack_surface"]["high_risk"].append(f"Port {port}")
 

@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''saas:
+    "config.yaml": """saas:
   multi_tenant: true
   multi_region: true
   websocket_port: 8080
@@ -41,9 +41,8 @@ stealth:
 ai_engine:
   enabled: true
   prioritization: true
-''',
-
-    'src/reconx/saas/tenant.py': '''import uuid
+""",
+    "src/reconx/saas/tenant.py": """import uuid
 
 class Organization:
     def __init__(self, name: str, plan: str):
@@ -65,9 +64,8 @@ class TenantContext:
         if not cls._current_tenant:
             raise PermissionError("CRITICAL: No active Tenant ID isolated in current execution context.")
         return cls._current_tenant
-''',
-
-    'src/reconx/saas/auth.py': '''class EnterpriseAuth:
+""",
+    "src/reconx/saas/auth.py": """class EnterpriseAuth:
     USERS = {
         "token_orgA_owner": {"tenant_id": "org_1", "role": "Owner"},
         "token_orgA_viewer": {"tenant_id": "org_1", "role": "Viewer"},
@@ -79,9 +77,8 @@ class TenantContext:
         if token not in cls.USERS:
             raise ValueError("401 Unauthorized: Invalid SSO/API Token")
         return cls.USERS[token]
-''',
-
-    'src/reconx/saas/audit.py': '''import logging
+""",
+    "src/reconx/saas/audit.py": """import logging
 import datetime
 
 logger = logging.getLogger("reconx_audit")
@@ -92,9 +89,8 @@ class ComplianceLogger:
         timestamp = datetime.datetime.utcnow().isoformat()
         audit_entry = f"[{timestamp}] [TENANT: {tenant_id}] [ROLE: {user_role}] ACTION: {action} on {target}"
         logger.warning(audit_entry) # Writes to compliance.log
-''',
-
-    'src/reconx/saas/billing.py': '''import logging
+""",
+    "src/reconx/saas/billing.py": """import logging
 
 logger = logging.getLogger("reconx")
 
@@ -117,9 +113,8 @@ class BillingEngine:
             
         cls.USAGE[tenant_id]["scans_used"] += 1
         return True
-''',
-
-    'src/reconx/saas/analytics.py': '''class PlatformAnalytics:
+""",
+    "src/reconx/saas/analytics.py": """class PlatformAnalytics:
     @staticmethod
     def generate_global_insights():
         return {
@@ -128,9 +123,8 @@ class BillingEngine:
             "global_tenant_risk_trend": "Increasing by 12% MoM",
             "active_campaigns": 42
         }
-''',
-
-    'src/reconx/api/websocket.py': '''import asyncio
+""",
+    "src/reconx/api/websocket.py": """import asyncio
 import logging
 
 logger = logging.getLogger("reconx")
@@ -146,9 +140,8 @@ class StreamEngine:
             await asyncio.sleep(0.1)
 
 streamer = StreamEngine()
-''',
-
-    'src/reconx/api/v1/routes.py': '''from reconx.saas.auth import EnterpriseAuth
+""",
+    "src/reconx/api/v1/routes.py": """from reconx.saas.auth import EnterpriseAuth
 from reconx.saas.tenant import TenantContext
 from reconx.saas.audit import ComplianceLogger
 from reconx.saas.billing import BillingEngine
@@ -187,9 +180,8 @@ class APIRouterV1:
         await streamer.broadcast_to_tenant(tenant_id, f"[Live] Campaign Initiated against {target}")
 
         return {"status": 202, "message": "Campaign Queued"}
-''',
-
-    'src/reconx/reporting/enterprise_exporter.py': '''import json
+""",
+    "src/reconx/reporting/enterprise_exporter.py": """import json
 
 def export_executive_summary(tenant_id: str, data: dict, filepath: str):
     with open(filepath, 'w') as f:
@@ -203,9 +195,8 @@ def export_executive_summary(tenant_id: str, data: dict, filepath: str):
         f.write("TECHNICAL BREAKDOWN:\\n")
         f.write(f"- Active Assets: {data.get('assets', 0)}\\n")
         f.write(f"- Critical Findings: {data.get('critical', 0)}\\n")
-''',
-
-    'src/reconx/frontend/app.js': '''// Simulated React/Vue Component Logic
+""",
+    "src/reconx/frontend/app.js": """// Simulated React/Vue Component Logic
 const socket = new WebSocket('wss://api.reconx.io/v1/live-stream');
 
 socket.onmessage = function(event) {
@@ -220,9 +211,8 @@ function renderDashboard(tenantData) {
     console.log("Loading Multi-Tenant Workspace for:", tenantData.org_name);
     console.log("Current Plan:", tenantData.plan);
 }
-''',
-
-    'docs/reports/stage18_saas_platform.md': '''# Stage 18: SaaS Platform Architecture
+""",
+    "docs/reports/stage18_saas_platform.md": """# Stage 18: SaaS Platform Architecture
 
 ## Multi-Tenant Cryptographic Isolation
 We implemented the `TenantContext` module. Every single API invocation, database read, and campaign dispatch is mathematically bound to a `tenant_id`. It is architecturally impossible for `org_A` to observe `org_B`'s targets.
@@ -232,12 +222,12 @@ The `BillingEngine` natively intercepts the V1 API Router. If a Free-tier tenant
 
 ## Compliance
 All mutations are strictly logged to immutable cold-storage via `ComplianceLogger`, recording exact timestamps, `tenant_id`s, and `user_role`s for SOC2 audit compliance.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

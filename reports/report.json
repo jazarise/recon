@@ -1,0 +1,14 @@
+{
+  "project": "Default Project",
+  "executive_summary": {
+    "total_assets": 0,
+    "high_risk_findings": 0,
+    "most_exposed_asset": "None",
+    "project_risk_score": 0,
+    "recommendations": [
+      "Prioritize remediation of internet-facing APIs.",
+      "Review critical vulnerabilities immediately."
+    ]
+  },
+  "assets": []
+}

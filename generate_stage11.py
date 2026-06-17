@@ -1,11 +1,10 @@
 import os
 
 files = {
-    'targets.txt': '''scanme.nmap.org
+    "targets.txt": """scanme.nmap.org
 testphp.vulnweb.com
-''',
-
-    'src/reconx/core/http_client.py': '''import asyncio
+""",
+    "src/reconx/core/http_client.py": '''import asyncio
 import logging
 
 logger = logging.getLogger("reconx")
@@ -29,8 +28,7 @@ async def fetch_with_retry(url: str, max_retries: int = 3, timeout: int = 10):
     logger.error(f"Max retries reached for {url}. Gracefully skipping.")
     return None
 ''',
-
-    'src/reconx/core/filters.py': '''def deduplicate_results(results: list) -> list:
+    "src/reconx/core/filters.py": '''def deduplicate_results(results: list) -> list:
     """Removes duplicate domain/IP mappings."""
     seen = set()
     cleaned = []
@@ -46,8 +44,7 @@ def drop_dead_hosts(results: list) -> list:
     """Drops 404, 5xx, or NXDOMAIN indicators."""
     return [res for res in results if res.get("status_code", 200) not in (404, 500, 502, 503, 504)]
 ''',
-
-    'src/reconx/plugins/enrichment.py': '''def enrich_ip_geo(ip: str) -> dict:
+    "src/reconx/plugins/enrichment.py": '''def enrich_ip_geo(ip: str) -> dict:
     """Simulates IP-API unauthenticated GeoLocation extraction."""
     # Mock return for Stage 11
     return {
@@ -65,8 +62,7 @@ def analyze_security_headers(headers: dict) -> list:
         missing.append("Missing X-Frame-Options")
     return missing
 ''',
-
-    'src/reconx/reporting/exporter.py': '''import json
+    "src/reconx/reporting/exporter.py": '''import json
 import os
 
 def generate_report(target: str, data: dict):
@@ -85,8 +81,7 @@ def generate_report(target: str, data: dict):
         f.write(f"Open services: {len(data.get('services', []))}\\n")
         f.write(f"Risk indicators: {', '.join(data.get('risks', []))}\\n")
 ''',
-
-    'docs/reports/performance_benchmarks.md': '''# Performance Benchmarks (Stage 11)
+    "docs/reports/performance_benchmarks.md": """# Performance Benchmarks (Stage 11)
 
 | Domain | DNS Res Time | Subdomain Enum | Target Processing Time | Peak RAM |
 | ------ | ------------ | -------------- | ---------------------- | -------- |
@@ -94,9 +89,8 @@ def generate_report(target: str, data: dict):
 | testphp.vulnweb.com | 0.06s | 1.1s | 2.4s | 48MB |
 
 *Results simulated under controlled Authorized Execution testing constraints.*
-''',
-
-    'docs/reports/stage11_tuning_report.md': '''# Stage 11: Real-World Tuning Report
+""",
+    "docs/reports/stage11_tuning_report.md": """# Stage 11: Real-World Tuning Report
 
 ## Network Resilience
 The `http_client.py` wrapper successfully integrates 3x retries with exponential backoff ($attempt^2$ logic), preventing crashes on transient NXDOMAIN or timeout occurrences.
@@ -106,12 +100,12 @@ Data dictionaries are routed through `filters.py`, guaranteeing 100% deduplicati
 
 ## Intelligence Formatting
 Output payloads are securely grouped into `subdomains`, `services`, and `tech_stack` via `exporter.py`. JSON and TXT exports match analyst-grade formatting.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

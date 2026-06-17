@@ -1,6 +1,7 @@
 import asyncio
 import socket
 
+
 class DnsResolver:
     @staticmethod
     async def resolve_a(hostname: str) -> list:

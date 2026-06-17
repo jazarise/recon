@@ -1,4 +1,3 @@
-
 class AttackGraph:
     def __init__(self):
         self.nodes = set()
@@ -10,7 +9,4 @@ class AttackGraph:
         self.edges.add(f"{source} -> {target}")
 
     def export(self):
-        return {
-            "nodes": list(self.nodes),
-            "edges": list(self.edges)
-        }
+        return {"nodes": list(self.nodes), "edges": list(self.edges)}

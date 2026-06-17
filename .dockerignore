@@ -1,0 +1,8 @@
+archive/
+workspace/
+tests/
+docs/
+.git/
+.github/
+*.env
+*.log

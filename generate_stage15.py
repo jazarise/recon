@@ -1,7 +1,7 @@
 import os
 
 files = {
-    'config.yaml': '''agent:
+    "config.yaml": """agent:
   enabled: true
   autonomy_level: high
   auto_stop: true
@@ -26,9 +26,8 @@ stealth:
 ai_engine:
   enabled: true
   prioritization: true
-''',
-
-    'src/reconx/agent/state.py': '''class AgentState:
+""",
+    "src/reconx/agent/state.py": """class AgentState:
     def __init__(self):
         self.coverage_percent = 0.0
         self.unique_assets = 0
@@ -49,9 +48,8 @@ ai_engine:
         if self.cycles_without_findings >= 3:
             return True
         return False
-''',
-
-    'src/reconx/agent/planner.py': '''class PlannerAgent:
+""",
+    "src/reconx/agent/planner.py": """class PlannerAgent:
     def generate_plan(self, goal: str) -> list:
         if goal == "Find admin panels":
             return [
@@ -61,9 +59,8 @@ ai_engine:
                 "Deep scan only high-risk endpoints"
             ]
         return ["Default wide scan"]
-''',
-
-    'src/reconx/agent/executor.py': '''import asyncio
+""",
+    "src/reconx/agent/executor.py": """import asyncio
 import logging
 
 logger = logging.getLogger("reconx")
@@ -79,16 +76,14 @@ class ExecutionAgent:
         if "Deep scan" in step:
             return 2 # Found 2 admin panels
         return 0
-''',
-
-    'src/reconx/agent/analyzer.py': '''class AnalysisAgent:
+""",
+    "src/reconx/agent/analyzer.py": """class AnalysisAgent:
     def evaluate(self, assets_found: int, state) -> str:
         if assets_found > 0:
             return f"Valuable intelligence acquired ({assets_found} new nodes)."
         return "Redundant/Noisy data block. Re-evaluating."
-''',
-
-    'src/reconx/agent/orchestrator.py': '''import asyncio
+""",
+    "src/reconx/agent/orchestrator.py": """import asyncio
 import logging
 from reconx.agent.state import AgentState
 from reconx.agent.planner import PlannerAgent
@@ -125,9 +120,8 @@ class AgentOrchestrator:
             
         logger.warning("Autonomous execution completed.")
         return self.state
-''',
-
-    'src/reconx/reporting/agent_exporter.py': '''def generate_autonomous_report(target: str, state, filepath: str):
+""",
+    "src/reconx/reporting/agent_exporter.py": """def generate_autonomous_report(target: str, state, filepath: str):
     with open(filepath, 'w') as f:
         f.write(f"TARGET: {target}\\n\\n")
         f.write("STATUS: Autonomous Recon Completed\\n\\n")
@@ -140,9 +134,8 @@ class AgentOrchestrator:
         
         f.write("RECOMMENDED NEXT STEP:\\n")
         f.write("Focus on API authentication testing for the discovered admin interfaces.\\n")
-''',
-
-    'src/reconx/main.py': '''import sys
+""",
+    "src/reconx/main.py": '''import sys
 import argparse
 import asyncio
 import logging
@@ -187,8 +180,7 @@ def main():
 if __name__ == "__main__":
     main()
 ''',
-
-    'docs/reports/stage15_autonomous_agent.md': '''# Stage 15: Autonomous Agent Architecture
+    "docs/reports/stage15_autonomous_agent.md": """# Stage 15: Autonomous Agent Architecture
 
 ## Multi-Agent Triad
 The ReconX framework now utilizes an Orchestrator bridging three conceptual agents:
@@ -198,12 +190,12 @@ The ReconX framework now utilizes an Orchestrator bridging three conceptual agen
 
 ## Auto-Stop Guardrails
 The system implements a hard stop counter. If the AnalysisAgent records 3 consecutive cycles yielding 0 new intelligence (diminishing returns), the Orchestrator terminates all execution instantly, preventing infinite autonomous loops.
-'''
+""",
 }
 
 for path, content in files.items():
     dirname = os.path.dirname(path)
     if dirname:
         os.makedirs(dirname, exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)

@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -e . pytest pytest-cov bandit pip-audit ruff mypy
+      - name: Quality Checks
+        run: |
+          ruff check .
+          mypy src
+      - name: Security Checks
+        run: |
+          bandit -r src -lll
+          pip-audit
+      - name: Run Tests
+        run: pytest --cov=src --cov-fail-under=80
+      - name: Build Docker Image
+        run: docker build -t reconx:${{ github.ref_name }} .

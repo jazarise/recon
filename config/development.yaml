@@ -1,12 +1,10 @@
-environment: development
+app:
+  name: "ReconX"
+  env: "development"
+  debug: true
+  auto_reload: true
+  secure_cookies: false
 logging:
-  level: DEBUG
-  format: text
+  level: "DEBUG"
 database:
-  pool_size: 5
-  timeout: 10
-workers:
-  count: 5
-  timeout: 600
-cache:
-  type: local
+  url: "sqlite+aiosqlite:///reconx.db"

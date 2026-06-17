@@ -6,6 +6,7 @@ from reconx.core.registry import capability_registry, load_adapters
 app = typer.Typer()
 console = Console()
 
+
 @app.command("list")
 def list_capabilities():
     """List all registered capabilities."""
@@ -20,5 +21,5 @@ def list_capabilities():
     for cap in capabilities:
         adapters = ", ".join(cap.adapters) if cap.adapters else "None"
         table.add_row(cap.name, cap.category.value, adapters, cap.description)
-    
+
     console.print(table)

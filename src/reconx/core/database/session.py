@@ -1,12 +1,19 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from .models import Base
-import os
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+from reconx.config.settings import settings
 
-DB_URL = os.environ.get("RECONX_DB_URL", "sqlite:///reconx.db")
+engine = create_async_engine(
+    settings.database.url, echo=settings.app.debug, future=True
+)
 
-engine = create_engine(DB_URL, connect_args={"check_same_thread": False} if "sqlite" in DB_URL else {})
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+async_session_factory = async_sessionmaker(
+    bind=engine,
+    autocommit=False,
+    autoflush=False,
+    expire_on_commit=False,
+    class_=AsyncSession,
+)
 
-def init_db():
-    Base.metadata.create_all(bind=engine)
+
+async def get_db():
+    async with async_session_factory() as session:
+        yield session

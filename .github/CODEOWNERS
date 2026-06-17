@@ -1,0 +1,17 @@
+# Global Owners
+* @reconx/core-maintainers
+
+# API & Core
+src/reconx/api/ @reconx/backend
+src/reconx/core/ @reconx/backend
+src/reconx/config/ @reconx/backend
+
+# Plugins
+src/reconx/plugins/ @reconx/plugin-reviewers
+
+# DevOps & Deployments
+deployment/ @reconx/devops
+Dockerfile @reconx/devops
+
+# Docs
+docs/ @reconx/docs

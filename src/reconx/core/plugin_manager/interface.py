@@ -1,6 +1,7 @@
 import abc
 from typing import Any, Dict
 
+
 class ReconXPlugin(abc.ABC):
     name: str = "unknown"
     version: str = "1.0.0"

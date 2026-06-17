@@ -2,7 +2,7 @@ class EnterpriseAuth:
     USERS = {
         "token_orgA_owner": {"tenant_id": "org_1", "role": "Owner"},
         "token_orgA_viewer": {"tenant_id": "org_1", "role": "Viewer"},
-        "token_orgB_admin": {"tenant_id": "org_2", "role": "Admin"}
+        "token_orgB_admin": {"tenant_id": "org_2", "role": "Admin"},
     }
 
     @classmethod
