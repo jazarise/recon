@@ -2,11 +2,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from typing import Dict, Any, List
 from reconx.core.database.models import Asset, AssetRelationship, AssetHistory
-from reconx.core.intelligence.asset_normalizer import AssetNormalizer
 from reconx.core.intelligence.deduplicator import Deduplicator
 from reconx.core.intelligence.relationship_engine import RelationshipEngine
 from reconx.core.intelligence.asset_correlator import AssetCorrelator
 
+
+from reconx.core.intelligence.schemas import AssetSchema
+from pydantic import ValidationError
 
 class IntelligenceStore:
     def __init__(self, db: AsyncSession):
@@ -19,29 +21,17 @@ class IntelligenceStore:
 
         normalized_assets = []
         for a in raw_assets:
-            if not AssetNormalizer.is_safe_value(a.get("value", "")):
+            try:
+                asset = AssetSchema(
+                    asset_type=a.get("type", a.get("asset_type", "DOMAIN")).upper(),
+                    value=a.get("value", ""),
+                    source=a.get("source", "unknown"),
+                    project_id=project_id,
+                )
+                normalized_assets.append(asset.model_dump())
+            except ValidationError as e:
+                # Log invalid asset (silently ignore for now as per legacy behavior)
                 continue
-
-            atype = a.get("asset_type", "DOMAIN").upper()
-            val = a.get("value", "")
-
-            if atype in ["DOMAIN", "SUBDOMAIN"]:
-                val = AssetNormalizer.normalize_domain(val)
-            elif atype in ["URL", "ENDPOINT"]:
-                val = AssetNormalizer.normalize_url(val)
-            elif atype == "IP":
-                val = AssetNormalizer.validate_ip(val)
-                if not val:
-                    continue
-
-            normalized_assets.append(
-                {
-                    "asset_type": atype,
-                    "value": val,
-                    "source": a.get("source", "unknown"),
-                    "project_id": project_id,
-                }
-            )
 
         deduped_assets = Deduplicator.deduplicate_assets(normalized_assets)
 

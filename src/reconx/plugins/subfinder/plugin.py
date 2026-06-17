@@ -22,3 +22,6 @@ class SubfinderPlugin(ReconXPlugin):
 
     async def cleanup(self) -> None:
         pass
+
+def register():
+    return SubfinderPlugin

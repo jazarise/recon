@@ -35,8 +35,8 @@ class PluginManager:
 
         if not target_path:
             raise PluginError(f"Plugin {name} not found")
-
-        plugin_class = PluginLoader.load_plugin(target_path)
+        from pathlib import Path
+        plugin_class = PluginLoader.load_plugin(target_path, trusted_root=Path(self.registry.plugin_dir))
         self.plugins[name] = plugin_class
 
     def unload_plugin(self, name: str):

@@ -44,7 +44,13 @@ class WorkflowEngine:
         tasks = []
         for t in workflow_def["tasks"]:
             tasks.append(
-                Task(id=t["id"], plugin=t["plugin"], depends_on=t.get("depends_on", []))
+                Task(
+                    id=t["id"], 
+                    plugin=t["plugin"], 
+                    depends_on=t.get("depends_on", []),
+                    timeout=t.get("timeout", 300),
+                    retries=t.get("retries", 3)
+                )
             )
 
         graph = DependencyGraph(tasks)
@@ -60,7 +66,13 @@ class WorkflowEngine:
             )
 
             scheduler = WorkflowScheduler(graph, context, aggregator)
-            await scheduler.run()
+            
+            try:
+                await scheduler.run()
+            except Exception as e:
+                # Top level failure isolation
+                await event_bus.publish("WorkflowError", {"workflow_name": name, "error": str(e)})
+                # Save partial progress anyway
 
             summary = aggregator.get_summary()
             success = len(scheduler.failed) == 0

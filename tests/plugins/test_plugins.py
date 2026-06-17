@@ -45,7 +45,7 @@ async def test_plugin_discovery(temp_plugin_dir):
     create_mock_plugin(
         temp_plugin_dir,
         "test_plugin",
-        "from reconx.core.plugins.base import ReconXPlugin\nclass TestPlugin(ReconXPlugin):\n    async def execute(self, t): pass",
+        "from reconx.core.plugins.base import ReconXPlugin\nclass TestPlugin(ReconXPlugin):\n    async def execute(self, t): pass\ndef register(): return TestPlugin\n",
         {"name": "test_plugin", "version": "1.0", "author": "test"},
     )
 
@@ -77,7 +77,7 @@ async def test_unsafe_plugin_rejected(temp_plugin_dir):
     create_mock_plugin(
         temp_plugin_dir,
         "unsafe_plugin",
-        "from reconx.core.plugins.base import ReconXPlugin\nclass UnsafePlugin(ReconXPlugin):\n    async def execute(self, t): eval('1')\n",
+        "from reconx.core.plugins.base import ReconXPlugin\nclass UnsafePlugin(ReconXPlugin):\n    async def execute(self, t): eval('1')\ndef register(): return UnsafePlugin\n",
         {"name": "unsafe_plugin", "version": "1.0", "author": "test"},
     )
 
@@ -95,6 +95,7 @@ async def test_plugin_execution(temp_plugin_dir):
 class ExecPlugin(ReconXPlugin):
     async def validate(self): return True
     async def execute(self, t): return PluginResult(status="success", findings=[{"foo":"bar"}])
+def register(): return ExecPlugin
     """,
         {"name": "exec_plugin", "version": "1.0", "author": "test"},
     )
@@ -120,6 +121,7 @@ class SlowPlugin(ReconXPlugin):
     async def execute(self, t): 
         await asyncio.sleep(10)
         return PluginResult(status="success")
+def register(): return SlowPlugin
     """,
         {"name": "slow_plugin", "version": "1.0", "author": "test"},
     )
@@ -153,6 +155,7 @@ async def test_plugin_permission_check(temp_plugin_dir):
 class PermPlugin(ReconXPlugin):
     async def validate(self): return True
     async def execute(self, t): return PluginResult(status="success")
+def register(): return PermPlugin
     """,
         {
             "name": "perm_plugin",
