@@ -59,6 +59,7 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+exclude = ["archive*", "workspace*"]
 
 [tool.setuptools.package-data]
 reconx = ["config/*.yaml"]

@@ -111,7 +111,7 @@ class TimelineEngine:
         self.edges.add(f"{source_ip} <-> {domain}")
 ''',
 
-    'src/reconx/global/correlation.py': '''from src.reconx.global.graph import NetworkGraph
+    'src/reconx/global/correlation.py': '''from reconx.global_intel.graph import NetworkGraph
 
 class CorrelationEngine:
     def __init__(self):
@@ -145,9 +145,9 @@ class CorrelationEngine:
 
     'src/reconx/global/streaming.py': '''import asyncio
 import logging
-from src.reconx.global.timeline import TimelineEngine
-from src.reconx.global.confidence import NoiseController
-from src.reconx.global.predictive import PredictiveEngine
+from reconx.global_intel.timeline import TimelineEngine
+from reconx.global_intel.confidence import NoiseController
+from reconx.global_intel.predictive import PredictiveEngine
 
 logger = logging.getLogger("reconx")
 
@@ -192,7 +192,7 @@ def export_global_analytics(diffs: list, predictions: list, filepath: str):
 ''',
 
     'tests/test_timeline.py': '''def test_timeline_diffs():
-    from src.reconx.global.timeline import TimelineEngine
+    from reconx.global_intel.timeline import TimelineEngine
     engine = TimelineEngine()
     
     # Time 1

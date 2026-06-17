@@ -1,4 +1,4 @@
-from src.reconx.core.opsec import RiskScore
+from reconx.core.opsec import RiskScore
 
 class Plugin:
     name = "port_scan"

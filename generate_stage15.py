@@ -90,10 +90,10 @@ class ExecutionAgent:
 
     'src/reconx/agent/orchestrator.py': '''import asyncio
 import logging
-from src.reconx.agent.state import AgentState
-from src.reconx.agent.planner import PlannerAgent
-from src.reconx.agent.executor import ExecutionAgent
-from src.reconx.agent.analyzer import AnalysisAgent
+from reconx.agent.state import AgentState
+from reconx.agent.planner import PlannerAgent
+from reconx.agent.executor import ExecutionAgent
+from reconx.agent.analyzer import AnalysisAgent
 
 logger = logging.getLogger("reconx")
 

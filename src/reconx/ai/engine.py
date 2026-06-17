@@ -1,7 +1,7 @@
-from src.reconx.ai.heuristics import HeuristicsEngine
-from src.reconx.ai.graph import AttackGraph
-from src.reconx.ai.memory import ContextMemory
-from src.reconx.ai.prioritization import PrioritizationEngine
+from reconx.ai.heuristics import HeuristicsEngine
+from reconx.ai.graph import AttackGraph
+from reconx.ai.memory import ContextMemory
+from reconx.ai.prioritization import PrioritizationEngine
 
 class IntelligenceEngine:
     def __init__(self):

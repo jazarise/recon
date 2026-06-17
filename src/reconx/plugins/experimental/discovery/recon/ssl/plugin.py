@@ -1,6 +1,5 @@
 from reconx.core.plugin_base import standardize_output
 from datetime import timezone
-from reconx.core.http.client import HttpClient
 import ssl
 import socket
 import datetime

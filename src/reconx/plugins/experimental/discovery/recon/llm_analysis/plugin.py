@@ -1,6 +1,5 @@
 from reconx.core.plugin_base import standardize_output
 def setup_logger(*args, **kwargs): pass
-from reconx.core.http.client import HttpClient
 """
 ReconX LLM Analysis Plugin — AI-powered attack surface analysis.
 Uses OpenAI when available; falls back to rule-based local analysis
@@ -9,7 +8,6 @@ so scans always complete regardless of API key availability.
 
 import os
 import json
-import re
 from datetime import datetime, timezone
 
 

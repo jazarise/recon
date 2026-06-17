@@ -2,7 +2,6 @@ import asyncio
 import uuid
 import importlib
 import json
-import os
 from pathlib import Path
 
 from reconx.core.workflow_engine import workflow_engine, WorkflowContext

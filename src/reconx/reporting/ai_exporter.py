@@ -1,4 +1,3 @@
-import json
 
 def export_intelligence_report(report_data: dict, filepath: str):
     """Outputs the structured AI reasoning report."""

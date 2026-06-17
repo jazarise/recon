@@ -1,4 +1,3 @@
-from functools import wraps
 
 ROLE_HIERARCHY = {
     "ADMIN": 100,

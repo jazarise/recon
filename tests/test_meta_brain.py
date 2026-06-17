@@ -1,5 +1,5 @@
 def test_meta_evolution():
-    from src.reconx.meta.meta_brain import MetaDecisionEngine
+    from reconx.meta.meta_brain import MetaDecisionEngine
     
     brain = MetaDecisionEngine()
     result = brain.run_self_reflection()

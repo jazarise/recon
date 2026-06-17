@@ -1,8 +1,7 @@
-import json
 
 def export_executive_summary(tenant_id: str, data: dict, filepath: str):
     with open(filepath, 'w') as f:
-        f.write(f"ENTERPRISE SECURITY INTELLIGENCE REPORT\n")
+        f.write("ENTERPRISE SECURITY INTELLIGENCE REPORT\n")
         f.write(f"Organization: {tenant_id}\n")
         f.write("="*40 + "\n\n")
         

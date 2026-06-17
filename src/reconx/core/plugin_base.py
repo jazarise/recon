@@ -1,7 +1,5 @@
-import sys
 import functools
 import traceback
-import shutil
 
 def standardize_output(func):
     @functools.wraps(func)

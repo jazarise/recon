@@ -1,4 +1,3 @@
-from .plugin_schema import Plugin
 from .plugin_registry import plugin_registry_system
 
 class PluginHealthCheck:

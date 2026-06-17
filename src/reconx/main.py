@@ -1,4 +1,3 @@
-import sys
 import argparse
 from reconx.logger import setup_logging
 from reconx.version import __version__

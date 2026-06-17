@@ -1,4 +1,4 @@
-from src.reconx.global.graph import NetworkGraph
+from reconx.global_intel.graph import NetworkGraph
 
 class CorrelationEngine:
     def __init__(self):

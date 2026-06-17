@@ -1,4 +1,3 @@
-import shutil
 from typing import List
 
 class PluginDependencyManager:

@@ -136,9 +136,9 @@ class CentralAggregator:
 
     'src/reconx/distributed/master.py': '''import asyncio
 import logging
-from src.reconx.distributed.queue import JobQueue
-from src.reconx.distributed.aggregator import CentralAggregator
-from src.reconx.distributed.messaging import MessageBroker
+from reconx.distributed.queue import JobQueue
+from reconx.distributed.aggregator import CentralAggregator
+from reconx.distributed.messaging import MessageBroker
 
 logger = logging.getLogger("reconx")
 
@@ -173,8 +173,8 @@ class MasterNode:
     'src/reconx/distributed/worker.py': '''import asyncio
 import logging
 import random
-from src.reconx.distributed.queue import JobQueue
-from src.reconx.distributed.messaging import MessageBroker
+from reconx.distributed.queue import JobQueue
+from reconx.distributed.messaging import MessageBroker
 
 logger = logging.getLogger("reconx")
 

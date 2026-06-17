@@ -100,10 +100,10 @@ class PrioritizationEngine:
         return actions
 ''',
 
-    'src/reconx/ai/engine.py': '''from src.reconx.ai.heuristics import HeuristicsEngine
-from src.reconx.ai.graph import AttackGraph
-from src.reconx.ai.memory import ContextMemory
-from src.reconx.ai.prioritization import PrioritizationEngine
+    'src/reconx/ai/engine.py': '''from reconx.ai.heuristics import HeuristicsEngine
+from reconx.ai.graph import AttackGraph
+from reconx.ai.memory import ContextMemory
+from reconx.ai.prioritization import PrioritizationEngine
 
 class IntelligenceEngine:
     def __init__(self):
@@ -169,7 +169,7 @@ def export_intelligence_report(report_data: dict, filepath: str):
 ''',
 
     'tests/test_ai_engine.py': '''def test_ai_prioritization():
-    from src.reconx.ai.engine import IntelligenceEngine
+    from reconx.ai.engine import IntelligenceEngine
     
     engine = IntelligenceEngine()
     

@@ -1,5 +1,5 @@
 def test_dns_enum_plugin():
-    from src.reconx.plugins.dns_enum import Plugin
+    from reconx.plugins.dns_enum import Plugin
     import asyncio
     
     plugin = Plugin()
@@ -7,10 +7,10 @@ def test_dns_enum_plugin():
     assert "www.scanme.nmap.org" in result["subdomains"]
 
 def test_guardrails():
-    from src.reconx.core.guardrails import is_allowed
-    assert is_allowed("scanme.nmap.org") == True
+    from reconx.core.guardrails import ScopeEnforcer
+    assert ScopeEnforcer.validate_target("scanme.nmap.org") == True
     
     try:
-        is_allowed("google.com")
+        ScopeEnforcer.validate_target("google.com")
     except Exception as e:
         assert "not in the authorized scope" in str(e)

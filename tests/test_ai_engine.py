@@ -1,5 +1,5 @@
 def test_ai_prioritization():
-    from src.reconx.ai.engine import IntelligenceEngine
+    from reconx.ai.engine import IntelligenceEngine
     
     engine = IntelligenceEngine()
     

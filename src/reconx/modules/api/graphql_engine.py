@@ -1,4 +1,3 @@
-import json
 from reconx.core.utils.http_client import HttpClient
 
 class GraphQLEngine:

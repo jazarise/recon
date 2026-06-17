@@ -1,8 +1,7 @@
-import asyncio
 import logging
-from src.reconx.global.timeline import TimelineEngine
-from src.reconx.global.confidence import NoiseController
-from src.reconx.global.predictive import PredictiveEngine
+from reconx.global_intel.timeline import TimelineEngine
+from reconx.global_intel.confidence import NoiseController
+from reconx.global_intel.predictive import PredictiveEngine
 
 logger = logging.getLogger("reconx")
 

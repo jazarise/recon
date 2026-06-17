@@ -1,5 +1,5 @@
 def test_timeline_diffs():
-    from src.reconx.global.timeline import TimelineEngine
+    from reconx.global_intel.timeline import TimelineEngine
     engine = TimelineEngine()
     
     # Time 1

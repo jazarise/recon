@@ -85,7 +85,7 @@ class StealthHTTPClient:
         return True
 ''',
 
-    'src/reconx/plugins/port_scan.py': '''from src.reconx.core.opsec import RiskScore
+    'src/reconx/plugins/port_scan.py': '''from reconx.core.opsec import RiskScore
 
 class Plugin:
     name = "port_scan"

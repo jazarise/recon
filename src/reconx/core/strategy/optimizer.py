@@ -1,4 +1,3 @@
-from collections import defaultdict
 
 class StrategyOptimizer:
     """Maintains a live dynamic scoreboard of capability efficiency."""

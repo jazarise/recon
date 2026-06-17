@@ -1,5 +1,5 @@
 import json
-from typing import Dict, Any
+from typing import Dict
 from reconx.core.events.event_stream import event_stream
 from reconx.core.asm.timeline_engine import timeline_engine
 

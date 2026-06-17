@@ -1,5 +1,4 @@
 from reconx.core.plugin_base import standardize_output
-from reconx.core.http.client import HttpClient
 """
 ReconX Reporting Plugin — generates MD, JSON, CSV, and HTML reports
 from correlated workflow context data.
@@ -7,7 +6,6 @@ from correlated workflow context data.
 
 import csv
 import json
-import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -70,7 +68,7 @@ class Plugin:
         risk_score = llm.get("risk_score", "N/A")
         risk_level = llm.get("risk_level", "UNKNOWN")
         lines += [
-            f"## Executive Summary",
+            "## Executive Summary",
             "",
             llm.get("executive_summary") or llm.get("summary") or "_No LLM analysis available._",
             "",

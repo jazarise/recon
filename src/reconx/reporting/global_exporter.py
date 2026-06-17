@@ -1,4 +1,3 @@
-import json
 
 def export_global_analytics(diffs: list, predictions: list, filepath: str):
     with open(filepath, 'w') as f:

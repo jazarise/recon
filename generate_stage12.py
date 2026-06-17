@@ -153,7 +153,7 @@ def export_markdown(data: dict, filepath: str):
 ''',
 
     'tests/test_plugins.py': '''def test_dns_enum_plugin():
-    from src.reconx.plugins.dns_enum import Plugin
+    from reconx.plugins.dns_enum import Plugin
     import asyncio
     
     plugin = Plugin()
@@ -161,7 +161,7 @@ def export_markdown(data: dict, filepath: str):
     assert "www.scanme.nmap.org" in result["subdomains"]
 
 def test_guardrails():
-    from src.reconx.core.guardrails import is_allowed
+    from reconx.core.guardrails import is_allowed
     assert is_allowed("scanme.nmap.org") == True
     
     try:

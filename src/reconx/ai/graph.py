@@ -1,4 +1,3 @@
-import json
 
 class AttackGraph:
     def __init__(self):

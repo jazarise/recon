@@ -1,8 +1,8 @@
 import asyncio
 import logging
 import random
-from src.reconx.distributed.queue import JobQueue
-from src.reconx.distributed.messaging import MessageBroker
+from reconx.distributed.queue import JobQueue
+from reconx.distributed.messaging import MessageBroker
 
 logger = logging.getLogger("reconx")
 

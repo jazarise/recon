@@ -1,7 +1,5 @@
 import importlib
 import pkgutil
-import sys
-import os
 
 class AdapterRegistry:
     def __init__(self):
