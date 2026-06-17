@@ -1,0 +1,16 @@
+name: test_working_memory
+category: api_security
+language: .py
+execution_type: library
+entrypoint: test_working_memory.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_working_memory
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

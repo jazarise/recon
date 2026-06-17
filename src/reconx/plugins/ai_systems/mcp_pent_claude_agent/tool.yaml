@@ -1,0 +1,16 @@
+name: mcp_pent_claude_agent
+category: ai_systems
+language: .py
+execution_type: cli_entrypoint
+entrypoint: mcp_pent_claude_agent.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - mcp_pent_claude_agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

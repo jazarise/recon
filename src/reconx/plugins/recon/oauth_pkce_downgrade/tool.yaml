@@ -1,0 +1,16 @@
+name: oauth_pkce_downgrade
+category: recon
+language: .py
+execution_type: library
+entrypoint: oauth_pkce_downgrade.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - oauth_pkce_downgrade
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

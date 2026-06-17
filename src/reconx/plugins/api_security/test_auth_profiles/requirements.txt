@@ -1,0 +1,8 @@
+__future__
+os
+stat
+sys
+pytest
+yaml
+cli.auth_profiles
+cli.credential_resolvers

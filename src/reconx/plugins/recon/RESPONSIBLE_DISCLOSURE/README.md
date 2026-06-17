@@ -1,0 +1,3 @@
+# RESPONSIBLE_DISCLOSURE Plugin
+
+Auto-generated scaffolding for RESPONSIBLE_DISCLOSURE.

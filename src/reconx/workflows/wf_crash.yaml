@@ -1,0 +1,8 @@
+name: Crash Workflow
+steps:
+- config:
+    mode: crash
+  id: s1
+  plugin: malicious
+  plugin_path: plugins/golden/malicious
+  timeout: 5

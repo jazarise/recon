@@ -1,0 +1,4 @@
+.plugin_manager
+.registry
+.plugin_loader
+.capability_map

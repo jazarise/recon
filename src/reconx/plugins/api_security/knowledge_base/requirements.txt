@@ -1,0 +1,6 @@
+ollama
+os
+json
+openai
+numpy
+dotenv

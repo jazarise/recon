@@ -1,0 +1,16 @@
+name: install_preferences
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: install_preferences.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - install_preferences
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

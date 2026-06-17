@@ -1,0 +1,5 @@
+socket
+threading
+requests
+concurrent.futures
+dns.resolver

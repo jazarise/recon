@@ -1,0 +1,16 @@
+name: test_dns_resolver_auto
+category: recon
+language: .bats
+execution_type: library
+entrypoint: test_dns_resolver_auto.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_dns_resolver_auto
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

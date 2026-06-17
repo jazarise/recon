@@ -1,0 +1,16 @@
+name: dns_test
+category: recon
+language: .go
+execution_type: library
+entrypoint: dns_test.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - dns_test
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

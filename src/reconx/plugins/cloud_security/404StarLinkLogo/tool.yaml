@@ -1,0 +1,16 @@
+name: 404StarLinkLogo
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: 404StarLinkLogo.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - 404StarLinkLogo
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

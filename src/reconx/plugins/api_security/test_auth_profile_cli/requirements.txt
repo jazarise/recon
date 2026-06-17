@@ -1,0 +1,6 @@
+__future__
+unittest.mock
+pytest
+typer.testing
+cli.auth_profiles
+cli.main

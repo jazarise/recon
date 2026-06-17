@@ -1,0 +1,3 @@
+# SslTrustAllTimeoutSslSocketFactory Plugin
+
+Auto-generated scaffolding for SslTrustAllTimeoutSslSocketFactory.

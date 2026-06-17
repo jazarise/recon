@@ -1,0 +1,16 @@
+name: gcp
+category: cloud_security
+language: .yaml
+execution_type: library
+entrypoint: gcp.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - gcp
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

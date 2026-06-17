@@ -1,0 +1,16 @@
+name: pre-commit-config
+category: ai_systems
+language: .yaml
+execution_type: library
+entrypoint: .pre-commit-config.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - pre-commit-config
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

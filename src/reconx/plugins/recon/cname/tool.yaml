@@ -1,0 +1,16 @@
+name: cname
+category: recon
+language: .go
+execution_type: library
+entrypoint: cname.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - cname
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

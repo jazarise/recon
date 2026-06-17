@@ -1,0 +1,16 @@
+name: operations_center
+category: recon
+language: .py
+execution_type: library
+entrypoint: operations_center.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - operations_center
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

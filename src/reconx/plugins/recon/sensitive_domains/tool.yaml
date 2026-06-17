@@ -1,0 +1,16 @@
+name: sensitive_domains
+category: recon
+language: .txt
+execution_type: library
+entrypoint: sensitive_domains.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - sensitive_domains
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

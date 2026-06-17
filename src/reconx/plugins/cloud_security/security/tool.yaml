@@ -1,0 +1,16 @@
+name: security
+category: cloud_security
+language: .yml
+execution_type: library
+entrypoint: security.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - security
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

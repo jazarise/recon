@@ -1,0 +1,7 @@
+__future__
+typing
+spectre.core.config
+spectre.core.logger
+spectre.core.settings
+spectre.plugins.registry
+spectre.sessions.manager

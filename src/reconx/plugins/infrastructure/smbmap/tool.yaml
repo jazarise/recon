@@ -1,0 +1,16 @@
+name: smbmap
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: smbmap.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - smbmap
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

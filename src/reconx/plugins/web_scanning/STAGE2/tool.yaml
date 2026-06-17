@@ -1,0 +1,16 @@
+name: STAGE2
+category: web_scanning
+language: .md
+execution_type: library
+entrypoint: STAGE2.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - STAGE2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

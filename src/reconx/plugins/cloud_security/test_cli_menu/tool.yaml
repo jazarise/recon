@@ -1,0 +1,16 @@
+name: test_cli_menu
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: test_cli_menu.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_cli_menu
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

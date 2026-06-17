@@ -1,0 +1,16 @@
+name: asset_secrets_scan
+category: recon
+language: .py
+execution_type: library
+entrypoint: asset_secrets_scan.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - asset_secrets_scan
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

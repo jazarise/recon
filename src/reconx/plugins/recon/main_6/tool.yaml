@@ -1,0 +1,16 @@
+name: main_6
+category: recon
+language: .py
+execution_type: cli_entrypoint
+entrypoint: main_6.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - main_6
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

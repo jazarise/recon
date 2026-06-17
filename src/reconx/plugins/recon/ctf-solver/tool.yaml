@@ -1,0 +1,16 @@
+name: ctf-solver
+category: recon
+language: .md
+execution_type: library
+entrypoint: ctf-solver.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ctf-solver
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

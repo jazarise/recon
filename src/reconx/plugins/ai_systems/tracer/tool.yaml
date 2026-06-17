@@ -1,0 +1,16 @@
+name: tracer
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: tracer.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tracer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

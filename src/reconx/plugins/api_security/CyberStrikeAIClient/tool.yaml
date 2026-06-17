@@ -1,0 +1,16 @@
+name: CyberStrikeAIClient
+category: api_security
+language: .java
+execution_type: library
+entrypoint: CyberStrikeAIClient.java
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - CyberStrikeAIClient
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

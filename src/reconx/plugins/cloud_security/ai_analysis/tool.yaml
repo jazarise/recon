@@ -1,0 +1,16 @@
+name: ai_analysis
+category: cloud_security
+language: .png
+execution_type: library
+entrypoint: ai_analysis.png
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ai_analysis
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

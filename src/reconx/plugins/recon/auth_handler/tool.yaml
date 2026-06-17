@@ -1,0 +1,16 @@
+name: auth_handler
+category: recon
+language: .py
+execution_type: library
+entrypoint: auth_handler.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - auth_handler
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

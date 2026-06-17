@@ -1,0 +1,16 @@
+name: config_2
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: config_2.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - config_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

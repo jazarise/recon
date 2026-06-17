@@ -1,0 +1,16 @@
+name: 2dd29513_run_B_safe
+category: recon
+language: .json
+execution_type: library
+entrypoint: 2dd29513_run_B_safe.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - 2dd29513_run_B_safe
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

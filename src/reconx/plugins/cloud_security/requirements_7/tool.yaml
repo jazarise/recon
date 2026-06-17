@@ -1,0 +1,16 @@
+name: requirements_7
+category: cloud_security
+language: .txt
+execution_type: library
+entrypoint: requirements_7.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - requirements_7
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

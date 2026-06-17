@@ -1,0 +1,16 @@
+name: reporthtml
+category: recon
+language: .j2
+execution_type: library
+entrypoint: report.html.j2
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reporthtml
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

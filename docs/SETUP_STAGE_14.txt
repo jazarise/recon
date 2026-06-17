@@ -1,0 +1,558 @@
+ReconX Setup and Usage Guide
+============================
+
+Workspace
+---------
+
+Primary workspace:
+E:\ReconX
+
+Source-of-truth repositories:
+E:\ReconX\pccc
+
+Extracted source lake:
+E:\ReconX\allfiles
+
+Do not edit pccc or allfiles directly. ReconX platform work should happen inside
+E:\ReconX and its platform directories.
+
+
+Current Platform Status
+-----------------------
+
+ReconX has completed Stages 1-14.
+
+Stages 1-13 established the core cyber platform foundations:
+- plugin orchestration
+- governance systems
+- federation systems
+- distributed cognition
+- swarm coordination
+- cyber AI laboratories
+- production infrastructure
+- observability
+- testing ecosystems
+- adaptive workflows
+- dashboard systems
+- distributed graph intelligence
+
+Stage 14 added the operational ecosystem layer:
+- multi-tenant workspaces
+- enterprise RBAC
+- tenant isolation
+- collaborative investigations
+- SOC-style case management
+- scheduling and recurring workflows
+- event-driven automation triggers
+- notifications and escalation routing
+- enterprise reporting and analytics
+- knowledge management and global search
+- analyst productivity tools
+- plugin/workflow/AI/federation SDKs
+- marketplace trust and validation
+- lifecycle onboarding, provisioning, decommissioning, and compliance exports
+- hash-chain audit ledger
+
+
+Important Stage 14 Files
+------------------------
+
+Workspace and tenant control:
+E:\ReconX\workspaces\tenant_manager.py
+E:\ReconX\workspaces\permissions\rbac.py
+E:\ReconX\workspaces\tenants\isolation.py
+
+Collaboration and case management:
+E:\ReconX\collaboration\case_management\service.py
+E:\ReconX\collaboration\investigations\service.py
+
+Scheduling and automation:
+E:\ReconX\automation\schedulers\engine.py
+E:\ReconX\automation\triggers\engine.py
+E:\ReconX\automation\triggers\notifications.py
+
+Reporting:
+E:\ReconX\reporting\analytics\engine.py
+E:\ReconX\reporting\summaries\executive.py
+E:\ReconX\reporting\exports\exporter.py
+
+Knowledge management and search:
+E:\ReconX\knowledge_management\store.py
+E:\ReconX\knowledge_management\search.py
+
+Analyst tools:
+E:\ReconX\analyst_tools\triage\engine.py
+E:\ReconX\analyst_tools\prioritization\scorer.py
+E:\ReconX\analyst_tools\investigation\guidance.py
+E:\ReconX\analyst_tools\workflow_assistance\assistant.py
+
+Developer SDKs:
+E:\ReconX\sdk\plugin_sdk
+E:\ReconX\sdk\workflow_sdk
+E:\ReconX\sdk\ai_sdk
+E:\ReconX\sdk\federation_sdk
+
+Marketplace:
+E:\ReconX\marketplace\registry.py
+E:\ReconX\marketplace\maturity.py
+
+Lifecycle and audit:
+E:\ReconX\lifecycle\auditing\ledger.py
+E:\ReconX\lifecycle\auditing\compliance.py
+E:\ReconX\lifecycle\onboarding\service.py
+E:\ReconX\lifecycle\provisioning\service.py
+E:\ReconX\lifecycle\decommissioning\service.py
+
+API:
+E:\ReconX\api\gateway\main.py
+E:\ReconX\api\routes\ecosystem.py
+
+Architecture note:
+E:\ReconX\intelligence\stage14_operational_ecosystem.md
+
+
+Prerequisites
+-------------
+
+Recommended:
+- Python 3.11 or newer
+- pip
+- PowerShell
+
+Python dependencies are listed in:
+E:\ReconX\requirements.txt
+
+Current requirements:
+- fastapi
+- uvicorn[standard]
+- PyYAML
+
+
+Environment Setup
+-----------------
+
+From PowerShell:
+
+1. Open the ReconX workspace.
+
+   cd E:\ReconX
+
+2. Create a virtual environment.
+
+   python -m venv .venv
+
+3. Activate the virtual environment.
+
+   .\.venv\Scripts\Activate.ps1
+
+4. Upgrade pip.
+
+   python -m pip install --upgrade pip
+
+5. Install dependencies.
+
+   python -m pip install -r requirements.txt
+
+
+If Python is not on PATH
+------------------------
+
+In this Codex desktop environment, a bundled Python runtime is available at:
+
+C:\Users\jaish\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+
+You can use it directly for tests and compile checks:
+
+C:\Users\jaish\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe -m unittest discover .\testing\unit
+
+For normal local development, installing Python and using a project virtual
+environment is cleaner.
+
+
+Run Validation
+--------------
+
+Compile the Stage 14 modules:
+
+python -m compileall .\workspaces .\collaboration .\automation .\reporting .\knowledge_management .\analyst_tools .\lifecycle .\sdk .\marketplace .\api .\testing\unit
+
+Run unit tests:
+
+python -m unittest discover .\testing\unit
+
+Expected current result:
+
+Ran 6 tests
+OK
+
+
+Start the API Server
+--------------------
+
+After installing requirements:
+
+uvicorn api.gateway.main:app --reload --host 127.0.0.1 --port 8000
+
+Health check:
+
+GET http://127.0.0.1:8000/health
+
+Expected response:
+
+{
+  "status": "healthy",
+  "stage": "14"
+}
+
+
+Main Stage 14 API Routes
+------------------------
+
+Base URL:
+http://127.0.0.1:8000/api/v1/ecosystem
+
+Tenant onboarding:
+POST /tenants/onboard
+
+Tenant snapshot:
+GET /tenants/{tenant_id}?actor_id={user_id}
+
+Create team:
+POST /teams
+
+Create project:
+POST /projects
+
+Create case:
+POST /cases
+
+Add case comment:
+POST /cases/{case_id}/comments
+
+Get case:
+GET /cases/{case_id}?actor_id={user_id}
+
+Add finding:
+POST /findings
+
+Add analyst note:
+POST /notes
+
+Create recurring schedule:
+POST /schedules
+
+List schedules:
+GET /schedules?tenant_id={tenant_id}&actor_id={user_id}
+
+Global search:
+GET /search?tenant_id={tenant_id}&actor_id={user_id}&query={text}
+
+Executive report:
+GET /reports/executive?tenant_id={tenant_id}&actor_id={user_id}
+
+Dashboard snapshot:
+GET /dashboard/{tenant_id}?actor_id={user_id}
+
+Audit report:
+GET /audit/{tenant_id}?actor_id={user_id}
+
+Plugin SDK template:
+GET /sdk/plugin-template?name={name}&category={category}&author={author}
+
+Workflow validation:
+POST /sdk/workflows/validate
+
+Publish marketplace plugin:
+POST /marketplace/plugins
+
+
+Basic Usage Flow
+----------------
+
+1. Onboard a tenant.
+
+   POST /api/v1/ecosystem/tenants/onboard
+
+   Example body:
+
+   {
+     "organization_name": "Acme Security",
+     "admin_email": "admin@example.com",
+     "admin_name": "Admin User",
+     "initial_project": "External Attack Surface"
+   }
+
+   This creates:
+   - tenant
+   - owner user
+   - Security Operations team
+   - initial project
+   - owner RBAC grant
+   - audit ledger entries
+
+2. Use the returned tenant_id, user_id, team_id, and project_id for later calls.
+
+3. Create or list projects and teams.
+
+4. Add findings to the knowledge base.
+
+5. Create SOC cases from findings.
+
+6. Add comments, evidence, assignments, workflow history, and remediation status
+   to cases.
+
+7. Create recurring schedules for workflows.
+
+8. Use global search to find findings, notes, cases, telemetry, workflows, and
+   historical memory.
+
+9. Generate executive reports and dashboard snapshots.
+
+10. Export audit/compliance reports for accountability.
+
+
+Security and Governance Model
+-----------------------------
+
+Every Stage 14 operation should remain:
+- tenant-scoped
+- RBAC-gated
+- audit-logged
+- explainable
+- modular
+- sandbox-aware
+
+Tenant isolation is handled by:
+E:\ReconX\workspaces\tenants\isolation.py
+
+RBAC is handled by:
+E:\ReconX\workspaces\permissions\rbac.py
+
+Audit records are hash-linked by:
+E:\ReconX\lifecycle\auditing\ledger.py
+
+Cross-tenant access should be denied. Team-scoped roles inherit only to projects
+that belong to that team.
+
+
+RBAC Roles
+----------
+
+Default roles:
+
+owner:
+- full tenant owner
+
+admin:
+- tenant/user/team/project management
+- workflow access
+- findings access
+- case access
+- schedules
+- reports
+- SDK
+- marketplace
+- audit
+- search
+
+lead:
+- project/team operations
+- workflow run/view
+- findings
+- cases
+- schedules
+- reports
+- audit
+- search
+
+analyst:
+- project view
+- workflow run/view
+- findings view/triage
+- cases view/comment/update
+- reports
+- search
+
+viewer:
+- read-only operational visibility
+
+sdk_developer:
+- SDK validation and scaffolding
+- marketplace submission
+- plugin tests
+
+automation_runner:
+- service identity for scheduled workflows
+
+
+Developer SDK Usage
+-------------------
+
+Plugin developers should use:
+E:\ReconX\sdk\plugin_sdk
+
+Workflow developers should use:
+E:\ReconX\sdk\workflow_sdk
+
+AI researchers should use:
+E:\ReconX\sdk\ai_sdk
+
+Federation integrations should use:
+E:\ReconX\sdk\federation_sdk
+
+Plugin marketplace publication requires:
+- manifest
+- signed package
+- signature
+- category
+- entrypoint
+- author
+- sandbox declaration
+- dependency review
+
+Wildcard plugin permissions are rejected.
+
+
+Scheduling Usage
+----------------
+
+Supported schedule expressions:
+- @hourly
+- @daily
+- interval:<seconds>
+- */N * * * *       every N minutes
+- M H * * *         daily at hour/minute
+
+Schedules are tenant/project scoped and audit logged.
+
+
+Reporting Usage
+---------------
+
+Reporting supports:
+- workflow analytics
+- finding analytics
+- telemetry analytics
+- executive summaries
+- CSV export
+- JSON export
+- compliance bundles
+- dashboard snapshots
+
+The executive summary generator is:
+E:\ReconX\reporting\summaries\executive.py
+
+
+Knowledge and Search Usage
+--------------------------
+
+The knowledge base stores:
+- findings
+- analyst notes
+- attack paths
+- long-term memory records
+
+Global search can search across:
+- findings
+- workflows
+- telemetry
+- attack paths
+- analyst notes
+- historical investigations
+- cases
+
+Search service:
+E:\ReconX\knowledge_management\search.py
+
+
+Analyst Workflow
+----------------
+
+Typical analyst flow:
+
+1. Review dashboard snapshot.
+2. Search for target, case, or finding history.
+3. Triage finding.
+4. Prioritize finding.
+5. Create or update case.
+6. Attach evidence.
+7. Add reasoning/commentary.
+8. Assign remediation.
+9. Schedule follow-up workflow.
+10. Generate report.
+11. Preserve audit trail.
+
+Analyst helpers:
+- triage engine
+- prioritization engine
+- investigation guide
+- workflow assistant
+
+
+Current Validation Progress
+---------------------------
+
+Completed:
+- Stage 14 directory structure created
+- tenant workspace system implemented
+- RBAC implemented
+- tenant isolation implemented
+- hash-chain audit ledger implemented
+- collaboration framework implemented
+- case management implemented
+- scheduling engine implemented
+- trigger engine implemented
+- notification engine implemented
+- reporting and analytics implemented
+- knowledge management implemented
+- global search implemented
+- analyst tools implemented
+- plugin SDK implemented
+- workflow SDK implemented
+- AI SDK implemented
+- federation SDK implemented
+- marketplace validation/trust implemented
+- lifecycle onboarding/provisioning/decommissioning implemented
+- ecosystem API routes added
+- API gateway updated
+- unit tests added
+- compile validation passed
+- unit tests passed
+
+Latest validation:
+
+python -m unittest discover .\testing\unit
+
+Result:
+
+Ran 6 tests
+OK
+
+
+Known Environment Note
+----------------------
+
+The bundled Python runtime used during implementation did not have FastAPI
+installed. The code compiles and unit tests pass, but the API server requires:
+
+python -m pip install -r requirements.txt
+
+After installing dependencies, run:
+
+uvicorn api.gateway.main:app --reload --host 127.0.0.1 --port 8000
+
+
+Recommended Next Steps
+----------------------
+
+1. Install API dependencies.
+2. Start the FastAPI server.
+3. Test onboarding through /api/v1/ecosystem/tenants/onboard.
+4. Create a tenant project and SOC case.
+5. Add findings and analyst notes.
+6. Validate global search.
+7. Create a recurring quick_recon schedule.
+8. Connect dashboard views to the Stage 14 ecosystem API.
+9. Persist Stage 14 in-memory stores into the existing storage layer.
+10. Connect Stage 14 schedules to the Stage 13 workflow execution engine.
+

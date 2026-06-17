@@ -1,0 +1,16 @@
+name: checkov
+category: cloud_security
+language: .yaml
+execution_type: library
+entrypoint: checkov.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - checkov
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

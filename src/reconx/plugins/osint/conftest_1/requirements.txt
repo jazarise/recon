@@ -1,0 +1,6 @@
+__future__
+socket
+collections.abc
+aiohttp
+pytest_asyncio
+tests.honeypot.server

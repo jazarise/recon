@@ -1,0 +1,16 @@
+name: index_6
+category: reporting
+language: .js
+execution_type: library
+entrypoint: index_6.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - index_6
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

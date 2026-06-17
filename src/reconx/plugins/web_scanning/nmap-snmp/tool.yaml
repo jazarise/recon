@@ -1,0 +1,16 @@
+name: nmap-snmp
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-snmp.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-snmp
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

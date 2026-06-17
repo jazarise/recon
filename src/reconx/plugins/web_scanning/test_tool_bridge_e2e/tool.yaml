@@ -1,0 +1,16 @@
+name: test_tool_bridge_e2e
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: test_tool_bridge_e2e.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_tool_bridge_e2e
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

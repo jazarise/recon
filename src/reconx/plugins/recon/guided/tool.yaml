@@ -1,0 +1,16 @@
+name: guided
+category: recon
+language: .py
+execution_type: library
+entrypoint: guided.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - guided
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

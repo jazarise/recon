@@ -1,0 +1,16 @@
+name: swagger_2
+category: api_security
+language: .yaml
+execution_type: library
+entrypoint: swagger_2.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - swagger_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: index_10
+category: web_scanning
+language: .js
+execution_type: library
+entrypoint: index_10.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - index_10
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

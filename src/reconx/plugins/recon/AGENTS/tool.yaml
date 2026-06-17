@@ -1,0 +1,16 @@
+name: AGENTS
+category: recon
+language: .md
+execution_type: api_server
+entrypoint: AGENTS.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - AGENTS
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

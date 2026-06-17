@@ -1,0 +1,16 @@
+name: test_integration
+category: ai_systems
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: test_integration.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_integration
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

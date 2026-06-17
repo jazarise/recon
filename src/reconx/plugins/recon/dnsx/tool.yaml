@@ -1,0 +1,16 @@
+name: dnsx
+category: recon
+language: .yaml
+execution_type: library
+entrypoint: dnsx.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - dnsx
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

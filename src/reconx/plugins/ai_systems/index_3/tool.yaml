@@ -1,0 +1,16 @@
+name: index_3
+category: ai_systems
+language: .html
+execution_type: library
+entrypoint: index_3.html
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - index_3
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

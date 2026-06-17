@@ -1,0 +1,16 @@
+name: pyproject_4
+category: web_scanning
+language: .toml
+execution_type: library
+entrypoint: pyproject_4.toml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - pyproject_4
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

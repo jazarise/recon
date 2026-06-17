@@ -1,0 +1,16 @@
+name: queue-validator
+category: orchestration
+language: .js
+execution_type: library
+entrypoint: queue-validator.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - queue-validator
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

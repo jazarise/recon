@@ -1,0 +1,16 @@
+name: nmap-mysql
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-mysql.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-mysql
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

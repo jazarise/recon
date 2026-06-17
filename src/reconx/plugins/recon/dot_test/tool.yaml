@@ -1,0 +1,16 @@
+name: dot_test
+category: recon
+language: .go
+execution_type: library
+entrypoint: dot_test.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - dot_test
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

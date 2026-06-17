@@ -1,0 +1,16 @@
+name: docker_manager
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: docker_manager.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - docker_manager
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

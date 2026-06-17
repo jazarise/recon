@@ -1,0 +1,16 @@
+name: whois_tool
+category: osint
+language: .py
+execution_type: library
+entrypoint: whois_tool.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - whois_tool
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,8 @@
+name: Hang Workflow
+steps:
+- config:
+    mode: infinite_loop
+  id: s2
+  plugin: malicious
+  plugin_path: plugins/golden/malicious
+  timeout: 2

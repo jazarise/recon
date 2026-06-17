@@ -1,0 +1,10 @@
+__future__
+importlib
+importlib.util
+inspect
+pkgutil
+pathlib
+typing
+spectre.core.logger
+spectre.core.settings
+spectre.plugins.base

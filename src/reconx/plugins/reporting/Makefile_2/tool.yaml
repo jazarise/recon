@@ -1,0 +1,16 @@
+name: Makefile_2
+category: reporting
+language: unknown
+execution_type: library
+entrypoint: Makefile_2
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - Makefile_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: xxe_upload
+category: api_security
+language: .py
+execution_type: library
+entrypoint: xxe_upload.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - xxe_upload
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

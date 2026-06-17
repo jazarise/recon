@@ -1,0 +1,16 @@
+name: test_report_only
+category: recon
+language: .bats
+execution_type: library
+entrypoint: test_report_only.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_report_only
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

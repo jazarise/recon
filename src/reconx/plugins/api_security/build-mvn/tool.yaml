@@ -1,0 +1,16 @@
+name: build-mvn
+category: api_security
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: build-mvn.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - build-mvn
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

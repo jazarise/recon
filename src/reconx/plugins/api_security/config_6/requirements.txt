@@ -1,0 +1,8 @@
+__future__
+os
+functools
+pathlib
+typing
+yaml
+dotenv
+spectre.core.settings

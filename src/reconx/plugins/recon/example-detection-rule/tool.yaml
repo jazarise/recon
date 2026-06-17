@@ -1,0 +1,16 @@
+name: example-detection-rule
+category: recon
+language: .md
+execution_type: library
+entrypoint: example-detection-rule.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - example-detection-rule
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

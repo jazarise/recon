@@ -1,0 +1,16 @@
+name: no_nested_task
+category: api_security
+language: .go
+execution_type: library
+entrypoint: no_nested_task.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - no_nested_task
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

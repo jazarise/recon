@@ -1,0 +1,16 @@
+name: executor_helpers
+category: recon
+language: .py
+execution_type: library
+entrypoint: executor_helpers.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - executor_helpers
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

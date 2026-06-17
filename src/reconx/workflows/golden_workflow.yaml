@@ -1,0 +1,22 @@
+name: Golden Recon Workflow
+steps:
+- id: s1
+  plugin: network_discovery
+  plugin_path: plugins/golden/network_discovery
+  timeout: 30
+- id: s2
+  plugin: web_recon
+  plugin_path: plugins/golden/web_recon
+  timeout: 30
+- id: s3
+  plugin: dns_intelligence
+  plugin_path: plugins/golden/dns_intelligence
+  timeout: 30
+- id: s4
+  plugin: llm_analysis
+  plugin_path: plugins/golden/llm_analysis
+  timeout: 30
+- id: s5
+  plugin: reporting
+  plugin_path: plugins/golden/reporting
+  timeout: 30

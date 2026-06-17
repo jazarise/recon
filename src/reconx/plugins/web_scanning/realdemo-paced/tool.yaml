@@ -1,0 +1,16 @@
+name: realdemo-paced
+category: web_scanning
+language: .cast
+execution_type: library
+entrypoint: realdemo-paced.cast
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - realdemo-paced
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

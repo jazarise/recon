@@ -1,0 +1,16 @@
+name: totp-validator
+category: intelligence/correlation
+language: .js
+execution_type: library
+entrypoint: totp-validator.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - totp-validator
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

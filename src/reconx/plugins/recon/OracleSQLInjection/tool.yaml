@@ -1,0 +1,16 @@
+name: OracleSQLInjection
+category: recon
+language: .md
+execution_type: library
+entrypoint: OracleSQL Injection.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - OracleSQLInjection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

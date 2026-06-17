@@ -1,0 +1,16 @@
+name: modes
+category: recon
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: modes.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - modes
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

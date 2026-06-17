@@ -1,0 +1,16 @@
+name: ad_agent
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: ad_agent.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ad_agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

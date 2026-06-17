@@ -1,0 +1,16 @@
+name: test_target_expander
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: test_target_expander.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_target_expander
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

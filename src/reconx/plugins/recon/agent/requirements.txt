@@ -1,0 +1,11 @@
+__future__
+asyncio
+logging
+uuid
+dataclasses
+pathlib
+typing
+httpx
+.adapter
+.corpus
+.detector

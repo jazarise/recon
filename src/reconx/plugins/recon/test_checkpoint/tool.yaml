@@ -1,0 +1,16 @@
+name: test_checkpoint
+category: recon
+language: .bats
+execution_type: library
+entrypoint: test_checkpoint.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_checkpoint
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

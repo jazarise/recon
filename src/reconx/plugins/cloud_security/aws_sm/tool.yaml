@@ -1,0 +1,16 @@
+name: aws_sm
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: aws_sm.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - aws_sm
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

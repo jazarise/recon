@@ -1,0 +1,16 @@
+name: EQBSL-Primer
+category: ai_systems
+language: .md
+execution_type: library
+entrypoint: EQBSL-Primer.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - EQBSL-Primer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

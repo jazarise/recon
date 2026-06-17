@@ -1,0 +1,16 @@
+name: portscan-all-tcp-ports
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: portscan-all-tcp-ports.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - portscan-all-tcp-ports
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

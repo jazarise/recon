@@ -1,0 +1,16 @@
+name: retry
+category: api_security
+language: .py
+execution_type: library
+entrypoint: retry.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - retry
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

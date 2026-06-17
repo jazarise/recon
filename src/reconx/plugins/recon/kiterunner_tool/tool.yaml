@@ -1,0 +1,16 @@
+name: kiterunner_tool
+category: recon
+language: .py
+execution_type: library
+entrypoint: kiterunner_tool.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - kiterunner_tool
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

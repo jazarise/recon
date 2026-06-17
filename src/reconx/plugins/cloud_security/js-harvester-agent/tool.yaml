@@ -1,0 +1,16 @@
+name: js-harvester-agent
+category: cloud_security
+language: .js
+execution_type: library
+entrypoint: js-harvester-agent.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - js-harvester-agent
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

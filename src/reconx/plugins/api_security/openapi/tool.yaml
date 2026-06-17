@@ -1,0 +1,16 @@
+name: openapi
+category: api_security
+language: .json
+execution_type: library
+entrypoint: openapi.json
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - openapi
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

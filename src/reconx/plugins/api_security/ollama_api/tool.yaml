@@ -1,0 +1,16 @@
+name: ollama_api
+category: api_security
+language: .py
+execution_type: library
+entrypoint: ollama_api.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ollama_api
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

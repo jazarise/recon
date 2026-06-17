@@ -1,0 +1,16 @@
+name: nmap-ftp
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-ftp.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-ftp
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

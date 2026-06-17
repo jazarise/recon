@@ -1,0 +1,16 @@
+name: reg_records
+category: recon
+language: .go
+execution_type: library
+entrypoint: reg_records.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - reg_records
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

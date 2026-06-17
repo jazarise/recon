@@ -1,0 +1,16 @@
+name: logo
+category: ai_systems
+language: .svg
+execution_type: library
+entrypoint: logo.svg
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - logo
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

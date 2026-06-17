@@ -1,0 +1,16 @@
+name: basic_scan
+category: infrastructure
+language: .py
+execution_type: cli_entrypoint
+entrypoint: basic_scan.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - basic_scan
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

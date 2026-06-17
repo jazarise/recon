@@ -1,0 +1,3 @@
+# test_tool_installer_extended Plugin
+
+Auto-generated scaffolding for test_tool_installer_extended.

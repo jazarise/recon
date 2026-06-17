@@ -1,0 +1,16 @@
+name: test_flag_detection
+category: cloud_security
+language: .py
+execution_type: library
+entrypoint: test_flag_detection.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_flag_detection
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

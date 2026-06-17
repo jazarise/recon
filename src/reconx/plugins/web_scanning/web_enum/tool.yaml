@@ -1,0 +1,16 @@
+name: web_enum
+category: web_scanning
+language: .py
+execution_type: cli_entrypoint
+entrypoint: web_enum.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - web_enum
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

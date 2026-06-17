@@ -1,0 +1,16 @@
+name: frontend-i18n
+category: api_security
+language: .md
+execution_type: library
+entrypoint: frontend-i18n.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - frontend-i18n
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

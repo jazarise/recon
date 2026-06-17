@@ -1,0 +1,16 @@
+name: requirements_15
+category: infrastructure
+language: .txt
+execution_type: library
+entrypoint: requirements_15.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - requirements_15
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

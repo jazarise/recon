@@ -1,0 +1,16 @@
+name: domain_record
+category: recon
+language: .go
+execution_type: library
+entrypoint: domain_record.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - domain_record
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

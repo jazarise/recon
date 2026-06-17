@@ -1,0 +1,16 @@
+name: pnpm-workspace
+category: ai_systems
+language: .yaml
+execution_type: library
+entrypoint: pnpm-workspace.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - pnpm-workspace
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

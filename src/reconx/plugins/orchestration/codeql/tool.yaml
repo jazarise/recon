@@ -1,0 +1,16 @@
+name: codeql
+category: orchestration
+language: .yml
+execution_type: library
+entrypoint: codeql.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - codeql
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: chatgpt
+category: api_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: chatgpt.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - chatgpt
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

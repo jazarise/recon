@@ -1,0 +1,16 @@
+name: install-git-hooks
+category: api_security
+language: .sh
+execution_type: cli_entrypoint
+entrypoint: install-git-hooks.sh
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - install-git-hooks
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

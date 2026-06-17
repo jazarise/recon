@@ -1,0 +1,16 @@
+name: tool_lessons
+category: recon
+language: .py
+execution_type: library
+entrypoint: tool_lessons.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tool_lessons
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

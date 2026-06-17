@@ -1,0 +1,16 @@
+name: active-crawl
+category: recon
+language: .js
+execution_type: library
+entrypoint: active-crawl.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - active-crawl
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

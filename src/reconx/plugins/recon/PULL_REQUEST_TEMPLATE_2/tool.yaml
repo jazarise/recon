@@ -1,0 +1,16 @@
+name: PULL_REQUEST_TEMPLATE_2
+category: recon
+language: .md
+execution_type: library
+entrypoint: PULL_REQUEST_TEMPLATE_2.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - PULL_REQUEST_TEMPLATE_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

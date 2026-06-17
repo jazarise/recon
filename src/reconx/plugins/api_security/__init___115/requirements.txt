@@ -1,0 +1,6 @@
+.kiterunner_tool
+.arjun_tool
+.graphql_tool
+.swagger_parser
+.postman_parser
+.api_fingerprint

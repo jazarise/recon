@@ -1,0 +1,16 @@
+name: sqli_login_bypass
+category: web_scanning
+language: .py
+execution_type: api_server
+entrypoint: sqli_login_bypass.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - sqli_login_bypass
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

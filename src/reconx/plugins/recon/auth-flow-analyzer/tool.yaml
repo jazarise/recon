@@ -1,0 +1,16 @@
+name: auth-flow-analyzer
+category: recon
+language: .js
+execution_type: library
+entrypoint: auth-flow-analyzer.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - auth-flow-analyzer
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

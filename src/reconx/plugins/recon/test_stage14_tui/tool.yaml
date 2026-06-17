@@ -1,0 +1,16 @@
+name: test_stage14_tui
+category: recon
+language: .py
+execution_type: cli_entrypoint
+entrypoint: test_stage14_tui.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_stage14_tui
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

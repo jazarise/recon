@@ -1,0 +1,16 @@
+name: _12
+category: recon
+language: .gitignore
+execution_type: library
+entrypoint: _12.gitignore
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - _12
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: nmap-smb
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-smb.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-smb
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: CTF
+category: ai_systems
+language: .yaml
+execution_type: library
+entrypoint: CTF.yaml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - CTF
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

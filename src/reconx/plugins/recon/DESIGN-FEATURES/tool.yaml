@@ -1,0 +1,16 @@
+name: DESIGN-FEATURES
+category: recon
+language: .md
+execution_type: api_server
+entrypoint: DESIGN-FEATURES.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - DESIGN-FEATURES
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

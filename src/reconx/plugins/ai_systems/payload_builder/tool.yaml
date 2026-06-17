@@ -1,0 +1,16 @@
+name: payload_builder
+category: ai_systems
+language: .go
+execution_type: library
+entrypoint: payload_builder.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - payload_builder
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

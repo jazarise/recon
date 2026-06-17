@@ -1,0 +1,16 @@
+name: i18n
+category: recon
+language: .js
+execution_type: library
+entrypoint: i18n.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - i18n
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

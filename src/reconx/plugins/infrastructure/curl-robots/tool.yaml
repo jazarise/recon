@@ -1,0 +1,16 @@
+name: curl-robots
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: curl-robots.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - curl-robots
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,3 @@
+types
+pytest
+pentest_mcp_server.server

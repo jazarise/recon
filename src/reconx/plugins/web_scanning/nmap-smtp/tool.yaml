@@ -1,0 +1,16 @@
+name: nmap-smtp
+category: web_scanning
+language: .py
+execution_type: library
+entrypoint: nmap-smtp.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - nmap-smtp
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

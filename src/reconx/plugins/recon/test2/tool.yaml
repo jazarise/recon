@@ -1,0 +1,16 @@
+name: test2
+category: recon
+language: .html
+execution_type: library
+entrypoint: test2.html
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: README_28
+category: cloud_security
+language: .md
+execution_type: library
+entrypoint: README_28.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_28
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

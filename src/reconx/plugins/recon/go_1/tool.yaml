@@ -1,0 +1,16 @@
+name: go_1
+category: recon
+language: .sum
+execution_type: library
+entrypoint: go_1.sum
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - go_1
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

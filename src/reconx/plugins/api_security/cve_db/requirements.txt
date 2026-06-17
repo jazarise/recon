@@ -1,0 +1,7 @@
+NPM
+__future__
+asyncio
+json
+logging
+typing
+aiohttp

@@ -1,0 +1,16 @@
+name: __init___57
+category: orchestration
+language: .py
+execution_type: library
+entrypoint: __init___57.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - __init___57
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

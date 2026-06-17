@@ -1,0 +1,16 @@
+name: template_manager
+category: recon
+language: .py
+execution_type: library
+entrypoint: template_manager.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - template_manager
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

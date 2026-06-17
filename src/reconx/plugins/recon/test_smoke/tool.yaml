@@ -1,0 +1,16 @@
+name: test_smoke
+category: recon
+language: .bats
+execution_type: library
+entrypoint: test_smoke.bats
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_smoke
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

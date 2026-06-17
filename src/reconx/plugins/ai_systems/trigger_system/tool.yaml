@@ -1,0 +1,16 @@
+name: trigger_system
+category: ai_systems
+language: .py
+execution_type: library
+entrypoint: trigger_system.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - trigger_system
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

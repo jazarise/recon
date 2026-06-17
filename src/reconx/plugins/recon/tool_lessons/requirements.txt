@@ -1,0 +1,11 @@
+__future__
+dataclasses
+typing
+rich
+rich.align
+rich.console
+rich.panel
+rich.prompt
+rich.rule
+rich.table
+rich.text

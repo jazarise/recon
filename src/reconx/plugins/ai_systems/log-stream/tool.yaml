@@ -1,0 +1,16 @@
+name: log-stream
+category: ai_systems
+language: .ts
+execution_type: library
+entrypoint: log-stream.ts
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - log-stream
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

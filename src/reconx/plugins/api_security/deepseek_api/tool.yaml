@@ -1,0 +1,16 @@
+name: deepseek_api
+category: api_security
+language: .py
+execution_type: cli_entrypoint
+entrypoint: deepseek_api.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - deepseek_api
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

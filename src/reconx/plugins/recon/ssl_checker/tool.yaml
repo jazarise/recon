@@ -1,0 +1,16 @@
+name: ssl_checker
+category: recon
+language: .py
+execution_type: library
+entrypoint: ssl_checker.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - ssl_checker
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: registry
+category: api_security
+language: .py
+execution_type: library
+entrypoint: registry.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - registry
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

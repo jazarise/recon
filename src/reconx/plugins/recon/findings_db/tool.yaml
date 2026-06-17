@@ -1,0 +1,16 @@
+name: findings_db
+category: recon
+language: .py
+execution_type: library
+entrypoint: findings_db.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - findings_db
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

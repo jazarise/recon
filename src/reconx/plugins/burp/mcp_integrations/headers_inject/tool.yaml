@@ -1,0 +1,16 @@
+name: headers_inject
+category: burp/mcp_integrations
+language: .txt
+execution_type: library
+entrypoint: headers_inject.txt
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - headers_inject
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

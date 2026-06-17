@@ -1,0 +1,16 @@
+name: test_handler_web_probes
+category: api_security
+language: .py
+execution_type: library
+entrypoint: test_handler_web_probes.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - test_handler_web_probes
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

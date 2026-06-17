@@ -1,0 +1,16 @@
+name: save-deliverable
+category: infrastructure
+language: .ts
+execution_type: library
+entrypoint: save-deliverable.ts
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - save-deliverable
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

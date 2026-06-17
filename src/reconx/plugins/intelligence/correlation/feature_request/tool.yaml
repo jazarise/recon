@@ -1,0 +1,16 @@
+name: feature_request
+category: intelligence/correlation
+language: .yml
+execution_type: library
+entrypoint: feature_request.yml
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - feature_request
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

@@ -1,0 +1,16 @@
+name: README_CN
+category: infrastructure
+language: .md
+execution_type: library
+entrypoint: README_CN.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - README_CN
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

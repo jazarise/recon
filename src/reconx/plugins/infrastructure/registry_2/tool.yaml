@@ -1,0 +1,16 @@
+name: registry_2
+category: infrastructure
+language: .py
+execution_type: library
+entrypoint: registry_2.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - registry_2
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

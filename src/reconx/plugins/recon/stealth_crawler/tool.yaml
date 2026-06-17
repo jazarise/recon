@@ -1,0 +1,16 @@
+name: stealth_crawler
+category: recon
+language: .py
+execution_type: library
+entrypoint: stealth_crawler.py
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - stealth_crawler
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

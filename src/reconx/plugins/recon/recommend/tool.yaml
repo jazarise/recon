@@ -1,0 +1,16 @@
+name: recommend
+category: recon
+language: .md
+execution_type: library
+entrypoint: recommend.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - recommend
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

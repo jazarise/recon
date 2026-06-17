@@ -1,0 +1,16 @@
+name: TERMS
+category: recon
+language: .md
+execution_type: library
+entrypoint: TERMS.md
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - TERMS
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

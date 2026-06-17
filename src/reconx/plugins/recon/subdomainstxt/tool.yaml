@@ -1,0 +1,16 @@
+name: subdomainstxt
+category: recon
+language: .gz
+execution_type: library
+entrypoint: subdomains.txt.gz
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - subdomainstxt
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

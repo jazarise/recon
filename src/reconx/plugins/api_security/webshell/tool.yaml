@@ -1,0 +1,16 @@
+name: webshell
+category: api_security
+language: .go
+execution_type: library
+entrypoint: webshell.go
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - webshell
+supports_parallel: true
+supports_distributed: true
+risk_level: medium

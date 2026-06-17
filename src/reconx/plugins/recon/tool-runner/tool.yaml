@@ -1,0 +1,16 @@
+name: tool-runner
+category: recon
+language: .js
+execution_type: library
+entrypoint: tool-runner.js
+wrapper: adapter.py
+input_type:
+  - domain
+  - url
+output_type:
+  - findings
+dependencies:
+  - tool-runner
+supports_parallel: true
+supports_distributed: true
+risk_level: medium
