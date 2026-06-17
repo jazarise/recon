@@ -1,3 +1,0 @@
-# test_probe_idor_authenticated Plugin
-
-Auto-generated scaffolding for test_probe_idor_authenticated.

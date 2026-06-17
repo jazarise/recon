@@ -1,3 +1,0 @@
-# test_probe_graphql_introspection Plugin
-
-Auto-generated scaffolding for test_probe_graphql_introspection.

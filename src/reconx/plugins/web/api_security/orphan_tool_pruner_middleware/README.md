@@ -1,3 +1,0 @@
-# orphan_tool_pruner_middleware Plugin
-
-Auto-generated scaffolding for orphan_tool_pruner_middleware.

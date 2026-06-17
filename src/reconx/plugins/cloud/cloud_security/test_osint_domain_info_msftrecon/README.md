@@ -1,3 +1,0 @@
-# test_osint_domain_info_msftrecon Plugin
-
-Auto-generated scaffolding for test_osint_domain_info_msftrecon.

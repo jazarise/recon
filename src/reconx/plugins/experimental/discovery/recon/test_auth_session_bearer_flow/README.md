@@ -1,3 +1,0 @@
-# test_auth_session_bearer_flow Plugin
-
-Auto-generated scaffolding for test_auth_session_bearer_flow.

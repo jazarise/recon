@@ -1,3 +1,0 @@
-# pythonorg_headers_20241216_000049 Plugin
-
-Auto-generated scaffolding for pythonorg_headers_20241216_000049.

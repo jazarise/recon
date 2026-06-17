@@ -1,0 +1,8 @@
+﻿name: subfinder
+version: 1.0.0
+author: ReconX
+category: subdomain_enumeration
+requires:
+  - subfinder
+permissions:
+  - network_access

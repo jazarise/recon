@@ -1,3 +1,0 @@
-# org_1 Plugin
-
-Auto-generated scaffolding for org_1.

@@ -1,3 +1,0 @@
-# test_probe_leaked_credentials Plugin
-
-Auto-generated scaffolding for test_probe_leaked_credentials.
